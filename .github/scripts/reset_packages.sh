@@ -2,14 +2,17 @@
 Rscript .github/scripts/deps_json.R packages.json directdeps.json
 python3 -c """
 import json
-f = open('packages.json', 'r')
-pkgs = json.load(f)
-for pkg in pkgs:
-    pkgs.get(pkg, []).sort()
-f.close()
-f = open('packages.json', 'w')
-f.write(json.dumps(pkgs, indent=4))
-f.close()"""
+with open('packages.json', 'r') as f:
+    pkgs = json.load(f)
+    for pkg in pkgs:
+        pkglist = pkgs.get(pkg)
+        pkglist = [] if not pkglist else pkglist
+        if pkg in pkglist:
+            pkglist.remove(pkg)
+        pkglist.sort()
+with open('packages.json', 'w') as f:
+    f.write(json.dumps(pkgs, indent=4))
+"""
 cp packages.json alldeps.json
 echo "$(TZ=EST date '+%Y-%m-%d-%H-%M')" > runstarttime
 bash .github/scripts/get_container_name.sh > containername
