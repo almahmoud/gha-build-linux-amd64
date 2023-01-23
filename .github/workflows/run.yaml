@@ -75,7 +75,8 @@ jobs:
             cp /tmp/write_PACKAGES lists/write_PACKAGES
             git config user.name github-actions
             git config user.email github-actions@github.com
-            git add logs/$(cat runstarttime)
+            git add logs
+            git add lists
             git commit -m "Updating write_packages to trigger"
             git push
 
