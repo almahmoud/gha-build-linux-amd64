@@ -335,5 +335,9 @@ jobs:
             git config user.email github-actions@github.com
             cp -r /tmp/logs ./
             git add logs
-            if bash -c "bash .github/scripts/rclone_push.sh ${{ matrix.pkg }} ${{steps.tar.outputs.pkg}} 2>&1 | grep -i 'error'"; then exit 1; else 
-            echo "Marked pushed ${{ matrix.pkg }}"; fi
+            if bash -c "bash .github/scripts/rclone_push.sh ${{ matrix.pkg }} ${{steps.tar.outputs.pkg}} 2>&1 | grep -i 'error'";
+              then exit 1
+            else 
+              echo "Marked pushed ${{ matrix.pkg }}"
+            fi
+            if grep -q "${{ matrix.pkg }}" packages.json; then exit 1; fi
