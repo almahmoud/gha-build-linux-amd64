@@ -211,7 +211,7 @@ jobs:
             echo "$RCLONE_CONF" > ~/.rclone.conf
 
       - name: Build and push container image to GHCR
-        id: pkgbuild
+        id: dockerbuild
         uses: docker/build-push-action@v3
         with:
           build-args: |
@@ -224,6 +224,11 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: ${{ steps.versions.outputs.platform }}
+
+      - name: Get status of package building (mark failed if tar missing)
+        id: pkgbuild
+        run: |
+          [ "$(ls -A /tmp/tars)" ] && exit 0 || exit 1
         continue-on-error: true
 
       - name: Extract files from image and set tar name
