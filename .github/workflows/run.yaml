@@ -261,8 +261,7 @@ jobs:
             PKG="${{ matrix.pkg }}"
             git pull origin main || git reset --hard origin/main
             mkdir -p lists/failed
-            cp /tmp/$PKG lists/failed/$PKG;
-            cp -r /tmp/logs/$(cat runstarttime) ./
+            echo "${{steps.dockerbuild.outputs.metadata}}" lists/failed/$PKG
             git config user.name github-actions
             git config user.email github-actions@github.com
             git add lists
