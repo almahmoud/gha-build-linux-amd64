@@ -225,16 +225,8 @@ jobs:
           platforms: ${{ steps.versions.outputs.platform }}
         continue-on-error: true
 
-      - name: Copy artifacts from within built container
-        run: |
-          set -x
-          CONTAINERID=$(docker create ${{ steps.meta.outputs.tags }})
-          docker cp $CONTAINERID:/tmp /
-          docker cp $CONTAINERID:/${{ steps.versions.outputs.library }}) $(dirname /${{ steps.versions.outputs.library }})
-          docker rm $CONTAINERID
-        if: ${{ contains(steps.versions.outputs.platform, 'linux/amd64') && steps.pkgbuild.outcome=='success' }}
-
-      - name: Copy artifacts from within built container
+      - name: Extract files from image and set tar name
+        id: tar
         run: |
           set -x
           mkdir -p image
@@ -247,12 +239,6 @@ jobs:
           cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }})
           cd ..
           rm -rf image
-        if: ${{ steps.pkgbuild.outcome=='failure' || !contains(steps.versions.outputs.platform, 'linux/amd64') }}
-
-      - name: Get tar name
-        id: tar
-        run: |
-          set -x
           echo pkg=$(ls /tmp/tars/ | grep ${{matrix.pkg}} | sed 's#/tmp/tars/##g') >> $GITHUB_OUTPUT
           # make tar of library
           cd $(dirname /${{ steps.versions.outputs.library }}) && tar -zcvf "${{ matrix.pkg }}.tar.gz" "$(basename /${{ steps.versions.outputs.library }})"
