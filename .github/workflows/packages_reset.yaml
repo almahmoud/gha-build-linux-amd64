@@ -4,6 +4,9 @@ on:
 jobs:
   packages:
     runs-on: ubuntu-latest
+    container:
+      image: "docker://&bioc.CONTAINER_BASE_IMAGE"
+      options: --user root
     steps:
       - uses: actions/checkout@v3
         with:
@@ -21,8 +24,5 @@ jobs:
           mv tobuild.txt "$LOGDIR"/ || true
           mv lists "$LOGDIR"/lists || true
 
-      - uses: "docker://&bioc.CONTAINER_BASE_IMAGE"
-        with:
-          entrypoint: /bin/bash
-          args: |
-            .github/scripts/reset_packages.sh
+      - run: |
+          bash .github/scripts/reset_packages.sh
