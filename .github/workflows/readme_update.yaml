@@ -1,0 +1,34 @@
+name: Repopulate README
+on:
+  workflow_dispatch: {}
+  push: {}
+
+jobs:
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          python -m pip install tabulate humanize
+          python .github/scripts/readme_update.py
+          mkdir -p /tmp
+          cp $(cat runstarttime)/README.md /tmp/README.md
+          COMMIT=$(git rev-parse --short HEAD)
+          sed -i "s#/main/#/$COMMIT/#g" /tmp/README.md
+
+      - name: Update README and push
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 20
+          shell: bash
+          command: |
+            set -xe
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git pull origin main || git reset --hard origin/main
+            cp /tmp/README.md $(cat runstarttime)/README.md
+            git add $(cat runstarttime)/README.md
+            git commit -m "Update README"
+            git push

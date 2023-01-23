@@ -1,0 +1,72 @@
+name: Create PACKAGES file for the R repository
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - lists/write_PACKAGES
+jobs:
+  writepkgs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+      - name: Add rclone conf file and PEM key for ssh
+        run: |
+          echo "$RCLONE_CONF" > ~/.rclone.conf
+          echo "$VMKEY" > ~/packages.pem
+          echo "$CLOUDBRIDGE_CONF" > ~/.cloudbridge
+          chmod 400 ~/packages.pem
+        env:
+          CLOUDBRIDGE_CONF: ${{secrets.CLOUDBRIDGE_CONF}}
+          RCLONE_CONF: ${{secrets.RCLONE_CONF}}
+          VMKEY: ${{secrets.VMKEY}}
+
+      - name: Launch instance in cloudbridge
+        shell: bash
+        run: |
+          set -x
+          # Install cloudbridge
+          mkdir -p /tmp/binaries
+          python -m pip install 'cloudbridge[openstack] @ git+https://github.com/cloudve/cloudbridge@main'
+          # Launch js2 instance
+          python .github/scripts/instlaunch.py -n 1 -i 1b4b86f9-910d-4075-bb14-2862d3367a19 -l gha-build -s 0 -t m3.medium -p openstack --network 739b1ee6-1e81-497f-8f76-188e17965d0e --subnet d58af0f2-1f4b-48cc-b54b-c4b3b59cc988 --firewall f93c379a-00e2-4cb4-8e6a-9ac3de8361b4 --router 7392886e-5751-41c0-b298-7f86f757dd7e --volume-size 300
+
+      - name: Install ansible
+        run: |
+          python -m pip install ansible
+
+      - name: Install rclone & add rclone conf file
+        uses: nick-fields/retry@v2
+        env:
+            RCLONE_CONF: ${{secrets.RCLONE_CONF}}
+        with:
+          timeout_minutes: 20
+          max_attempts: 3
+          shell: bash
+          command: |
+            echo "$RCLONE_CONF" > ~/.rclone.conf
+            set -x
+            mkdir -p /tmp/binaries
+            grep -roh "^.*tar.gz$" lists > /tmp/tarlist
+            ls /tmp/binaries/ > /tmp/curtars
+            comm -2 -3 <(sort /tmp/tarlist) <(sort /tmp/curtars) > /tmp/missingtars
+            mkdir -p .github/scripts/ansible/files
+            split -l 200 /tmp/missingtars .github/scripts/ansible/files/tars
+
+      - name: Run ansible playbook to create PACKAGES file in VM
+        run: |
+          VMIP=$(python -c 'from cloudbridge.factory import CloudProviderFactory, ProviderList; prov = CloudProviderFactory().create_provider("openstack", {}); inst = prov.compute.instances.find(label="gha-build-inst-0")[0]; inst.wait_till_ready(); print(inst.public_ips[0])')
+          sed -i "s@##IP##@$VMIP@g" .github/scripts/ansible/inventory
+          sed -i "s@##PEM##@$(realpath ~/packages.pem)@g" .github/scripts/ansible/inventory
+          ansible-playbook -vvv -T60 .github/scripts/ansible/ansible-packages.yaml -i .github/scripts/ansible/inventory --extra-vars "container_base_image=&bioc.CONTAINER_BASE_IMAGE"
+
+      - name: Delete VM
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 10
+          shell: bash
+          command: |
+            python .github/scripts/instlaunch.py --delete "$(python -c 'from cloudbridge.factory import CloudProviderFactory, ProviderList; prov = CloudProviderFactory().create_provider("openstack", {}); inst = prov.compute.instances.find(label="gha-build-inst-0")[0]; print(inst.id)')"

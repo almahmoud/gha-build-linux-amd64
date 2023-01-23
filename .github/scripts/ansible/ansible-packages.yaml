@@ -1,0 +1,67 @@
+---
+- name: Write R PACKAGES file for binary
+  hosts: js2pkgs
+  become: yes
+  tasks:
+  - name: Reboot machine for updates to apply (otherwise will reboot itself)
+    ansible.builtin.reboot:
+    become_user: root
+
+  - name: Install rclone
+    shell: sudo -v ; curl https://rclone.org/install.sh | sudo bash && mkdir -p /tmp/binaries
+    ignore_errors: true
+    become_user: root
+
+  - name: Create directory
+    file:
+      path: /root/.config/rclone
+      state: directory
+
+  - name: Add Rclone conf
+    copy:
+      src: ~/.rclone.conf
+      dest: /root/.config/rclone/rclone.conf
+
+  - name: Create directory
+    file:
+      path: /tmp/tars/
+      state: directory
+
+  - name: Copy each tar list file
+    ansible.builtin.copy:
+      src: "{{ item }}"
+      dest: "/tmp/tars/{{ item | basename }}"
+    with_fileglob: "tars*"
+
+  - name: Copy binaries
+    shell: |
+      set -x
+      cd /home/ubuntu && git clone https://github.com/almahmoud/gha-build || true
+      cd gha-build && git pull
+      cat /tmp/tars/{{ item | basename }} | xargs -i -P 20 -n 1 rclone copyto js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/{} /tmp/binaries/{} -vvvvv
+    with_fileglob: "tars*"
+    args:
+      executable: /bin/bash
+
+  - name: Make PACKAGES files
+    docker_container:
+      name: bioc
+      image: {{ container_base_image }}
+      command: Rscript -e 'tools::write_PACKAGES("/tmp/binaries", addFiles = TRUE, verbose = TRUE)'
+      volumes:
+        - /tmp/binaries:/tmp/binaries
+
+  - name: Wait for PACKAGES file to exist
+    wait_for:
+      path: /tmp/binaries/PACKAGES
+      state: present
+
+
+  - name: Upload PACKAGES files
+    shell: |
+      cd /home/ubuntu/gha-build
+      rclone copyto /tmp/binaries/PACKAGES js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES -vvvvv
+      rclone copyto /tmp/binaries/PACKAGES.gz js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES.gz -vvvvv
+      rclone copyto /tmp/binaries/PACKAGES.rds js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES.rds -vvvvv
+    args:
+      executable: /bin/bash

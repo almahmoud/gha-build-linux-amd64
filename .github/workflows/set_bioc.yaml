@@ -1,0 +1,21 @@
+name: Set .bioc inputs
+on:
+  workflow_dispatch: {}
+jobs:
+  biocset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+          persist-credentials: true
+
+      - name: Replace values
+        run: |
+          ls | grep ".bioc$" | awk -F'.bioc' '{print $1}' | xargs -i bash -c 'grep -irl "&bioc.{}" .github/ | xargs sed -i "s#&bioc.{}#$(cat {}.bioc)#g" '
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .github
+          git commit -m "Auto set &bioc.* variables"
+          git push

@@ -1,0 +1,10 @@
+[js2pkgs]
+##IP##
+
+[all:vars]
+ansible_ssh_port=22
+ansible_user='ubuntu'
+ansible_ssh_extra_args='-o StrictHostKeyChecking=no -o PasswordAuthentication=no -o ConnectTimeout=60s'
+ansible_ssh_private_key_file=##PEM##
+ansible_ssh_retries=10
+container_base_image=bioconductor/bioconductor_docker:RELEASE_3_16

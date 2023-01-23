@@ -1,0 +1,347 @@
+name: Build packages matrix
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - tobuild.txt
+  schedule:
+    - cron: '*/30 * * * *'
+
+jobs:
+  getlistformatrix:
+    concurrency:
+      group: dispatch
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.pkglist }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get timestamp for list
+        id: uniq
+        run: |
+          echo "time=$(TZ=EST date '+%Y-%m-%d_%H-%M')" >> $GITHUB_OUTPUT
+
+      - name: Initialize to build list
+        id: claim
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 20
+          shell: bash
+          command: |
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            bash .github/scripts/list_tobuild.sh
+
+      - name: Output list of up to 90 packages to build
+        id: matrix
+        run: |
+          mkdir -p /tmp
+          head -n90 tobuild.txt > /tmp/pkglist
+          # Output it as json parsable list "['pkg1', 'pkg2']"
+          echo pkglist=$(echo "['$(cat /tmp/pkglist |  paste -d, -s | sed s/,/\',\'/g)']") >> $GITHUB_OUTPUT
+          # Remove first 90 lines from to build
+          sed '1,90d' tobuild.txt > /tmp/newtobuild
+
+      - name: Set token depending on whether a new workflow is needed
+        id: tokenlist
+        run: |
+          # PAT will trigger a push workflow, GITHUB_TOKEN won't
+          # Trigger a new workflow if tobuild is not empty
+          if [ -s /tmp/newtobuild ]; then TOK=${{secrets.PAT}}; elif [ -s /tmp/write_PACKAGES ]; then TOK=${{secrets.PAT}}; else TOK=${{secrets.GITHUB_TOKEN}}; fi
+          echo tok=$(echo "$TOK") >> $GITHUB_OUTPUT
+
+      - name: Checkout with new token
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.tokenlist.outputs.tok }}
+          persist-credentials: true
+
+      - name: Add write_packages log
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            if [ ! -s /tmp/write_PACKAGES ]; then exit 0; fi
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git pull origin main || git reset --hard origin/main
+            cp /tmp/write_PACKAGES lists/write_PACKAGES
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add logs/$(cat runstarttime)
+            git commit -m "Updating write_packages to trigger"
+            git push
+
+      - name: Exit if list is empty
+        run: |
+          # Exit if this run's package dispatch list is empty
+          if [ ! -s /tmp/pkglist ]; then exit 1; fi
+
+      - name: Update list
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git pull origin main || git reset --hard origin/main
+            cp /tmp/newtobuild tobuild.txt
+            mkdir -p logs/$(cat runstarttime)/logs/dispatchlists
+            mkdir -p lists
+            cp /tmp/pkglist logs/$(cat runstarttime)/logs/dispatchlists/${{ steps.uniq.outputs.time }}_pkglist
+            cat /tmp/pkglist | xargs -i sed -i 's/readytobuild/claimed/g' "lists/{}"
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add lists
+            git add logs/$(cat runstarttime)
+            git add tobuild.txt
+            git commit -m "Updating tobuild list"
+            git push
+
+  build:
+    needs: getlistformatrix
+    strategy:
+      fail-fast: false
+      matrix:
+        pkg: ${{fromJson(needs.getlistformatrix.outputs.matrix)}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get Current Job Log URL
+        uses: Tiryoh/gha-jobid-action@v0
+        id: jobs
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          job_name: build (${{ matrix.pkg }})
+          per_page: 100
+
+      - name: Push run_id
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git pull origin main || git reset --hard origin/main
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            PKG="${{ matrix.pkg }}"
+            sed -i 's/claimed/building/g' "lists/$PKG"
+            mkdir -p logs/$(cat runstarttime)/run_ids/$(cat containername)/$(cat arch)
+            echo "${{ steps.jobs.outputs.html_url }}" >> logs/$(cat runstarttime)/run_ids/$(cat containername)/$(cat arch)/$PKG
+            # Add workflow URL as backup, in case above failed
+            echo "${{ github.repository }}/actions/runs/${{ github.run_id }}" >> logs/$(cat runstarttime)/run_ids/$(cat containername)/$(cat arch)/$PKG
+            git add logs/$(cat runstarttime)
+            git commit -m "push run_id container $PKG"
+            git push
+
+      - name: Get R, OS, and Bioc versions
+        uses: "docker://&bioc.CONTAINER_BASE_IMAGE"
+        id: versions
+        with:
+          entrypoint: /bin/bash
+          args: .github/scripts/output_versions.sh
+
+      - name: Get deps list
+        id: deps
+        run: |
+          PKG=${{ matrix.pkg }}
+          sed -n "/^    \"$PKG\"/,/^    \"/p" alldeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/deps
+          sed -n "/^    \"$PKG\"/,/^    \"/p" directdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/directdeps
+
+      - name: Collect Workflow Telemetry
+        uses: runforesight/workflow-telemetry-action@v1
+        with:
+          theme: dark
+          comment_on_pr: false
+
+      - name: Get dependency artifacts 
+        run: |
+          # Install gh cli, jq, time, collectl
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt-get update -y && DEBIAN_FRONTEND=noninteractive sudo apt-get --no-install-recommends install gh jq time -y
+          PKG=${{ matrix.pkg }}
+          mkdir -p $(pwd)/${{ steps.versions.outputs.library }}
+          cat /tmp/directdeps | xargs -i bash .github/scripts/download_artifact.sh {} $(pwd)/${{ steps.versions.outputs.library }} ${{github.repository}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64
+        if: contains(steps.versions.outputs.platform, 'arm64')
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          platforms: ${{ steps.versions.outputs.platform }}
+
+      - name: Extract metadata for container image
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedarch}}
+
+      - name: Install rclone & add rclone conf file
+        uses: nick-fields/retry@v2
+        env:
+            RCLONE_CONF: ${{secrets.RCLONE_CONF}}
+        with:
+          timeout_minutes: 20
+          max_attempts: 3
+          shell: bash
+          command: |
+            sudo -v ; curl https://rclone.org/install.sh | sudo bash
+            echo "$RCLONE_CONF" > ~/.rclone.conf
+
+      - name: Build and push container image to GHCR
+        id: pkgbuild
+        uses: docker/build-push-action@v3
+        with:
+          build-args: |
+            LIBRARY=${{ steps.versions.outputs.library }}
+            PKG=${{ matrix.pkg }}
+            PLATFORM=${{ steps.versions.outputs.platform }}
+          file: .github/scripts/build.Dockerfile
+          push: false
+          load: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          platforms: ${{ steps.versions.outputs.platform }}
+        continue-on-error: true
+
+      - name: Copy artifacts from within built container
+        run: |
+          set -x
+          CONTAINERID=$(docker create ${{ steps.meta.outputs.tags }})
+          docker cp $CONTAINERID:/tmp /
+          docker cp $CONTAINERID:/${{ steps.versions.outputs.library }}) $(dirname /${{ steps.versions.outputs.library }})
+          docker rm $CONTAINERID
+        if: ${{ contains(steps.versions.outputs.platform, 'linux/amd64') && steps.pkgbuild.outcome=='success' }}
+
+      - name: Copy artifacts from within built container
+        run: |
+          set -x
+          mkdir -p image
+          cd image
+          docker save ${{ steps.meta.outputs.tags }} > image.tar
+          tar -xvf image.tar
+          # Untar the last layer (Build layer)
+          cat manifest.json | awk -F'"' '{print $(NF-1)}' | xargs tar -xvf
+          cp -r tmp /
+          cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }})
+          cd ..
+          rm -rf image
+        if: ${{ steps.pkgbuild.outcome=='failure' || !contains(steps.versions.outputs.platform, 'linux/amd64') }}
+
+      - name: Get tar name
+        id: tar
+        run: |
+          set -x
+          echo pkg=$(ls /tmp/tars/ | grep ${{matrix.pkg}} | sed 's#/tmp/tars/##g') >> $GITHUB_OUTPUT
+          # make tar of library
+          cd $(dirname /${{ steps.versions.outputs.library }}) && tar -zcvf "${{ matrix.pkg }}.tar.gz" "$(basename /${{ steps.versions.outputs.library }})"
+          echo name=$(echo "$(dirname /${{ steps.versions.outputs.library }})/${{ matrix.pkg }}.tar.gz") >> $GITHUB_OUTPUT
+        if: steps.pkgbuild.outcome=='success'
+
+      - name: Push failed before exit
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            PKG="${{ matrix.pkg }}"
+            git pull origin main || git reset --hard origin/main
+            mkdir -p lists/failed
+            cp /tmp/$PKG lists/failed/$PKG;
+            cp -r /tmp/logs/$(cat runstarttime) ./
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add lists
+            git add logs/$(cat runstarttime)
+            git commit -m "Marked failed $PKG"
+            git push
+        if: steps.pkgbuild.outcome=='failure'
+
+      - name: Exit on failure
+        run: exit 1
+        if: steps.pkgbuild.outcome=='failure'
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: "artifact-${{ matrix.pkg }}"
+          path: ${{steps.tar.outputs.name}}
+
+      - name: Save size and time
+        run: |
+          PKG="${{ matrix.pkg }}"
+          runstarttime=$(cat runstarttime)
+          containername=$(cat containername)
+          arch=$(cat arch)
+          mkdir -p /tmp/logs/$runstarttime/sizes/$containername/$arch/libraries
+          mkdir -p /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries
+          wc -c "${{steps.tar.outputs.name}}" > /tmp/logs/$runstarttime/sizes/$containername/$arch/libraries/$PKG
+          wc -c "/tmp/tars/${{steps.tar.outputs.pkg}}" > /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries/$PKG
+          mkdir -p /tmp/logs/$runstarttime/times/$containername/$arch/
+
+          # Get the 3 lines of times into time log
+          echo "$(grep -A2 '^real' /tmp/$PKG)" > /tmp/logs/$runstarttime/times/$containername/$arch/$PKG
+          
+          mkdir -p /tmp/logs/$runstarttime/build/$containername/$arch
+          # Copy entire log
+          cp /tmp/$PKG /tmp/logs/$runstarttime/build/$containername/$arch/$PKG
+
+      - name: Rclone push package
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 20
+          max_attempts: 3
+          shell: bash
+          command: |
+            set -x
+            # Push binary
+            rclone copy /tmp/tars/${{steps.tar.outputs.pkg}} js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/ -vvvvvv
+            # Push copy of library
+            rclone copy ${{steps.tar.outputs.name}} js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/libraries/ -vvvvvv
+
+      - name: Add info to summary
+        run: |
+          PKG="${{ matrix.pkg }}"
+          PLATFORM=${{ steps.versions.outputs.platform }}
+          echo "# $PKG package build summary" >> $GITHUB_STEP_SUMMARY
+          echo "Platform: $PLATFORM" >> $GITHUB_STEP_SUMMARY
+          echo "Package binary: [Jetstream2](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/${{steps.tar.outputs.pkg}})" >> $GITHUB_STEP_SUMMARY
+          echo "Size of package binary: $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/binaries/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
+          echo "Size of package library w/ dependencies ([see GitHub artifacts in job summary](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifacts)): $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/libraries/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
+
+      - name: Rclone mark as pushed
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            cp -r /tmp/logs ./
+            git add logs
+            if bash -c "bash .github/scripts/rclone_push.sh ${{ matrix.pkg }} ${{steps.tar.outputs.pkg}} 2>&1 | grep -i 'error'"; then exit 1; else 
+            echo "Marked pushed ${{ matrix.pkg }}"; fi

@@ -1,0 +1,28 @@
+name: Reset packages
+on:
+  workflow_dispatch: {}
+jobs:
+  packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+          persist-credentials: true
+
+      - name: Copy old run
+        run: |
+          STARTTIME="$(cat runstarttime)" || true
+          LOGDIR="logs/$(cat runstarttime)" || true
+          mv runstarttime "$LOGDIR"/ || true
+          mv alldeps.json "$LOGDIR"/ || true
+          mv directdeps.json "$LOGDIR"/ || true
+          mv packages.json "$LOGDIR"/ || true
+          mv tobuild.txt "$LOGDIR"/ || true
+          mv lists "$LOGDIR"/lists || true
+
+      - uses: "docker://&bioc.CONTAINER_BASE_IMAGE"
+        with:
+          entrypoint: /bin/bash
+          args: |
+            .github/scripts/reset_packages.sh
