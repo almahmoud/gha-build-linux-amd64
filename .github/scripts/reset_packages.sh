@@ -10,6 +10,7 @@ with open('packages.json', 'r') as f:
         if pkg in pkglist:
             pkglist.remove(pkg)
         pkglist.sort()
+        pkgs[pkg] = pkglist
 with open('packages.json', 'w') as f:
     f.write(json.dumps(pkgs, indent=4))
 """
