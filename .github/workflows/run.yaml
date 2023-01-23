@@ -225,14 +225,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           platforms: ${{ steps.versions.outputs.platform }}
 
-      - name: Get status of package building (mark failed if tar missing)
+      - name: Extract files from image and mark failed
         id: pkgbuild
-        run: |
-          [ "$(ls -A /tmp/tars)" ] && exit 0 || exit 1
-        continue-on-error: true
-
-      - name: Extract files from image and set tar name
-        id: tar
         run: |
           set -x
           mkdir -p image
@@ -241,10 +235,17 @@ jobs:
           tar -xvf image.tar
           # Untar the last layer (Build layer)
           cat manifest.json | awk -F'"' '{print $(NF-1)}' | xargs tar -xvf
-          cp -r tmp /
-          cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }})
+          cp -r tmp / || true
+          cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }}) || true
           cd ..
           rm -rf image
+          [ "$(ls -A /tmp/tars)" ] && exit 0 || exit 1
+        continue-on-error: true
+
+      - name: Set tar name
+        id: tar
+        run: |
+          set -x
           echo pkg=$(ls /tmp/tars/ | grep ${{matrix.pkg}} | sed 's#/tmp/tars/##g') >> $GITHUB_OUTPUT
           # make tar of library
           cd $(dirname /${{ steps.versions.outputs.library }}) && tar -zcvf "${{ matrix.pkg }}.tar.gz" "$(basename /${{ steps.versions.outputs.library }})"
