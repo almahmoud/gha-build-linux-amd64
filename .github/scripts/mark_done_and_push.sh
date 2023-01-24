@@ -26,7 +26,7 @@ with open('$TARGETFILE', 'w') as f:
 EOF
 
 if [[ ${TAR} != *"tar.gz"* ]]; then
-    bash /tmp/remove_non_strong.py
+    python /tmp/remove_non_strong.py
 else
 	bash .github/scripts/mark_done.sh $PKGTOMARK $TARGETFILE
 fi
