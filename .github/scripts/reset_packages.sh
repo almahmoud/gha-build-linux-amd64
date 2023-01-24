@@ -1,16 +1,19 @@
 #!/bin/bash
-Rscript .github/scripts/deps_json.R packages.json directdeps.json
+Rscript .github/scripts/deps_json.R --outfile=packages.json --which=most --recursive=strong
+Rscript .github/scripts/deps_json.R --outfile=directdeps.json --which=most
+Rscript .github/scripts/deps_json.R --outfile=strongdeps.json --which=strong --recursive=strong
+
 python3 -c """
 import json
 with open('packages.json', 'r') as f:
     pkgs = json.load(f)
-    for pkg in pkgs:
-        pkglist = pkgs.get(pkg)
-        pkglist = [] if not pkglist else pkglist
-        if pkg in pkglist:
-            pkglist.remove(pkg)
-        pkglist.sort()
-        pkgs[pkg] = pkglist
+for pkg in pkgs:
+    pkglist = pkgs.get(pkg)
+    pkglist = [] if not pkglist else pkglist
+    if pkg in pkglist:
+        pkglist.remove(pkg)
+    pkglist.sort()
+    pkgs[pkg] = pkglist
 with open('packages.json', 'w') as f:
     f.write(json.dumps(pkgs, indent=4))
 """

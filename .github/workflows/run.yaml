@@ -162,6 +162,7 @@ jobs:
           PKG=${{ matrix.pkg }}
           sed -n "/^    \"$PKG\"/,/^    \"/p" alldeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/deps
           sed -n "/^    \"$PKG\"/,/^    \"/p" directdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/directdeps
+          sed -n "/^    \"$PKG\"/,/^    \"/p" strongdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/strongdeps
 
       - name: Collect Workflow Telemetry
         uses: runforesight/workflow-telemetry-action@v1
@@ -263,7 +264,14 @@ jobs:
             PKG="${{ matrix.pkg }}"
             git pull origin main || git reset --hard origin/main
             mkdir -p lists/failed
-            echo "${{steps.dockerbuild.outputs.metadata}}" lists/failed/$PKG
+            mv /tmp/$PKG lists/failed/$PKG
+            if bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} 'failed' packages.json 2>&1 | grep -i 'error'";
+              then exit 1
+            elif bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} 'failed' alldeps.json 2>&1 | grep -i 'error'";
+              then exit 1
+            else 
+              echo "Marked pushed ${{ matrix.pkg }}"
+            fi
             git config user.name github-actions
             git config user.email github-actions@github.com
             git add lists
@@ -336,7 +344,7 @@ jobs:
             git config user.email github-actions@github.com
             cp -r /tmp/logs ./
             git add logs
-            if bash -c "bash .github/scripts/rclone_push.sh ${{ matrix.pkg }} ${{steps.tar.outputs.pkg}} 2>&1 | grep -i 'error'";
+            if bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} ${{steps.tar.outputs.pkg}} packages.json 2>&1 | grep -i 'error'";
               then exit 1
             else 
               echo "Marked pushed ${{ matrix.pkg }}"
