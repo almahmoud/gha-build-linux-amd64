@@ -264,7 +264,7 @@ jobs:
             PKG="${{ matrix.pkg }}"
             git pull origin main || git reset --hard origin/main
             mkdir -p lists/failed
-            mv /tmp/$PKG lists/failed/$PKG
+            cp /tmp/$PKG lists/failed/$PKG
             if bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} 'failed' packages.json 2>&1 | grep -i 'error'";
               then exit 1
             elif bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} 'failed' alldeps.json 2>&1 | grep -i 'error'";
