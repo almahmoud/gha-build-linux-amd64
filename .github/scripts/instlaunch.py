@@ -36,13 +36,20 @@ def main():
                         required=False,
                         type=int,
                         metavar='[integer]')
-    parser.add_argument('-i', '--image',
+    parser.add_argument('-i', '--image-id',
                         help='ID of image to use for the  instances. Will '
                              'default to Ubuntu 18.04 on Jetstream.',
                         required=False,
                         type=str,
-                        default='516b3611-ff7d-4eb3-bca2-80e1aef034dd',
-                        metavar='[image-id]')
+                        default='',
+                        metavar='[image_id]')
+    parser.add_argument('-m', '--image-name',
+                        help='Name of image to use for the  instances. Will '
+                             'default to Ubuntu 20 on Jetstream.',
+                        required=False,
+                        type=str,
+                        default='Featured-Ubuntu22',
+                        metavar='[image_name]')
     parser.add_argument('-l', '--label',
                         help='Label prefix that will be used for all '
                              'resources. Will default to "bulk-cb".',
@@ -140,7 +147,8 @@ def main():
                            action='store_true')
 
     args = vars(parser.parse_args())
-    image_id = args['image']
+    image_id = args['image_id']
+    image_name = args['image_name']
     prefix = args['label']
     start = args['start']
     n = args['number'] if args['number'] else 1
@@ -219,7 +227,7 @@ def main():
     print("Using firewall: " + str(fw))
 
     vm_type = get_vm_type_by_name(provider, vm_type_name)
-    image = get_image(provider, image_id)
+    image = get_image(provider, image_id, image_name)
 
     create_instances(prefix, provider, n, start, sn, gw, fw,
                      master_kp, vm_type, vol_size, image, kp_file,
@@ -336,8 +344,14 @@ def _init_firewall(prefix, provider, network):
     return fw
 
 
-def get_image(provider, image_id):
-    img = provider.compute.images.get(image_id)
+def get_image(provider, image_id, image_name):
+    if image_id:
+        img = provider.compute.images.get(image_id)
+    else:
+        DEFAULT_OWNER_PUBLIC_IMAGES_JS2="d05cee28f6834f99b44160621a520acd"
+        img = [i for i in list(prov.os_conn.image.images(owner="d05cee28f6834f99b44160621a520acd")) if i.name=='Featured-Ubuntu22']
+        if len(img) > 0:
+            img = img[0]
     print("Using image: " + str(img))
     return img
 

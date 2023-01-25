@@ -31,7 +31,7 @@ jobs:
           mkdir -p /tmp/binaries
           python -m pip install 'cloudbridge[openstack] @ git+https://github.com/cloudve/cloudbridge@main'
           # Launch js2 instance
-          python .github/scripts/instlaunch.py -n 1 -i 1b4b86f9-910d-4075-bb14-2862d3367a19 -l gha-build -s 0 -t m3.medium -p openstack --network 739b1ee6-1e81-497f-8f76-188e17965d0e --subnet d58af0f2-1f4b-48cc-b54b-c4b3b59cc988 --firewall f93c379a-00e2-4cb4-8e6a-9ac3de8361b4 --router 7392886e-5751-41c0-b298-7f86f757dd7e --volume-size 300
+          python .github/scripts/instlaunch.py -n 1 -m Featured-Ubuntu22 -l gha-build -s 0 -t m3.medium -p openstack --network 739b1ee6-1e81-497f-8f76-188e17965d0e --subnet d58af0f2-1f4b-48cc-b54b-c4b3b59cc988 --firewall f93c379a-00e2-4cb4-8e6a-9ac3de8361b4 --router 7392886e-5751-41c0-b298-7f86f757dd7e --volume-size 300
 
       - name: Install ansible
         run: |
