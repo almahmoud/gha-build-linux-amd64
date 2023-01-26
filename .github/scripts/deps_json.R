@@ -32,7 +32,7 @@ while (length(biocpkgs) > 0)
 }
 
 # Remove dependencies that are already dependencies of other dependencies
-finaldeps <- lapply(finaldeps, function(x) {
+pkgdeps <- lapply(pkgdeps, function(x) {
   elements_to_remove <- unique(unlist(pkgdeps[unlist(x)]))
   elements_to_remove <- elements_to_remove[elements_to_remove %in% x]
   return(x[!(x %in% elements_to_remove)])
@@ -40,5 +40,5 @@ finaldeps <- lapply(finaldeps, function(x) {
 
 library(jsonlite)
 fileConn<-file(outfile)
-writeLines(prettify(toJSON(finaldeps)), fileConn)
+writeLines(prettify(toJSON(pkgdeps)), fileConn)
 close(fileConn)

@@ -1,6 +1,9 @@
 name: Reset packages
 on:
   workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/packages_reset.yaml
 jobs:
   packages:
     runs-on: ubuntu-latest
