@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''nFactors'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'nFactors'
+also installing the dependencies ‘mnormt’, ‘psych’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mnormt_2.1.1.tar.gz'
+Content type 'binary/octet-stream' length 212500 bytes (207 KB)
+==================================================
+downloaded 207 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/psych_2.2.9.tar.gz'
+Content type 'binary/octet-stream' length 3816081 bytes (3.6 MB)
+==================================================
+downloaded 3.6 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/nFactors_2.4.1.1.tar.gz'
+Content type 'binary/octet-stream' length 208110 bytes (203 KB)
+==================================================
+downloaded 203 KB
+
+* installing *binary* package ‘mnormt’ ...
+* ‘mnormt’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mnormt’ as ‘mnormt_2.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mnormt)
+* installing *binary* package ‘psych’ ...
+* ‘psych’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘psych’ as ‘psych_2.2.9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (psych)
+* installing *binary* package ‘nFactors’ ...
+* ‘nFactors’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘nFactors’ as ‘nFactors_2.4.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (nFactors)
+
+The downloaded source packages are in
+	‘/tmp/RtmpCK4nVL/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m13.149s
+user	0m6.484s
+sys	0m0.641s
