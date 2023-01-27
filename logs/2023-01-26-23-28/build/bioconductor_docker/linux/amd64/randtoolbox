@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''randtoolbox'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'randtoolbox'
+also installing the dependency ‘rngWELL’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rngWELL_0.10-9.tar.gz'
+Content type 'binary/octet-stream' length 35048 bytes (34 KB)
+==================================================
+downloaded 34 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/randtoolbox_2.0.3.tar.gz'
+Content type 'binary/octet-stream' length 1728667 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+* installing *binary* package ‘rngWELL’ ...
+* ‘rngWELL’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rngWELL’ as ‘rngWELL_0.10-9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rngWELL)
+* installing *binary* package ‘randtoolbox’ ...
+* ‘randtoolbox’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘randtoolbox’ as ‘randtoolbox_2.0.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (randtoolbox)
+
+The downloaded source packages are in
+	‘/tmp/Rtmph8ltJe/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.903s
+user	0m5.024s
+sys	0m0.317s
