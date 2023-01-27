@@ -1,0 +1,57 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''iClusterPlus'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'iClusterPlus'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/iClusterPlus_1.34.3.tar.gz'
+Content type 'application/x-gzip' length 21234751 bytes (20.3 MB)
+==================================================
+downloaded 20.3 MB
+
+* installing *source* package ‘iClusterPlus’ ...
+** using staged installation
+ This package has only been tested with gfortran.
+ So some checks are needed.
+ R_HOME is /usr/local/lib/R
+Attempting to determine R_ARCH...
+R_ARCH is 
+Attempting to detect how R was configured for Fortran 90....
+  R configured for gfortran; Good!
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c iClusterBayes.c -o iClusterBayes.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c iClusterPlus.c -o iClusterPlus.o
+gfortran -fno-optimize-sibling-calls -fdefault-real-8 -ffixed-form -fpic  -g -O2  -c  newGLMnet.f90 -o newGLMnet.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o iClusterPlus.so iClusterBayes.o iClusterPlus.o newGLMnet.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-iClusterPlus/00new/iClusterPlus/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iClusterPlus’ as ‘iClusterPlus_1.34.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iClusterPlus)
+
+The downloaded source packages are in
+	‘/tmp/RtmpQO2FS0/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m23.577s
+user	0m20.392s
+sys	0m1.560s
