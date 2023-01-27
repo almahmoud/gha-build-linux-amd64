@@ -1,0 +1,145 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''LEA'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'LEA'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/LEA_3.10.2.tar.gz'
+Content type 'application/x-gzip' length 685145 bytes (669 KB)
+==================================================
+downloaded 669 KB
+
+* installing *source* package ‘LEA’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_LFMM.c -o R_LFMM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_crossEntropy.c -o R_crossEntropy.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_createDataSet.c -o R_createDataSet.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_sNMF.c -o R_sNMF.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_ancestrymap2geno.c -o R_ancestrymap2geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_ancestrymap2lfmm.c -o R_ancestrymap2lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_geno2lfmm.c -o R_geno2lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_lfmm2geno.c -o R_lfmm2geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_pca.c -o R_pca.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_ped2geno.c -o R_ped2geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_ped2lfmm.c -o R_ped2lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_vcf2geno.c -o R_vcf2geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_tracyWidom.c -o R_tracyWidom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_LEA.c -o R_init_LEA.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bituint/bituint.c -o bituint/bituint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bituint/calc_bituint.c -o bituint/calc_bituint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bituint/io_geno_bituint.c -o bituint/io_geno_bituint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bituint/slice_bituint.c -o bituint/slice_bituint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bituint/thread_bituint.c -o bituint/thread_bituint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/ancestrymap.c -o convert/ancestrymap.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/geno.c -o convert/geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/ped.c -o convert/ped.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/vcf2geno.c -o convert/vcf2geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/geno2lfmm.c -o convert/geno2lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/lfmm2geno.c -o convert/lfmm2geno.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert/register_convert.c -o convert/register_convert.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c createDataSet/createDataSet.c -o createDataSet/createDataSet.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c createDataSet/error_cds.c -o createDataSet/error_cds.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c createDataSet/print_cds.c -o createDataSet/print_cds.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c createDataSet/register_cds.c -o createDataSet/register_cds.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crossEntropy/crossEntropy.c -o crossEntropy/crossEntropy.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crossEntropy/error_ce.c -o crossEntropy/error_ce.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crossEntropy/print_ce.c -o crossEntropy/print_ce.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crossEntropy/register_ce.c -o crossEntropy/register_ce.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io/io_data_double.c -o io/io_data_double.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io/io_data_float.c -o io/io_data_float.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io/io_data_int.c -o io/io_data_int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io/io_error.c -o io/io_error.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io/io_tools.c -o io/io_tools.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io/print_bar.c -o io/print_bar.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/beta.c -o LFMM/beta.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/error_lfmm.c -o LFMM/error_lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/lfmm_k0.c -o LFMM/lfmm_k0.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/slice_lfmm.c -o LFMM/slice_lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/U.c -o LFMM/U.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/beta_k0.c -o LFMM/beta_k0.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/lfmm_algo.c -o LFMM/lfmm_algo.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/print_lfmm.c -o LFMM/print_lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/thread_lfmm.c -o LFMM/thread_lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/V.c -o LFMM/V.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/data_lfmm.c -o LFMM/data_lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/LFMM.c -o LFMM/LFMM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/register_lfmm.c -o LFMM/register_lfmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LFMM/thread_var.c -o LFMM/thread_var.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/cholesky.c -o matrix/cholesky.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/error_matrix.c -o matrix/error_matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/normalize.c -o matrix/normalize.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/slice_matrix.c -o matrix/slice_matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/data.c -o matrix/data.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/inverse.c -o matrix/inverse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/rand.c -o matrix/rand.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/sylvester.c -o matrix/sylvester.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/diagonalize.c -o matrix/diagonalize.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/matrix.c -o matrix/matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/random_projection.c -o matrix/random_projection.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix/thread_matrix.c -o matrix/thread_matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nnlsm/blockpivot.c -o nnlsm/blockpivot.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nnlsm/nnlsm.c -o nnlsm/nnlsm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nnlsm/solvenormaleqcomb.c -o nnlsm/solvenormaleqcomb.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nnlsm/sort.c -o nnlsm/sort.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pca/calc_cov.c -o pca/calc_cov.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pca/error_pca.c -o pca/error_pca.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pca/pca.c -o pca/pca.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pca/print_pca.c -o pca/print_pca.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pca/register_pca.c -o pca/register_pca.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/als.c -o sNMF/als.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/als_k1.c -o sNMF/als_k1.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/criteria.c -o sNMF/criteria.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/print_snmf.c -o sNMF/print_snmf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/sNMF.c -o sNMF/sNMF.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/thread_Q.c -o sNMF/thread_Q.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/als_F.c -o sNMF/als_F.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/als_Q.c -o sNMF/als_Q.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/error_snmf.c -o sNMF/error_snmf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/register_snmf.c -o sNMF/register_snmf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/thread_F.c -o sNMF/thread_F.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sNMF/thread_snmf.c -o sNMF/thread_snmf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/beta_distribution.c -o stats/beta_distribution.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/gamma_density.c -o stats/gamma_density.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/ln_beta_function.c -o stats/ln_beta_function.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/beta_function.c -o stats/beta_function.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/gamma_distribution.c -o stats/gamma_distribution.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/ln_gamma_function.c -o stats/ln_gamma_function.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/entire_incomplete_gamma_function.c -o stats/entire_incomplete_gamma_function.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/gamma_dist_tables.c -o stats/gamma_dist_tables.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/student_t_distribution.c -o stats/student_t_distribution.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/factorial.c -o stats/factorial.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stats/gamma_function.c -o stats/gamma_function.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tracyWidom/error_tracyWidom.c -o tracyWidom/error_tracyWidom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tracyWidom/register_tracyWidom.c -o tracyWidom/register_tracyWidom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tracyWidom/print_tracyWidom.c -o tracyWidom/print_tracyWidom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I.  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tracyWidom/tracyWidom.c -o tracyWidom/tracyWidom.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o LEA.so R_LFMM.o R_crossEntropy.o R_createDataSet.o R_sNMF.o R_ancestrymap2geno.o R_ancestrymap2lfmm.o R_geno2lfmm.o R_lfmm2geno.o R_pca.o R_ped2geno.o R_ped2lfmm.o R_vcf2geno.o R_tracyWidom.o R_init_LEA.o bituint/bituint.o bituint/calc_bituint.o bituint/io_geno_bituint.o bituint/slice_bituint.o bituint/thread_bituint.o convert/ancestrymap.o convert/geno.o convert/ped.o convert/vcf2geno.o convert/geno2lfmm.o convert/lfmm2geno.o convert/register_convert.o createDataSet/createDataSet.o createDataSet/error_cds.o createDataSet/print_cds.o createDataSet/register_cds.o crossEntropy/crossEntropy.o crossEntropy/error_ce.o crossEntropy/print_ce.o crossEntropy/register_ce.o io/io_data_double.o io/io_data_float.o io/io_data_int.o io/io_error.o io/io_tools.o io/print_bar.o LFMM/beta.o LFMM/error_lfmm.o LFMM/lfmm_k0.o LFMM/slice_lfmm.o LFMM/U.o LFMM/beta_k0.o LFMM/lfmm_algo.o LFMM/print_lfmm.o LFMM/thread_lfmm.o LFMM/V.o LFMM/data_lfmm.o LFMM/LFMM.o LFMM/register_lfmm.o LFMM/thread_var.o matrix/cholesky.o matrix/error_matrix.o matrix/normalize.o matrix/slice_matrix.o matrix/data.o matrix/inverse.o matrix/rand.o matrix/sylvester.o matrix/diagonalize.o matrix/matrix.o matrix/random_projection.o matrix/thread_matrix.o nnlsm/blockpivot.o nnlsm/nnlsm.o nnlsm/solvenormaleqcomb.o nnlsm/sort.o pca/calc_cov.o pca/error_pca.o pca/pca.o pca/print_pca.o pca/register_pca.o sNMF/als.o sNMF/als_k1.o sNMF/criteria.o sNMF/print_snmf.o sNMF/sNMF.o sNMF/thread_Q.o sNMF/als_F.o sNMF/als_Q.o sNMF/error_snmf.o sNMF/register_snmf.o sNMF/thread_F.o sNMF/thread_snmf.o stats/beta_distribution.o stats/gamma_density.o stats/ln_beta_function.o stats/beta_function.o stats/gamma_distribution.o stats/ln_gamma_function.o stats/entire_incomplete_gamma_function.o stats/gamma_dist_tables.o stats/student_t_distribution.o stats/factorial.o stats/gamma_function.o tracyWidom/error_tracyWidom.o tracyWidom/register_tracyWidom.o tracyWidom/print_tracyWidom.o tracyWidom/tracyWidom.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-LEA/00new/LEA/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘LEA’ as ‘LEA_3.10.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (LEA)
+
+The downloaded source packages are in
+	‘/tmp/RtmpEaAYqf/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m16.495s
+user	0m13.787s
+sys	0m1.833s
