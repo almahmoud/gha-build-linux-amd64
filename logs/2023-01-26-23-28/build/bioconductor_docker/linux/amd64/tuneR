@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''tuneR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'tuneR'
+also installing the dependency ‘signal’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/signal_0.7-7.tar.gz'
+Content type 'binary/octet-stream' length 341049 bytes (333 KB)
+==================================================
+downloaded 333 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/tuneR_1.4.2.tar.gz'
+Content type 'binary/octet-stream' length 545243 bytes (532 KB)
+==================================================
+downloaded 532 KB
+
+* installing *binary* package ‘signal’ ...
+* ‘signal’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘signal’ as ‘signal_0.7-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (signal)
+* installing *binary* package ‘tuneR’ ...
+* ‘tuneR’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘tuneR’ as ‘tuneR_1.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tuneR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpsFg3Qa/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.681s
+user	0m4.168s
+sys	0m0.321s
