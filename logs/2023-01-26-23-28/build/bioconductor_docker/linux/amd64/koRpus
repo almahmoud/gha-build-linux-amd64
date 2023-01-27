@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''koRpus'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'koRpus'
+also installing the dependencies ‘sylly’, ‘data.table’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/sylly_0.1-6.tar.gz'
+Content type 'binary/octet-stream' length 262253 bytes (256 KB)
+==================================================
+downloaded 256 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/data.table_1.14.6.tar.gz'
+Content type 'binary/octet-stream' length 2082451 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/koRpus_0.13-8.tar.gz'
+Content type 'binary/octet-stream' length 1478407 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+* installing *binary* package ‘sylly’ ...
+* ‘sylly’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘sylly’ as ‘sylly_0.1-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sylly)
+* installing *binary* package ‘data.table’ ...
+* ‘data.table’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘data.table’ as ‘data.table_1.14.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (data.table)
+* installing *binary* package ‘koRpus’ ...
+* ‘koRpus’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘koRpus’ as ‘koRpus_0.13-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (koRpus)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDmzhXW/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.537s
+user	0m5.126s
+sys	0m0.560s
