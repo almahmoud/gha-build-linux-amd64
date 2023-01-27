@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''bench'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'bench'
+also installing the dependency ‘profmem’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/profmem_0.6.0.tar.gz'
+Content type 'binary/octet-stream' length 51635 bytes (50 KB)
+==================================================
+downloaded 50 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bench_1.1.2.tar.gz'
+Content type 'binary/octet-stream' length 349217 bytes (341 KB)
+==================================================
+downloaded 341 KB
+
+* installing *binary* package ‘profmem’ ...
+* ‘profmem’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘profmem’ as ‘profmem_0.6.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (profmem)
+* installing *binary* package ‘bench’ ...
+* ‘bench’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bench’ as ‘bench_1.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bench)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpq6w84S/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m7.887s
+user	0m3.788s
+sys	0m0.373s
