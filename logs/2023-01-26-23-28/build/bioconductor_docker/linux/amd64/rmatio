@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''rmatio'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'rmatio'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rmatio_0.17.0.tar.gz'
+Content type 'binary/octet-stream' length 806299 bytes (787 KB)
+==================================================
+downloaded 787 KB
+
+* installing *binary* package ‘rmatio’ ...
+* ‘rmatio’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rmatio’ as ‘rmatio_0.17.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rmatio)
+
+The downloaded source packages are in
+	‘/tmp/RtmpJgouH5/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.563s
+user	0m4.166s
+sys	0m0.338s
