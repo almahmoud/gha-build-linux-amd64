@@ -1,0 +1,51 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''diffGeneAnalysis'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'diffGeneAnalysis'
+also installing the dependency ‘minpack.lm’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/minpack.lm_1.2-3.tar.gz'
+Content type 'binary/octet-stream' length 92092 bytes (89 KB)
+==================================================
+downloaded 89 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/diffGeneAnalysis_1.80.0.tar.gz'
+Content type 'application/x-gzip' length 159005 bytes (155 KB)
+==================================================
+downloaded 155 KB
+
+* installing *binary* package ‘minpack.lm’ ...
+* ‘minpack.lm’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘minpack.lm’ as ‘minpack.lm_1.2-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (minpack.lm)
+* installing *source* package ‘diffGeneAnalysis’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘diffGeneAnalysis’ as ‘diffGeneAnalysis_1.80.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (diffGeneAnalysis)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp0yhXcU/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m7.670s
+user	0m4.916s
+sys	0m0.630s
