@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''FuncMap'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'FuncMap'
+also installing the dependency ‘mvbutils’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mvbutils_2.8.232.tar.gz'
+Content type 'binary/octet-stream' length 583504 bytes (569 KB)
+==================================================
+downloaded 569 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/FuncMap_1.0.10.tar.gz'
+Content type 'binary/octet-stream' length 28538 bytes (27 KB)
+==================================================
+downloaded 27 KB
+
+* installing *binary* package ‘mvbutils’ ...
+* ‘mvbutils’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mvbutils’ as ‘mvbutils_2.8.232_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mvbutils)
+* installing *binary* package ‘FuncMap’ ...
+* ‘FuncMap’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘FuncMap’ as ‘FuncMap_1.0.10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (FuncMap)
+
+The downloaded source packages are in
+	‘/tmp/RtmpoT7Fcl/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m7.030s
+user	0m3.936s
+sys	0m0.284s
