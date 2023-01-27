@@ -1,0 +1,38 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''DrugVsDiseasedata'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'DrugVsDiseasedata'
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/DrugVsDiseasedata_1.34.0.tar.gz'
+Content type 'application/x-gzip' length 4200667 bytes (4.0 MB)
+==================================================
+downloaded 4.0 MB
+
+* installing *source* package ‘DrugVsDiseasedata’ ...
+** using staged installation
+** data
+*** moving datasets to lazyload DB
+** inst
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DrugVsDiseasedata’ as ‘DrugVsDiseasedata_1.34.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DrugVsDiseasedata)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnjVdUT/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.625s
+user	0m5.770s
+sys	0m0.660s
