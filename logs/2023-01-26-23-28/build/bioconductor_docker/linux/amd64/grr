@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''grr'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'grr'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/grr_0.9.5.tar.gz'
+Content type 'binary/octet-stream' length 118877 bytes (116 KB)
+==================================================
+downloaded 116 KB
+
+* installing *binary* package ‘grr’ ...
+* ‘grr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘grr’ as ‘grr_0.9.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (grr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpvWgGLh/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m5.468s
+user	0m3.506s
+sys	0m0.199s
