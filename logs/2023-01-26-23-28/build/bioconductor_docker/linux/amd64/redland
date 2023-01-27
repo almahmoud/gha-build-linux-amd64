@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''redland'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'redland'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/redland_1.0.17-16.tar.gz'
+Content type 'binary/octet-stream' length 839057 bytes (819 KB)
+==================================================
+downloaded 819 KB
+
+* installing *binary* package ‘redland’ ...
+* ‘redland’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘redland’ as ‘redland_1.0.17-16_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (redland)
+
+The downloaded source packages are in
+	‘/tmp/RtmpHsTfU8/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m5.655s
+user	0m3.709s
+sys	0m0.295s
