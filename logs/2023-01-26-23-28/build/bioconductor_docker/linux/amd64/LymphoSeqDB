@@ -1,0 +1,38 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''LymphoSeqDB'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'LymphoSeqDB'
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/LymphoSeqDB_0.99.2.tar.gz'
+Content type 'application/x-gzip' length 46278996 bytes (44.1 MB)
+==================================================
+downloaded 44.1 MB
+
+* installing *source* package ‘LymphoSeqDB’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘LymphoSeqDB’ as ‘LymphoSeqDB_0.99.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (LymphoSeqDB)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWwc2Ia/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	1m13.531s
+user	1m4.770s
+sys	0m1.878s
