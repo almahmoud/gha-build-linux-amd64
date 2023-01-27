@@ -1,0 +1,630 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''GWASdata'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'GWASdata'
+also installing the dependencies ‘backports’, ‘tidyselect’, ‘vctrs’, ‘bit’, ‘broom’, ‘dplyr’, ‘generics’, ‘tidyr’, ‘operator.tools’, ‘SparseM’, ‘MatrixModels’, ‘BiocGenerics’, ‘bit64’, ‘blob’, ‘plogr’, ‘zoo’, ‘mice’, ‘formula.tools’, ‘quantreg’, ‘Biobase’, ‘gdsfmt’, ‘DBI’, ‘RSQLite’, ‘GWASExactHW’, ‘DNAcopy’, ‘sandwich’, ‘lmtest’, ‘logistf’, ‘quantsmooth’, ‘data.table’, ‘GWASTools’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/backports_1.4.1.tar.gz'
+Content type 'binary/octet-stream' length 99762 bytes (97 KB)
+==================================================
+downloaded 97 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/tidyselect_1.2.0.tar.gz'
+Content type 'binary/octet-stream' length 219415 bytes (214 KB)
+==================================================
+downloaded 214 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/vctrs_0.5.2.tar.gz'
+Content type 'binary/octet-stream' length 1282129 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bit_4.0.5.tar.gz'
+Content type 'binary/octet-stream' length 1121918 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/broom_1.0.3.tar.gz'
+Content type 'binary/octet-stream' length 1838755 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/dplyr_1.0.10.tar.gz'
+Content type 'binary/octet-stream' length 1307837 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/generics_0.1.3.tar.gz'
+Content type 'binary/octet-stream' length 73201 bytes (71 KB)
+==================================================
+downloaded 71 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/tidyr_1.3.0.tar.gz'
+Content type 'binary/octet-stream' length 1198134 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/operator.tools_1.6.3.tar.gz'
+Content type 'binary/octet-stream' length 51511 bytes (50 KB)
+==================================================
+downloaded 50 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/SparseM_1.81.tar.gz'
+Content type 'binary/octet-stream' length 1104977 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/MatrixModels_0.5-1.tar.gz'
+Content type 'binary/octet-stream' length 434533 bytes (424 KB)
+==================================================
+downloaded 424 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BiocGenerics_0.44.0.tar.gz'
+Content type 'application/x-gzip' length 47711 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bit64_4.0.5.tar.gz'
+Content type 'binary/octet-stream' length 574906 bytes (561 KB)
+==================================================
+downloaded 561 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/blob_1.2.3.tar.gz'
+Content type 'binary/octet-stream' length 45568 bytes (44 KB)
+==================================================
+downloaded 44 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/plogr_0.2.0.tar.gz'
+Content type 'binary/octet-stream' length 12785 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/zoo_1.8-11.tar.gz'
+Content type 'binary/octet-stream' length 1024169 bytes (1000 KB)
+==================================================
+downloaded 1000 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mice_3.15.0.tar.gz'
+Content type 'binary/octet-stream' length 1449048 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/formula.tools_1.7.1.tar.gz'
+Content type 'binary/octet-stream' length 86595 bytes (84 KB)
+==================================================
+downloaded 84 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/quantreg_5.94.tar.gz'
+Content type 'binary/octet-stream' length 1664593 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/Biobase_2.58.0.tar.gz'
+Content type 'application/x-gzip' length 1792896 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/gdsfmt_1.34.0.tar.gz'
+Content type 'application/x-gzip' length 3010054 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/DBI_1.1.3.tar.gz'
+Content type 'binary/octet-stream' length 748403 bytes (730 KB)
+==================================================
+downloaded 730 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/RSQLite_2.2.20.tar.gz'
+Content type 'binary/octet-stream' length 1258523 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/GWASExactHW_1.01.tar.gz'
+Content type 'binary/octet-stream' length 15696 bytes (15 KB)
+==================================================
+downloaded 15 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/DNAcopy_1.72.3.tar.gz'
+Content type 'application/x-gzip' length 298266 bytes (291 KB)
+==================================================
+downloaded 291 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/sandwich_3.0-2.tar.gz'
+Content type 'binary/octet-stream' length 1456523 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lmtest_0.9-40.tar.gz'
+Content type 'binary/octet-stream' length 402726 bytes (393 KB)
+==================================================
+downloaded 393 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/logistf_1.24.1.tar.gz'
+Content type 'binary/octet-stream' length 277283 bytes (270 KB)
+==================================================
+downloaded 270 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/quantsmooth_1.64.0.tar.gz'
+Content type 'application/x-gzip' length 234790 bytes (229 KB)
+==================================================
+downloaded 229 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/data.table_1.14.6.tar.gz'
+Content type 'binary/octet-stream' length 2082451 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GWASTools_1.44.0.tar.gz'
+Content type 'application/x-gzip' length 1630465 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/GWASdata_1.36.0.tar.gz'
+Content type 'application/x-gzip' length 8649251 bytes (8.2 MB)
+==================================================
+downloaded 8.2 MB
+
+* installing *binary* package ‘backports’ ...
+* ‘backports’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘backports’ as ‘backports_1.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (backports)
+* installing *binary* package ‘vctrs’ ...
+* ‘vctrs’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘vctrs’ as ‘vctrs_0.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (vctrs)
+* installing *binary* package ‘bit’ ...
+* ‘bit’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bit’ as ‘bit_4.0.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bit)
+* installing *binary* package ‘generics’ ...
+* ‘generics’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘generics’ as ‘generics_0.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (generics)
+* installing *binary* package ‘operator.tools’ ...
+* ‘operator.tools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘operator.tools’ as ‘operator.tools_1.6.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (operator.tools)
+* installing *binary* package ‘SparseM’ ...
+* ‘SparseM’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘SparseM’ as ‘SparseM_1.81_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SparseM)
+* installing *binary* package ‘MatrixModels’ ...
+* ‘MatrixModels’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘MatrixModels’ as ‘MatrixModels_0.5-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (MatrixModels)
+* installing *source* package ‘BiocGenerics’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘aperm’ in package ‘BiocGenerics’
+Creating a new generic function for ‘append’ in package ‘BiocGenerics’
+Creating a new generic function for ‘as.data.frame’ in package ‘BiocGenerics’
+Creating a new generic function for ‘cbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rbind’ in package ‘BiocGenerics’
+Creating a new generic function for ‘do.call’ in package ‘BiocGenerics’
+Creating a new generic function for ‘duplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘anyDuplicated’ in package ‘BiocGenerics’
+Creating a new generic function for ‘eval’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmax.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘pmin.int’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Reduce’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Filter’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Find’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Map’ in package ‘BiocGenerics’
+Creating a new generic function for ‘Position’ in package ‘BiocGenerics’
+Creating a new generic function for ‘get’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mget’ in package ‘BiocGenerics’
+Creating a new generic function for ‘grep’ in package ‘BiocGenerics’
+Creating a new generic function for ‘grepl’ in package ‘BiocGenerics’
+Creating a new generic function for ‘is.unsorted’ in package ‘BiocGenerics’
+Creating a new generic function for ‘lapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘match’ in package ‘BiocGenerics’
+Creating a new generic function for ‘order’ in package ‘BiocGenerics’
+Creating a new generic function for ‘paste’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rank’ in package ‘BiocGenerics’
+Creating a new generic function for ‘rownames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘colnames’ in package ‘BiocGenerics’
+Creating a new generic function for ‘union’ in package ‘BiocGenerics’
+Creating a new generic function for ‘intersect’ in package ‘BiocGenerics’
+Creating a new generic function for ‘setdiff’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sort’ in package ‘BiocGenerics’
+Creating a new generic function for ‘table’ in package ‘BiocGenerics’
+Creating a new generic function for ‘tapply’ in package ‘BiocGenerics’
+Creating a new generic function for ‘unique’ in package ‘BiocGenerics’
+Creating a new generic function for ‘unsplit’ in package ‘BiocGenerics’
+Creating a new generic function for ‘var’ in package ‘BiocGenerics’
+Creating a new generic function for ‘sd’ in package ‘BiocGenerics’
+Creating a new generic function for ‘which.min’ in package ‘BiocGenerics’
+Creating a new generic function for ‘which.max’ in package ‘BiocGenerics’
+Creating a new generic function for ‘IQR’ in package ‘BiocGenerics’
+Creating a new generic function for ‘mad’ in package ‘BiocGenerics’
+Creating a new generic function for ‘xtabs’ in package ‘BiocGenerics’
+Creating a new generic function for ‘basename’ in package ‘BiocGenerics’
+Creating a new generic function for ‘dirname’ in package ‘BiocGenerics’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BiocGenerics’ as ‘BiocGenerics_0.44.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BiocGenerics)
+* installing *binary* package ‘plogr’ ...
+* ‘plogr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘plogr’ as ‘plogr_0.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (plogr)
+* installing *binary* package ‘zoo’ ...
+* ‘zoo’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘zoo’ as ‘zoo_1.8-11_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (zoo)
+* installing *source* package ‘gdsfmt’ ...
+** using staged installation
+** libs
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_CoreArray.cpp -o R_CoreArray.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gdsfmt.cpp -o gdsfmt.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c digest.cpp -o digest.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/CoreArray.cpp -o CoreArray/CoreArray.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dAllocator.cpp -o CoreArray/dAllocator.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dAny.cpp -o CoreArray/dAny.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dBase.cpp -o CoreArray/dBase.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dBitGDS.cpp -o CoreArray/dBitGDS.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dEndian.cpp -o CoreArray/dEndian.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dFile.cpp -o CoreArray/dFile.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dParallel.cpp -o CoreArray/dParallel.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dParallel_Ext.c -o CoreArray/dParallel_Ext.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dPlatform.cpp -o CoreArray/dPlatform.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dRealGDS.cpp -o CoreArray/dRealGDS.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dSerial.cpp -o CoreArray/dSerial.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dStrGDS.cpp -o CoreArray/dStrGDS.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dStream.cpp -o CoreArray/dStream.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dStruct.cpp -o CoreArray/dStruct.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dSparse.cpp -o CoreArray/dSparse.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CoreArray/dVLIntGDS.cpp -o CoreArray/dVLIntGDS.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/adler32.c -o ZLIB/adler32.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/compress.c -o ZLIB/compress.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/crc32.c -o ZLIB/crc32.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/deflate.c -o ZLIB/deflate.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/infback.c -o ZLIB/infback.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/inffast.c -o ZLIB/inffast.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/inflate.c -o ZLIB/inflate.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/inftrees.c -o ZLIB/inftrees.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/trees.c -o ZLIB/trees.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/uncompr.c -o ZLIB/uncompr.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c -g0 ZLIB/zutil.c -o ZLIB/zutil.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LZ4/lz4.c -o LZ4/lz4.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LZ4/lz4hc.c -o LZ4/lz4hc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LZ4/lz4frame.c -o LZ4/lz4frame.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -D_FILE_OFFSET_BITS=64 -I../inst/include -ICoreArray  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LZ4/xxhash.c -o LZ4/xxhash.o
+cd XZ && tar -xzf xz-5.2.5.tar.gz
+cd XZ/xz-5.2.5 && \
+	./configure CC="gcc" CPP="gcc -E" CXX="g++ -std=gnu++14" CXXCPP="" --build="" \
+	--with-pic --enable-silent-rules --quiet --disable-xz > /dev/null
+cd XZ/xz-5.2.5/src/liblzma && make
+make[1]: Entering directory '/tmp/RtmpqAcfgp/R.INSTALL12d6e699207/gdsfmt/src/XZ/xz-5.2.5/src/liblzma'
+Making all in api
+make[2]: Entering directory '/tmp/RtmpqAcfgp/R.INSTALL12d6e699207/gdsfmt/src/XZ/xz-5.2.5/src/liblzma/api'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/RtmpqAcfgp/R.INSTALL12d6e699207/gdsfmt/src/XZ/xz-5.2.5/src/liblzma/api'
+make[2]: Entering directory '/tmp/RtmpqAcfgp/R.INSTALL12d6e699207/gdsfmt/src/XZ/xz-5.2.5/src/liblzma'
+  CC       liblzma_la-tuklib_physmem.lo
+  CC       liblzma_la-tuklib_cpucores.lo
+  CC       liblzma_la-common.lo
+  CC       liblzma_la-block_util.lo
+  CC       liblzma_la-easy_preset.lo
+  CC       liblzma_la-filter_common.lo
+  CC       liblzma_la-hardware_physmem.lo
+  CC       liblzma_la-index.lo
+  CC       liblzma_la-stream_flags_common.lo
+  CC       liblzma_la-vli_size.lo
+  CC       liblzma_la-hardware_cputhreads.lo
+  CC       liblzma_la-alone_encoder.lo
+  CC       liblzma_la-block_buffer_encoder.lo
+  CC       liblzma_la-block_encoder.lo
+  CC       liblzma_la-block_header_encoder.lo
+  CC       liblzma_la-easy_buffer_encoder.lo
+  CC       liblzma_la-easy_encoder.lo
+  CC       liblzma_la-easy_encoder_memusage.lo
+  CC       liblzma_la-filter_buffer_encoder.lo
+  CC       liblzma_la-filter_encoder.lo
+  CC       liblzma_la-filter_flags_encoder.lo
+  CC       liblzma_la-index_encoder.lo
+  CC       liblzma_la-stream_buffer_encoder.lo
+  CC       liblzma_la-stream_encoder.lo
+  CC       liblzma_la-stream_flags_encoder.lo
+  CC       liblzma_la-vli_encoder.lo
+  CC       liblzma_la-outqueue.lo
+  CC       liblzma_la-stream_encoder_mt.lo
+  CC       liblzma_la-alone_decoder.lo
+  CC       liblzma_la-auto_decoder.lo
+  CC       liblzma_la-block_buffer_decoder.lo
+  CC       liblzma_la-block_decoder.lo
+  CC       liblzma_la-block_header_decoder.lo
+  CC       liblzma_la-easy_decoder_memusage.lo
+  CC       liblzma_la-filter_buffer_decoder.lo
+  CC       liblzma_la-filter_decoder.lo
+  CC       liblzma_la-filter_flags_decoder.lo
+  CC       liblzma_la-index_decoder.lo
+  CC       liblzma_la-index_hash.lo
+  CC       liblzma_la-stream_buffer_decoder.lo
+  CC       liblzma_la-stream_decoder.lo
+  CC       liblzma_la-stream_flags_decoder.lo
+  CC       liblzma_la-vli_decoder.lo
+  CC       liblzma_la-check.lo
+  CC       liblzma_la-crc32_table.lo
+  CC       liblzma_la-crc32_fast.lo
+  CC       liblzma_la-crc64_table.lo
+  CC       liblzma_la-crc64_fast.lo
+  CC       liblzma_la-sha256.lo
+  CC       liblzma_la-lz_encoder.lo
+  CC       liblzma_la-lz_encoder_mf.lo
+  CC       liblzma_la-lz_decoder.lo
+  CC       liblzma_la-lzma_encoder_presets.lo
+  CC       liblzma_la-lzma_encoder.lo
+  CC       liblzma_la-lzma_encoder_optimum_fast.lo
+  CC       liblzma_la-lzma_encoder_optimum_normal.lo
+  CC       liblzma_la-fastpos_table.lo
+  CC       liblzma_la-lzma_decoder.lo
+  CC       liblzma_la-lzma2_encoder.lo
+  CC       liblzma_la-lzma2_decoder.lo
+  CC       liblzma_la-price_table.lo
+  CC       liblzma_la-delta_common.lo
+  CC       liblzma_la-delta_encoder.lo
+  CC       liblzma_la-delta_decoder.lo
+  CC       liblzma_la-simple_coder.lo
+  CC       liblzma_la-simple_encoder.lo
+  CC       liblzma_la-simple_decoder.lo
+  CC       liblzma_la-x86.lo
+  CC       liblzma_la-powerpc.lo
+  CC       liblzma_la-ia64.lo
+  CC       liblzma_la-arm.lo
+  CC       liblzma_la-armthumb.lo
+  CC       liblzma_la-sparc.lo
+  CCLD     liblzma.la
+  PC       liblzma.pc
+make[2]: Leaving directory '/tmp/RtmpqAcfgp/R.INSTALL12d6e699207/gdsfmt/src/XZ/xz-5.2.5/src/liblzma'
+make[1]: Leaving directory '/tmp/RtmpqAcfgp/R.INSTALL12d6e699207/gdsfmt/src/XZ/xz-5.2.5/src/liblzma'
+cp XZ/xz-5.2.5/src/liblzma/.libs/liblzma.a  .
+rm -rf XZ/xz-5.2.5/dos
+rm -rf XZ/xz-5.2.5/po
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gdsfmt.so R_CoreArray.o gdsfmt.o digest.o CoreArray/CoreArray.o CoreArray/dAllocator.o CoreArray/dAny.o CoreArray/dBase.o CoreArray/dBitGDS.o CoreArray/dEndian.o CoreArray/dFile.o CoreArray/dParallel.o CoreArray/dParallel_Ext.o CoreArray/dPlatform.o CoreArray/dRealGDS.o CoreArray/dSerial.o CoreArray/dStrGDS.o CoreArray/dStream.o CoreArray/dStruct.o CoreArray/dSparse.o CoreArray/dVLIntGDS.o ZLIB/adler32.o ZLIB/compress.o ZLIB/crc32.o ZLIB/deflate.o ZLIB/infback.o ZLIB/inffast.o ZLIB/inflate.o ZLIB/inftrees.o ZLIB/trees.o ZLIB/uncompr.o ZLIB/zutil.o LZ4/lz4.o LZ4/lz4hc.o LZ4/lz4frame.o LZ4/xxhash.o ./liblzma.a -lpthread -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-gdsfmt/00new/gdsfmt/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gdsfmt’ as ‘gdsfmt_1.34.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gdsfmt)
+* installing *binary* package ‘DBI’ ...
+* ‘DBI’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘DBI’ as ‘DBI_1.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DBI)
+* installing *binary* package ‘GWASExactHW’ ...
+* ‘GWASExactHW’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘GWASExactHW’ as ‘GWASExactHW_1.01_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (GWASExactHW)
+* installing *source* package ‘DNAcopy’ ...
+** using staged installation
+** libs
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c cbsWtstats.f -o cbsWtstats.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c cbststats.f -o cbststats.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c changepoints-wtd.f -o changepoints-wtd.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c changepoints.f -o changepoints.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c esegment.f -o esegment.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c flchoose.c -o flchoose.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fphyper.c -o fphyper.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fpnorm.c -o fpnorm.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c getbdry.f -o getbdry.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c prune.f -o prune.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rshared.c -o rshared.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c segmentp.f -o segmentp.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c smoothCNA.f -o smoothCNA.o
+gfortran -fno-optimize-sibling-calls  -fpic  -g -O2  -c tailprobs.f -o tailprobs.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o DNAcopy.so cbsWtstats.o cbststats.o changepoints-wtd.o changepoints.o esegment.o flchoose.o fphyper.o fpnorm.o getbdry.o prune.o rshared.o segmentp.o smoothCNA.o tailprobs.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-DNAcopy/00new/DNAcopy/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DNAcopy’ as ‘DNAcopy_1.72.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DNAcopy)
+* installing *binary* package ‘data.table’ ...
+* ‘data.table’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘data.table’ as ‘data.table_1.14.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (data.table)
+* installing *binary* package ‘tidyselect’ ...
+* ‘tidyselect’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘tidyselect’ as ‘tidyselect_1.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyselect)
+* installing *binary* package ‘bit64’ ...
+* ‘bit64’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bit64’ as ‘bit64_4.0.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bit64)
+* installing *binary* package ‘blob’ ...
+* ‘blob’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘blob’ as ‘blob_1.2.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (blob)
+* installing *binary* package ‘formula.tools’ ...
+* ‘formula.tools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘formula.tools’ as ‘formula.tools_1.7.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (formula.tools)
+* installing *binary* package ‘quantreg’ ...
+* ‘quantreg’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘quantreg’ as ‘quantreg_5.94_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (quantreg)
+* installing *source* package ‘Biobase’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rinit.c -o Rinit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c anyMissing.c -o anyMissing.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c envir.c -o envir.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matchpt.c -o matchpt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rowMedians.c -o rowMedians.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sublist_extract.c -o sublist_extract.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Biobase.so Rinit.o anyMissing.o envir.o matchpt.o rowMedians.o sublist_extract.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-Biobase/00new/Biobase/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘Biobase’ as ‘Biobase_2.58.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Biobase)
+* installing *binary* package ‘sandwich’ ...
+* ‘sandwich’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘sandwich’ as ‘sandwich_3.0-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sandwich)
+* installing *binary* package ‘lmtest’ ...
+* ‘lmtest’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lmtest’ as ‘lmtest_0.9-40_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lmtest)
+* installing *binary* package ‘dplyr’ ...
+* ‘dplyr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘dplyr’ as ‘dplyr_1.0.10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dplyr)
+* installing *binary* package ‘RSQLite’ ...
+* ‘RSQLite’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘RSQLite’ as ‘RSQLite_2.2.20_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RSQLite)
+* installing *source* package ‘quantsmooth’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘quantsmooth’ as ‘quantsmooth_1.64.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (quantsmooth)
+* installing *binary* package ‘tidyr’ ...
+* ‘tidyr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘tidyr’ as ‘tidyr_1.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyr)
+* installing *binary* package ‘broom’ ...
+* ‘broom’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘broom’ as ‘broom_1.0.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (broom)
+* installing *binary* package ‘mice’ ...
+* ‘mice’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mice’ as ‘mice_3.15.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mice)
+* installing *binary* package ‘logistf’ ...
+* ‘logistf’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘logistf’ as ‘logistf_1.24.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (logistf)
+* installing *source* package ‘GWASTools’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘GWASTools’ as ‘GWASTools_1.44.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (GWASTools)
+* installing *source* package ‘GWASdata’ ...
+** using staged installation
+** data
+** inst
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+Warning in utils::tar(filepath, curPkg, compression = "gzip", compression_level = 9L,  :
+  storing paths of more than 100 bytes is not portable:
+  ‘GWASdata/extdata/affy_raw_data/GIGAS_g_GAINmixHapMapAffy2_GenomeWideEx_6_A03_31250.BIRDSEED.ALLELE_SUMMARY.TXT’
+Warning in utils::tar(filepath, curPkg, compression = "gzip", compression_level = 9L,  :
+  storing paths of more than 100 bytes is not portable:
+  ‘GWASdata/extdata/affy_raw_data/GIGAS_g_GAINmixHapMapAffy2_GenomeWideEx_6_A05_31282.BIRDSEED.ALLELE_SUMMARY.TXT’
+Warning in utils::tar(filepath, curPkg, compression = "gzip", compression_level = 9L,  :
+  storing paths of more than 100 bytes is not portable:
+  ‘GWASdata/extdata/affy_raw_data/GIGAS_g_GAINmixHapMapAffy2_GenomeWideEx_6_B02_31236.BIRDSEED.ALLELE_SUMMARY.TXT’
+packaged installation of ‘GWASdata’ as ‘GWASdata_1.36.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (GWASdata)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp8ncK5O/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	4m43.419s
+user	4m11.981s
+sys	0m16.618s
