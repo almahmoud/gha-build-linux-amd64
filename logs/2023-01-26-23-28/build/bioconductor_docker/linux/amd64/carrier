@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''carrier'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'carrier'
+also installing the dependencies ‘lobstr’, ‘pryr’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lobstr_1.1.2.tar.gz'
+Content type 'binary/octet-stream' length 464700 bytes (453 KB)
+==================================================
+downloaded 453 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pryr_0.1.6.tar.gz'
+Content type 'binary/octet-stream' length 202226 bytes (197 KB)
+==================================================
+downloaded 197 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/carrier_0.1.0.tar.gz'
+Content type 'binary/octet-stream' length 20095 bytes (19 KB)
+==================================================
+downloaded 19 KB
+
+* installing *binary* package ‘lobstr’ ...
+* ‘lobstr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lobstr’ as ‘lobstr_1.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lobstr)
+* installing *binary* package ‘pryr’ ...
+* ‘pryr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘pryr’ as ‘pryr_0.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pryr)
+* installing *binary* package ‘carrier’ ...
+* ‘carrier’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘carrier’ as ‘carrier_0.1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (carrier)
+
+The downloaded source packages are in
+	‘/tmp/RtmpksNsSl/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m7.685s
+user	0m4.941s
+sys	0m0.475s
