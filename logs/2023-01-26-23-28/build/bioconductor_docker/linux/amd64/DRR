@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''DRR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'DRR'
+also installing the dependencies ‘kernlab’, ‘CVST’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/kernlab_0.9-31.tar.gz'
+Content type 'binary/octet-stream' length 2544983 bytes (2.4 MB)
+==================================================
+downloaded 2.4 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/CVST_0.2-3.tar.gz'
+Content type 'binary/octet-stream' length 84331 bytes (82 KB)
+==================================================
+downloaded 82 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/DRR_0.0.4.tar.gz'
+Content type 'binary/octet-stream' length 157369 bytes (153 KB)
+==================================================
+downloaded 153 KB
+
+* installing *binary* package ‘kernlab’ ...
+* ‘kernlab’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘kernlab’ as ‘kernlab_0.9-31_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (kernlab)
+* installing *binary* package ‘CVST’ ...
+* ‘CVST’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘CVST’ as ‘CVST_0.2-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (CVST)
+* installing *binary* package ‘DRR’ ...
+* ‘DRR’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘DRR’ as ‘DRR_0.0.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DRR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpOmsjEw/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.209s
+user	0m4.740s
+sys	0m0.396s
