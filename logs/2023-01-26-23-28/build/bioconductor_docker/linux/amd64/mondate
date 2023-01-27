@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''mondate'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'mondate'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mondate_0.10.02.tar.gz'
+Content type 'binary/octet-stream' length 303981 bytes (296 KB)
+==================================================
+downloaded 296 KB
+
+* installing *binary* package ‘mondate’ ...
+* ‘mondate’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mondate’ as ‘mondate_0.10.02_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mondate)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp1nxppV/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m5.609s
+user	0m3.794s
+sys	0m0.253s
