@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''fauxpas'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'fauxpas'
+also installing the dependency ‘httpcode’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/httpcode_0.3.0.tar.gz'
+Content type 'binary/octet-stream' length 32104 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fauxpas_0.5.0.tar.gz'
+Content type 'binary/octet-stream' length 2756509 bytes (2.6 MB)
+==================================================
+downloaded 2.6 MB
+
+* installing *binary* package ‘httpcode’ ...
+* ‘httpcode’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘httpcode’ as ‘httpcode_0.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (httpcode)
+* installing *binary* package ‘fauxpas’ ...
+* ‘fauxpas’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘fauxpas’ as ‘fauxpas_0.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fauxpas)
+
+The downloaded source packages are in
+	‘/tmp/RtmpMOYZtC/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m10.370s
+user	0m5.034s
+sys	0m0.485s
