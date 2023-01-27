@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''anyLib'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'anyLib'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/anyLib_1.0.5.tar.gz'
+Content type 'binary/octet-stream' length 19520 bytes (19 KB)
+==================================================
+downloaded 19 KB
+
+* installing *binary* package ‘anyLib’ ...
+* ‘anyLib’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘anyLib’ as ‘anyLib_1.0.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (anyLib)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDoODCD/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m5.378s
+user	0m3.489s
+sys	0m0.223s
