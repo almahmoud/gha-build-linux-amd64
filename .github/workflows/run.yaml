@@ -349,4 +349,4 @@ jobs:
             else 
               echo "Marked pushed ${{ matrix.pkg }}"
             fi
-            if grep -q "${{ matrix.pkg }}" packages.json; then exit 1; fi
+            if grep -q '"${{ matrix.pkg }}"' packages.json; then exit 1; fi
