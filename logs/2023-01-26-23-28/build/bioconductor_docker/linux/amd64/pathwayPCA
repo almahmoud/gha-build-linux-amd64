@@ -1,0 +1,51 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''pathwayPCA'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'pathwayPCA'
+also installing the dependency ‘lars’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lars_1.3.tar.gz'
+Content type 'binary/octet-stream' length 228837 bytes (223 KB)
+==================================================
+downloaded 223 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/pathwayPCA_1.14.0.tar.gz'
+Content type 'application/x-gzip' length 3378617 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+* installing *binary* package ‘lars’ ...
+* ‘lars’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lars’ as ‘lars_1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lars)
+* installing *source* package ‘pathwayPCA’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pathwayPCA’ as ‘pathwayPCA_1.14.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pathwayPCA)
+
+The downloaded source packages are in
+	‘/tmp/RtmpzUPmda/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m14.109s
+user	0m10.498s
+sys	0m1.090s
