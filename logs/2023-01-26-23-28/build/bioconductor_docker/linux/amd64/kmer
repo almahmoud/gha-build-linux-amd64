@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''kmer'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'kmer'
+also installing the dependencies ‘ape’, ‘phylogram’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/ape_5.6-2.tar.gz'
+Content type 'binary/octet-stream' length 3196327 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/phylogram_2.1.0.tar.gz'
+Content type 'binary/octet-stream' length 449744 bytes (439 KB)
+==================================================
+downloaded 439 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/kmer_1.1.2.tar.gz'
+Content type 'binary/octet-stream' length 230597 bytes (225 KB)
+==================================================
+downloaded 225 KB
+
+* installing *binary* package ‘ape’ ...
+* ‘ape’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘ape’ as ‘ape_5.6-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ape)
+* installing *binary* package ‘phylogram’ ...
+* ‘phylogram’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘phylogram’ as ‘phylogram_2.1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (phylogram)
+* installing *binary* package ‘kmer’ ...
+* ‘kmer’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘kmer’ as ‘kmer_1.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (kmer)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpo1aw2m/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.503s
+user	0m4.734s
+sys	0m0.501s
