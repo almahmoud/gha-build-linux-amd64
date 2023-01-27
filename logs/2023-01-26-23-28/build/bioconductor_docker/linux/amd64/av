@@ -1,0 +1,52 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''av'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'av'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/av_0.8.2.tar.gz'
+Content type 'binary/octet-stream' length 754040 bytes (736 KB)
+==================================================
+downloaded 736 KB
+
+* installing *source* package ‘av’ ...
+** package ‘av’ successfully unpacked and MD5 sums checked
+** using staged installation
+Found pkg-config cflags and libs!
+Using PKG_CFLAGS=-I/usr/include/x86_64-linux-gnu
+Using PKG_LIBS=-lavfilter
+** libs
+rm -f av.so fft.o formats.o info.o init.o video.o winfunc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu  -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fft.c -o fft.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu  -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c formats.c -o formats.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu  -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c info.c -o info.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu  -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu  -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c video.c -o video.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/x86_64-linux-gnu  -I/usr/local/include  -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c winfunc.c -o winfunc.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o av.so fft.o formats.o info.o init.o video.o winfunc.o -lavfilter -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-av/00new/av/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘av’ as ‘av_0.8.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (av)
+
+The downloaded source packages are in
+	‘/tmp/RtmpYgA4Fz/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m11.686s
+user	0m7.355s
+sys	0m1.039s
