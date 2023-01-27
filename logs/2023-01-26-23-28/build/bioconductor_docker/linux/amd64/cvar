@@ -1,0 +1,60 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''cvar'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'cvar'
+also installing the dependencies ‘rbibutils’, ‘gbutils’, ‘Rdpack’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rbibutils_2.2.13.tar.gz'
+Content type 'binary/octet-stream' length 877878 bytes (857 KB)
+==================================================
+downloaded 857 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gbutils_0.5.tar.gz'
+Content type 'binary/octet-stream' length 250244 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/Rdpack_2.4.tar.gz'
+Content type 'binary/octet-stream' length 956942 bytes (934 KB)
+==================================================
+downloaded 934 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/cvar_0.5.tar.gz'
+Content type 'binary/octet-stream' length 255921 bytes (249 KB)
+==================================================
+downloaded 249 KB
+
+* installing *binary* package ‘rbibutils’ ...
+* ‘rbibutils’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rbibutils’ as ‘rbibutils_2.2.13_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rbibutils)
+* installing *binary* package ‘Rdpack’ ...
+* ‘Rdpack’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘Rdpack’ as ‘Rdpack_2.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Rdpack)
+* installing *binary* package ‘gbutils’ ...
+* ‘gbutils’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gbutils’ as ‘gbutils_0.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gbutils)
+* installing *binary* package ‘cvar’ ...
+* ‘cvar’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘cvar’ as ‘cvar_0.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (cvar)
+
+The downloaded source packages are in
+	‘/tmp/RtmpLeuFTn/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m14.959s
+user	0m7.943s
+sys	0m0.763s
