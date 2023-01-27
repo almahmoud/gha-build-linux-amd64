@@ -20,7 +20,7 @@ with open('packages.json', 'w') as f:
 cp packages.json alldeps.json
 echo "$(TZ=EST date '+%Y-%m-%d-%H-%M')" > runstarttime
 bash .github/scripts/get_container_name.sh > containername
-echo "&bioc.ARCH" > arch
+echo "linux/amd64" > arch
 git config --global --add safe.directory "$GITHUB_WORKSPACE"
 git config user.email "action@github.com"
 git config user.name "GitHub Action"

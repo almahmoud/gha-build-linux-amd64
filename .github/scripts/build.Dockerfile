@@ -1,4 +1,4 @@
-FROM &bioc.CONTAINER_BASE_IMAGE
+FROM ghcr.io/bioconductor/bioconductor:RELEASE_3_16
 ARG LIBRARY
 ARG PKG
 ARG PLATFORM
