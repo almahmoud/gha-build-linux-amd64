@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''chromote'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'chromote'
+also installing the dependencies ‘AsioHeaders’, ‘websocket’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/AsioHeaders_1.22.1-2.tar.gz'
+Content type 'binary/octet-stream' length 649266 bytes (634 KB)
+==================================================
+downloaded 634 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/websocket_1.4.1.tar.gz'
+Content type 'binary/octet-stream' length 474050 bytes (462 KB)
+==================================================
+downloaded 462 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/chromote_0.1.1.tar.gz'
+Content type 'binary/octet-stream' length 365700 bytes (357 KB)
+==================================================
+downloaded 357 KB
+
+* installing *binary* package ‘AsioHeaders’ ...
+* ‘AsioHeaders’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘AsioHeaders’ as ‘AsioHeaders_1.22.1-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (AsioHeaders)
+* installing *binary* package ‘websocket’ ...
+* ‘websocket’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘websocket’ as ‘websocket_1.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (websocket)
+* installing *binary* package ‘chromote’ ...
+* ‘chromote’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘chromote’ as ‘chromote_0.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (chromote)
+
+The downloaded source packages are in
+	‘/tmp/RtmpXBwnQn/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m13.764s
+user	0m7.337s
+sys	0m0.743s
