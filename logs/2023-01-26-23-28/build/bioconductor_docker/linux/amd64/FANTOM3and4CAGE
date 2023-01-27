@@ -1,0 +1,37 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''FANTOM3and4CAGE'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'FANTOM3and4CAGE'
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/FANTOM3and4CAGE_1.34.0.tar.gz'
+Content type 'application/x-gzip' length 36282665 bytes (34.6 MB)
+==================================================
+downloaded 34.6 MB
+
+* installing *source* package ‘FANTOM3and4CAGE’ ...
+** using staged installation
+** data
+** inst
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘FANTOM3and4CAGE’ as ‘FANTOM3and4CAGE_1.34.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (FANTOM3and4CAGE)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp6zzdue/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.084s
+user	0m7.095s
+sys	0m0.731s
