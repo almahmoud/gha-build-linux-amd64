@@ -1,0 +1,115 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''bridge'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'bridge'
+also installing the dependency ‘rama’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/rama_1.72.0.tar.gz'
+Content type 'application/x-gzip' length 530376 bytes (517 KB)
+==================================================
+downloaded 517 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/bridge_1.62.0.tar.gz'
+Content type 'application/x-gzip' length 518508 bytes (506 KB)
+==================================================
+downloaded 506 KB
+
+* installing *source* package ‘rama’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c estimation_slice.c -o estimation_slice.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ex_estimation_slice.c -o ex_estimation_slice.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mean.sd.c -o mean.sd.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reorder.c -o reorder.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c util.c -o util.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rama.so estimation_slice.o ex_estimation_slice.o mean.sd.o reorder.o util.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-rama/00new/rama/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: Package 'rama' is deprecated and will be removed from Bioconductor
+  version 3.17
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+Warning: Package 'rama' is deprecated and will be removed from Bioconductor
+  version 3.17
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rama’ as ‘rama_1.72.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rama)
+* installing *source* package ‘bridge’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bridge2.affy.c -o bridge2.affy.o
+bridge2.affy.c: In function ‘up_date_w2’:
+bridge2.affy.c:302:3: warning: implicit declaration of function ‘dirichlet’; did you mean ‘dirichlet2’? [-Wimplicit-function-declaration]
+  302 |   dirichlet(gamma, 2, w);
+      |   ^~~~~~~~~
+      |   dirichlet2
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bridge2.c -o bridge2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bridge2_util.c -o bridge2_util.o
+In file included from /usr/local/lib/R/include/R.h:80,
+                 from bridge2_util.h:1,
+                 from bridge2_util.c:1:
+bridge2_util.c: In function ‘qr_solve’:
+bridge2_util.c:570:14: warning: implicit declaration of function ‘dqrdc2_’ [-Wimplicit-function-declaration]
+  570 |     F77_CALL(dqrdc2)(xt, &n, &n, &p, &tol, &rank,qraux, pivot, work);
+      |              ^~~~~~
+/usr/local/lib/R/include/R_ext/RS.h:77:25: note: in definition of macro ‘F77_CALL’
+   77 | # define F77_CALL(x)    x ## _
+      |                         ^
+bridge2_util.c:585:14: warning: implicit declaration of function ‘dqrcf_’ [-Wimplicit-function-declaration]
+  585 |     F77_CALL(dqrcf)(xt, &n, &rank, qraux,yt, &n, coeft, &info);
+      |              ^~~~~
+/usr/local/lib/R/include/R_ext/RS.h:77:25: note: in definition of macro ‘F77_CALL’
+   77 | # define F77_CALL(x)    x ## _
+      |                         ^
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bridge3.c -o bridge3.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o bridge.so bridge2.affy.o bridge2.o bridge2_util.o bridge3.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-bridge/00new/bridge/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+Package 'rama' is deprecated and will be removed from Bioconductor
+  version 3.17 
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: Package 'rama' is deprecated and will be removed from Bioconductor
+  version 3.17
+Warning: Package 'bridge' is deprecated and will be removed from Bioconductor
+  version 3.17
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+Warning: Package 'rama' is deprecated and will be removed from Bioconductor
+  version 3.17
+Warning: Package 'bridge' is deprecated and will be removed from Bioconductor
+  version 3.17
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bridge’ as ‘bridge_1.62.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bridge)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp9QgZiU/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m11.109s
+user	0m9.207s
+sys	0m1.308s
