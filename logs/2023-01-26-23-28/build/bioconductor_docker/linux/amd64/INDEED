@@ -1,0 +1,72 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''INDEED'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'INDEED'
+also installing the dependencies ‘glasso’, ‘igraph’, ‘visNetwork’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/glasso_1.11.tar.gz'
+Content type 'binary/octet-stream' length 45837 bytes (44 KB)
+==================================================
+downloaded 44 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/igraph_1.3.5.tar.gz'
+Content type 'binary/octet-stream' length 8440779 bytes (8.0 MB)
+==================================================
+downloaded 8.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/visNetwork_2.1.2.tar.gz'
+Content type 'binary/octet-stream' length 4643355 bytes (4.4 MB)
+==================================================
+downloaded 4.4 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/INDEED_2.12.0.tar.gz'
+Content type 'application/x-gzip' length 1947169 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+* installing *binary* package ‘glasso’ ...
+* ‘glasso’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘glasso’ as ‘glasso_1.11_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (glasso)
+* installing *binary* package ‘igraph’ ...
+* ‘igraph’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘igraph’ as ‘igraph_1.3.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (igraph)
+* installing *binary* package ‘visNetwork’ ...
+* ‘visNetwork’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘visNetwork’ as ‘visNetwork_2.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (visNetwork)
+* installing *source* package ‘INDEED’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘INDEED’ as ‘INDEED_2.12.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (INDEED)
+
+The downloaded source packages are in
+	‘/tmp/RtmpjALLut/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m19.175s
+user	0m15.667s
+sys	0m1.221s
