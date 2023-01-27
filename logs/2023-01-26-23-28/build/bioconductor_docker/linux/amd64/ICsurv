@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ICsurv'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'ICsurv'
+also installing the dependency ‘matrixcalc’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/matrixcalc_1.0-6.tar.gz'
+Content type 'binary/octet-stream' length 201166 bytes (196 KB)
+==================================================
+downloaded 196 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/ICsurv_1.0.1.tar.gz'
+Content type 'binary/octet-stream' length 54746 bytes (53 KB)
+==================================================
+downloaded 53 KB
+
+* installing *binary* package ‘matrixcalc’ ...
+* ‘matrixcalc’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘matrixcalc’ as ‘matrixcalc_1.0-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (matrixcalc)
+* installing *binary* package ‘ICsurv’ ...
+* ‘ICsurv’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘ICsurv’ as ‘ICsurv_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ICsurv)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp4UAI0Z/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.369s
+user	0m3.848s
+sys	0m0.346s
