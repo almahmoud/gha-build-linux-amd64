@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''lokern'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'lokern'
+also installing the dependency ‘sfsmisc’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/sfsmisc_1.1-14.tar.gz'
+Content type 'binary/octet-stream' length 651352 bytes (636 KB)
+==================================================
+downloaded 636 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lokern_1.1-9.tar.gz'
+Content type 'binary/octet-stream' length 126305 bytes (123 KB)
+==================================================
+downloaded 123 KB
+
+* installing *binary* package ‘sfsmisc’ ...
+* ‘sfsmisc’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘sfsmisc’ as ‘sfsmisc_1.1-14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sfsmisc)
+* installing *binary* package ‘lokern’ ...
+* ‘lokern’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lokern’ as ‘lokern_1.1-9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lokern)
+
+The downloaded source packages are in
+	‘/tmp/RtmpwF1yoj/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m6.342s
+user	0m3.838s
+sys	0m0.367s
