@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''proj4'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'proj4'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/proj4_1.0-12.tar.gz'
+Content type 'binary/octet-stream' length 24819 bytes (24 KB)
+==================================================
+downloaded 24 KB
+
+* installing *binary* package ‘proj4’ ...
+* ‘proj4’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘proj4’ as ‘proj4_1.0-12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (proj4)
+
+The downloaded source packages are in
+	‘/tmp/RtmpInR1cZ/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m7.408s
+user	0m3.531s
+sys	0m0.192s
