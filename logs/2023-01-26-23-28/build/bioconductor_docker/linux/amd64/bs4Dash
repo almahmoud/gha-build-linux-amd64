@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''bs4Dash'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'bs4Dash'
+also installing the dependencies ‘fresh’, ‘waiter’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fresh_0.2.0.tar.gz'
+Content type 'binary/octet-stream' length 1492453 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/waiter_0.2.5.tar.gz'
+Content type 'binary/octet-stream' length 460590 bytes (449 KB)
+==================================================
+downloaded 449 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bs4Dash_2.2.1.tar.gz'
+Content type 'binary/octet-stream' length 1822243 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+* installing *binary* package ‘fresh’ ...
+* ‘fresh’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘fresh’ as ‘fresh_0.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fresh)
+* installing *binary* package ‘waiter’ ...
+* ‘waiter’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘waiter’ as ‘waiter_0.2.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (waiter)
+* installing *binary* package ‘bs4Dash’ ...
+* ‘bs4Dash’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bs4Dash’ as ‘bs4Dash_2.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bs4Dash)
+
+The downloaded source packages are in
+	‘/tmp/RtmpbZTGGq/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.618s
+user	0m6.224s
+sys	0m0.579s
