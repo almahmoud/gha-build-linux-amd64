@@ -1,0 +1,154 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''imager'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'imager'
+also installing the dependencies ‘bmp’, ‘tiff’, ‘png’, ‘jpeg’, ‘readbitmap’, ‘downloader’, ‘igraph’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bmp_0.3.tar.gz'
+Content type 'binary/octet-stream' length 119612 bytes (116 KB)
+==================================================
+downloaded 116 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/tiff_0.1-11.tar.gz'
+Content type 'binary/octet-stream' length 78828 bytes (76 KB)
+==================================================
+downloaded 76 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/png_0.1-8.tar.gz'
+Content type 'binary/octet-stream' length 39953 bytes (39 KB)
+==================================================
+downloaded 39 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/jpeg_0.1-10.tar.gz'
+Content type 'binary/octet-stream' length 28493 bytes (27 KB)
+==================================================
+downloaded 27 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/readbitmap_0.1.5.tar.gz'
+Content type 'binary/octet-stream' length 16817 bytes (16 KB)
+==================================================
+downloaded 16 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/downloader_0.4.tar.gz'
+Content type 'binary/octet-stream' length 21735 bytes (21 KB)
+==================================================
+downloaded 21 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/igraph_1.3.5.tar.gz'
+Content type 'binary/octet-stream' length 8440779 bytes (8.0 MB)
+==================================================
+downloaded 8.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/imager_0.42.16.tar.gz'
+Content type 'binary/octet-stream' length 4817242 bytes (4.6 MB)
+==================================================
+downloaded 4.6 MB
+
+* installing *binary* package ‘bmp’ ...
+* ‘bmp’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bmp’ as ‘bmp_0.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bmp)
+* installing *binary* package ‘tiff’ ...
+* ‘tiff’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘tiff’ as ‘tiff_0.1-11_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tiff)
+* installing *binary* package ‘png’ ...
+* ‘png’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘png’ as ‘png_0.1-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (png)
+* installing *binary* package ‘jpeg’ ...
+* ‘jpeg’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘jpeg’ as ‘jpeg_0.1-10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (jpeg)
+* installing *binary* package ‘downloader’ ...
+* ‘downloader’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘downloader’ as ‘downloader_0.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (downloader)
+* installing *binary* package ‘igraph’ ...
+* ‘igraph’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘igraph’ as ‘igraph_1.3.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (igraph)
+* installing *binary* package ‘readbitmap’ ...
+* ‘readbitmap’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘readbitmap’ as ‘readbitmap_0.1.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (readbitmap)
+* installing *source* package ‘imager’ ...
+** package ‘imager’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for pkg-config... /usr/bin/pkg-config
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++14 accepts -g... yes
+checking how to run the C++ preprocessor... g++ -std=gnu++14 -E
+checking for X... libraries , headers 
+checking for XOpenDisplay in -lX11... yes
+X11 library found.
+configure: Checking if FFTW3 library is available using pkg-config
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for FFTW... yes
+FFTW3 found!
+checking whether pkg-config knows about libtiff-4... yes
+checking for configurable backends... checking whether --static is needed... no
+checking for g++ -std=gnu++14 option to support OpenMP... -fopenmp
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c colourspace.cpp -o colourspace.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coordinates.cpp -o coordinates.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c display.cpp -o display.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c drawing.cpp -o drawing.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filtering.cpp -o filtering.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hough.cpp -o hough.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imgraphs.cpp -o imgraphs.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c interact.cpp -o interact.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c interpolation.cpp -o interpolation.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c morphology.cpp -o morphology.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reductions.cpp -o reductions.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transformations.cpp -o transformations.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.cpp -o utils.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I/usr/local/include  -Dcimg_use_fftw3  -I/usr/include/x86_64-linux-gnu -Dcimg_use_tiff -I../inst/include -DCIMG_COMPILING -Dcimg_use_rng -Dcimg_use_r -Dcimg_use_fftw3_singlethread -Dcimg_verbosity=1 -Dcimg_date='""' -Dcimg_time='""' -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wrappers.cpp -o wrappers.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o imager.so RcppExports.o colourspace.o coordinates.o display.o drawing.o filtering.o hough.o imgraphs.o interact.o interpolation.o morphology.o reductions.o transformations.o utils.o wrappers.o -lX11 -Dcimg_use_fftw3 -lfftw3 -ltiff -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-imager/00new/imager/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘imager’ as ‘imager_0.42.16_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (imager)
+
+The downloaded source packages are in
+	‘/tmp/RtmpOQb7QQ/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	6m1.576s
+user	5m47.130s
+sys	0m9.514s
