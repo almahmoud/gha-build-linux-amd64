@@ -1,0 +1,38 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''cMap2data'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'cMap2data'
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/cMap2data_1.34.0.tar.gz'
+Content type 'application/x-gzip' length 29198641 bytes (27.8 MB)
+==================================================
+downloaded 27.8 MB
+
+* installing *source* package ‘cMap2data’ ...
+** using staged installation
+** data
+*** moving datasets to lazyload DB
+** inst
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘cMap2data’ as ‘cMap2data_1.34.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (cMap2data)
+
+The downloaded source packages are in
+	‘/tmp/RtmpzOUDg2/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m32.351s
+user	0m28.845s
+sys	0m1.436s
