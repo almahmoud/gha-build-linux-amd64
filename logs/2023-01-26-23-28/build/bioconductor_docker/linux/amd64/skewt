@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''skewt'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'skewt'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/skewt_1.0.tar.gz'
+Content type 'binary/octet-stream' length 12848 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+* installing *binary* package ‘skewt’ ...
+* ‘skewt’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘skewt’ as ‘skewt_1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (skewt)
+
+The downloaded source packages are in
+	‘/tmp/RtmpPDffSK/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.564s
+user	0m5.207s
+sys	0m0.380s
