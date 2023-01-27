@@ -1,0 +1,49 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BAC'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'BAC'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BAC_1.58.0.tar.gz'
+Content type 'application/x-gzip' length 962735 bytes (940 KB)
+==================================================
+downloaded 940 KB
+
+* installing *source* package ‘BAC’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c BAC.c -o BAC.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c util.c -o util.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BAC.so BAC.o util.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-BAC/00new/BAC/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: Package 'BAC' is deprecated and will be removed from Bioconductor
+  version 3.17
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+Warning: Package 'BAC' is deprecated and will be removed from Bioconductor
+  version 3.17
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BAC’ as ‘BAC_1.58.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BAC)
+
+The downloaded source packages are in
+	‘/tmp/RtmpolTFMT/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m6.812s
+user	0m5.055s
+sys	0m0.667s
