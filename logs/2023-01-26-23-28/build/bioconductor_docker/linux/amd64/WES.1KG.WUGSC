@@ -1,0 +1,37 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''WES.1KG.WUGSC'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'WES.1KG.WUGSC'
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/WES.1KG.WUGSC_1.30.0.tar.gz'
+Content type 'application/x-gzip' length 391329534 bytes (373.2 MB)
+==================================================
+downloaded 373.2 MB
+
+* installing *source* package ‘WES.1KG.WUGSC’ ...
+** using staged installation
+** inst
+** help
+No man pages found in package  ‘WES.1KG.WUGSC’ 
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘WES.1KG.WUGSC’ as ‘WES.1KG.WUGSC_1.30.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (WES.1KG.WUGSC)
+
+The downloaded source packages are in
+	‘/tmp/RtmpdnUem4/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	1m15.076s
+user	0m54.230s
+sys	0m4.112s
