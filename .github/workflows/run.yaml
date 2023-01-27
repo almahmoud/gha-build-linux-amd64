@@ -248,7 +248,7 @@ jobs:
         id: tar
         run: |
           set -x
-          echo pkg=$(ls /tmp/tars/ | grep ${{matrix.pkg}} | sed 's#/tmp/tars/##g') >> $GITHUB_OUTPUT
+          echo pkg=$(ls /tmp/tars/ | grep "^${{matrix.pkg}}_" | sed 's#/tmp/tars/##g') >> $GITHUB_OUTPUT
           # make tar of library
           cd $(dirname /${{ steps.versions.outputs.library }}) && tar -zcvf "${{ matrix.pkg }}.tar.gz" "$(basename /${{ steps.versions.outputs.library }})"
           echo name=$(echo "$(dirname /${{ steps.versions.outputs.library }})/${{ matrix.pkg }}.tar.gz") >> $GITHUB_OUTPUT
