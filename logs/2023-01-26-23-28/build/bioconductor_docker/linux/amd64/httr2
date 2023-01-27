@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''httr2'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'httr2'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/httr2_0.2.2.tar.gz'
+Content type 'binary/octet-stream' length 374013 bytes (365 KB)
+==================================================
+downloaded 365 KB
+
+* installing *binary* package ‘httr2’ ...
+* ‘httr2’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘httr2’ as ‘httr2_0.2.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (httr2)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp8F5OvX/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m10.770s
+user	0m3.752s
+sys	0m0.213s
