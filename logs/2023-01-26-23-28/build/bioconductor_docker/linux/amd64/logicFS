@@ -1,0 +1,61 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''logicFS'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'logicFS'
+also installing the dependencies ‘LogicReg’, ‘mcbiopi’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/LogicReg_1.6.5.tar.gz'
+Content type 'binary/octet-stream' length 338509 bytes (330 KB)
+==================================================
+downloaded 330 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mcbiopi_1.1.6.tar.gz'
+Content type 'binary/octet-stream' length 29457 bytes (28 KB)
+==================================================
+downloaded 28 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/logicFS_2.18.0.tar.gz'
+Content type 'application/x-gzip' length 153099 bytes (149 KB)
+==================================================
+downloaded 149 KB
+
+* installing *binary* package ‘LogicReg’ ...
+* ‘LogicReg’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘LogicReg’ as ‘LogicReg_1.6.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (LogicReg)
+* installing *binary* package ‘mcbiopi’ ...
+* ‘mcbiopi’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mcbiopi’ as ‘mcbiopi_1.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mcbiopi)
+* installing *source* package ‘logicFS’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘logicFS’ as ‘logicFS_2.18.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (logicFS)
+
+The downloaded source packages are in
+	‘/tmp/RtmpQu1m2A/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m14.056s
+user	0m11.385s
+sys	0m1.000s
