@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''pyinit'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'pyinit'
+also installing the dependencies ‘DEoptimR’, ‘robustbase’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/DEoptimR_1.0-11.tar.gz'
+Content type 'binary/octet-stream' length 40404 bytes (39 KB)
+==================================================
+downloaded 39 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/robustbase_0.95-0.tar.gz'
+Content type 'binary/octet-stream' length 3198550 bytes (3.1 MB)
+==================================================
+downloaded 3.1 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pyinit_1.1.3.tar.gz'
+Content type 'binary/octet-stream' length 59635 bytes (58 KB)
+==================================================
+downloaded 58 KB
+
+* installing *binary* package ‘DEoptimR’ ...
+* ‘DEoptimR’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘DEoptimR’ as ‘DEoptimR_1.0-11_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DEoptimR)
+* installing *binary* package ‘robustbase’ ...
+* ‘robustbase’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘robustbase’ as ‘robustbase_0.95-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (robustbase)
+* installing *binary* package ‘pyinit’ ...
+* ‘pyinit’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘pyinit’ as ‘pyinit_1.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pyinit)
+
+The downloaded source packages are in
+	‘/tmp/Rtmps2S7cu/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m11.280s
+user	0m4.874s
+sys	0m0.441s
