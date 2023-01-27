@@ -1,0 +1,151 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BHC'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'BHC'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BHC_1.50.0.tar.gz'
+Content type 'application/x-gzip' length 140501 bytes (137 KB)
+==================================================
+downloaded 137 KB
+
+* installing *source* package ‘BHC’ ...
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for gcc option to support OpenMP... -fopenmp
+checking whether OpenMP will work in this package... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c BlockCovarianceMatrix.cpp -o BlockCovarianceMatrix.o
+In file included from BlockCovarianceMatrix.h:16,
+                 from BlockCovarianceMatrix.cpp:15:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CubicSplineTimecourseDataSet.cpp -o CubicSplineTimecourseDataSet.o
+In file included from DataSet.h:16,
+                 from TimecourseDataSet.h:20,
+                 from CubicSplineTimecourseDataSet.h:20,
+                 from CubicSplineTimecourseDataSet.cpp:15:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c DataSet.cpp -o DataSet.o
+In file included from DataSet.h:16,
+                 from DataSet.cpp:13:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c DirichletProcessMixture.cpp -o DirichletProcessMixture.o
+In file included from DirichletProcessMixture.h:4,
+                 from DirichletProcessMixture.cpp:15:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MultinomialDataSet.cpp -o MultinomialDataSet.o
+In file included from DataSet.h:16,
+                 from MultinomialDataSet.h:4,
+                 from MultinomialDataSet.cpp:1:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Node.cpp -o Node.o
+In file included from Node.h:16,
+                 from Node.cpp:13:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RobustCubicSplineTimecourseDataSet.cpp -o RobustCubicSplineTimecourseDataSet.o
+In file included from DataSet.h:16,
+                 from TimecourseDataSet.h:20,
+                 from CubicSplineTimecourseDataSet.h:20,
+                 from RobustCubicSplineTimecourseDataSet.h:20,
+                 from RobustCubicSplineTimecourseDataSet.cpp:15:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RobustSquaredExponentialTimecourseDataSet.cpp -o RobustSquaredExponentialTimecourseDataSet.o
+In file included from SquaredExponentialTimecourseDataSet.h:20,
+                 from RobustSquaredExponentialTimecourseDataSet.h:20,
+                 from RobustSquaredExponentialTimecourseDataSet.cpp:15:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SquaredExponentialTimecourseDataSet.cpp -o SquaredExponentialTimecourseDataSet.o
+In file included from SquaredExponentialTimecourseDataSet.h:20,
+                 from SquaredExponentialTimecourseDataSet.cpp:15:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c TimecourseDataSet.cpp -o TimecourseDataSet.o
+In file included from DataSet.h:16,
+                 from TimecourseDataSet.h:20,
+                 from TimecourseDataSet.cpp:13:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bhc.cpp -o bhc.o
+In file included from bhc.cpp:17:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gammaln.cpp -o gammaln.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c header.cpp -o header.o
+In file included from header.cpp:1:
+header.h:16: warning: "NDEBUG" redefined
+   16 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multinomial_CalculateHyperparameters.cpp -o multinomial_CalculateHyperparameters.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multinomial_OutputDendrogramInformation.cpp -o multinomial_OutputDendrogramInformation.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multinomial_ReadInData.cpp -o multinomial_ReadInData.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multinomial_bayeslink_binf.cpp -o multinomial_bayeslink_binf.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -fopenmp  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multinomial_binevidence.cpp -o multinomial_binevidence.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BHC.so BlockCovarianceMatrix.o CubicSplineTimecourseDataSet.o DataSet.o DirichletProcessMixture.o MultinomialDataSet.o Node.o RobustCubicSplineTimecourseDataSet.o RobustSquaredExponentialTimecourseDataSet.o SquaredExponentialTimecourseDataSet.o TimecourseDataSet.o bhc.o gammaln.o header.o multinomial_CalculateHyperparameters.o multinomial_OutputDendrogramInformation.o multinomial_ReadInData.o multinomial_bayeslink_binf.o multinomial_binevidence.o -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-BHC/00new/BHC/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BHC’ as ‘BHC_1.50.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BHC)
+
+The downloaded source packages are in
+	‘/tmp/RtmpIlMUGN/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m34.463s
+user	0m29.324s
+sys	0m3.391s
