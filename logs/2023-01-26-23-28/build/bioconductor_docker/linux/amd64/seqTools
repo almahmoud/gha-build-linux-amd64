@@ -1,0 +1,73 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''seqTools'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'seqTools'
+also installing the dependency ‘zlibbioc’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/zlibbioc_1.44.0.tar.gz'
+Content type 'application/x-gzip' length 214256 bytes (209 KB)
+==================================================
+downloaded 209 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/seqTools_1.32.0.tar.gz'
+Content type 'application/x-gzip' length 365111 bytes (356 KB)
+==================================================
+downloaded 356 KB
+
+* installing *source* package ‘zlibbioc’ ...
+** using staged installation
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+mkdir -p "/tmp/built/00LOCK-zlibbioc/00new/zlibbioc/include"
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_zlibbioc.c -o R_init_zlibbioc.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o zlibbioc.so R_init_zlibbioc.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-zlibbioc/00new/zlibbioc/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘zlibbioc’ as ‘zlibbioc_1.44.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (zlibbioc)
+* installing *source* package ‘seqTools’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/zlibbioc/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c seqTools.c -o seqTools.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o seqTools.so seqTools.o -lm -lz -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-seqTools/00new/seqTools/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘seqTools’ as ‘seqTools_1.32.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (seqTools)
+
+The downloaded source packages are in
+	‘/tmp/RtmpNYUf9P/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m10.959s
+user	0m9.311s
+sys	0m1.364s
