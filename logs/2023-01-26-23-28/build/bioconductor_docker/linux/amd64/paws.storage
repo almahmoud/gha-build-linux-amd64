@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''paws.storage'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'paws.storage'
+also installing the dependency ‘paws.common’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/paws.common_0.5.4.tar.gz'
+Content type 'binary/octet-stream' length 372728 bytes (363 KB)
+==================================================
+downloaded 363 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/paws.storage_0.1.12.tar.gz'
+Content type 'binary/octet-stream' length 1834845 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+* installing *binary* package ‘paws.common’ ...
+* ‘paws.common’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘paws.common’ as ‘paws.common_0.5.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (paws.common)
+* installing *binary* package ‘paws.storage’ ...
+* ‘paws.storage’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘paws.storage’ as ‘paws.storage_0.1.12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (paws.storage)
+
+The downloaded source packages are in
+	‘/tmp/RtmprwOAta/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m6.236s
+user	0m4.234s
+sys	0m0.302s
