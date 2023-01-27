@@ -1,0 +1,52 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BufferedMatrix'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'BufferedMatrix'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BufferedMatrix_1.62.0.tar.gz'
+Content type 'application/x-gzip' length 496102 bytes (484 KB)
+==================================================
+downloaded 484 KB
+
+* installing *source* package ‘BufferedMatrix’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RBufferedMatrix.c -o RBufferedMatrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c doubleBufferedMatrix.c -o doubleBufferedMatrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c doubleBufferedMatrix_C_tests.c -o doubleBufferedMatrix_C_tests.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init_package.c -o init_package.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BufferedMatrix.so RBufferedMatrix.o doubleBufferedMatrix.o doubleBufferedMatrix_C_tests.o init_package.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-BufferedMatrix/00new/BufferedMatrix/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘rowMeans’ in package ‘BufferedMatrix’
+Creating a new generic function for ‘rowSums’ in package ‘BufferedMatrix’
+Creating a new generic function for ‘colMeans’ in package ‘BufferedMatrix’
+Creating a new generic function for ‘colSums’ in package ‘BufferedMatrix’
+Creating a generic function for ‘ncol’ from package ‘base’ in package ‘BufferedMatrix’
+Creating a generic function for ‘nrow’ from package ‘base’ in package ‘BufferedMatrix’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BufferedMatrix’ as ‘BufferedMatrix_1.62.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BufferedMatrix)
+
+The downloaded source packages are in
+	‘/tmp/RtmptkSKrW/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.831s
+user	0m7.213s
+sys	0m0.671s
