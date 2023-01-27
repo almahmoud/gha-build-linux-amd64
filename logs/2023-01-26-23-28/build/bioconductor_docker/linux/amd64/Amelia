@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''Amelia'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'Amelia'
+also installing the dependency ‘RcppArmadillo’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/RcppArmadillo_0.11.4.3.1.tar.gz'
+Content type 'binary/octet-stream' length 1034989 bytes (1010 KB)
+==================================================
+downloaded 1010 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/Amelia_1.8.1.tar.gz'
+Content type 'binary/octet-stream' length 1533165 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+* installing *binary* package ‘RcppArmadillo’ ...
+* ‘RcppArmadillo’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘RcppArmadillo’ as ‘RcppArmadillo_0.11.4.3.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RcppArmadillo)
+* installing *binary* package ‘Amelia’ ...
+* ‘Amelia’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘Amelia’ as ‘Amelia_1.8.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Amelia)
+
+The downloaded source packages are in
+	‘/tmp/RtmpSH6Of5/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.255s
+user	0m6.845s
+sys	0m0.697s
