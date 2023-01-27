@@ -1,0 +1,60 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''basefun'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'basefun'
+also installing the dependencies ‘variables’, ‘polynom’, ‘orthopolynom’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/variables_1.1-1.tar.gz'
+Content type 'binary/octet-stream' length 42146 bytes (41 KB)
+==================================================
+downloaded 41 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/polynom_1.4-1.tar.gz'
+Content type 'binary/octet-stream' length 404082 bytes (394 KB)
+==================================================
+downloaded 394 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/orthopolynom_1.0-6.1.tar.gz'
+Content type 'binary/octet-stream' length 337099 bytes (329 KB)
+==================================================
+downloaded 329 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/basefun_1.1-3.tar.gz'
+Content type 'binary/octet-stream' length 113034 bytes (110 KB)
+==================================================
+downloaded 110 KB
+
+* installing *binary* package ‘variables’ ...
+* ‘variables’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘variables’ as ‘variables_1.1-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (variables)
+* installing *binary* package ‘polynom’ ...
+* ‘polynom’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘polynom’ as ‘polynom_1.4-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (polynom)
+* installing *binary* package ‘orthopolynom’ ...
+* ‘orthopolynom’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘orthopolynom’ as ‘orthopolynom_1.0-6.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (orthopolynom)
+* installing *binary* package ‘basefun’ ...
+* ‘basefun’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘basefun’ as ‘basefun_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (basefun)
+
+The downloaded source packages are in
+	‘/tmp/RtmpA34lME/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m9.929s
+user	0m4.576s
+sys	0m0.571s
