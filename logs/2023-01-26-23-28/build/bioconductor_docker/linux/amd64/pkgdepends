@@ -1,0 +1,60 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''pkgdepends'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'pkgdepends'
+also installing the dependencies ‘filelock’, ‘lpSolve’, ‘pkgcache’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/filelock_1.0.2.tar.gz'
+Content type 'binary/octet-stream' length 30533 bytes (29 KB)
+==================================================
+downloaded 29 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lpSolve_5.6.17.tar.gz'
+Content type 'binary/octet-stream' length 1237098 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pkgcache_2.0.4.tar.gz'
+Content type 'binary/octet-stream' length 778602 bytes (760 KB)
+==================================================
+downloaded 760 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pkgdepends_0.4.0.tar.gz'
+Content type 'binary/octet-stream' length 1031840 bytes (1007 KB)
+==================================================
+downloaded 1007 KB
+
+* installing *binary* package ‘filelock’ ...
+* ‘filelock’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘filelock’ as ‘filelock_1.0.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (filelock)
+* installing *binary* package ‘lpSolve’ ...
+* ‘lpSolve’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lpSolve’ as ‘lpSolve_5.6.17_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lpSolve)
+* installing *binary* package ‘pkgcache’ ...
+* ‘pkgcache’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘pkgcache’ as ‘pkgcache_2.0.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pkgcache)
+* installing *binary* package ‘pkgdepends’ ...
+* ‘pkgdepends’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘pkgdepends’ as ‘pkgdepends_0.4.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pkgdepends)
+
+The downloaded source packages are in
+	‘/tmp/RtmpVrEWOF/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m11.178s
+user	0m5.653s
+sys	0m0.504s
