@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''wesanderson'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'wesanderson'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/wesanderson_0.3.6.tar.gz'
+Content type 'binary/octet-stream' length 17451 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+* installing *binary* package ‘wesanderson’ ...
+* ‘wesanderson’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘wesanderson’ as ‘wesanderson_0.3.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (wesanderson)
+
+The downloaded source packages are in
+	‘/tmp/RtmpC2qTyM/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m5.663s
+user	0m3.838s
+sys	0m0.331s
