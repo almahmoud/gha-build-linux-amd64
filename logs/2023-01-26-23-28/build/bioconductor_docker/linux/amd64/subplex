@@ -1,0 +1,28 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''subplex'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'subplex'
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/subplex_1.8.tar.gz'
+Content type 'binary/octet-stream' length 54504 bytes (53 KB)
+==================================================
+downloaded 53 KB
+
+* installing *binary* package ‘subplex’ ...
+* ‘subplex’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘subplex’ as ‘subplex_1.8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (subplex)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmRAAAe/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.451s
+user	0m4.321s
+sys	0m0.315s
