@@ -1,0 +1,66 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''GraphAlignment'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'GraphAlignment'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GraphAlignment_1.62.0.tar.gz'
+Content type 'application/x-gzip' length 455263 bytes (444 KB)
+==================================================
+downloaded 444 KB
+
+* installing *source* package ‘GraphAlignment’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GA_alloc.c -o GA_alloc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GA_matrix.c -o GA_matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GA_matrix_R.c -o GA_matrix_R.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GA_message.c -o GA_message.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GA_vector.c -o GA_vector.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GA_vector_R.c -o GA_vector_R.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GraphAlignment.c -o GraphAlignment.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lap.c -o lap.o
+lap.c: In function ‘LAP_checklap’:
+lap.c:348:9: warning: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  348 |         scanf("%c", &wait);
+      |         ^~~~~~~~~~~~~~~~~~
+lap.c:358:7: warning: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  358 |       scanf("%c", &wait);
+      |       ^~~~~~~~~~~~~~~~~~
+lap.c:371:7: warning: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  371 |       scanf("%c", &wait);
+      |       ^~~~~~~~~~~~~~~~~~
+lap.c:384:7: warning: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  384 |       scanf("%c", &wait);
+      |       ^~~~~~~~~~~~~~~~~~
+lap.c:394:7: warning: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  394 |       scanf("%c", &wait);
+      |       ^~~~~~~~~~~~~~~~~~
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o GraphAlignment.so GA_alloc.o GA_matrix.o GA_matrix_R.o GA_message.o GA_vector.o GA_vector_R.o GraphAlignment.o lap.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-GraphAlignment/00new/GraphAlignment/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘GraphAlignment’ as ‘GraphAlignment_1.62.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (GraphAlignment)
+
+The downloaded source packages are in
+	‘/tmp/RtmpA1mOId/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m10.856s
+user	0m7.412s
+sys	0m0.935s
