@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''quarto'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'quarto'
+also installing the dependencies ‘packrat’, ‘rsconnect’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/packrat_0.9.0.tar.gz'
+Content type 'binary/octet-stream' length 692691 bytes (676 KB)
+==================================================
+downloaded 676 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rsconnect_0.8.29.tar.gz'
+Content type 'binary/octet-stream' length 700311 bytes (683 KB)
+==================================================
+downloaded 683 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/quarto_1.2.tar.gz'
+Content type 'binary/octet-stream' length 68096 bytes (66 KB)
+==================================================
+downloaded 66 KB
+
+* installing *binary* package ‘packrat’ ...
+* ‘packrat’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘packrat’ as ‘packrat_0.9.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (packrat)
+* installing *binary* package ‘rsconnect’ ...
+* ‘rsconnect’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rsconnect’ as ‘rsconnect_0.8.29_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rsconnect)
+* installing *binary* package ‘quarto’ ...
+* ‘quarto’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘quarto’ as ‘quarto_1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (quarto)
+
+The downloaded source packages are in
+	‘/tmp/RtmpCvCxzv/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m10.552s
+user	0m5.749s
+sys	0m0.552s
