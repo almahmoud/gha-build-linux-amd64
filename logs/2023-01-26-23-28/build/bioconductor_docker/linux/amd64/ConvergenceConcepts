@@ -1,0 +1,79 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ConvergenceConcepts'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'ConvergenceConcepts'
+also installing the dependency ‘tkrplot’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/tkrplot_0.0-27.tar.gz'
+Content type 'binary/octet-stream' length 33509 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/ConvergenceConcepts_1.2.3.tar.gz'
+Content type 'binary/octet-stream' length 14156 bytes (13 KB)
+==================================================
+downloaded 13 KB
+
+* installing *source* package ‘tkrplot’ ...
+** package ‘tkrplot’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include/tcl8.6 -I/usr/include/tcl8.6  -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tcltkimg.c -o tcltkimg.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o tkrplot.so tcltkimg.o -L/usr/lib/x86_64-linux-gnu -ltcl8.6 -L/usr/lib/x86_64-linux-gnu -ltk8.6 -lX11 -lXss -lXext -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-tkrplot/00new/tkrplot/libs
+** R
+** byte-compile and prepare package for lazy loading
+Warning message:
+no DISPLAY variable so Tk is not available 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: no DISPLAY variable so Tk is not available
+Warning: loading Rplot failed
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+Warning: no DISPLAY variable so Tk is not available
+Warning: loading Rplot failed
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tkrplot’ as ‘tkrplot_0.0-27_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tkrplot)
+* installing *source* package ‘ConvergenceConcepts’ ...
+** package ‘ConvergenceConcepts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning messages:
+1: no DISPLAY variable so Tk is not available 
+2: loading Rplot failed 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: no DISPLAY variable so Tk is not available
+Warning: loading Rplot failed
+** testing if installed package can be loaded from final location
+Warning: no DISPLAY variable so Tk is not available
+Warning: loading Rplot failed
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ConvergenceConcepts’ as ‘ConvergenceConcepts_1.2.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ConvergenceConcepts)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp0JXXZs/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m10.626s
+user	0m6.870s
+sys	0m1.357s
