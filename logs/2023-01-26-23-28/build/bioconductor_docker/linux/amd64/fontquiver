@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''fontquiver'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'fontquiver'
+also installing the dependencies ‘fontBitstreamVera’, ‘fontLiberation’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fontBitstreamVera_0.1.1.tar.gz'
+Content type 'binary/octet-stream' length 699423 bytes (683 KB)
+==================================================
+downloaded 683 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fontLiberation_0.1.0.tar.gz'
+Content type 'binary/octet-stream' length 4539039 bytes (4.3 MB)
+==================================================
+downloaded 4.3 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fontquiver_0.2.1.tar.gz'
+Content type 'binary/octet-stream' length 2279204 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+* installing *binary* package ‘fontBitstreamVera’ ...
+* ‘fontBitstreamVera’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘fontBitstreamVera’ as ‘fontBitstreamVera_0.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fontBitstreamVera)
+* installing *binary* package ‘fontLiberation’ ...
+* ‘fontLiberation’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘fontLiberation’ as ‘fontLiberation_0.1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fontLiberation)
+* installing *binary* package ‘fontquiver’ ...
+* ‘fontquiver’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘fontquiver’ as ‘fontquiver_0.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fontquiver)
+
+The downloaded source packages are in
+	‘/tmp/RtmpkisTEM/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m14.745s
+user	0m7.794s
+sys	0m0.706s
