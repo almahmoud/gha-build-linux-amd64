@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''gamlss'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'gamlss'
+also installing the dependencies ‘gamlss.data’, ‘gamlss.dist’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gamlss.data_6.0-2.tar.gz'
+Content type 'binary/octet-stream' length 1327380 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gamlss.dist_6.0-5.tar.gz'
+Content type 'binary/octet-stream' length 3435547 bytes (3.3 MB)
+==================================================
+downloaded 3.3 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gamlss_5.4-10.tar.gz'
+Content type 'binary/octet-stream' length 1409757 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+* installing *binary* package ‘gamlss.data’ ...
+* ‘gamlss.data’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gamlss.data’ as ‘gamlss.data_6.0-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gamlss.data)
+* installing *binary* package ‘gamlss.dist’ ...
+* ‘gamlss.dist’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gamlss.dist’ as ‘gamlss.dist_6.0-5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gamlss.dist)
+* installing *binary* package ‘gamlss’ ...
+* ‘gamlss’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gamlss’ as ‘gamlss_5.4-10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gamlss)
+
+The downloaded source packages are in
+	‘/tmp/RtmpwjdwaT/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m8.198s
+user	0m4.853s
+sys	0m0.451s
