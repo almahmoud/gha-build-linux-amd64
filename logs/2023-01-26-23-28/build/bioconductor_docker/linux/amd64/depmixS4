@@ -1,0 +1,50 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''depmixS4'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'depmixS4'
+also installing the dependencies ‘truncnorm’, ‘Rsolnp’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/truncnorm_1.0-8.tar.gz'
+Content type 'binary/octet-stream' length 43430 bytes (42 KB)
+==================================================
+downloaded 42 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/Rsolnp_1.16.tar.gz'
+Content type 'binary/octet-stream' length 248658 bytes (242 KB)
+==================================================
+downloaded 242 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/depmixS4_1.5-0.tar.gz'
+Content type 'binary/octet-stream' length 711511 bytes (694 KB)
+==================================================
+downloaded 694 KB
+
+* installing *binary* package ‘truncnorm’ ...
+* ‘truncnorm’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘truncnorm’ as ‘truncnorm_1.0-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (truncnorm)
+* installing *binary* package ‘Rsolnp’ ...
+* ‘Rsolnp’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘Rsolnp’ as ‘Rsolnp_1.16_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Rsolnp)
+* installing *binary* package ‘depmixS4’ ...
+* ‘depmixS4’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘depmixS4’ as ‘depmixS4_1.5-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (depmixS4)
+
+The downloaded source packages are in
+	‘/tmp/Rtmprt8FrC/downloaded_packages’
+Old packages: 'fansi', 'fontawesome', 'fs', 'knitr', 'Rcpp', 'sass', 'vctrs',
+  'yaml', 'class', 'MASS', 'spatial'
+
+real	0m11.491s
+user	0m4.278s
+sys	0m0.487s
