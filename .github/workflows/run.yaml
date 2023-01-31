@@ -236,7 +236,10 @@ jobs:
           docker save ${{ steps.meta.outputs.tags }} > image.tar
           tar -xvf image.tar
           # Untar the last layer (Build layer)
-          cat manifest.json | awk -F'"' '{print $(NF-1)}' | xargs tar -xvf
+          cat manifest.json | awk -F'"' '{print $(NF-1)}' > /tmp/layername
+          rm image.tar
+          ls | grep -v "$(cat /tmp/layername)" | xargs rm
+          cat /tmp/layername | xargs -i bash -c "tar -xvf {} && rm {}"
           cp -r tmp / || true
           cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }}) || true
           cd ..
