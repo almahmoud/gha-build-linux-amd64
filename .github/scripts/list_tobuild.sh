@@ -13,7 +13,7 @@ if [ ! -s tobuild.txt ]; then
       # Add list of packages to build
       grep -lr "readytobuild" lists/ | sed 's#lists/##g' > tobuild.txt
 
-      if [ ! -s tobuild.txt ] && [ -d "lists/" ]; then
+      if [ ! -s tobuild.txt ] && [ -f "packages.json" ]; then
             mkdir -p logs/$(cat runstarttime)
             counter=0
             if [ -f "logs/$(cat runstarttime)/retries_counter" ]; then
