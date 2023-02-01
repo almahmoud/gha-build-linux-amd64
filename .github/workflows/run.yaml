@@ -177,6 +177,7 @@ jobs:
           PKG=${{ matrix.pkg }}
           mkdir -p $(pwd)/${{ steps.versions.outputs.library }}
           cat /tmp/directdeps | xargs -i bash .github/scripts/download_artifact.sh {} $(pwd)/${{ steps.versions.outputs.library }} ${{github.repository}}
+          ls $(pwd)/${{ steps.versions.outputs.library }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
