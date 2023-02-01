@@ -1,6 +1,6 @@
 #!/bin/bash
 Rscript .github/scripts/deps_json.R --outfile=packages.json --which=most --recursive=strong
-Rscript .github/scripts/deps_json.R --outfile=directdeps.json --which=most
+Rscript .github/scripts/deps_json.R --outfile=directdeps.json --which=most --recursive=FALSE
 Rscript .github/scripts/deps_json.R --outfile=strongdeps.json --which=strong --recursive=strong
 
 python3 -c """

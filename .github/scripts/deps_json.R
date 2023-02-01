@@ -6,6 +6,7 @@ userargs <- R.utils::commandArgs(asValues = TRUE)
 outfile <- userargs$outfile
 which <- userargs$which
 recursive <- userargs$recursive
+if (recursive == 'FALSE') { recursive = FALSE }
 
 .exlude_packages <- function() {
     inst <- installed.packages()
