@@ -193,13 +193,10 @@ jobs:
         with:
           platforms: ${{ steps.versions.outputs.platform }}
 
-      - name: Extract metadata for container image
+      - name: Set container image name
         id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: |
-            type=raw,value=${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedarch}}
+        run: |
+          echo image="ghcr.io/${{ github.repository }}:${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedarch}}" >> $GITHUB_OUTPUT
 
       - name: Install rclone & add rclone conf file
         uses: nick-fields/retry@v2
@@ -224,8 +221,7 @@ jobs:
           file: .github/scripts/build.Dockerfile
           push: false
           load: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.image }}
           platforms: ${{ steps.versions.outputs.platform }}
 
       - name: Extract files from image and mark failed
@@ -234,7 +230,7 @@ jobs:
           set -x
           mkdir -p image
           cd image
-          docker save ${{ steps.meta.outputs.tags }} > image.tar
+          docker save ${{ steps.meta.outputs.image }} > image.tar
           tar -xvf image.tar
           # Untar the last layer (Build layer)
           cat manifest.json | awk -F'"' '{print $(NF-1)}' > /tmp/layername
