@@ -1,12 +1,14 @@
 #!/usr/local/bin/RScript
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager", repos = "http://cran.us.r-project.org")
-install.packages("R.utils", repos = "http://cran.us.r-project.org")
+if (!require("R.utils", quietly = TRUE))
+    install.packages("R.utils", repos = "http://cran.us.r-project.org")
+
 userargs <- R.utils::commandArgs(asValues = TRUE)
 outfile <- userargs$outfile
 which <- userargs$which
 recursive <- userargs$recursive
-if (recursive == 'FALSE') { recursive = FALSE }
+if (recursive == 'FALSE') { recursive <- FALSE }
 
 .exlude_packages <- function() {
     inst <- installed.packages()
@@ -33,11 +35,7 @@ while (length(biocpkgs) > 0)
 }
 
 # Remove dependencies that are already dependencies of other dependencies
-pkgdeps <- lapply(pkgdeps, function(x) {
-  elements_to_remove <- unique(unlist(pkgdeps[unlist(x)]))
-  elements_to_remove <- elements_to_remove[elements_to_remove %in% x]
-  return(x[!(x %in% elements_to_remove)])
-})
+for (each in names(pkgdeps)) { for (el in pkgdeps[[each]]) {pkgdeps[[each]] <- pkgdeps[[each]][!(pkgdeps[[each]] %in% pkgdeps[[el]])]}}
 
 library(jsonlite)
 fileConn<-file(outfile)
