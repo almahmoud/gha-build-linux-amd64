@@ -23,7 +23,7 @@ function process_dep() {
 export -f process_dep
 
 if [ -s /tmp/deps ]; then
-  cat /tmp/deps | xargs -i bash -c "process_dep {}"
+  cat /tmp/deps | xargs -i bash -c "if grep 'tar.gz$' lists/{}; then process_dep {}; else echo 'Skipping {}'; fi"
 else
   echo "No dependencies"
 fi

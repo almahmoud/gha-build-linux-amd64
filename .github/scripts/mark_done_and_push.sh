@@ -33,5 +33,5 @@ fi
 
 git add lists
 git add "$TARGETFILE"
-git commit -m "Mark pushed $PKGTOMARK"
+git commit -m "Mark $PKGTOMARK as $TAR"
 git push

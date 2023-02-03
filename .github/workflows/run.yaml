@@ -176,7 +176,7 @@ jobs:
           curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null && sudo apt-get update -y && DEBIAN_FRONTEND=noninteractive sudo apt-get --no-install-recommends install gh jq time -y
           PKG=${{ matrix.pkg }}
           mkdir -p $(pwd)/${{ steps.versions.outputs.library }}
-          cat /tmp/directdeps | xargs -i bash .github/scripts/download_artifact.sh {} $(pwd)/${{ steps.versions.outputs.library }} ${{github.repository}}
+          cat /tmp/directdeps | xargs -i bash -c "if grep 'tar.gz$' lists/{}; then bash .github/scripts/download_artifact.sh {} $(pwd)/${{ steps.versions.outputs.library }} ${{github.repository}}; else echo 'Skipping {}'; fi"
           ls $(pwd)/${{ steps.versions.outputs.library }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -266,8 +266,6 @@ jobs:
             mkdir -p lists/failed
             cp /tmp/$PKG lists/failed/$PKG
             if bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} 'failed' packages.json 2>&1 | grep -i 'error'";
-              then exit 1
-            elif bash -c "bash .github/scripts/mark_done_and_push.sh ${{ matrix.pkg }} 'failed' alldeps.json 2>&1 | grep -i 'error'";
               then exit 1
             else 
               echo "Marked pushed ${{ matrix.pkg }}"
