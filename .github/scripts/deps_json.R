@@ -34,8 +34,18 @@ while (length(biocpkgs) > 0)
     ## Add dependencies to list to add to final list of packages to buil
 }
 
-# Remove dependencies that are already dependencies of other dependencies
-for (each in names(pkgdeps)) { for (el in pkgdeps[[each]]) {pkgdeps[[each]] <- pkgdeps[[each]][!(pkgdeps[[each]] %in% pkgdeps[[el]])]}}
+
+for (each in names(pkgdeps))
+{
+    for (el in pkgdeps[[each]])
+    {
+        # Remove circular dependencies
+        pkgdeps[[el]] <- pkgdeps[[el]][pkgdeps[[el]] != each]
+        # Remove dependencies that are already dependencies of other dependencies
+        pkgdeps[[each]] <- pkgdeps[[each]][!(pkgdeps[[each]] %in% pkgdeps[[el]])]
+    }
+}
+
 
 library(jsonlite)
 fileConn<-file(outfile)
