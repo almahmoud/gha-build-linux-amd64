@@ -18,7 +18,7 @@ with open('$TARGETFILE', 'r') as f:
 with open('strongdeps.json', 'r') as f:
     strongdeps = json.load(f)
 failedpkg = '$PKGTOMARK'
-affected = [p for p in pkgs if (failedpkg in pkgs[p] and failedpkg not in strongdeps[p])]
+affected = [p for p in pkgs if (failedpkg in pkgs.get(p, []) and failedpkg not in strongdeps.get(p, []))]
 for pkg in affected:
     pkgs[pkg].remove(failedpkg)
 with open('$TARGETFILE', 'w') as f:
