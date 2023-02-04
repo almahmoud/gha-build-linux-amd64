@@ -329,6 +329,21 @@ jobs:
           echo "Size of package binary: $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/binaries/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
           echo "Size of package library w/ dependencies ([see GitHub artifacts in job summary](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifacts)): $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/libraries/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
 
+      - name: Set token depending on whether a new workflow is needed
+        id: tokenbuilt
+        run: |
+          # PAT will trigger a push workflow, GITHUB_TOKEN won't
+          # Trigger a new workflow if this package has reverse dependencies (and no comma, ie other dependencies)
+          PKG=${{matrix.pkg}}
+          if grep -q "        \"$PKG\"$" packages.json; then TOK=${{secrets.PAT}}; else TOK=${{secrets.GITHUB_TOKEN}}; fi
+          echo tok=$(echo "$TOK") >> $GITHUB_OUTPUT
+
+      - name: Checkout with token
+        uses: actions/checkout@v3
+        with:
+          token: ${{ steps.tokenbuilt.outputs.tok }}
+          persist-credentials: true
+
       - name: Rclone mark as pushed
         uses: nick-fields/retry@v2
         with:
