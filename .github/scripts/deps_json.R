@@ -18,28 +18,22 @@ exclude <- .exlude_packages()
 db <- available.packages(repos = BiocManager::repositories())
 
 biocpkgs <- available.packages(repos = BiocManager::repositories()["BioCsoft"])[,1]
+pkglist <- biocpkgs
 pkgdeps <- c()
-while (length(biocpkgs) > 0)
+while (length(pkglist) > 0)
 {
-    pdeps <- tools::package_dependencies(biocpkgs, db = db, recursive = recursive, which = which)
+    pdeps <- tools::package_dependencies(pkglist, db = db, recursive = recursive, which = which)
     pdeps <- lapply(pdeps, function(x){x[!(x %in% exclude)] } )
     for (p in names(pdeps)) {
-        biocpkgs <- c(biocpkgs, pdeps[[p]][!(pdeps[[p]]) %in% c(names(pkgdeps), biocpkgs)])
+        pkglist <- c(pkglist, pdeps[[p]][!(pdeps[[p]]) %in% c(names(pkgdeps), pkglist)])
     }
     pkgdeps <- c(pkgdeps, pdeps)
-    biocpkgs <- biocpkgs[!(biocpkgs %in% names(pkgdeps))]
+    pkglist <- pkglist[!(pkglist %in% names(pkgdeps))]
+    # The first iteration uses the specified 'which', applying to all Bioc packages.
+    # Always use strong always for CRAN packages, which is what is installed after
+    # the first iteration of the loop
+    which <- "strong"
 }
-
-
-for (each in names(pkgdeps))
-{
-    for (el in pkgdeps[[each]])
-    {
-        # Remove circular dependencies
-        pkgdeps[[el]] <- pkgdeps[[el]][pkgdeps[[el]] != each]
-    }
-}
-
 
 library(jsonlite)
 fileConn<-file(outfile)
