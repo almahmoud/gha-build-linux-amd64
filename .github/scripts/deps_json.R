@@ -17,21 +17,17 @@ if (recursive == 'FALSE') { recursive <- FALSE }
 exclude <- .exlude_packages()
 db <- available.packages(repos = BiocManager::repositories())
 
-# Recursive dependencies
 biocpkgs <- available.packages(repos = BiocManager::repositories()["BioCsoft"])[,1]
 pkgdeps <- c()
 while (length(biocpkgs) > 0)
 {
-    biocpkgs <- biocpkgs[!(biocpkgs %in% names(pkgdeps))]
     pdeps <- tools::package_dependencies(biocpkgs, db = db, recursive = recursive, which = which)
     pdeps <- lapply(pdeps, function(x){x[!(x %in% exclude)] } )
     for (p in names(pdeps)) {
         biocpkgs <- c(biocpkgs, pdeps[[p]][!(pdeps[[p]]) %in% c(names(pkgdeps), biocpkgs)])
     }
-    
-    ## Add this package and its reverse dependencies to the list
     pkgdeps <- c(pkgdeps, pdeps)
-    ## Add dependencies to list to add to final list of packages to buil
+    biocpkgs <- biocpkgs[!(biocpkgs %in% names(pkgdeps))]
 }
 
 
@@ -41,8 +37,6 @@ for (each in names(pkgdeps))
     {
         # Remove circular dependencies
         pkgdeps[[el]] <- pkgdeps[[el]][pkgdeps[[el]] != each]
-        # Remove dependencies that are already dependencies of other dependencies
-        pkgdeps[[each]] <- pkgdeps[[each]][!(pkgdeps[[each]] %in% pkgdeps[[el]])]
     }
 }
 
