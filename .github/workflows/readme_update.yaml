@@ -5,6 +5,9 @@ on:
 
 jobs:
   readme:
+    concurrency:
+      group: readme
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
