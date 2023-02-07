@@ -204,11 +204,17 @@ jobs:
             RCLONE_CONF: ${{secrets.RCLONE_CONF}}
         with:
           timeout_minutes: 20
-          max_attempts: 3
+          max_attempts: 10
           shell: bash
           command: |
+            set -xe
             sudo -v ; curl https://rclone.org/install.sh | sudo bash
             echo "$RCLONE_CONF" > ~/.rclone.conf
+            if ! command -v rclone &> /dev/null
+            then
+                echo "rclone could not be found"
+                exit 1;
+            fi
 
       - name: Build and push container image to GHCR
         id: dockerbuild
