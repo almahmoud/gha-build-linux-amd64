@@ -42,6 +42,8 @@ for (each in names(pkgdeps))
     {
         if (el %in% pkgdeps[[each]] && each %in% pkgdeps[[el]])
         {
+            # Add Bioc strong dependencies to recursive (otherwise hidden circular dependencies will exist)
+            pkgdeps[[each]] <- c(pkgdeps[[each]], pkgdeps[[el]][!(pkgdeps[[el]] %in% pkgdeps[[each]])])
             # Remove circular dependencies
             pkgdeps[[el]] <- pkgdeps[[el]][pkgdeps[[el]] != each]
         }
