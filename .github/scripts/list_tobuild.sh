@@ -22,9 +22,13 @@ if [ ! -s tobuild.txt ]; then
             counter=$((counter+1))
             echo $counter > "logs/$(cat runstarttime)/retries_counter"
             if [ $counter -gt 2 ]; then
-                grep -Ervl "(failed|tar.gz$)" lists | grep -v "failed" | xargs rm
-                git add lists;
-            elif [ $counter -gt 10 ]; then
+                grep -Ervl "(failed|tar.gz$)" lists | grep -v "failed" > /tmp/resetpkgs
+                if [ -s /tmp/resetpkgs ]; then
+                    cat /tmp/resetpkgs | xargs rm
+                    git add lists;
+                fi
+            fi
+            if [ $counter -gt 10 ]; then
                 echo "READY" > /tmp/write_PACKAGES
             fi
             git add logs/$(cat runstarttime)

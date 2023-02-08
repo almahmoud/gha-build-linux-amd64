@@ -35,6 +35,20 @@ while (length(pkglist) > 0)
     which <- "strong"
 }
 
+
+for (each in names(pkgdeps))
+{
+    for (el in pkgdeps[[each]])
+    {
+        if (el in pkgdeps[[each]] && each in pkgdeps[[el]])
+        {
+            # Remove circular dependencies
+            pkgdeps[[el]] <- pkgdeps[[el]][pkgdeps[[el]] != each]
+        }
+    }
+}
+
+
 library(jsonlite)
 fileConn<-file(outfile)
 writeLines(prettify(toJSON(pkgdeps)), fileConn)
