@@ -40,7 +40,7 @@ for (each in names(pkgdeps))
 {
     for (el in pkgdeps[[each]])
     {
-        if (el in pkgdeps[[each]] && each in pkgdeps[[el]])
+        if (el %in% pkgdeps[[each]] && each %in% pkgdeps[[el]])
         {
             # Remove circular dependencies
             pkgdeps[[el]] <- pkgdeps[[el]][pkgdeps[[el]] != each]

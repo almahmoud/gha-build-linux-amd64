@@ -32,4 +32,6 @@ fi
 # Redirect all stout/stderr to log
 (time Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); if(BiocManager::install('$PKG', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)" 2>&1 ) 2>&1 | tee /tmp/$PKG
 
+Rscript -e "install.packages('maketools'); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('$PKG'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('tmp/$PKG-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"
+
 mv ${PKG}_*.tar.gz /tmp/tars/ || true

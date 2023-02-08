@@ -312,6 +312,9 @@ jobs:
           # Copy entire log
           cp /tmp/$PKG /tmp/logs/$runstarttime/build/$containername/$arch/$PKG
 
+          mkdir -p /tmp/logs/$runstarttime/sysdeps/$containername/$arch/$PKG
+          if [ -s "/tmp/${PKG}-sysdeps" ]; then cp /tmp/${PKG}-sysdeps /tmp/logs/$runstarttime/sysdeps/$containername/$arch/$PKG; fi
+
       - name: Rclone push package
         uses: nick-fields/retry@v2
         with:
