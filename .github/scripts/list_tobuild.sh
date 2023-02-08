@@ -21,6 +21,10 @@ if [ ! -s tobuild.txt ]; then
             fi
             counter=$((counter+1))
             echo $counter > "logs/$(cat runstarttime)/retries_counter"
+            if [ $counter -gt 2 ]; then
+                grep -Ervl "(failed|tar.gz$)" lists | grep -v "failed" | xargs rm
+                git add lists
+            fi
             if [ $counter -gt 10 ]; then
                 echo "READY" > /tmp/write_PACKAGES
             fi
