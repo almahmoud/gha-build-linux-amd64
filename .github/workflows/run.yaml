@@ -150,7 +150,7 @@ jobs:
             git push
 
       - name: Get R, OS, and Bioc versions
-        uses: "docker://&bioc.CONTAINER_BASE_IMAGE"
+        uses: "docker://ghcr.io/bioconductor/bioconductor:RELEASE_3_16"
         id: versions
         with:
           entrypoint: /bin/bash
