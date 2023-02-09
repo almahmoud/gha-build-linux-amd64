@@ -1,7 +1,5 @@
 #!/bin/bash
-Rscript .github/scripts/deps_json.R --outfile=packages.json --which=most --recursive=strong
-Rscript .github/scripts/deps_json.R --outfile=directdeps.json --which=most --recursive=FALSE
-Rscript .github/scripts/deps_json.R --outfile=strongdeps.json --which=strong --recursive=strong
+Rscript .github/scripts/deps_json.R --alldeps=alldeps.json --biocdeps=packages.json --which=most --recursive=strong
 
 python3 -c """
 import json
@@ -17,7 +15,7 @@ for pkg in pkgs:
 with open('packages.json', 'w') as f:
     f.write(json.dumps(pkgs, indent=4))
 """
-cp packages.json alldeps.json
+cp packages.json biocdeps.json
 echo "$(TZ=EST date '+%Y-%m-%d-%H-%M')" > runstarttime
 bash .github/scripts/get_container_name.sh > containername
 echo "&bioc.ARCH" > arch

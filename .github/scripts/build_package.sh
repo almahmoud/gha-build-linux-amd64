@@ -8,8 +8,8 @@ containername=$(cat containername)
 mkdir -p $LIBRARY
 mkdir -p /tmp/tars/
 
-# Get direct dependency list to pull their libraries from their build run
-sed -n "/^    \"$PKG\"/,/^    \"/p" directdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/deps
+# Get bioc dependencies list to pull their libraries from their build run
+sed -n "/^    \"$PKG\"/,/^    \"/p" biocdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/deps
 
 function process_dep() {
   if [ -d $LIBRARY/$1 ]; then
@@ -30,8 +30,10 @@ fi
 
 # Build package, and exit with code 0 only on success
 # Redirect all stout/stderr to log
-(time Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); if(BiocManager::install('$PKG', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)" 2>&1 ) 2>&1 | tee /tmp/$PKG
+(time Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); if(BiocManager::install('$PKG', INSTALL_opts = '--build', dependencies = TRUE, update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)" 2>&1 ) 2>&1 | tee /tmp/$PKG
 
 Rscript -e "install.packages('maketools'); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('$PKG'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('/tmp/$PKG-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"
 
-mv ${PKG}_*.tar.gz /tmp/tars/ || true
+mv *.tar.gz /tmp/tars/ || true
+
+ls /tmp/tars | awk -F'_' '{print $1}' | xargs -i bash -c 'if grep -q "tar.gz$" lists/{}; then rm /tmp/tars/$(cat lists/{}); else echo "{} tar not already found."; fi'
