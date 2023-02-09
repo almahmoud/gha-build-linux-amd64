@@ -1,0 +1,111 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''switchBox'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'switchBox'
+also installing the dependencies ‘bitops’, ‘plyr’, ‘gtools’, ‘caTools’, ‘pROC’, ‘gplots’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bitops_1.0-7.tar.gz'
+Content type 'binary/octet-stream' length 32391 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/plyr_1.8.8.tar.gz'
+Content type 'binary/octet-stream' length 819020 bytes (799 KB)
+==================================================
+downloaded 799 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'binary/octet-stream' length 352174 bytes (343 KB)
+==================================================
+downloaded 343 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/caTools_1.18.2.tar.gz'
+Content type 'binary/octet-stream' length 245911 bytes (240 KB)
+==================================================
+downloaded 240 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pROC_1.18.0.tar.gz'
+Content type 'binary/octet-stream' length 827272 bytes (807 KB)
+==================================================
+downloaded 807 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gplots_3.1.3.tar.gz'
+Content type 'binary/octet-stream' length 594297 bytes (580 KB)
+==================================================
+downloaded 580 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/switchBox_1.34.0.tar.gz'
+Content type 'application/x-gzip' length 473827 bytes (462 KB)
+==================================================
+downloaded 462 KB
+
+* installing *binary* package ‘bitops’ ...
+* ‘bitops’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bitops’ as ‘bitops_1.0-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bitops)
+* installing *binary* package ‘plyr’ ...
+* ‘plyr’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘plyr’ as ‘plyr_1.8.8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (plyr)
+* installing *binary* package ‘gtools’ ...
+* ‘gtools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *binary* package ‘caTools’ ...
+* ‘caTools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘caTools’ as ‘caTools_1.18.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caTools)
+* installing *binary* package ‘pROC’ ...
+* ‘pROC’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘pROC’ as ‘pROC_1.18.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pROC)
+* installing *binary* package ‘gplots’ ...
+* ‘gplots’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gplots’ as ‘gplots_3.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gplots)
+* installing *source* package ‘switchBox’ ...
+** using staged installation
+** libs
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CalculateSignedScoreCore.cc -o CalculateSignedScoreCore.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CalculateSignedScoreCoreTieHandler.cc -o CalculateSignedScoreCoreTieHandler.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CalculateSignedScoreRestrictedPairsCore.cc -o CalculateSignedScoreRestrictedPairsCore.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CalculateSignedScoreRestrictedPairsCoreTieHandler.cc -o CalculateSignedScoreRestrictedPairsCoreTieHandler.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rinit.c -o rinit.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vect2compC.cc -o vect2compC.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o switchBox.so CalculateSignedScoreCore.o CalculateSignedScoreCoreTieHandler.o CalculateSignedScoreRestrictedPairsCore.o CalculateSignedScoreRestrictedPairsCoreTieHandler.o rinit.o vect2compC.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-switchBox/00new/switchBox/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘switchBox’ as ‘switchBox_1.34.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (switchBox)
+
+The downloaded source packages are in
+	‘/tmp/RtmpyqwLcf/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m18.119s
+user	0m9.029s
+sys	0m1.228s
