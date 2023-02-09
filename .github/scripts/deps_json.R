@@ -6,10 +6,7 @@ if (!require("R.utils", quietly = TRUE))
 
 userargs <- R.utils::commandArgs(asValues = TRUE)
 biocdeps <- userargs$biocdeps
-alldeps <- userargs$alldeps
-which <- userargs$which
-recursive <- userargs$recursive
-if (recursive == 'FALSE') { recursive <- FALSE }
+uniquedeps <- userargs$uniquedeps
 
 .exlude_packages <- function() {
     inst <- installed.packages()
@@ -18,25 +15,38 @@ if (recursive == 'FALSE') { recursive <- FALSE }
 exclude <- .exlude_packages()
 db <- available.packages(repos = BiocManager::repositories())
 
-biocpkgs <- available.packages(repos = BiocManager::repositories()["BioCsoft"])[,1]
-pkglist <- biocpkgs
-pkgdeps <- c()
-pdeps <- tools::package_dependencies(pkglist, db = db, recursive = recursive, which = which)
-pdeps <- lapply(pdeps, function(x){x[!(x %in% exclude)] } )
-for (p in names(pdeps)) {
-    pkglist <- c(pkglist, pdeps[[p]][!(pdeps[[p]]) %in% c(names(pkgdeps), pkglist)])
-}
-pkgdeps <- c(pkgdeps, pdeps)
+softpkgs <- available.packages(repos = BiocManager::repositories()["BioCsoft"])[,1]
+annpkgs <- available.packages(repos = BiocManager::repositories()["BioCann"])[,1]
+exppkgs <- available.packages(repos = BiocManager::repositories()["BioCexp"])[,1]
+wkflpkgs <- available.packages(repos = BiocManager::repositories()["BioCworkflows"])[,1]
+# bookpkgs <- available.packages(repos = BiocManager::repositories()["BioCbooks"])[,1]
+
+biocpkgs <- unique(sort(c(softpkgs, annpkgs, exppkgs, wkflpkgs)))
+
+pkgdeps <- tools::package_dependencies(biocpkgs, db = db, recursive = 'strong', which = 'most')
+pkgdeps <- lapply(pkgdeps, function(x){x[!(x %in% exclude)] } )
+strongpkgdeps <- tools::package_dependencies(biocpkgs, db = db, recursive = 'strong', which = 'strong')
+strongpkgdeps <- lapply(strongpkgdeps, function(x){x[!(x %in% exclude)] } )
 
 biocpkgdeps <- c()
 
 for (p in names(pkgdeps)) {
-    biocpkgdeps[[p]] <- pkgdeps[[p]][pkgdeps[[p]] %in% biocpkgs]
+    biocpkgdeps[[p]] <- strongpkgdeps[[p]][strongpkgdeps[[p]] %in% biocpkgs]
+}
+
+strongpkgs <- unique(sort(c(unlist(strongpkgdeps), names(strongpkgdeps))))
+allpkgs <- unique(sort(c(unlist(pkgdeps), names(pkgdeps))))
+notstrong <- allpkgs[!(allpkgs %in% strongpkgs)]
+
+uniquepkgdeps <- c()
+for (p in names(pkgdeps)) {
+    uniquepkgdeps[[p]] <- pkgdeps[[p]][pkgdeps[[p]] %in% notstrong]
+    notstrong <- notstrong[!(notstrong %in% uniquepkgdeps[[p]])]
 }
 
 library(jsonlite)
-fileConn<-file(alldeps)
-writeLines(prettify(toJSON(pkgdeps)), fileConn)
+fileConn<-file(uniquedeps)
+writeLines(prettify(toJSON(uniquepkgdeps)), fileConn)
 close(fileConn)
 fileConn<-file(biocdeps)
 writeLines(prettify(toJSON(biocpkgdeps)), fileConn)
