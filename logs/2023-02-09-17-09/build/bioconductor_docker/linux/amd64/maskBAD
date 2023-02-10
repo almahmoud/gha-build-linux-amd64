@@ -1,0 +1,69 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''maskBAD'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'maskBAD'
+also installing the dependency ‘gcrma’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/gcrma_2.70.0.tar.gz'
+Content type 'application/x-gzip' length 149387 bytes (145 KB)
+==================================================
+downloaded 145 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/maskBAD_1.42.0.tar.gz'
+Content type 'application/x-gzip' length 1429992 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+* installing *source* package ‘gcrma’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c baseProfile.c -o baseProfile.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c computeAffinities.c -o computeAffinities.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c postmean.c -o postmean.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gcrma.so baseProfile.o computeAffinities.o postmean.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-gcrma/00new/gcrma/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gcrma’ as ‘gcrma_2.70.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gcrma)
+* installing *source* package ‘maskBAD’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘maskBAD’ as ‘maskBAD_1.42.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (maskBAD)
+
+The downloaded source packages are in
+	‘/tmp/RtmpKdRUIo/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m23.126s
+user	0m20.828s
+sys	0m1.653s
