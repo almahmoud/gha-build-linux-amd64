@@ -1,0 +1,76 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''oppar'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'oppar'
+also installing the dependency ‘GSVA’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/GSVA_1.46.0.tar.gz'
+Content type 'application/x-gzip' length 2267711 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/oppar_1.26.0.tar.gz'
+Content type 'application/x-gzip' length 3554720 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+* installing *source* package ‘GSVA’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c kernel_estimation.c -o kernel_estimation.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ks_test.c -o ks_test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c register_cmethods.c -o register_cmethods.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o GSVA.so kernel_estimation.o ks_test.o register_cmethods.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-GSVA/00new/GSVA/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘GSVA’ as ‘GSVA_1.46.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (GSVA)
+* installing *source* package ‘oppar’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_oppar.c -o R_init_oppar.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c kernel_estimation.c -o kernel_estimation.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ks_test.c -o ks_test.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o oppar.so R_init_oppar.o kernel_estimation.o ks_test.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-oppar/00new/oppar/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘oppar’ as ‘oppar_1.26.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (oppar)
+
+The downloaded source packages are in
+	‘/tmp/RtmpZ8MyhC/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m56.815s
+user	0m52.526s
+sys	0m2.975s
