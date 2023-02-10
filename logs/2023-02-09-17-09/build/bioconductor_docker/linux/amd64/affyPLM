@@ -1,0 +1,94 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''affyPLM'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'affyPLM'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/affyPLM_1.74.2.tar.gz'
+Content type 'application/x-gzip' length 5989782 bytes (5.7 MB)
+==================================================
+downloaded 5.7 MB
+
+* installing *source* package ‘affyPLM’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LESN.c -o LESN.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_avg_log.c -o PLM_avg_log.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_biweight.c -o PLM_biweight.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_log_avg.c -o PLM_log_avg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_medianPM.c -o PLM_medianPM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_median_logPM.c -o PLM_median_logPM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_medianpolish.c -o PLM_medianpolish.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PLM_modelmatrix.c -o PLM_modelmatrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SCAB.c -o SCAB.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chipbackground.c -o chipbackground.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c common_types.c -o common_types.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c do_PLMrlm.c -o do_PLMrlm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c do_PLMrma.c -o do_PLMrma.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c do_PLMthreestep.c -o do_PLMthreestep.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c idealmismatch.c -o idealmismatch.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lm_threestep.c -o lm_threestep.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix_functions.c -o matrix_functions.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nthLargestPM.c -o nthLargestPM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c preprocess.c -o preprocess.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c psi_fns.c -o psi_fns.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c qnorm_probeset.c -o qnorm_probeset.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_rmaexpress.c -o read_rmaexpress.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rlm_PLM.c -o rlm_PLM.o
+rlm_PLM.c: In function ‘rlm_PLMset_nameoutput’:
+rlm_PLM.c:868:32: warning: ‘%d’ directive output may be truncated writing between 1 and 10 bytes into a region of size 9 [-Wformat-truncation=]
+  868 |           snprintf(tmp_str2,9,"%d",j+2);
+      |                                ^~
+rlm_PLM.c:868:31: note: directive argument in the range [2, 2147483647]
+  868 |           snprintf(tmp_str2,9,"%d",j+2);
+      |                               ^~~~
+In file included from /usr/include/stdio.h:894,
+                 from /usr/local/lib/R/include/R.h:45,
+                 from preprocess.h:4,
+                 from rlm_PLM.c:71:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:71:10: note: ‘__builtin___snprintf_chk’ output between 2 and 11 bytes into a destination of size 9
+   71 |   return __builtin___snprintf_chk (__s, __n, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   72 |                                    __glibc_objsize (__s), __fmt,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   73 |                                    __va_arg_pack ());
+      |                                    ~~~~~~~~~~~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rlm_threestep.c -o rlm_threestep.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rmaPLM_pseudo.c -o rmaPLM_pseudo.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rma_PLM.c -o rma_PLM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rma_common.c -o rma_common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scaling.c -o scaling.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c threestep.c -o threestep.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c threestep_PLM.c -o threestep_PLM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c threestep_common.c -o threestep_common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c threestep_summary.c -o threestep_summary.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c threestep_summary_methods.c -o threestep_summary_methods.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/preprocessCore/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transfns.c -o transfns.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o affyPLM.so LESN.o PLM_avg_log.o PLM_biweight.o PLM_log_avg.o PLM_medianPM.o PLM_median_logPM.o PLM_medianpolish.o PLM_modelmatrix.o SCAB.o chipbackground.o common_types.o do_PLMrlm.o do_PLMrma.o do_PLMthreestep.o idealmismatch.o lm_threestep.o matrix_functions.o nthLargestPM.o preprocess.o psi_fns.o qnorm_probeset.o read_rmaexpress.o rlm_PLM.o rlm_threestep.o rmaPLM_pseudo.o rma_PLM.o rma_common.o scaling.o threestep.o threestep_PLM.o threestep_common.o threestep_summary.o threestep_summary_methods.o transfns.o -llapack -lblas -lgfortran -lm -lquadmath -lz -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-affyPLM/00new/affyPLM/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘affyPLM’ as ‘affyPLM_1.74.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (affyPLM)
+
+The downloaded source packages are in
+	‘/tmp/RtmplbnDZf/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m21.613s
+user	0m19.442s
+sys	0m1.585s
