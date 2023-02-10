@@ -1,0 +1,223 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''rhdf5'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'rhdf5'
+also installing the dependency ‘rhdf5filters’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/rhdf5filters_1.10.0.tar.gz'
+Content type 'application/x-gzip' length 948290 bytes (926 KB)
+==================================================
+downloaded 926 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/rhdf5_2.42.0.tar.gz'
+Content type 'application/x-gzip' length 1241025 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+* installing *source* package ‘rhdf5filters’ ...
+** using staged installation
+configuring the BLOSC filter...
+x86_CPU=true
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether C compiler accepts -msse2... yes
+checking whether C compiler accepts -mavx2... yes
+checking for gcc __builtin_cpu_init function... (cached) true
+checking for x86 sse2 instruction support... yes
+checking for x86 avx2 instruction support... yes
+configure: creating ./config.status
+config.status: creating src/blosc/lib/blosc-1.20.1/Makefile
+config.status: creating src/blosc/Makefile
+configure:    BZIP2_LIB=bzip2/libH5Zbz2.so
+configure:    BLOSC_LIB=blosc/libH5Zblosc.so
+configure:    LZF_LIB=lzf/libH5Zlzf.so
+configure: creating ./config.status
+config.status: creating src/blosc/lib/blosc-1.20.1/Makefile
+config.status: creating src/blosc/Makefile
+config.status: creating src/Makevars
+** libs
+make -C blosc
+make[1]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc'
+make -C lib/snappy-1.1.1
+make[2]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/snappy-1.1.1'
+g++ -std=gnu++14 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -c snappy.cc
+g++ -std=gnu++14 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -c snappy-c.cc
+g++ -std=gnu++14 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -c snappy-sinksource.cc
+g++ -std=gnu++14 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -c snappy-stubs-internal.cc
+make[2]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/snappy-1.1.1'
+make -C lib/lz4-1.9.2
+make[2]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/lz4-1.9.2'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -c lz4.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -c lz4hc.c
+make[2]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/lz4-1.9.2'
+make -C lib/zstd-1.4.5
+make[2]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/zstd-1.4.5'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/debug.c -o common/debug.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/entropy_common.c -o common/entropy_common.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/error_private.c -o common/error_private.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/fse_decompress.c -o common/fse_decompress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -I. -c common/pool.c -o common/pool.o -o common/pool.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/threading.c -o common/threading.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/xxhash.c -o common/xxhash.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c common/zstd_common.c -o common/zstd_common.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/fse_compress.c -o compress/fse_compress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/hist.c -o compress/hist.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/huf_compress.c -o compress/huf_compress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_compress.c -o compress/zstd_compress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_compress_literals.c -o compress/zstd_compress_literals.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_compress_sequences.c -o compress/zstd_compress_sequences.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_compress_superblock.c -o compress/zstd_compress_superblock.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_double_fast.c -o compress/zstd_double_fast.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_fast.c -o compress/zstd_fast.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_lazy.c -o compress/zstd_lazy.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_ldm.c -o compress/zstd_ldm.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstd_opt.c -o compress/zstd_opt.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c compress/zstdmt_compress.c -o compress/zstdmt_compress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c decompress/huf_decompress.c -o decompress/huf_decompress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c decompress/zstd_ddict.c -o decompress/zstd_ddict.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c decompress/zstd_decompress.c -o decompress/zstd_decompress.o
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I. -I./common -DXXH_NAMESPACE=ZSTD_ -c decompress/zstd_decompress_block.c -o decompress/zstd_decompress_block.o
+make[2]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/zstd-1.4.5'
+make -C lib/blosc-1.20.1 all
+make[2]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/blosc-1.20.1'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c bitshuffle-avx2.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c shuffle-avx2.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c bitshuffle-sse2.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c shuffle-sse2.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c bitshuffle-generic.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c shuffle-generic.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -DSHUFFLE_SSE2_ENABLED -DSHUFFLE_AVX2_ENABLED -c shuffle.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c blosclz.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c blosc.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I../lz4-1.9.2 -I../snappy-1.1.1 -I../zstd-1.4.5 -msse2 -mavx2 -c fastcopy.c
+make[2]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc/lib/blosc-1.20.1'
+rm -f libblosc.a
+ar cq libblosc.a lib/blosc-1.20.1/bitshuffle-avx2.o lib/blosc-1.20.1/blosc.o lib/blosc-1.20.1/shuffle-avx2.o lib/blosc-1.20.1/shuffle-sse2.o lib/blosc-1.20.1/bitshuffle-generic.o lib/blosc-1.20.1/blosclz.o lib/blosc-1.20.1/shuffle.o lib/blosc-1.20.1/bitshuffle-sse2.o lib/blosc-1.20.1/fastcopy.o lib/blosc-1.20.1/shuffle-generic.o lib/snappy-1.1.1/snappy.o lib/snappy-1.1.1/snappy-c.o lib/snappy-1.1.1/snappy-sinksource.o lib/snappy-1.1.1/snappy-stubs-internal.o lib/lz4-1.9.2/lz4.o lib/lz4-1.9.2/lz4hc.o lib/zstd-1.4.5/common/debug.o lib/zstd-1.4.5/common/entropy_common.o lib/zstd-1.4.5/common/error_private.o lib/zstd-1.4.5/common/fse_decompress.o lib/zstd-1.4.5/common/pool.o lib/zstd-1.4.5/common/threading.o lib/zstd-1.4.5/common/xxhash.o lib/zstd-1.4.5/common/zstd_common.o lib/zstd-1.4.5/compress/fse_compress.o lib/zstd-1.4.5/compress/hist.o lib/zstd-1.4.5/compress/huf_compress.o lib/zstd-1.4.5/compress/zstd_compress.o lib/zstd-1.4.5/compress/zstd_compress_literals.o lib/zstd-1.4.5/compress/zstd_compress_sequences.o lib/zstd-1.4.5/compress/zstd_compress_superblock.o lib/zstd-1.4.5/compress/zstd_double_fast.o lib/zstd-1.4.5/compress/zstd_fast.o lib/zstd-1.4.5/compress/zstd_lazy.o lib/zstd-1.4.5/compress/zstd_ldm.o lib/zstd-1.4.5/compress/zstd_opt.o lib/zstd-1.4.5/compress/zstdmt_compress.o lib/zstd-1.4.5/decompress/huf_decompress.o lib/zstd-1.4.5/decompress/zstd_ddict.o lib/zstd-1.4.5/decompress/zstd_decompress.o lib/zstd-1.4.5/decompress/zstd_decompress_block.o
+ranlib libblosc.a
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -c -o H5Zblosc.o H5Zblosc.c \
+-I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I./lib/blosc-1.20.1
+g++ -std=gnu++14 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -L/usr/local/lib -shared -o libH5Zblosc.so H5Zblosc.o \
+libblosc.a -lz
+make[1]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/blosc'
+make -C bzip2
+make[1]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/bzip2'
+make -C bzip2-1.0.8
+make[2]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/bzip2/bzip2-1.0.8'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c blocksort.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c huffman.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c crctable.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c randtable.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c compress.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c decompress.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -D_FILE_OFFSET_BITS=64 -c bzlib.c
+rm -f libbz2.a
+ar cq libbz2.a blocksort.o huffman.o crctable.o randtable.o compress.o decompress.o bzlib.o
+ranlib libbz2.a
+make[2]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/bzip2/bzip2-1.0.8'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -shared H5Zbzip2.c -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" \
+-I./bzip2-1.0.8/ ./bzip2-1.0.8/libbz2.a -L/usr/local/lib -o libH5Zbz2.so
+make[1]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/bzip2'
+make -C lzf
+make[1]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/lzf'
+make -C lzf
+make[2]: Entering directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/lzf/lzf'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -c lzf_c.c
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -c lzf_d.c
+rm -f liblzf.a
+ar cq liblzf.a lzf_c.o lzf_d.o
+make[2]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/lzf/lzf'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic -shared H5Zlzf.c -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" \
+-I./lzf/ ./lzf/liblzf.a -L/usr/local/lib -o libH5Zlzf.so
+make[1]: Leaving directory '/tmp/RtmpHOLNwy/R.INSTALL451d0bb202/rhdf5filters/src/lzf'
+mkdir -p "/tmp/built/00LOCK-rhdf5filters/00new/rhdf5filters/lib/"
+cp bzip2/libH5Zbz2.so "/tmp/built/00LOCK-rhdf5filters/00new/rhdf5filters/lib/"
+cp blosc/libH5Zblosc.so "/tmp/built/00LOCK-rhdf5filters/00new/rhdf5filters/lib/"
+cp lzf/libH5Zlzf.so "/tmp/built/00LOCK-rhdf5filters/00new/rhdf5filters/lib/"
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -I"/tmp/built/Rhdf5lib/include" -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rhdf5filters.c -o rhdf5filters.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rhdf5filters.so rhdf5filters.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-rhdf5filters/00new/rhdf5filters/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rhdf5filters’ as ‘rhdf5filters_1.10.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rhdf5filters)
+* installing *source* package ‘rhdf5’ ...
+** using staged installation
+configure: creating ./config.status
+config.status: creating src/external_filters.h
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5.c -o H5.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5A.c -o H5A.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5D.c -o H5D.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5E.c -o H5E.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5F.c -o H5F.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5G.c -o H5G.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5I.c -o H5I.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5L.c -o H5L.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5O.c -o H5O.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5P.c -o H5P.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5R.c -o H5R.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5S.c -o H5S.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5S_extras.c -o H5S_extras.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5T.c -o H5T.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5Z.c -o H5Z.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c H5constants.c -o H5constants.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c HandleList.cpp -o HandleList.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c HandleListWrap.c -o HandleListWrap.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bit64conversion.c -o bit64conversion.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c external_filters.c -o external_filters.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c h5dump.c -o h5dump.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c h5ls.c -o h5ls.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c h5testLock.c -o h5testLock.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c h5writeDataFrame.c -o h5writeDataFrame.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c printdatatype.c -o printdatatype.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/Rhdf5lib/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wrap.c -o wrap.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rhdf5.so H5.o H5A.o H5D.o H5E.o H5F.o H5G.o H5I.o H5L.o H5O.o H5P.o H5R.o H5S.o H5S_extras.o H5T.o H5Z.o H5constants.o HandleList.o HandleListWrap.o bit64conversion.o external_filters.o h5dump.o h5ls.o h5testLock.o h5writeDataFrame.o printdatatype.o utils.o wrap.o /tmp/built/Rhdf5lib/lib/libhdf5.a -lcrypto -lcurl -lsz -laec -lz -ldl -lm -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-rhdf5/00new/rhdf5/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rhdf5’ as ‘rhdf5_2.42.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rhdf5)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpp8RQ0P/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m55.173s
+user	0m50.747s
+sys	0m3.865s
