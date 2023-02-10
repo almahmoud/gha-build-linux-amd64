@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''HumanTranscriptomeCompendium'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'HumanTranscriptomeCompendium'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/HumanTranscriptomeCompendium_1.14.0.tar.gz'
+Content type 'application/x-gzip' length 2923734 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+* installing *source* package ‘HumanTranscriptomeCompendium’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘HumanTranscriptomeCompendium’ as ‘HumanTranscriptomeCompendium_1.14.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (HumanTranscriptomeCompendium)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpjm22rJ/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m22.278s
+user	0m19.404s
+sys	0m1.348s
