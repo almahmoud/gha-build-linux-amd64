@@ -1,0 +1,71 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''PtH2O2lipids'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'PtH2O2lipids'
+also installing the dependency ‘LOBSTAHS’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/LOBSTAHS_1.24.0.tar.gz'
+Content type 'application/x-gzip' length 3042544 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/PtH2O2lipids_1.24.0.tar.gz'
+Content type 'application/x-gzip' length 16235852 bytes (15.5 MB)
+==================================================
+downloaded 15.5 MB
+
+* installing *source* package ‘LOBSTAHS’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘polarity<-’ in package ‘LOBSTAHS’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: multiple methods tables found for ‘polarity<-’
+** testing if installed package can be loaded from final location
+Warning: multiple methods tables found for ‘polarity<-’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘LOBSTAHS’ as ‘LOBSTAHS_1.24.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (LOBSTAHS)
+* installing *source* package ‘PtH2O2lipids’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+multiple methods tables found for ‘polarity<-’ 
+Warning: replacing previous import ‘xcms::polarity<-’ by ‘LOBSTAHS::polarity<-’ when loading ‘PtH2O2lipids’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: multiple methods tables found for ‘polarity<-’
+Warning: replacing previous import ‘xcms::polarity<-’ by ‘LOBSTAHS::polarity<-’ when loading ‘PtH2O2lipids’
+** testing if installed package can be loaded from final location
+Warning: multiple methods tables found for ‘polarity<-’
+Warning: replacing previous import ‘xcms::polarity<-’ by ‘LOBSTAHS::polarity<-’ when loading ‘PtH2O2lipids’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘PtH2O2lipids’ as ‘PtH2O2lipids_1.24.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (PtH2O2lipids)
+
+The downloaded source packages are in
+	‘/tmp/RtmpClI8IA/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	1m5.552s
+user	1m1.109s
+sys	0m3.177s
