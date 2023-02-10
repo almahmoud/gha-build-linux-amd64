@@ -1,0 +1,105 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''DropletUtils'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'DropletUtils'
+also installing the dependencies ‘R.oo’, ‘R.methodsS3’, ‘sitmo’, ‘R.utils’, ‘dqrng’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/R.oo_1.25.0.tar.gz'
+Content type 'binary/octet-stream' length 954776 bytes (932 KB)
+==================================================
+downloaded 932 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/R.methodsS3_1.8.2.tar.gz'
+Content type 'binary/octet-stream' length 80411 bytes (78 KB)
+==================================================
+downloaded 78 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/sitmo_2.0.2.tar.gz'
+Content type 'binary/octet-stream' length 169062 bytes (165 KB)
+==================================================
+downloaded 165 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/R.utils_2.12.2.tar.gz'
+Content type 'binary/octet-stream' length 1394432 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/dqrng_0.3.0.tar.gz'
+Content type 'binary/octet-stream' length 152899 bytes (149 KB)
+==================================================
+downloaded 149 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/DropletUtils_1.18.1.tar.gz'
+Content type 'application/x-gzip' length 570311 bytes (556 KB)
+==================================================
+downloaded 556 KB
+
+* installing *binary* package ‘R.methodsS3’ ...
+* ‘R.methodsS3’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘R.methodsS3’ as ‘R.methodsS3_1.8.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (R.methodsS3)
+* installing *binary* package ‘sitmo’ ...
+* ‘sitmo’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘sitmo’ as ‘sitmo_2.0.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sitmo)
+* installing *binary* package ‘R.oo’ ...
+* ‘R.oo’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘R.oo’ as ‘R.oo_1.25.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (R.oo)
+* installing *binary* package ‘dqrng’ ...
+* ‘dqrng’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘dqrng’ as ‘dqrng_0.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dqrng)
+* installing *binary* package ‘R.utils’ ...
+* ‘R.utils’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘R.utils’ as ‘R.utils_2.12.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (R.utils)
+* installing *source* package ‘DropletUtils’ ...
+** using staged installation
+** libs
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c downsample_run.cpp -o downsample_run.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c encode_sequences.cpp -o encode_sequences.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c find_chimeric.cpp -o find_chimeric.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c find_swapped.cpp -o find_swapped.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c get_cell_barcodes.cpp -o get_cell_barcodes.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_cells.cpp -o group_cells.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hashed_deltas.cpp -o hashed_deltas.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c montecarlo_pval.cpp -o montecarlo_pval.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rand_custom.cpp -o rand_custom.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/beachmat/include' -I'/tmp/built/Rhdf5lib/include' -I'/tmp/built/BH/include' -I'/tmp/built/dqrng/include' -I'/tmp/built/scuttle/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.cpp -o utils.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o DropletUtils.so RcppExports.o downsample_run.o encode_sequences.o find_chimeric.o find_swapped.o get_cell_barcodes.o group_cells.o hashed_deltas.o montecarlo_pval.o rand_custom.o utils.o /tmp/built/Rhdf5lib/lib/libhdf5_cpp.a /tmp/built/Rhdf5lib/lib/libhdf5.a -lcrypto -lcurl -lsz -laec -lz -ldl -lm -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-DropletUtils/00new/DropletUtils/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DropletUtils’ as ‘DropletUtils_1.18.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DropletUtils)
+
+The downloaded source packages are in
+	‘/tmp/RtmpNjxmq3/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	1m22.137s
+user	1m11.935s
+sys	0m5.201s
