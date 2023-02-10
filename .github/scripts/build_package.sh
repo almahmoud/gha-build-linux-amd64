@@ -40,6 +40,6 @@ cat /tmp/uniquedeps | xargs -i Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER
 
 mv *.tar.gz /tmp/tars/ || true
 
-ls /tmp/tars | awk -F'_' '{print $1}' | xargs -i bash -c 'if grep -q "tar.gz$" lists/{}; then rm /tmp/tars/$(cat lists/{}); else echo "{} tar not already found."; fi'
+ls /tmp/tars | awk -F'_' '{print $1}' | grep -v "$PKG" | xargs -i bash -c 'if grep -q "tar.gz$" lists/{}; then rm /tmp/tars/$(cat lists/{}); else echo "{} tar not already found."; fi'
 
 ls /tmp/tars | awk -F'_' '{print $1}' | xargs -i Rscript -e "install.packages('maketools'); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('{}'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('/tmp/{}-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"
