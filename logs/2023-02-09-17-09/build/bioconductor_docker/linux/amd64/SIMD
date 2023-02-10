@@ -1,0 +1,89 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''SIMD'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'SIMD'
+also installing the dependencies ‘statmod’, ‘methylMnM’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/statmod_1.5.0.tar.gz'
+Content type 'binary/octet-stream' length 311238 bytes (303 KB)
+==================================================
+downloaded 303 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/methylMnM_1.36.0.tar.gz'
+Content type 'application/x-gzip' length 8813681 bytes (8.4 MB)
+==================================================
+downloaded 8.4 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/SIMD_1.16.0.tar.gz'
+Content type 'application/x-gzip' length 340752 bytes (332 KB)
+==================================================
+downloaded 332 KB
+
+* installing *binary* package ‘statmod’ ...
+* ‘statmod’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘statmod’ as ‘statmod_1.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (statmod)
+* installing *source* package ‘methylMnM’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c CpGcount.c -o CpGcount.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c calculatecount.c -o calculatecount.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c calculatecount1.c -o calculatecount1.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c calculatecountneg.c -o calculatecountneg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pmultinom.c -o pmultinom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pvalueclassify.c -o pvalueclassify.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c register.c -o register.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o methylMnM.so CpGcount.o calculatecount.o calculatecount1.o calculatecountneg.o pmultinom.o pvalueclassify.o register.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-methylMnM/00new/methylMnM/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘methylMnM’ as ‘methylMnM_1.36.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (methylMnM)
+* installing *source* package ‘SIMD’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pvalueclassify.c -o pvalueclassify.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o SIMD.so init.o pvalueclassify.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-SIMD/00new/SIMD/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SIMD’ as ‘SIMD_1.16.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SIMD)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp5t0CN0/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m27.903s
+user	0m23.467s
+sys	0m1.315s
