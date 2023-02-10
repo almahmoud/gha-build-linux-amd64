@@ -1,0 +1,73 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''affyContam'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'affyContam'
+also installing the dependency ‘affydata’
+
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/affydata_1.46.0.tar.gz'
+Content type 'application/x-gzip' length 12710980 bytes (12.1 MB)
+==================================================
+downloaded 12.1 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/affyContam_1.56.0.tar.gz'
+Content type 'application/x-gzip' length 421749 bytes (411 KB)
+==================================================
+downloaded 411 KB
+
+* installing *source* package ‘affydata’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+     Package    LibPath                            Item      
+[1,] "affydata" "/tmp/built/00LOCK-affydata/00new" "Dilution"
+     Title                        
+[1,] "AffyBatch instance Dilution"
+** testing if installed package can be loaded from final location
+     Package    LibPath      Item       Title                        
+[1,] "affydata" "/tmp/built" "Dilution" "AffyBatch instance Dilution"
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘affydata’ as ‘affydata_1.46.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (affydata)
+* installing *source* package ‘affyContam’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+     Package    LibPath      Item       Title                        
+[1,] "affydata" "/tmp/built" "Dilution" "AffyBatch instance Dilution"
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+     Package    LibPath      Item       Title                        
+[1,] "affydata" "/tmp/built" "Dilution" "AffyBatch instance Dilution"
+** testing if installed package can be loaded from final location
+     Package    LibPath      Item       Title                        
+[1,] "affydata" "/tmp/built" "Dilution" "AffyBatch instance Dilution"
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘affyContam’ as ‘affyContam_1.56.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (affyContam)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp0qaaFt/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m18.709s
+user	0m16.277s
+sys	0m1.293s
