@@ -1,0 +1,60 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''PREDA'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'PREDA'
+also installing the dependencies ‘sfsmisc’, ‘lokern’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/sfsmisc_1.1-14.tar.gz'
+Content type 'binary/octet-stream' length 651352 bytes (636 KB)
+==================================================
+downloaded 636 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lokern_1.1-9.tar.gz'
+Content type 'binary/octet-stream' length 126305 bytes (123 KB)
+==================================================
+downloaded 123 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/PREDA_1.44.0.tar.gz'
+Content type 'application/x-gzip' length 1841446 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+* installing *binary* package ‘sfsmisc’ ...
+* ‘sfsmisc’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘sfsmisc’ as ‘sfsmisc_1.1-14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sfsmisc)
+* installing *binary* package ‘lokern’ ...
+* ‘lokern’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lokern’ as ‘lokern_1.1-9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lokern)
+* installing *source* package ‘PREDA’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘PREDA’ as ‘PREDA_1.44.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (PREDA)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpx1k0qL/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m35.311s
+user	0m28.613s
+sys	0m1.918s
