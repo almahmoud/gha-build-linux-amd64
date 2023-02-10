@@ -1,0 +1,101 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''rhdf5client'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'rhdf5client'
+also installing the dependencies ‘DelayedArray’, ‘rjson’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/DelayedArray_0.24.0.tar.gz'
+Content type 'application/x-gzip' length 642972 bytes (627 KB)
+==================================================
+downloaded 627 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rjson_0.2.21.tar.gz'
+Content type 'binary/octet-stream' length 217890 bytes (212 KB)
+==================================================
+downloaded 212 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/rhdf5client_1.20.0.tar.gz'
+Content type 'application/x-gzip' length 545740 bytes (532 KB)
+==================================================
+downloaded 532 KB
+
+* installing *source* package ‘DelayedArray’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/S4Vectors/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_DelayedArray.c -o R_init_DelayedArray.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/S4Vectors/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/S4Vectors/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c abind.c -o abind.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/S4Vectors/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c array_selection.c -o array_selection.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/S4Vectors/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c compress_atomic_vector.c -o compress_atomic_vector.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/built/S4Vectors/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sparseMatrix_utils.c -o sparseMatrix_utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o DelayedArray.so R_init_DelayedArray.o S4Vectors_stubs.o abind.o array_selection.o compress_atomic_vector.o sparseMatrix_utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-DelayedArray/00new/DelayedArray/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘rowsum’ in package ‘DelayedArray’
+Creating a new generic function for ‘apply’ in package ‘DelayedArray’
+Creating a new generic function for ‘sweep’ in package ‘DelayedArray’
+Creating a new generic function for ‘scale’ in package ‘DelayedArray’
+Creating a generic function for ‘dnorm’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘pnorm’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qnorm’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘dbinom’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘pbinom’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qbinom’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘dpois’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘ppois’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qpois’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘dlogis’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘plogis’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qlogis’ from package ‘stats’ in package ‘DelayedArray’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DelayedArray’ as ‘DelayedArray_0.24.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DelayedArray)
+* installing *binary* package ‘rjson’ ...
+* ‘rjson’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rjson’ as ‘rjson_0.2.21_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rjson)
+* installing *source* package ‘rhdf5client’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c extract.c -o extract.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rhdf5client.so extract.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-rhdf5client/00new/rhdf5client/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rhdf5client’ as ‘rhdf5client_1.20.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rhdf5client)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpkw3kwD/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m40.341s
+user	0m36.940s
+sys	0m2.055s
