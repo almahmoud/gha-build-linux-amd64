@@ -1,0 +1,94 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''EBcoexpress'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'EBcoexpress'
+also installing the dependencies ‘EBarrays’, ‘mclust’, ‘minqa’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/EBarrays_2.62.0.tar.gz'
+Content type 'application/x-gzip' length 956570 bytes (934 KB)
+==================================================
+downloaded 934 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mclust_6.0.0.tar.gz'
+Content type 'binary/octet-stream' length 4085105 bytes (3.9 MB)
+==================================================
+downloaded 3.9 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/minqa_1.2.5.tar.gz'
+Content type 'binary/octet-stream' length 118770 bytes (115 KB)
+==================================================
+downloaded 115 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/EBcoexpress_1.42.0.tar.gz'
+Content type 'application/x-gzip' length 2922992 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+* installing *source* package ‘EBarrays’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ebarrays.c -o ebarrays.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o EBarrays.so ebarrays.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-EBarrays/00new/EBarrays/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EBarrays’ as ‘EBarrays_2.62.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EBarrays)
+* installing *binary* package ‘mclust’ ...
+* ‘mclust’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mclust’ as ‘mclust_6.0.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mclust)
+* installing *binary* package ‘minqa’ ...
+* ‘minqa’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘minqa’ as ‘minqa_1.2.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (minqa)
+* installing *source* package ‘EBcoexpress’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c EBcoexpress.c -o EBcoexpress.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o EBcoexpress.so EBcoexpress.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-EBcoexpress/00new/EBcoexpress/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EBcoexpress’ as ‘EBcoexpress_1.42.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EBcoexpress)
+
+The downloaded source packages are in
+	‘/tmp/RtmpPXS5NE/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m16.937s
+user	0m12.560s
+sys	0m1.410s
