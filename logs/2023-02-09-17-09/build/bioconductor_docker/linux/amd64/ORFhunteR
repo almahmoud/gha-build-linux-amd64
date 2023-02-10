@@ -1,0 +1,97 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ORFhunteR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'ORFhunteR'
+also installing the dependencies ‘Peptides’, ‘BSgenome.Hsapiens.UCSC.hg38’, ‘data.table’, ‘randomForest’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/Peptides_2.4.4.tar.gz'
+Content type 'binary/octet-stream' length 1273936 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/BSgenome.Hsapiens.UCSC.hg38_1.4.5.tar.gz'
+Content type 'application/x-gzip' length 731245539 bytes (697.4 MB)
+==================================================
+downloaded 697.4 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/data.table_1.14.6.tar.gz'
+Content type 'binary/octet-stream' length 2082451 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/randomForest_4.7-1.1.tar.gz'
+Content type 'binary/octet-stream' length 261878 bytes (255 KB)
+==================================================
+downloaded 255 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/ORFhunteR_1.6.0.tar.gz'
+Content type 'application/x-gzip' length 1928377 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+* installing *binary* package ‘Peptides’ ...
+* ‘Peptides’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘Peptides’ as ‘Peptides_2.4.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Peptides)
+* installing *source* package ‘BSgenome.Hsapiens.UCSC.hg38’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BSgenome.Hsapiens.UCSC.hg38’ as ‘BSgenome.Hsapiens.UCSC.hg38_1.4.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BSgenome.Hsapiens.UCSC.hg38)
+* installing *binary* package ‘data.table’ ...
+* ‘data.table’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘data.table’ as ‘data.table_1.14.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (data.table)
+* installing *binary* package ‘randomForest’ ...
+* ‘randomForest’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘randomForest’ as ‘randomForest_4.7-1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (randomForest)
+* installing *source* package ‘ORFhunteR’ ...
+** using staged installation
+** libs
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getBaoMetrics.cpp -o getBaoMetrics.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getCorrelationFactors.cpp -o getCorrelationFactors.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getPatternCount_V.cpp -o getPatternCount_V.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ORFhunteR.so RcppExports.o getBaoMetrics.o getCorrelationFactors.o getPatternCount_V.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-ORFhunteR/00new/ORFhunteR/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ORFhunteR’ as ‘ORFhunteR_1.6.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ORFhunteR)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp7kmtFv/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	2m47.716s
+user	2m31.478s
+sys	0m7.727s
