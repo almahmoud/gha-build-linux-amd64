@@ -245,7 +245,7 @@ jobs:
           cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }}) || true
           cd ..
           rm -rf image
-          [ "$(ls -A /tmp/tars)" ] && exit 0 || exit 1
+          if (ls /tmp/tars | grep -q "^${{matrix.pkg}}_"); then exit 0; else exit 1; fi
         continue-on-error: true
 
       - name: Set tar name

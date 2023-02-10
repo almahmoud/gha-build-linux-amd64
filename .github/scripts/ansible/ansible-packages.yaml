@@ -46,7 +46,7 @@
   - name: Make PACKAGES files
     docker_container:
       name: bioc
-      image: {{ container_base_image }}
+      image: "{{ container_base_image }}"
       command: Rscript -e 'tools::write_PACKAGES("/tmp/binaries", addFiles = TRUE, verbose = TRUE)'
       volumes:
         - /tmp/binaries:/tmp/binaries

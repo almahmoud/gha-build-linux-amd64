@@ -23,6 +23,7 @@ import time
 
 from cloudbridge.factory import CloudProviderFactory, ProviderList
 from cloudbridge.interfaces.resources import TrafficDirection
+from cloudbridge.providers.openstack.resources import OpenStackMachineImage
 
 
 def main():
@@ -351,7 +352,7 @@ def get_image(provider, image_id, image_name):
         DEFAULT_OWNER_PUBLIC_IMAGES_JS2="d05cee28f6834f99b44160621a520acd"
         img = [i for i in list(provider.os_conn.image.images(owner="d05cee28f6834f99b44160621a520acd")) if i.name=='Featured-Ubuntu22']
         if len(img) > 0:
-            img = img[0]
+            img = OpenStackMachineImage(provider, img[0])
     print("Using image: " + str(img))
     return img
 
