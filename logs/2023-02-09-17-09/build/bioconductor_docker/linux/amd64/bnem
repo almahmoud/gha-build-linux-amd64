@@ -1,0 +1,944 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''bnem'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'bnem'
+also installing the dependencies ‘deldir’, ‘lmtest’, ‘jpeg’, ‘interp’, ‘abind’, ‘ggm’, ‘corpcor’, ‘vcd’, ‘bdsmatrix’, ‘sfsmisc’, ‘fastICA’, ‘clue’, ‘BoolNet’, ‘latticeExtra’, ‘pcalg’, ‘latex2exp’, ‘epiNEM’, ‘binom’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/deldir_1.0-6.tar.gz'
+Content type 'binary/octet-stream' length 306171 bytes (298 KB)
+==================================================
+downloaded 298 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/lmtest_0.9-40.tar.gz'
+Content type 'binary/octet-stream' length 402726 bytes (393 KB)
+==================================================
+downloaded 393 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/jpeg_0.1-10.tar.gz'
+Content type 'binary/octet-stream' length 28493 bytes (27 KB)
+==================================================
+downloaded 27 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/interp_1.1-3.tar.gz'
+Content type 'binary/octet-stream' length 1084022 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/abind_1.4-5.tar.gz'
+Content type 'binary/octet-stream' length 60719 bytes (59 KB)
+==================================================
+downloaded 59 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/ggm_2.5.tar.gz'
+Content type 'binary/octet-stream' length 110264 bytes (107 KB)
+==================================================
+downloaded 107 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/corpcor_1.6.10.tar.gz'
+Content type 'binary/octet-stream' length 113550 bytes (110 KB)
+==================================================
+downloaded 110 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/vcd_1.4-11.tar.gz'
+Content type 'binary/octet-stream' length 1255161 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/bdsmatrix_1.3-6.tar.gz'
+Content type 'binary/octet-stream' length 320944 bytes (313 KB)
+==================================================
+downloaded 313 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/sfsmisc_1.1-14.tar.gz'
+Content type 'binary/octet-stream' length 651352 bytes (636 KB)
+==================================================
+downloaded 636 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/fastICA_1.2-3.tar.gz'
+Content type 'binary/octet-stream' length 58327 bytes (56 KB)
+==================================================
+downloaded 56 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/clue_0.3-64.tar.gz'
+Content type 'binary/octet-stream' length 991047 bytes (967 KB)
+==================================================
+downloaded 967 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/BoolNet_2.1.7.tar.gz'
+Content type 'binary/octet-stream' length 1689279 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/latticeExtra_0.6-30.tar.gz'
+Content type 'binary/octet-stream' length 2201783 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pcalg_2.7-8.tar.gz'
+Content type 'binary/octet-stream' length 4158418 bytes (4.0 MB)
+==================================================
+downloaded 4.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/latex2exp_0.9.6.tar.gz'
+Content type 'binary/octet-stream' length 1532378 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/epiNEM_1.22.0.tar.gz'
+Content type 'application/x-gzip' length 1950263 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/binom_1.1-1.1.tar.gz'
+Content type 'binary/octet-stream' length 383283 bytes (374 KB)
+==================================================
+downloaded 374 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/bnem_1.6.0.tar.gz'
+Content type 'application/x-gzip' length 1613571 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+* installing *binary* package ‘deldir’ ...
+* ‘deldir’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘deldir’ as ‘deldir_1.0-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (deldir)
+* installing *binary* package ‘lmtest’ ...
+* ‘lmtest’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘lmtest’ as ‘lmtest_0.9-40_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lmtest)
+* installing *binary* package ‘jpeg’ ...
+* ‘jpeg’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘jpeg’ as ‘jpeg_0.1-10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (jpeg)
+* installing *binary* package ‘abind’ ...
+* ‘abind’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘abind’ as ‘abind_1.4-5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (abind)
+* installing *source* package ‘ggm’ ...
+** package ‘ggm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ggm’ as ‘ggm_2.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ggm)
+* installing *binary* package ‘corpcor’ ...
+* ‘corpcor’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘corpcor’ as ‘corpcor_1.6.10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (corpcor)
+* installing *binary* package ‘bdsmatrix’ ...
+* ‘bdsmatrix’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘bdsmatrix’ as ‘bdsmatrix_1.3-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bdsmatrix)
+* installing *binary* package ‘sfsmisc’ ...
+* ‘sfsmisc’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘sfsmisc’ as ‘sfsmisc_1.1-14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sfsmisc)
+* installing *binary* package ‘fastICA’ ...
+* ‘fastICA’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘fastICA’ as ‘fastICA_1.2-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fastICA)
+* installing *binary* package ‘clue’ ...
+* ‘clue’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘clue’ as ‘clue_0.3-64_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (clue)
+* installing *source* package ‘BoolNet’ ...
+** package ‘BoolNet’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c attractor_info.c -o attractor_info.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c attractor_search_interface.c -o attractor_search_interface.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c common.c -o common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c picosat.c -o picosat.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c probabilistic_boolean_network.c -o probabilistic_boolean_network.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reconstruct_network.c -o reconstruct_network.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sat_search.c -o sat_search.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c statespace_search.c -o statespace_search.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c symbolic_network.c -o symbolic_network.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c symbolic_simulator.c -o symbolic_simulator.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BoolNet.so attractor_info.o attractor_search_interface.o common.o init.o picosat.o probabilistic_boolean_network.o reconstruct_network.o sat_search.o statespace_search.o symbolic_network.o symbolic_simulator.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-BoolNet/00new/BoolNet/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BoolNet’ as ‘BoolNet_2.1.7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BoolNet)
+* installing *binary* package ‘latex2exp’ ...
+* ‘latex2exp’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘latex2exp’ as ‘latex2exp_0.9.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (latex2exp)
+* installing *binary* package ‘binom’ ...
+* ‘binom’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘binom’ as ‘binom_1.1-1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (binom)
+* installing *binary* package ‘interp’ ...
+* ‘interp’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘interp’ as ‘interp_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (interp)
+* installing *binary* package ‘vcd’ ...
+* ‘vcd’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘vcd’ as ‘vcd_1.4-11_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (vcd)
+* installing *binary* package ‘latticeExtra’ ...
+* ‘latticeExtra’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘latticeExtra’ as ‘latticeExtra_0.6-30_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (latticeExtra)
+* installing *source* package ‘pcalg’ ...
+** package ‘pcalg’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/RcppArmadillo/include' -I'/tmp/built/BH/include' -I/usr/local/include  -I"../inst/include" -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c constraint.cpp -o constraint.o
+In file included from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+../inst/include/pcalg/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from /tmp/built/BH/include/boost/scoped_ptr.hpp:13,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/scoped_ptr.hpp:74:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   74 |     explicit scoped_ptr( std::auto_ptr<T> p ) BOOST_SP_NOEXCEPT : px( p.release() )
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/detail/shared_count.hpp:361:33: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  361 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:250:65: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  250 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:507:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  507 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:520:22: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  520 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:603:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  603 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:612:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  612 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/constraint.hpp:10,
+                 from constraint.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:614:38: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  614 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/constraint.hpp:8,
+                 from constraint.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/RcppArmadillo/include' -I'/tmp/built/BH/include' -I/usr/local/include  -I"../inst/include" -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gies.cpp -o gies.o
+In file included from ../inst/include/pcalg/constraint.hpp:8,
+                 from gies.cpp:21:
+../inst/include/pcalg/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from /tmp/built/BH/include/boost/scoped_ptr.hpp:13,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/scoped_ptr.hpp:74:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   74 |     explicit scoped_ptr( std::auto_ptr<T> p ) BOOST_SP_NOEXCEPT : px( p.release() )
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/detail/shared_count.hpp:361:33: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  361 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:250:65: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  250 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:507:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  507 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:520:22: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  520 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:603:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  603 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:612:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  612 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from gies.cpp:12:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:614:38: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  614 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /tmp/built/BH/include/boost/container_hash/hash.hpp:47,
+                 from /tmp/built/BH/include/boost/functional/hash.hpp:6,
+                 from /tmp/built/BH/include/boost/unordered/unordered_set.hpp:19,
+                 from /tmp/built/BH/include/boost/unordered_set.hpp:17,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:20,
+                 from gies.cpp:12:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/RcppArmadillo/include' -I'/tmp/built/BH/include' -I/usr/local/include  -I"../inst/include" -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c greedy.cpp -o greedy.o
+In file included from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+../inst/include/pcalg/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from /tmp/built/BH/include/boost/scoped_ptr.hpp:13,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/scoped_ptr.hpp:74:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   74 |     explicit scoped_ptr( std::auto_ptr<T> p ) BOOST_SP_NOEXCEPT : px( p.release() )
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/detail/shared_count.hpp:361:33: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  361 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:250:65: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  250 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:507:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  507 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:520:22: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  520 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:603:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  603 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:612:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  612 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from greedy.cpp:8:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:614:38: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  614 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from ../inst/include/pcalg/greedy.hpp:11,
+                 from greedy.cpp:8:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/RcppArmadillo/include' -I'/tmp/built/BH/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/RcppArmadillo/include' -I'/tmp/built/BH/include' -I/usr/local/include  -I"../inst/include" -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c score.cpp -o score.o
+In file included from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+../inst/include/pcalg/armaLapack.hpp:17: warning: "NDEBUG" redefined
+   17 | #define NDEBUG
+      | 
+<command-line>: note: this is the location of the previous definition
+In file included from /tmp/built/BH/include/boost/scoped_ptr.hpp:13,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:22,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/scoped_ptr.hpp:74:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   74 |     explicit scoped_ptr( std::auto_ptr<T> p ) BOOST_SP_NOEXCEPT : px( p.release() )
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:17,
+                 from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/detail/shared_count.hpp:361:33: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  361 |     explicit shared_count( std::auto_ptr<Y> & r ): pi_( new sp_counted_impl_p<Y>( r.get() ) )
+      |                                 ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:250:65: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  250 | template< class T, class R > struct sp_enable_if_auto_ptr< std::auto_ptr< T >, R >
+      |                                                                 ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:507:31: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  507 |     explicit shared_ptr( std::auto_ptr<Y> & r ): px(r.get()), pn()
+      |                               ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:520:22: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  520 |     shared_ptr( std::auto_ptr<Y> && r ): px(r.get()), pn()
+      |                      ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:603:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  603 |     shared_ptr & operator=( std::auto_ptr<Y> & r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:612:34: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  612 |     shared_ptr & operator=( std::auto_ptr<Y> && r )
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /tmp/built/BH/include/boost/property_map/vector_property_map.hpp:14,
+                 from /tmp/built/BH/include/boost/property_map/property_map.hpp:598,
+                 from /tmp/built/BH/include/boost/graph/adjacency_list.hpp:27,
+                 from ../inst/include/pcalg/greedy.hpp:18,
+                 from score.cpp:7:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp: In member function ‘boost::shared_ptr<T>& boost::shared_ptr<T>::operator=(std::auto_ptr<_Up>&&)’:
+/tmp/built/BH/include/boost/smart_ptr/shared_ptr.hpp:614:38: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+  614 |         this_type( static_cast< std::auto_ptr<Y> && >( r ) ).swap( *this );
+      |                                      ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo/interface/RcppArmadilloForward.h:25,
+                 from /tmp/built/RcppArmadillo/include/RcppArmadillo.h:29,
+                 from ../inst/include/pcalg/armaLapack.hpp:15,
+                 from ../inst/include/pcalg/score.hpp:12,
+                 from score.cpp:6:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o pcalg.so constraint.o gies.o greedy.o init.o score.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-pcalg/00new/pcalg/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pcalg’ as ‘pcalg_2.7-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pcalg)
+* installing *source* package ‘epiNEM’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘epiNEM’ as ‘epiNEM_1.22.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (epiNEM)
+* installing *source* package ‘bnem’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bnem’ as ‘bnem_1.6.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bnem)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp9WI5lw/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	3m12.889s
+user	2m44.129s
+sys	0m11.228s
