@@ -1,0 +1,73 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''biscuiteer'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'biscuiteer'
+also installing the dependencies ‘qualV’, ‘Mus.musculus’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/qualV_0.3-4.tar.gz'
+Content type 'binary/octet-stream' length 136129 bytes (132 KB)
+==================================================
+downloaded 132 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/Mus.musculus_1.3.1.tar.gz'
+Content type 'application/x-gzip' length 1618 bytes
+==================================================
+downloaded 1618 bytes
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/biscuiteer_1.12.0.tar.gz'
+Content type 'application/x-gzip' length 4975779 bytes (4.7 MB)
+==================================================
+downloaded 4.7 MB
+
+* installing *binary* package ‘qualV’ ...
+* ‘qualV’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘qualV’ as ‘qualV_0.3-4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (qualV)
+* installing *source* package ‘Mus.musculus’ ...
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘Mus.musculus’ as ‘Mus.musculus_1.3.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Mus.musculus)
+* installing *source* package ‘biscuiteer’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘BiocParallel::bpstart’ by ‘QDNAseq::bpstart’ when loading ‘biscuiteer’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘BiocParallel::bpstart’ by ‘QDNAseq::bpstart’ when loading ‘biscuiteer’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘BiocParallel::bpstart’ by ‘QDNAseq::bpstart’ when loading ‘biscuiteer’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘biscuiteer’ as ‘biscuiteer_1.12.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (biscuiteer)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp5mGYPy/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	1m22.058s
+user	1m14.060s
+sys	0m3.874s
