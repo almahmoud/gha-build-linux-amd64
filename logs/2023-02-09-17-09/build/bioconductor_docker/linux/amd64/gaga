@@ -1,0 +1,83 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''gaga'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'gaga'
+also installing the dependencies ‘coda’, ‘EBarrays’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/coda_0.19-4.tar.gz'
+Content type 'binary/octet-stream' length 320587 bytes (313 KB)
+==================================================
+downloaded 313 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/EBarrays_2.62.0.tar.gz'
+Content type 'application/x-gzip' length 956570 bytes (934 KB)
+==================================================
+downloaded 934 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/gaga_2.44.0.tar.gz'
+Content type 'application/x-gzip' length 435647 bytes (425 KB)
+==================================================
+downloaded 425 KB
+
+* installing *binary* package ‘coda’ ...
+* ‘coda’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘coda’ as ‘coda_0.19-4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (coda)
+* installing *source* package ‘EBarrays’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ebarrays.c -o ebarrays.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o EBarrays.so ebarrays.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-EBarrays/00new/EBarrays/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EBarrays’ as ‘EBarrays_2.62.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EBarrays)
+* installing *source* package ‘gaga’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cseqdesma.c -o cseqdesma.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cstat.c -o cstat.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gaga.so cseqdesma.o cstat.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-gaga/00new/gaga/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gaga’ as ‘gaga_2.44.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gaga)
+
+The downloaded source packages are in
+	‘/tmp/RtmpLDN7kf/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m19.879s
+user	0m16.956s
+sys	0m1.499s
