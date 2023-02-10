@@ -1,0 +1,133 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''CoGAPS'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'CoGAPS'
+also installing the dependencies ‘gtools’, ‘caTools’, ‘gplots’, ‘RColorBrewer’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'binary/octet-stream' length 352174 bytes (343 KB)
+==================================================
+downloaded 343 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/caTools_1.18.2.tar.gz'
+Content type 'binary/octet-stream' length 245911 bytes (240 KB)
+==================================================
+downloaded 240 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gplots_3.1.3.tar.gz'
+Content type 'binary/octet-stream' length 594297 bytes (580 KB)
+==================================================
+downloaded 580 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/RColorBrewer_1.1-3.tar.gz'
+Content type 'binary/octet-stream' length 53064 bytes (51 KB)
+==================================================
+downloaded 51 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/CoGAPS_3.18.0.tar.gz'
+Content type 'application/x-gzip' length 20839969 bytes (19.9 MB)
+==================================================
+downloaded 19.9 MB
+
+* installing *binary* package ‘gtools’ ...
+* ‘gtools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *binary* package ‘caTools’ ...
+* ‘caTools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘caTools’ as ‘caTools_1.18.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caTools)
+* installing *binary* package ‘RColorBrewer’ ...
+* ‘RColorBrewer’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘RColorBrewer’ as ‘RColorBrewer_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RColorBrewer)
+* installing *binary* package ‘gplots’ ...
+* ‘gplots’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gplots’ as ‘gplots_3.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gplots)
+* installing *source* package ‘CoGAPS’ ...
+** using staged installation
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++14 accepts -g... yes
+checking how to run the C++ preprocessor... g++ -std=gnu++14 -E
+checking whether we are using the GNU C++ compiler... (cached) yes
+checking whether g++ -std=gnu++14 accepts -g... (cached) yes
+./configure: line 2752: AX_COMPILER_VENDOR: command not found
+./configure: line 2753: AX_COMPILER_VERSION: command not found
+./configure: line 2764: AX_OPENMP: command not found
+building on  compiler version 
+Using AVX instructions if available
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Cogaps.cpp -o Cogaps.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GapsParameters.cpp -o GapsParameters.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GapsResult.cpp -o GapsResult.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GapsRunner.cpp -o GapsRunner.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GapsStatistics.cpp -o GapsStatistics.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-runner.cpp -o test-runner.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c atomic/Atom.cpp -o atomic/Atom.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c atomic/ConcurrentAtom.cpp -o atomic/ConcurrentAtom.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c atomic/AtomicDomain.cpp -o atomic/AtomicDomain.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c atomic/ConcurrentAtomicDomain.cpp -o atomic/ConcurrentAtomicDomain.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c atomic/ProposalQueue.cpp -o atomic/ProposalQueue.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/HashSets.cpp -o data_structures/HashSets.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/HybridMatrix.cpp -o data_structures/HybridMatrix.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/HybridVector.cpp -o data_structures/HybridVector.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/Matrix.cpp -o data_structures/Matrix.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/SparseIterator.cpp -o data_structures/SparseIterator.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/SparseMatrix.cpp -o data_structures/SparseMatrix.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/SparseVector.cpp -o data_structures/SparseVector.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data_structures/Vector.cpp -o data_structures/Vector.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file_parser/CharacterDelimitedParser.cpp -o file_parser/CharacterDelimitedParser.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file_parser/FileParser.cpp -o file_parser/FileParser.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file_parser/MatrixElement.cpp -o file_parser/MatrixElement.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file_parser/MtxParser.cpp -o file_parser/MtxParser.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gibbs_sampler/AlphaParameters.cpp -o gibbs_sampler/AlphaParameters.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gibbs_sampler/DenseNormalModel.cpp -o gibbs_sampler/DenseNormalModel.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gibbs_sampler/SparseNormalModel.cpp -o gibbs_sampler/SparseNormalModel.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/Math.cpp -o math/Math.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/MatrixMath.cpp -o math/MatrixMath.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/Random.cpp -o math/Random.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG -DBOOST_MATH_PROMOTE_DOUBLE_POLICY=0 -DGAPS_DISABLE_CHECKPOINTS -D__GAPS_R_BUILD__ -Iinclude -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/built/BH/include' -I/usr/local/include  -march=native  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/VectorMath.cpp -o math/VectorMath.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o CoGAPS.so Cogaps.o GapsParameters.o GapsResult.o GapsRunner.o GapsStatistics.o RcppExports.o test-runner.o atomic/Atom.o atomic/ConcurrentAtom.o atomic/AtomicDomain.o atomic/ConcurrentAtomicDomain.o atomic/ProposalQueue.o data_structures/HashSets.o data_structures/HybridMatrix.o data_structures/HybridVector.o data_structures/Matrix.o data_structures/SparseIterator.o data_structures/SparseMatrix.o data_structures/SparseVector.o data_structures/Vector.o file_parser/CharacterDelimitedParser.o file_parser/FileParser.o file_parser/MatrixElement.o file_parser/MtxParser.o gibbs_sampler/AlphaParameters.o gibbs_sampler/DenseNormalModel.o gibbs_sampler/SparseNormalModel.o math/Math.o math/MatrixMath.o math/Random.o math/VectorMath.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-CoGAPS/00new/CoGAPS/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘CoGAPS’ as ‘CoGAPS_3.18.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (CoGAPS)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpqwbj7J/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	2m1.266s
+user	1m50.909s
+sys	0m7.685s
