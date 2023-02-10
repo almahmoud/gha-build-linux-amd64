@@ -1,0 +1,52 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''DrugVsDisease'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'DrugVsDisease'
+also installing the dependency ‘RUnit’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/RUnit_0.4.32.tar.gz'
+Content type 'binary/octet-stream' length 285269 bytes (278 KB)
+==================================================
+downloaded 278 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/DrugVsDisease_2.40.0.tar.gz'
+Content type 'application/x-gzip' length 1823817 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+* installing *binary* package ‘RUnit’ ...
+* ‘RUnit’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘RUnit’ as ‘RUnit_0.4.32_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RUnit)
+* installing *source* package ‘DrugVsDisease’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DrugVsDisease’ as ‘DrugVsDisease_2.40.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DrugVsDisease)
+
+The downloaded source packages are in
+	‘/tmp/RtmpC0ubEC/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m41.842s
+user	0m36.301s
+sys	0m2.086s
