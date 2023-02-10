@@ -1,0 +1,117 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''proFIA'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'proFIA'
+also installing the dependencies ‘rngtools’, ‘randomForest’, ‘itertools’, ‘doRNG’, ‘pracma’, ‘minpack.lm’, ‘missForest’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rngtools_1.5.2.tar.gz'
+Content type 'binary/octet-stream' length 76661 bytes (74 KB)
+==================================================
+downloaded 74 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/randomForest_4.7-1.1.tar.gz'
+Content type 'binary/octet-stream' length 261878 bytes (255 KB)
+==================================================
+downloaded 255 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/itertools_0.1-3.tar.gz'
+Content type 'binary/octet-stream' length 110261 bytes (107 KB)
+==================================================
+downloaded 107 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/doRNG_1.8.6.tar.gz'
+Content type 'binary/octet-stream' length 301893 bytes (294 KB)
+==================================================
+downloaded 294 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/pracma_2.4.2.tar.gz'
+Content type 'binary/octet-stream' length 1705059 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/minpack.lm_1.2-3.tar.gz'
+Content type 'binary/octet-stream' length 92092 bytes (89 KB)
+==================================================
+downloaded 89 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/missForest_1.5.tar.gz'
+Content type 'binary/octet-stream' length 343057 bytes (335 KB)
+==================================================
+downloaded 335 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/proFIA_1.23.0.tar.gz'
+Content type 'application/x-gzip' length 3377949 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+* installing *binary* package ‘rngtools’ ...
+* ‘rngtools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rngtools’ as ‘rngtools_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rngtools)
+* installing *binary* package ‘randomForest’ ...
+* ‘randomForest’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘randomForest’ as ‘randomForest_4.7-1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (randomForest)
+* installing *binary* package ‘itertools’ ...
+* ‘itertools’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘itertools’ as ‘itertools_0.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (itertools)
+* installing *binary* package ‘pracma’ ...
+* ‘pracma’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘pracma’ as ‘pracma_2.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pracma)
+* installing *binary* package ‘minpack.lm’ ...
+* ‘minpack.lm’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘minpack.lm’ as ‘minpack.lm_1.2-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (minpack.lm)
+* installing *binary* package ‘doRNG’ ...
+* ‘doRNG’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘doRNG’ as ‘doRNG_1.8.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (doRNG)
+* installing *binary* package ‘missForest’ ...
+* ‘missForest’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘missForest’ as ‘missForest_1.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (missForest)
+* installing *source* package ‘proFIA’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c FIABandsExtractionCentroid.c -o FIABandsExtractionCentroid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c UtilFunc.c -o UtilFunc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fastMatchPpm.c -o fastMatchPpm.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o proFIA.so FIABandsExtractionCentroid.o UtilFunc.o fastMatchPpm.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-proFIA/00new/proFIA/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘proFIA’ as ‘proFIA_1.23.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (proFIA)
+
+The downloaded source packages are in
+	‘/tmp/RtmpSKT2RW/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m45.880s
+user	0m39.976s
+sys	0m2.833s
