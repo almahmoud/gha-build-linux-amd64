@@ -1,0 +1,72 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''OrderedList'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'OrderedList'
+also installing the dependency ‘twilight’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/twilight_1.74.0.tar.gz'
+Content type 'application/x-gzip' length 962537 bytes (939 KB)
+==================================================
+downloaded 939 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/OrderedList_1.70.0.tar.gz'
+Content type 'application/x-gzip' length 824820 bytes (805 KB)
+==================================================
+downloaded 805 KB
+
+* installing *source* package ‘twilight’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c confidence.line.c -o confidence.line.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c correlation.c -o correlation.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c kstest.c -o kstest.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sep.c -o sep.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c twosample.perm.c -o twosample.perm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c twosample.single.c -o twosample.single.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o twilight.so confidence.line.o correlation.o kstest.o sep.o twosample.perm.o twosample.single.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-twilight/00new/twilight/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘twilight’ as ‘twilight_1.74.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (twilight)
+* installing *source* package ‘OrderedList’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘OrderedList’ as ‘OrderedList_1.70.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (OrderedList)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp93qU3a/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m13.017s
+user	0m10.324s
+sys	0m1.130s
