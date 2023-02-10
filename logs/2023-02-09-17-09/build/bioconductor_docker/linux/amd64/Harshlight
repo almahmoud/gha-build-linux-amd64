@@ -1,0 +1,90 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''Harshlight'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'Harshlight'
+also installing the dependency ‘altcdfenvs’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/altcdfenvs_2.60.0.tar.gz'
+Content type 'application/x-gzip' length 325520 bytes (317 KB)
+==================================================
+downloaded 317 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/Harshlight_1.70.0.tar.gz'
+Content type 'application/x-gzip' length 176590 bytes (172 KB)
+==================================================
+downloaded 172 KB
+
+* installing *source* package ‘altcdfenvs’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+NOTE: arguments in definition for validity method for class 'AffyProbesMatch' changed from (obj) to (object)
+in method for ‘toHypergraph’ with signature ‘"CdfEnvAffy"’: no definition for class “CdfEnvAffy”
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘altcdfenvs’ as ‘altcdfenvs_2.60.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (altcdfenvs)
+* installing *source* package ‘Harshlight’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Harshlight.c -o Harshlight.o
+Harshlight.c: In function ‘report_overall_header’:
+Harshlight.c:1471:26: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+ 1471 |   PP "%d %d moveto (%.2f%) show\n", x_text_val, y_text - 215, *diff_br);
+      |                          ^
+Harshlight.c:1474:26: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+ 1474 |   PP "%d %d moveto (%.2f%) show\n", x_text_val, y_text - 230, *diff_dr);
+      |                          ^
+Harshlight.c: In function ‘chip_summary’:
+Harshlight.c:1532:107: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+ 1532 |   PP "%d %d moveto (Extended defects: the variance of the Error Image explained by the background is %.2f%) show\n", x_text, y_text - 30, *var);
+      |                                                                                                           ^
+Harshlight.c:1542:26: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+ 1542 |   PP "%d %d moveto (%.2f%) show\n", x_val_1, y_text - 100, *perc_c);
+      |                          ^
+Harshlight.c:1543:26: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+ 1543 |   PP "%d %d moveto (%.2f%) show\n", x_val_2, y_text - 100, *perc_d);
+      |                          ^
+Harshlight.c: In function ‘extended_stop’:
+Harshlight.c:1555:107: warning: unknown conversion type character ‘)’ in format [-Wformat=]
+ 1555 |   PP "%d %d moveto (Extended defects: the variance of the Error Image explained by the background is %.2f%) show\n", x_text, y_text - 30, *var);
+      |                                                                                                           ^
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Harshlight.so Harshlight.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-Harshlight/00new/Harshlight/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘Harshlight’ as ‘Harshlight_1.70.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Harshlight)
+
+The downloaded source packages are in
+	‘/tmp/RtmpQ9D1kv/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m32.994s
+user	0m28.075s
+sys	0m2.329s
