@@ -1,0 +1,137 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BEclear'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'BEclear'
+also installing the dependencies ‘rbibutils’, ‘uuid’, ‘Rdpack’, ‘data.table’, ‘abind’, ‘dixonTest’, ‘ids’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rbibutils_2.2.13.tar.gz'
+Content type 'binary/octet-stream' length 877878 bytes (857 KB)
+==================================================
+downloaded 857 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/uuid_1.1-0.tar.gz'
+Content type 'binary/octet-stream' length 77986 bytes (76 KB)
+==================================================
+downloaded 76 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/Rdpack_2.4.tar.gz'
+Content type 'binary/octet-stream' length 956942 bytes (934 KB)
+==================================================
+downloaded 934 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/data.table_1.14.6.tar.gz'
+Content type 'binary/octet-stream' length 2082451 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/abind_1.4-5.tar.gz'
+Content type 'binary/octet-stream' length 60719 bytes (59 KB)
+==================================================
+downloaded 59 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/dixonTest_1.0.4.tar.gz'
+Content type 'binary/octet-stream' length 50912 bytes (49 KB)
+==================================================
+downloaded 49 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/ids_1.0.1.tar.gz'
+Content type 'binary/octet-stream' length 119831 bytes (117 KB)
+==================================================
+downloaded 117 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BEclear_2.14.0.tar.gz'
+Content type 'application/x-gzip' length 705118 bytes (688 KB)
+==================================================
+downloaded 688 KB
+
+* installing *binary* package ‘rbibutils’ ...
+* ‘rbibutils’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rbibutils’ as ‘rbibutils_2.2.13_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rbibutils)
+* installing *binary* package ‘uuid’ ...
+* ‘uuid’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘uuid’ as ‘uuid_1.1-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (uuid)
+* installing *binary* package ‘data.table’ ...
+* ‘data.table’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘data.table’ as ‘data.table_1.14.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (data.table)
+* installing *binary* package ‘abind’ ...
+* ‘abind’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘abind’ as ‘abind_1.4-5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (abind)
+* installing *binary* package ‘dixonTest’ ...
+* ‘dixonTest’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘dixonTest’ as ‘dixonTest_1.0.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dixonTest)
+* installing *binary* package ‘Rdpack’ ...
+* ‘Rdpack’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘Rdpack’ as ‘Rdpack_2.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Rdpack)
+* installing *binary* package ‘ids’ ...
+* ‘ids’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘ids’ as ‘ids_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ids)
+* installing *source* package ‘BEclear’ ...
+** using staged installation
+** libs
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c localLoss.cpp -o localLoss.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BEclear.so RcppExports.o localLoss.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-BEclear/00new/BEclear/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BEclear’ as ‘BEclear_2.14.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BEclear)
+
+The downloaded source packages are in
+	‘/tmp/RtmpabNRLL/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m38.523s
+user	0m27.062s
+sys	0m2.859s
+* installing *binary* package ‘signal’ ...
+* ‘signal’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘signal’ as ‘signal_0.7-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (signal)
+* installing *binary* package ‘tuneR’ ...
+* ‘tuneR’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘tuneR’ as ‘tuneR_1.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tuneR)
+* installing *binary* package ‘seewave’ ...
+* ‘seewave’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘seewave’ as ‘seewave_2.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (seewave)
+* installing *binary* package ‘tuneR’ ...
+* ‘tuneR’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘tuneR’ as ‘tuneR_1.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tuneR)
