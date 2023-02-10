@@ -1,0 +1,43 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''test2cdf'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'test2cdf'
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/test2cdf_2.18.0.tar.gz'
+Content type 'application/x-gzip' length 19648 bytes (19 KB)
+==================================================
+downloaded 19 KB
+
+* installing *source* package ‘test2cdf’ ...
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘AnnotationDbi::tail’ by ‘utils::tail’ when loading ‘test2cdf’
+Warning: replacing previous import ‘AnnotationDbi::head’ by ‘utils::head’ when loading ‘test2cdf’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘AnnotationDbi::tail’ by ‘utils::tail’ when loading ‘test2cdf’
+Warning: replacing previous import ‘AnnotationDbi::head’ by ‘utils::head’ when loading ‘test2cdf’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘AnnotationDbi::tail’ by ‘utils::tail’ when loading ‘test2cdf’
+Warning: replacing previous import ‘AnnotationDbi::head’ by ‘utils::head’ when loading ‘test2cdf’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘test2cdf’ as ‘test2cdf_2.18.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (test2cdf)
+
+The downloaded source packages are in
+	‘/tmp/RtmpyvtnQR/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m15.031s
+user	0m12.657s
+sys	0m1.005s
