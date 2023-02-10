@@ -1,0 +1,61 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''EpiTxDb.Mm.mm10'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'EpiTxDb.Mm.mm10'
+also installing the dependency ‘EpiTxDb’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/EpiTxDb_1.10.0.tar.gz'
+Content type 'application/x-gzip' length 756958 bytes (739 KB)
+==================================================
+downloaded 739 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/EpiTxDb.Mm.mm10_0.99.6.tar.gz'
+Content type 'application/x-gzip' length 298650 bytes (291 KB)
+==================================================
+downloaded 291 KB
+
+* installing *source* package ‘EpiTxDb’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EpiTxDb’ as ‘EpiTxDb_1.10.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EpiTxDb)
+* installing *source* package ‘EpiTxDb.Mm.mm10’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EpiTxDb.Mm.mm10’ as ‘EpiTxDb.Mm.mm10_0.99.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EpiTxDb.Mm.mm10)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp5IFB8E/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	1m13.785s
+user	1m9.077s
+sys	0m3.793s
