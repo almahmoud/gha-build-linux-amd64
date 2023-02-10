@@ -1,0 +1,80 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''gaggle'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'gaggle'
+also installing the dependencies ‘rJava’, ‘RUnit’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/rJava_1.0-6.tar.gz'
+Content type 'binary/octet-stream' length 1290398 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/RUnit_0.4.32.tar.gz'
+Content type 'binary/octet-stream' length 285269 bytes (278 KB)
+==================================================
+downloaded 278 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/gaggle_1.66.0.tar.gz'
+Content type 'application/x-gzip' length 288152 bytes (281 KB)
+==================================================
+downloaded 281 KB
+
+* installing *binary* package ‘rJava’ ...
+* ‘rJava’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rJava’ as ‘rJava_1.0-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rJava)
+* installing *binary* package ‘RUnit’ ...
+* ‘RUnit’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘RUnit’ as ‘RUnit_0.4.32_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RUnit)
+* installing *source* package ‘gaggle’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+
+onLoad -- libname: /tmp/built/00LOCK-gaggle/00new pkgname: gaggle 
+path to jar: /tmp/built/00LOCK-gaggle/00new/gaggle/jars/gaggleRShell.jar 
+      script:  gaggle.R $Revision: 4499 $   $Date: 2010-08-10 17:15:03 -0700 (Tue, 10 Aug 2010) $ 
+  os version:  Linux 
+ jvm version:  11.0.17 
+
+   You are using the wrong version of Java.
+   Please see http://gaggle.systemsbiology.org/docs/html/java
+
+** testing if installed package can be loaded from final location
+
+onLoad -- libname: /tmp/built pkgname: gaggle 
+path to jar: /tmp/built/gaggle/jars/gaggleRShell.jar 
+      script:  gaggle.R $Revision: 4499 $   $Date: 2010-08-10 17:15:03 -0700 (Tue, 10 Aug 2010) $ 
+  os version:  Linux 
+ jvm version:  11.0.17 
+
+   You are using the wrong version of Java.
+   Please see http://gaggle.systemsbiology.org/docs/html/java
+
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gaggle’ as ‘gaggle_1.66.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gaggle)
+
+The downloaded source packages are in
+	‘/tmp/RtmpgMiFCe/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m12.048s
+user	0m8.054s
+sys	0m0.844s
