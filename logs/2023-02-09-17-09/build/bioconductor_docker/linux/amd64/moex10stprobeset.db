@@ -1,0 +1,37 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''moex10stprobeset.db'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'moex10stprobeset.db'
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/moex10stprobeset.db_8.8.0.tar.gz'
+Content type 'application/x-gzip' length 56639629 bytes (54.0 MB)
+==================================================
+downloaded 54.0 MB
+
+* installing *source* package ‘moex10stprobeset.db’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘moex10stprobeset.db’ as ‘moex10stprobeset.db_8.8.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (moex10stprobeset.db)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp86N4eY/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	2m2.180s
+user	1m59.006s
+sys	0m1.546s
