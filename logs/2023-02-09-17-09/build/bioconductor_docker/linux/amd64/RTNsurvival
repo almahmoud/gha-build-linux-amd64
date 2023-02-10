@@ -1,0 +1,72 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''RTNsurvival'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'RTNsurvival'
+also installing the dependencies ‘gridExtra’, ‘egg’, ‘dunn.test’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/gridExtra_2.3.tar.gz'
+Content type 'binary/octet-stream' length 1106730 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/egg_0.4.5.tar.gz'
+Content type 'binary/octet-stream' length 828355 bytes (808 KB)
+==================================================
+downloaded 808 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/dunn.test_1.3.5.tar.gz'
+Content type 'binary/octet-stream' length 51110 bytes (49 KB)
+==================================================
+downloaded 49 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/RTNsurvival_1.22.0.tar.gz'
+Content type 'application/x-gzip' length 750393 bytes (732 KB)
+==================================================
+downloaded 732 KB
+
+* installing *binary* package ‘gridExtra’ ...
+* ‘gridExtra’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘gridExtra’ as ‘gridExtra_2.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gridExtra)
+* installing *binary* package ‘dunn.test’ ...
+* ‘dunn.test’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘dunn.test’ as ‘dunn.test_1.3.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dunn.test)
+* installing *binary* package ‘egg’ ...
+* ‘egg’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘egg’ as ‘egg_0.4.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (egg)
+* installing *source* package ‘RTNsurvival’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RTNsurvival’ as ‘RTNsurvival_1.22.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RTNsurvival)
+
+The downloaded source packages are in
+	‘/tmp/RtmpFBQVQN/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m35.982s
+user	0m31.381s
+sys	0m2.016s
