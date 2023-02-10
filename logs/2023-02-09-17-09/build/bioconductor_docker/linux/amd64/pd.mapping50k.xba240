@@ -1,0 +1,37 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''pd.mapping50k.xba240'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'pd.mapping50k.xba240'
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/pd.mapping50k.xba240_3.12.0.tar.gz'
+Content type 'application/x-gzip' length 123348434 bytes (117.6 MB)
+==================================================
+downloaded 117.6 MB
+
+* installing *source* package ‘pd.mapping50k.xba240’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pd.mapping50k.xba240’ as ‘pd.mapping50k.xba240_3.12.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pd.mapping50k.xba240)
+
+The downloaded source packages are in
+	‘/tmp/RtmpbH1amk/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	3m0.105s
+user	2m54.872s
+sys	0m2.960s
