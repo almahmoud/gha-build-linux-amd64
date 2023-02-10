@@ -1,0 +1,92 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''DAPARdata'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'DAPARdata'
+also installing the dependencies ‘MALDIquant’, ‘MSnbase’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/MALDIquant_1.22.tar.gz'
+Content type 'binary/octet-stream' length 2827697 bytes (2.7 MB)
+==================================================
+downloaded 2.7 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/MSnbase_2.24.2.tar.gz'
+Content type 'application/x-gzip' length 5837336 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/DAPARdata_1.28.0.tar.gz'
+Content type 'application/x-gzip' length 34849240 bytes (33.2 MB)
+==================================================
+downloaded 33.2 MB
+
+* installing *binary* package ‘MALDIquant’ ...
+* ‘MALDIquant’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘MALDIquant’ as ‘MALDIquant_1.22_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (MALDIquant)
+* installing *source* package ‘MSnbase’ ...
+** using staged installation
+** libs
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Spectrum1_class.c -o Spectrum1_class.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Spectrum2_class.c -o Spectrum2_class.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imp_neighbour_avg.cpp -o imp_neighbour_avg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o MSnbase.so RcppExports.o Spectrum1_class.o Spectrum2_class.o imp_neighbour_avg.o utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-MSnbase/00new/MSnbase/libs
+** R
+** data
+*** moving datasets to lazyload DB
+Creating a new generic function for ‘trimws’ in package ‘MSnbase’
+in method for ‘coerce’ with signature ‘"MSnSet","SummarizedExperiment"’: no definition for class “SummarizedExperiment”
+in method for ‘coerce’ with signature ‘"SummarizedExperiment","MSnSet"’: no definition for class “SummarizedExperiment”
+in method for ‘coerce’ with signature ‘"IBSpectra","MSnSet"’: no definition for class “IBSpectra”
+in method for ‘plotMzDelta’ with signature ‘"mzRramp"’: no definition for class “mzRramp”
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘trimws’ in package ‘MSnbase’
+in method for ‘coerce’ with signature ‘"MSnSet","SummarizedExperiment"’: no definition for class “SummarizedExperiment”
+in method for ‘coerce’ with signature ‘"SummarizedExperiment","MSnSet"’: no definition for class “SummarizedExperiment”
+in method for ‘coerce’ with signature ‘"IBSpectra","MSnSet"’: no definition for class “IBSpectra”
+in method for ‘plotMzDelta’ with signature ‘"mzRramp"’: no definition for class “mzRramp”
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘MSnbase’ as ‘MSnbase_2.24.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (MSnbase)
+* installing *source* package ‘DAPARdata’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DAPARdata’ as ‘DAPARdata_1.28.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DAPARdata)
+
+The downloaded source packages are in
+	‘/tmp/RtmpVSQb5Q/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	1m8.258s
+user	1m2.262s
+sys	0m3.543s
