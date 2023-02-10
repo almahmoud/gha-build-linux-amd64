@@ -1,0 +1,40 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''CellMapperData'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'CellMapperData'
+trying URL 'https://bioconductor.org/packages/3.16/data/experiment/src/contrib/CellMapperData_1.24.0.tar.gz'
+Content type 'application/x-gzip' length 143926 bytes (140 KB)
+==================================================
+downloaded 140 KB
+
+* installing *source* package ‘CellMapperData’ ...
+** using staged installation
+** inst
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘stats::sd’ by ‘S4Vectors::sd’ when loading ‘CellMapper’
+Warning: replacing previous import ‘stats::var’ by ‘S4Vectors::var’ when loading ‘CellMapper’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘stats::sd’ by ‘S4Vectors::sd’ when loading ‘CellMapper’
+Warning: replacing previous import ‘stats::var’ by ‘S4Vectors::var’ when loading ‘CellMapper’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘CellMapperData’ as ‘CellMapperData_1.24.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (CellMapperData)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp6rHWI2/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m44.933s
+user	0m38.075s
+sys	0m3.337s
