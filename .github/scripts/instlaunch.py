@@ -23,6 +23,7 @@ import time
 
 from cloudbridge.factory import CloudProviderFactory, ProviderList
 from cloudbridge.interfaces.resources import TrafficDirection
+from cloudbridge.providers.openstack.resources import OpenStackMachineImage
 
 
 def main():
