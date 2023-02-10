@@ -1,0 +1,63 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''skewr'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'skewr'
+also installing the dependencies ‘mvtnorm’, ‘mixsmsn’
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mvtnorm_1.1-3.tar.gz'
+Content type 'binary/octet-stream' length 263444 bytes (257 KB)
+==================================================
+downloaded 257 KB
+
+trying URL 'https://packagemanager.posit.co/cran/__linux__/jammy/latest/src/contrib/mixsmsn_1.1-10.tar.gz'
+Content type 'binary/octet-stream' length 209019 bytes (204 KB)
+==================================================
+downloaded 204 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/skewr_1.30.0.tar.gz'
+Content type 'application/x-gzip' length 869058 bytes (848 KB)
+==================================================
+downloaded 848 KB
+
+* installing *binary* package ‘mvtnorm’ ...
+* ‘mvtnorm’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mvtnorm’ as ‘mvtnorm_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mvtnorm)
+* installing *binary* package ‘mixsmsn’ ...
+* ‘mixsmsn’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘mixsmsn’ as ‘mixsmsn_1.1-10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mixsmsn)
+* installing *source* package ‘skewr’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** testing if installed package can be loaded from final location
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘skewr’ as ‘skewr_1.30.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (skewr)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpv5D2ij/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m58.615s
+user	0m51.134s
+sys	0m3.147s
