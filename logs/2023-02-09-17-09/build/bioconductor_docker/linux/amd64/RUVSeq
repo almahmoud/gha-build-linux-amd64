@@ -1,0 +1,61 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''RUVSeq'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'RUVSeq'
+also installing the dependency ‘EDASeq’
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/EDASeq_2.32.0.tar.gz'
+Content type 'application/x-gzip' length 1036452 bytes (1012 KB)
+==================================================
+downloaded 1012 KB
+
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/RUVSeq_1.32.0.tar.gz'
+Content type 'application/x-gzip' length 145935 bytes (142 KB)
+==================================================
+downloaded 142 KB
+
+* installing *source* package ‘EDASeq’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EDASeq’ as ‘EDASeq_2.32.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EDASeq)
+* installing *source* package ‘RUVSeq’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RUVSeq’ as ‘RUVSeq_1.32.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RUVSeq)
+
+The downloaded source packages are in
+	‘/tmp/RtmpyTSzn7/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	1m5.443s
+user	1m1.340s
+sys	0m3.299s
