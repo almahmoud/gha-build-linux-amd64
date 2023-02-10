@@ -1,0 +1,43 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''methylationArrayAnalysis'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'methylationArrayAnalysis'
+trying URL 'https://bioconductor.org/packages/3.16/workflows/src/contrib/methylationArrayAnalysis_1.22.0.tar.gz'
+Content type 'application/x-gzip' length 228793839 bytes (218.2 MB)
+==================================================
+downloaded 218.2 MB
+
+* installing *source* package ‘methylationArrayAnalysis’ ...
+** using staged installation
+** inst
+** help
+No man pages found in package  ‘methylationArrayAnalysis’ 
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import 'rmarkdown::pdf_document' by 'BiocStyle::pdf_document' when loading 'methylationArrayAnalysis'
+Warning: replacing previous import 'rmarkdown::html_document' by 'BiocStyle::html_document' when loading 'methylationArrayAnalysis'
+Warning: replacing previous import 'rmarkdown::md_document' by 'BiocStyle::md_document' when loading 'methylationArrayAnalysis'
+** testing if installed package can be loaded from final location
+Warning: replacing previous import 'rmarkdown::pdf_document' by 'BiocStyle::pdf_document' when loading 'methylationArrayAnalysis'
+Warning: replacing previous import 'rmarkdown::html_document' by 'BiocStyle::html_document' when loading 'methylationArrayAnalysis'
+Warning: replacing previous import 'rmarkdown::md_document' by 'BiocStyle::md_document' when loading 'methylationArrayAnalysis'
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘methylationArrayAnalysis’ as ‘methylationArrayAnalysis_1.22.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (methylationArrayAnalysis)
+
+The downloaded source packages are in
+	‘/tmp/RtmpEgdwRJ/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	3m24.684s
+user	3m12.146s
+sys	0m8.020s
