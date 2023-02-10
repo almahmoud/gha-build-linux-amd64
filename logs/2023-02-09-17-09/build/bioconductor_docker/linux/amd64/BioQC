@@ -1,0 +1,53 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BioQC'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'BioQC'
+trying URL 'https://bioconductor.org/packages/3.16/bioc/src/contrib/BioQC_1.26.0.tar.gz'
+Content type 'application/x-gzip' length 4507145 bytes (4.3 MB)
+==================================================
+downloaded 4.3 MB
+
+* installing *source* package ‘BioQC’ ...
+** using staged installation
+** libs
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gini.c -o gini.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++14 -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_gmt.cpp -o read_gmt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stat_rank.c -o stat_rank.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wmw_test.c -o wmw_test.o
+g++ -std=gnu++14 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BioQC.so gini.o init.o read_gmt.o stat_rank.o wmw_test.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/built/00LOCK-BioQC/00new/BioQC/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BioQC’ as ‘BioQC_1.26.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BioQC)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDSdsWi/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m17.377s
+user	0m14.007s
+sys	0m1.579s
+* installing *binary* package ‘rbenchmark’ ...
+* ‘rbenchmark’ was already a binary package and will not be rebuilt
+* creating tarball
+packaged installation of ‘rbenchmark’ as ‘rbenchmark_1.0.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rbenchmark)
