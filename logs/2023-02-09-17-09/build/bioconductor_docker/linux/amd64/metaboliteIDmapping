@@ -1,0 +1,44 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''metaboliteIDmapping'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'?repositories' for details
+
+replacement repositories:
+    CRAN: https://packagemanager.posit.co/cran/__linux__/jammy/latest
+
+Bioconductor version 3.16 (BiocManager 1.30.19), R 4.2.2 (2022-10-31)
+Installing package(s) 'metaboliteIDmapping'
+trying URL 'https://bioconductor.org/packages/3.16/data/annotation/src/contrib/metaboliteIDmapping_1.0.0.tar.gz'
+Content type 'application/x-gzip' length 307248 bytes (300 KB)
+==================================================
+downloaded 300 KB
+
+* installing *source* package ‘metaboliteIDmapping’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+snapshotDate(): 2022-10-31
+downloading 1 resources
+retrieving 1 resource
+loading from cache
+** testing if installed package can be loaded from final location
+snapshotDate(): 2022-10-31
+loading from cache
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘metaboliteIDmapping’ as ‘metaboliteIDmapping_1.0.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (metaboliteIDmapping)
+
+The downloaded source packages are in
+	‘/tmp/RtmpICloAx/downloaded_packages’
+Old packages: 'fs', 'sourcetools', 'tinytex', 'utf8', 'xfun', 'codetools',
+  'nlme'
+
+real	0m57.080s
+user	0m41.379s
+sys	0m2.325s
