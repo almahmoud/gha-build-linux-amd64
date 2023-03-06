@@ -150,11 +150,8 @@ jobs:
             git push
 
       - name: Get R, OS, and Bioc versions
-        uses: "docker://&bioc.CONTAINER_BASE_IMAGE"
         id: versions
-        with:
-          entrypoint: /bin/bash
-          args: .github/scripts/output_versions.sh
+        run: bash .github/scripts/output_versions.sh
 
       - name: Get deps list
         id: deps
