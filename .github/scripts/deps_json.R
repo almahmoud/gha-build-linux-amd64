@@ -16,12 +16,12 @@ exclude <- .exlude_packages()
 db <- available.packages(repos = BiocManager::repositories())
 
 softpkgs <- available.packages(repos = BiocManager::repositories()["BioCsoft"])[,1]
-annpkgs <- available.packages(repos = BiocManager::repositories()["BioCann"])[,1]
-exppkgs <- available.packages(repos = BiocManager::repositories()["BioCexp"])[,1]
-wkflpkgs <- available.packages(repos = BiocManager::repositories()["BioCworkflows"])[,1]
+# annpkgs <- available.packages(repos = BiocManager::repositories()["BioCann"])[,1]
+# exppkgs <- available.packages(repos = BiocManager::repositories()["BioCexp"])[,1]
+# wkflpkgs <- available.packages(repos = BiocManager::repositories()["BioCworkflows"])[,1]
 # bookpkgs <- available.packages(repos = BiocManager::repositories()["BioCbooks"])[,1]
 
-biocpkgs <- unique(sort(c(softpkgs, annpkgs, exppkgs, wkflpkgs)))
+biocpkgs <- unique(sort(c(softpkgs))) #, annpkgs, exppkgs, wkflpkgs)))
 
 pkgdeps <- tools::package_dependencies(biocpkgs, db = db, recursive = 'strong', which = 'most')
 pkgdeps <- lapply(pkgdeps, function(x){x[!(x %in% exclude)] } )
