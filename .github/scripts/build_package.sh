@@ -26,7 +26,7 @@ function process_dep() {
 export -f process_dep
 
 if [ -s /tmp/deps ]; then
-  cat /tmp/deps | xargs -i bash -c "if grep 'tar.gz$' lists/{}; then process_dep {}; else echo 'Skipping {}'; fi"
+  cat /tmp/deps | xargs -i bash -c "if grep -q 'tar.gz$' lists/{}; then process_dep {}; else echo 'Skipping {}' && cat lists/{}; fi"
 else
   echo "No dependencies"
 fi
@@ -36,7 +36,6 @@ fi
 (time Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); if(BiocManager::install('$PKG', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)" 2>&1 ) 2>&1 | tee /tmp/$PKG
   
 cat /tmp/uniquedeps | xargs -i Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); BiocManager::install('{}', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE)" 2>&1 >> /tmp/$PKG
-
 
 mv *.tar.gz /tmp/tars/ || true
 

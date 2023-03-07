@@ -17,6 +17,7 @@ jobs:
         run: |
           echo platform=$(cat ARCH.bioc) >> $GITHUB_OUTPUT
           echo rootcontainer=$(cat ROOT_CONTAINER.bioc) >> $GITHUB_OUTPUT
+          mkdir -p /tmp/image
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -41,24 +42,12 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           file: .github/scripts/root.Dockerfile
-          push: true
+          push: false
           load: false
+          outputs: type=tar,dest=/tmp/image/bioc_build.tar
+          context: .
           tags: ${{ steps.variables.outputs.rootcontainer }}
           platforms: ${{ steps.variables.outputs.platform }}
-
-  packages-set:
-    runs-on: ubuntu-latest
-    needs: packages-build
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PAT }}
-          persist-credentials: true
-
-      - id: variables
-        run: |
-          echo platform=$(cat ARCH.bioc) >> $GITHUB_OUTPUT
-          echo rootcontainer=$(cat ROOT_CONTAINER.bioc) >> $GITHUB_OUTPUT
 
       - name: Copy old run
         run: |
@@ -71,21 +60,26 @@ jobs:
           mv biocdeps.json "$LOGDIR"/ || true
           mv tobuild.txt "$LOGDIR"/ || true
           mv lists "$LOGDIR"/lists || true
+
           repodir=$(pwd)
-          mkdir -p /tmp/rootimage
-          cd /tmp/rootimage
-          docker save ${{ steps.variables.outputs.rootcontainer }} > image.tar
-          tar -xvf image.tar
-          # Untar the last layer (Bioc build layer)
-          cat manifest.json | awk -F'"' '{print $(NF-1)}' > /tmp/layername
-          rm image.tar
-          ls | grep -v "$(cat /tmp/layername | awk -F'/' '{print $1}')" | xargs rm -rf
-          cat /tmp/layername | xargs -i bash -c "tar -xvf {} && rm {}"
-          cp -r tmp/bioc_build $repodir/
-          cp tmp/bioc_build/*.json $repodir/
-          cp tmp/bioc_build/biocdeps.json $repodir/packages.json
-          docker push ${{ steps.variables.outputs.rootcontainer }}
-          cd $repodir
+          mkdir -p bioc_build
+
+          (cd /tmp/image && tar -xvf bioc_build.tar && cp -r tmp/bioc_build $repodir/)
+
+          mv bioc_build/uniquedeps.json ./
+          mv bioc_build/biocdeps.json ./
+          cp biocdeps.json packages.json
+
+          # ROOTCONTAINER="${{ steps.variables.outputs.rootcontainer }}"
+
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/arch > bioc_build/arch
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/os > bioc_build/os
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/library > bioc_build/library
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/bioc > bioc_build/bioc
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/r > bioc_build/r
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/uniquedeps.json > uniquedeps.json
+          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/biocdeps.json > biocdeps.json
+          
           bash .github/scripts/reset_packages.sh
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config user.email "action@github.com"

@@ -210,6 +210,7 @@ jobs:
                 echo "rclone could not be found"
                 exit 1;
             fi
+            mkdir -p /tmp/image
 
       - name: Build and push container image to GHCR
         id: dockerbuild
@@ -220,8 +221,10 @@ jobs:
             PKG=${{ matrix.pkg }}
             PLATFORM=${{ steps.versions.outputs.platform }}
           file: .github/scripts/build.Dockerfile
+          context: .
           push: false
-          load: true
+          load: false
+          outputs: type=tar,dest=/tmp/image/${{ matrix.pkg }}.tar
           tags: ${{ steps.meta.outputs.image }}
           platforms: ${{ steps.versions.outputs.platform }}
 
@@ -229,15 +232,9 @@ jobs:
         id: pkgbuild
         run: |
           set -x
-          mkdir -p image
-          cd image
-          docker save ${{ steps.meta.outputs.image }} > image.tar
-          tar -xvf image.tar
-          # Untar the last layer (Build layer)
-          cat manifest.json | awk -F'"' '{print $(NF-1)}' > /tmp/layername
-          rm image.tar
-          ls | grep -v "$(cat /tmp/layername | awk -F'/' '{print $1}')" | xargs rm -rf 
-          cat /tmp/layername | xargs -i bash -c "tar -xvf {} && rm {}"
+          repodir=$(pwd)
+          cd /tmp/image
+          tar -xvf ${{ matrix.pkg }}.tar
           cp -r tmp / || true
           cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }}) || true
           cd ..
