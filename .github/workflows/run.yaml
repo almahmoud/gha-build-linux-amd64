@@ -212,7 +212,7 @@ jobs:
             fi
             mkdir -p /tmp/image
 
-      - name: Build and push container image to GHCR
+      - name: Build package via docker build and extracting files to scratch
         id: dockerbuild
         uses: docker/build-push-action@v3
         with:
@@ -224,6 +224,8 @@ jobs:
           context: .
           push: false
           load: false
+          cache-to: type=gha
+          cache-from: type=gha
           outputs: type=tar,dest=/tmp/image/${{ matrix.pkg }}.tar
           tags: ${{ steps.meta.outputs.image }}
           platforms: ${{ steps.versions.outputs.platform }}
