@@ -117,7 +117,26 @@ jobs:
         pkg: ${{fromJson(needs.getlistformatrix.outputs.matrix)}}
     runs-on: ubuntu-latest
     steps:
+    
+      - name: Free space check
+        run: |
+          echo "Free space:"
+          df -h
+
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 35840
+          remove-dotnet: 'true'
+          remove-android: 'true'
+          remove-haskell: 'true'
+
       - uses: actions/checkout@v3
+
+      - name: Free space check
+        run: |
+          echo "Free space:"
+          df -h
 
       - name: Get Current Job Log URL
         uses: Tiryoh/gha-jobid-action@v0
@@ -151,7 +170,8 @@ jobs:
 
       - name: Get R, OS, and Bioc versions
         id: versions
-        run: bash .github/scripts/output_versions.sh
+        run: |
+          bash .github/scripts/output_versions.sh
 
       - name: Get deps list
         id: deps
@@ -192,6 +212,7 @@ jobs:
         id: meta
         run: |
           echo image="ghcr.io/${{ github.repository }}:${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedarch}}" >> $GITHUB_OUTPUT
+          echo base="$(cat CONTAINER_BASE_IMAGE.bioc)" >> $GITHUB_OUTPUT
 
       - name: Install rclone & add rclone conf file
         uses: nick-fields/retry@v2
@@ -212,6 +233,11 @@ jobs:
             fi
             mkdir -p /tmp/image
 
+      - name: Free space check
+        run: |
+          echo "Free space:"
+          df -h
+
       - name: Build package via docker build and extracting files to scratch
         id: dockerbuild
         uses: docker/build-push-action@v3
@@ -224,8 +250,7 @@ jobs:
           context: .
           push: false
           load: false
-          cache-to: type=gha
-          cache-from: type=gha
+          cache-from: type=gha,scope=${{ steps.meta.outputs.image }}
           outputs: type=tar,dest=/tmp/image/${{ matrix.pkg }}.tar
           tags: ${{ steps.meta.outputs.image }}
           platforms: ${{ steps.versions.outputs.platform }}
