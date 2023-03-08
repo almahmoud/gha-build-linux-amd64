@@ -46,6 +46,7 @@ jobs:
           load: false
           outputs: type=tar,dest=/tmp/image/bioc_build.tar
           context: .
+          cache-to: type=gha,mode=max,scope=${{ steps.meta.outputs.image }}
           tags: ${{ steps.variables.outputs.rootcontainer }}
           platforms: ${{ steps.variables.outputs.platform }}
 

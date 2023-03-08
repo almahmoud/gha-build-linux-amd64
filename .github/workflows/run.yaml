@@ -124,9 +124,10 @@ jobs:
           df -h
 
       - name: Maximize build space
-        uses: easimon/maximize-build-space@master
+        uses: easimon/maximize-build-space@v6
         with:
-          root-reserve-mb: 35840
+          root-reserve-mb: 41984
+          swap-size-mb: 1024
           remove-dotnet: 'true'
           remove-android: 'true'
           remove-haskell: 'true'
@@ -213,6 +214,8 @@ jobs:
         run: |
           echo image="ghcr.io/${{ github.repository }}:${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedarch}}" >> $GITHUB_OUTPUT
           echo base="$(cat CONTAINER_BASE_IMAGE.bioc)" >> $GITHUB_OUTPUT
+          echo workspace="$(echo $GITHUB_WORKSPACE)" >> $GITHUB_OUTPUT
+          mkdir -p "$GITHUB_WORKSPACE/tmp/image"
 
       - name: Install rclone & add rclone conf file
         uses: nick-fields/retry@v2
@@ -250,8 +253,7 @@ jobs:
           context: .
           push: false
           load: false
-          cache-from: type=gha,scope=${{ steps.meta.outputs.image }}
-          outputs: type=tar,dest=/tmp/image/${{ matrix.pkg }}.tar
+          outputs: type=tar,dest=${{ steps.meta.outputs.workspace }}/tmp/image/${{ matrix.pkg }}.tar
           tags: ${{ steps.meta.outputs.image }}
           platforms: ${{ steps.versions.outputs.platform }}
 
@@ -260,7 +262,7 @@ jobs:
         run: |
           set -x
           repodir=$(pwd)
-          cd /tmp/image
+          cd ${{ steps.meta.outputs.workspace }}/tmp/image
           tar -xvf ${{ matrix.pkg }}.tar
           cp -r tmp / || true
           cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }}) || true
