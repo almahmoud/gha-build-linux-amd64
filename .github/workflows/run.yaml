@@ -240,6 +240,9 @@ jobs:
         run: |
           echo "Free space:"
           df -h
+          sudo rm -rf /opt/hostedtoolcache/*
+          sudo rm -rf /usr/lib/google-cloud-sdk
+          df -h
 
       - name: Build package via docker build and extracting files to scratch
         id: dockerbuild
