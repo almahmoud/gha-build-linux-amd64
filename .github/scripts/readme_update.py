@@ -4,8 +4,8 @@ from tabulate import tabulate
 import requests, time, humanize
 
 def get_pkgs_dict():
-    """Loads package information from 'alldeps.json' file"""
-    with open("alldeps.json", "r") as f:
+    """Loads package information from 'biocdeps.json' file"""
+    with open("biocdeps.json", "r") as f:
         pkgs = json.load(f)
     return pkgs
 
@@ -55,7 +55,7 @@ def add_successful_size_and_url(pkg, status, tarname, container_path_name="rstud
         if sizeinfo:
             size_b = int(sizeinfo.split(" ")[0])
             tartext = f"{humanize.naturalsize(size_b)} {tarname}"
-        tartext = f"[{tartext}](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/{container_path_name}/{arch}/{runstart}/{tarname})"
+        tartext = f"[{tartext}](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/{container_path_name}/{arch}/{runstart}/binaries/{tarname})"
     return tartext
 
 def check_cran_archived(pkg, logtext, each):
@@ -176,7 +176,7 @@ def main():
     unclaimed_headers = ["Package", "Status", "Tarball"]
     succeeded_headers = ["Package", "Status", "Tarball"]
 
-    with open(f"{runstart}/README.md", "w") as f:
+    with open("README.md", "w") as f:
         f.write(f"# Summary\n\n{len(tables['Succeeded'])} built packages\n\n{len(tables['Failed'])} failed packages\n\n{len(tables['Unclaimed'])} unclaimed packages\n\n")
         f.write(f"\n\n## Failed ({len(tables['Failed'])})\n")
         f.write(tabulate(tables["Failed"], failed_headers, tablefmt="github"))
