@@ -1,11 +1,12 @@
 import json, yaml
 from os.path import exists
+import os
 from tabulate import tabulate
 import requests, time, humanize
 
-def get_pkgs_dict():
+def get_pkgs_dict(jsonfile):
     """Loads package information from 'biocdeps.json' file"""
-    with open("biocdeps.json", "r") as f:
+    with open(jsonfile, "r") as f:
         pkgs = json.load(f)
     return pkgs
 
@@ -29,19 +30,19 @@ def get_pkg_name_and_run_info(pkg, container_path_name="rstudio-binaries", runst
             name = f"[{pkg}]({runurl})"
     return name
 
-def get_pkg_status_and_tarname(pkg, name):
+def get_pkg_status_and_tarname(pkg):
     """Gets the status and tar name for a package"""
     status = "Unclaimed"
     tarname = ""
-    if exists(f"lists/failed/{pkg}"):
+    if exists(f"lists/failed/{pkg.strip()}"):
         status = "Failed"
-        tarname = f"https://github.com/almahmoud/gha-build/blob/main/lists/failed/{pkg}"
-    elif exists(f"lists/{pkg}"):
-        with open(f"lists/{pkg}", "r") as pf:
-            plog = pf.read()
-        if plog.endswith("tar.gz\n"):
+        tarname = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY', 'almahmoud/gha-build')}/blob/main/lists/failed/{pkg}"
+    elif exists(f"lists/{pkg.strip()}"):
+        with open(f"lists/{pkg.strip()}", "r") as pf:
+            plog = pf.read().strip()
+        if plog.endswith("tar.gz"):
             status = "Succeeded"
-            tarname = plog.strip()
+            tarname = plog
     return status, tarname
 
 def add_successful_size_and_url(pkg, status, tarname, container_path_name="rstudio-binaries", runstart="", arch="linux/amd64"):
@@ -58,22 +59,25 @@ def add_successful_size_and_url(pkg, status, tarname, container_path_name="rstud
         tartext = f"[{tartext}](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/{container_path_name}/{arch}/{runstart}/binaries/{tarname})"
     return tartext
 
-def check_cran_archived(pkg, logtext, each):
+def check_cran_archived(pkg, each):
     """Checks if a package has been archived on CRAN"""
-    if f"package ‘{pkg}’ is not available for Bioconductor version" in logtext:
-        cranurl = f"https://cran.r-project.org/web/packages/{pkg}/index.html"
+    #if f"package ‘{pkg}’ is not available for Bioconductor version" in logtext:
+    cranurl = f"https://cran.r-project.org/web/packages/{pkg}/index.html"
+    r = requests.get(cranurl)
+    retries = 0
+    while retries <= 5 and r.status_code != 200:
         r = requests.get(cranurl)
-        retries = 0
-        while retries <= 5 and r.status_code != 200:
-            r = requests.get(cranurl)
-            retries += 1
-            time.sleep(5)
-        if r.status_code == 200:
-            crantext = r.content.decode("utf-8")
-            if "Archived on " in crantext:
-                archivetext = crantext[crantext.find("Archived on"):]
-                archivetext = archivetext[:archivetext.find("\n")]
-                each.append(f"[CRAN Package '{pkg}']({cranurl}) archived. Extracted text: {archivetext}")
+        retries += 1
+        time.sleep(5)
+    if r.status_code == 200:
+        crantext = r.content.decode("utf-8")
+        if "Archived on " in crantext:
+            archivetext = crantext[crantext.find("Archived on"):]
+            archivetext = archivetext[:archivetext.find("\n")]
+            currtext = each[-1]
+            each[-1] = f"{currtext}. [CRAN Package '{pkg}']({cranurl}) archived. Extracted text: {archivetext}"
+            return True
+    return False
 
 def get_logtext(logurl):
     """Gets the log text for a package by making a request to the log URL"""
@@ -107,13 +111,16 @@ def check_dependency_missing(logtext, each):
     if "there is no package called" in logtext:
         tofind = "there is no package called ‘"
         missingtext = logtext[logtext.find(tofind)+len(tofind):]
-        missingtext = missingtext[:missingtext.find("’")]
-        each.append(f"Undeclared R dependency: '{missingtext}'")
+        pkg = missingtext[:missingtext.find("’")]
+        each.append(f"Failed R dependency: '{pkg}'")
+        check_cran_archived(pkg, each)
+        
     if "ERROR: dependency" in logtext:
         tofind = "ERROR: dependency ‘"
         missingtext = logtext[logtext.find(tofind)+len(tofind):]
-        missingtext = missingtext[:missingtext.find("’")]
-        each.append(f"Undeclared R dependency: '{missingtext}'")
+        pkg = missingtext[:missingtext.find("’")]
+        each.append(f"Failed R dependency: '{pkg}'")
+        check_cran_archived(pkg, each)
 
 def add_bbs_status(pkg, each):
     """
@@ -124,21 +131,18 @@ def add_bbs_status(pkg, each):
     r = requests.get(bbsurl)
     bbs_status = ""
     retries = 0
-    if "CRAN Package" not in each[-1]:
-        while retries <= 5 and r.status_code != 200:
-            r = requests.get(bbsurl)
-            retries += 1
-            time.sleep(5)
-        if r.status_code == 200:
-            bbs_summary = r.content.decode("utf-8")
-            bbs_status = yaml.safe_load(bbs_summary).get("Status", "Unknown")
-        if not bbs_status:
-            bbs_status = "Failed retrieving"
-        else:
-            bbs_status = f"[{bbs_status}]({bbsurl.replace('/raw-results/nebbiolo2/buildsrc-summary.dcf', '')})"
-        each.insert(2, bbs_status)
+    while retries <= 5 and r.status_code != 200:
+        r = requests.get(bbsurl)
+        retries += 1
+        time.sleep(5)
+    if r.status_code == 200:
+        bbs_summary = r.content.decode("utf-8")
+        bbs_status = yaml.safe_load(bbs_summary).get("Status", "Unknown")
+    if not bbs_status:
+        bbs_status = "Failed retrieving"
     else:
-        each.insert(2, 'N/A: CRAN package')
+        bbs_status = f"[{bbs_status}]({bbsurl.replace('/raw-results/nebbiolo2/buildsrc-summary.dcf', '')})"
+    each.insert(2, bbs_status)
 
 def process_failed_pkgs(tables):
     """Updates the tar text for failed packages to include a link to the build log and checks if the package has been archived on CRAN"""
@@ -146,34 +150,59 @@ def process_failed_pkgs(tables):
         update_failed_tartext(each)
         pkg = each[0][each[0].find('[')+1:each[0].find(']')]
         logtext = get_failed_log(pkg)
-        check_cran_archived(pkg, logtext, each)
+        # check_cran_archived(pkg, logtext, each)
         check_dependency_missing(logtext, each)
         add_bbs_status(pkg, each)
 
+def process_unclaimed_pkgs(tables, leftpkgs):
+    """Add blocking packages"""
+    for each in tables["Unclaimed"]:
+        currtext = each[2]
+        pkg = each[0]
+        if "[" in pkg:
+            pkg = each[0][each[0].find('[')+1:each[0].find(']')]
+        if leftpkgs.get(pkg):
+            each[2] = f"Incomplete Bioc dependencies: {', '.join(leftpkgs[pkg])}. {currtext}"
+        
 def get_runmeta(filepath):
     """Get timestamp or container name from the start of this run cycle from the given file path"""
     with open(filepath, "r") as f:
         meta = f.read()
     return meta.strip()
 
+def process_pkg_list(tables, pkgs, biocpkgs, containername, runstart, arch):
+    for pkg in list(pkgs):
+        name = pkg
+        if pkg in biocpkgs:
+            name = get_pkg_name_and_run_info(pkg, containername, runstart, arch)
+        status, tarname = get_pkg_status_and_tarname(pkg)
+        tartext = add_successful_size_and_url(pkg, status, tarname, containername, runstart, arch)
+        tables[status].append([name, status, tartext])
+
+def get_non_bioc_soft_tars(biocpkgs):
+    with open("/tmp/alltars", "r") as f:
+        tars = f.readlines()
+    return [t for t in tars if t not in biocpkgs]
+
 def main():
     runstart = get_runmeta("runstarttime")
     containername = get_runmeta("containername")
     arch = get_runmeta("arch")
-    pkgs = get_pkgs_dict()
+    biocpkgs = get_pkgs_dict("biocdeps.json")
+    leftpkgs = get_pkgs_dict("packages.json")
     tables = {"Failed": [], "Unclaimed": [], "Succeeded": []}
-    for pkg in list(pkgs):
-        name = get_pkg_name_and_run_info(pkg, containername, runstart, arch)
-        status, tarname = get_pkg_status_and_tarname(pkg, name)
-        tartext = add_successful_size_and_url(pkg, status, tarname, containername, runstart, arch)
-        tables[status].append([name, status, tartext])
+    process_pkg_list(tables, biocpkgs, biocpkgs, containername, runstart, arch)
+    non_biocsoft_pkgs = get_non_bioc_soft_tars(biocpkgs)
+    process_pkg_list(tables, non_biocsoft_pkgs, biocpkgs, containername, runstart, arch)
+
     process_failed_pkgs(tables)
+    process_unclaimed_pkgs(tables, leftpkgs)
 
     tables["Failed"] = [x if len(x)>4 else x+["Error unknown"] for x in tables["Failed"]]
     tables["Failed"].sort(key=lambda x: x[4])
 
     failed_headers = ["Package", "Status", "BBS Status", "Log", "Known Error"]
-    unclaimed_headers = ["Package", "Status", "Tarball"]
+    unclaimed_headers = ["Package", "Status", "Blocked By"]
     succeeded_headers = ["Package", "Status", "Tarball"]
 
     with open("README.md", "w") as f:

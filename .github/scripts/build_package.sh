@@ -6,12 +6,12 @@ export PKG=$2
 runstart=$(cat runstarttime)
 containername=$(cat containername)
 mkdir -p $LIBRARY
-mkdir -p /tmp/tars/
+mkdir -p /tmp/tmp/tars/
 
 # Get bioc dependencies list to pull their libraries from their build run
-sed -n "/^    \"$PKG\"/,/^    \"/p" biocdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/deps
+sed -n "/^    \"$PKG\"/,/^    \"/p" biocdeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/tmp/deps
 # Get unique dependencies list to get binaries for them as well at the end
-sed -n "/^    \"$PKG\"/,/^    \"/p" uniquedeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/uniquedeps
+sed -n "/^    \"$PKG\"/,/^    \"/p" uniquedeps.json | grep '^        "' | awk -F'"' '{print $2}' > /tmp/tmp/uniquedeps
 
 
 function process_dep() {
@@ -25,20 +25,20 @@ function process_dep() {
 
 export -f process_dep
 
-if [ -s /tmp/deps ]; then
-  cat /tmp/deps | xargs -i bash -c "if grep -q 'tar.gz$' lists/{}; then process_dep {}; else echo 'Skipping {}' && cat lists/{}; fi"
+if [ -s /tmp/tmp/deps ]; then
+  cat /tmp/tmp/deps | xargs -i bash -c "if grep -q 'tar.gz$' lists/{}; then process_dep {}; else echo 'Skipping {}' && cat lists/{}; fi"
 else
   echo "No dependencies"
 fi
 
 # Build package, and exit with code 0 only on success
 # Redirect all stout/stderr to log
-(time Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); if(BiocManager::install('$PKG', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)" 2>&1 ) 2>&1 | tee /tmp/$PKG
+(time Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); if(BiocManager::install('$PKG', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)" 2>&1 ) 2>&1 | tee /tmp/tmp/$PKG
   
-cat /tmp/uniquedeps | xargs -i Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); BiocManager::install('{}', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE)" 2>&1 >> /tmp/$PKG
+cat /tmp/tmp/uniquedeps | xargs -i Rscript -e "Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); BiocManager::install('{}', INSTALL_opts = '--build', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE)" 2>&1 >> /tmp/tmp/$PKG
 
-mv *.tar.gz /tmp/tars/ || true
+mv *.tar.gz /tmp/tmp/tars/ || true
 
-ls /tmp/tars | awk -F'_' '{print $1}' | grep -v "$PKG" | xargs -i bash -c 'if grep -q "tar.gz$" lists/{}; then rm /tmp/tars/$(cat lists/{}); else echo "{} tar not already found."; fi'
+ls /tmp/tmp/tars | awk -F'_' '{print $1}' | grep -v "$PKG" | xargs -i bash -c 'if grep -q "tar.gz$" lists/{}; then rm /tmp/tmp/tars/$(cat lists/{}); else echo "{} tar not already found."; fi'
 
-ls /tmp/tars | awk -F'_' '{print $1}' | xargs -i Rscript -e "install.packages('maketools'); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('{}'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('/tmp/{}-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"
+ls /tmp/tmp/tars | awk -F'_' '{print $1}' | xargs -i Rscript -e "install.packages('maketools'); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('{}'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('/tmp/tmp/{}-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"

@@ -122,15 +122,52 @@ jobs:
         run: |
           echo "Free space:"
           df -h
+          
+      - name: Free space
+        run: |
+          df -h
+          set -x
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /opt/hostedtoolcache/*
+          sudo rm -rf /usr/local/.ghcup
+          sudo rm -rf /usr/lib/google-cloud-sdk
+          sudo rm -rf /usr/lib/firefox
+          sudo rm -rf /opt/microsoft/powershell
+          sudo rm -rf /usr/lib/jvm
+          sudo rm -rf /usr/local/graalvm
+          sudo rm -rf /etc/skel/.rustup /home/runner/.rustup /home/runneradmin/.rustup
+          sudo rm -rf /usr/lib/llvm-13
+          sudo rm -rf /usr/local/julia1.8.5
+          sudo rm -rf /opt/microsoft
+          sudo rm -rf /usr/lib/llvm-14
+          sudo rm -rf /opt/az
+          sudo rm -rf /home/linuxbrew
+          sudo rm -rf /opt/pipx
+          sudo rm -rf /opt/google
+          sudo rm -rf /usr/lib/gcc
+          sudo rm -rf /usr/lib/mono
+          sudo rm -rf /usr/local/aws-*
+          sudo rm -rf /var/lib/mysql
+          sudo rm -rf /var/lib/gems
+          sudo rm -rf /usr/src/*-azure-*
+          sudo rm -rf /usr/share/swift
+          sudo rm -rf /usr/share/az_9.3.0
+          sudo rm -rf /usr/share/miniconda
+          sudo rm -rf /home/runner/.cargo
+          sudo rm -rf /usr/share/gradle-8.0.2
+          sudo rm -rf /usr/local/n
+          sudo rm -rf /usr/local/sqlpackage
+          df -h
+          sudo du --max-depth=3 / | sort -n
 
       - name: Maximize build space
         uses: easimon/maximize-build-space@v6
         with:
-          root-reserve-mb: 41984
+          root-reserve-mb: 69632
           swap-size-mb: 1024
-          remove-dotnet: 'true'
-          remove-android: 'true'
-          remove-haskell: 'true'
+          overprovision-lvm: true
 
       - uses: actions/checkout@v3
 
@@ -238,10 +275,6 @@ jobs:
 
       - name: Free space check
         run: |
-          echo "Free space:"
-          df -h
-          sudo rm -rf /opt/hostedtoolcache/*
-          sudo rm -rf /usr/lib/google-cloud-sdk
           df -h
 
       - name: Build package via docker build and extracting files to scratch
@@ -256,20 +289,34 @@ jobs:
           context: .
           push: false
           load: false
-          outputs: type=tar,dest=${{ steps.meta.outputs.workspace }}/tmp/image/${{ matrix.pkg }}.tar
+          outputs: type=tar,dest=/tmp/image/${{ matrix.pkg }}.tar
           tags: ${{ steps.meta.outputs.image }}
           platforms: ${{ steps.versions.outputs.platform }}
+
+      - name: Free space check
+        run: |
+          echo "Free space:"
+          df -h
+          set -x
+          sudo rm -rf /var/lib/docker/volumes/buildx* || true
+          df -h
 
       - name: Extract files from image and mark failed
         id: pkgbuild
         run: |
           set -x
+          sudo docker images -a
+          BUILDKIT_CONTAINER_ID=$(sudo docker ps -a | grep 'buildkit' | awk '{print $1}')
+          sudo docker rm $BUILDKIT_CONTAINER_ID -f || true
+          sudo docker system prune --volumes -f || true
+          sudo docker images prune -f || true
           repodir=$(pwd)
-          cd ${{ steps.meta.outputs.workspace }}/tmp/image
-          tar -xvf ${{ matrix.pkg }}.tar
-          cp -r tmp / || true
-          cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }}) || true
-          cd ..
+          rm -rf $repodir/${{ steps.versions.outputs.library }}
+          cd /
+          tar -xvf /tmp/image/${{ matrix.pkg }}.tar && rm /tmp/image/${{ matrix.pkg }}.tar
+          #cp -r tmp / || true
+          #cp -r ${{ steps.versions.outputs.library }} $(dirname /${{ steps.versions.outputs.library }})/ || true
+          cd $repodir
           rm -rf image
           if (ls /tmp/tars | grep -q "^${{matrix.pkg}}_"); then exit 0; else exit 1; fi
         continue-on-error: true
