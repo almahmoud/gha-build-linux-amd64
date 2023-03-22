@@ -56,7 +56,7 @@ def add_successful_size_and_url(pkg, status, tarname, container_path_name="rstud
         if sizeinfo:
             size_b = int(sizeinfo.split(" ")[0])
             tartext = f"{humanize.naturalsize(size_b)} {tarname}"
-        tartext = f"[{tartext}](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/{container_path_name}/{arch}/{runstart}/binaries/{tarname})"
+        tartext = f"[{tartext}](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/{container_path_name}/{arch}/{runstart}/binaries/src/contrib/{tarname})"
     return tartext
 
 def check_cran_archived(pkg, each):

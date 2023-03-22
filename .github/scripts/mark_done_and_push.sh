@@ -7,7 +7,6 @@ TAR=$2
 TARGETFILE=$3
 TARGETFILE=${TARGETFILE:-"packages.json"}
 
-#rclone ls js2:/gha-build | grep "tar" | awk '{print $2}' > /tmp/tars
 ls /tmp/tars/ | sed 's#/tmp/tars/##g' | awk -F'_' '{print $1}' | xargs -i bash -c 'ls /tmp/tars/ | sed "s#/tmp/tars/##g" | grep "^{}_" > lists/{}'
 echo "$TAR" > "lists/$PKGTOMARK"
 

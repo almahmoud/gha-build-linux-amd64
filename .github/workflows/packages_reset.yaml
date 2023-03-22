@@ -6,7 +6,72 @@ on:
       - .github/scripts/root.Dockerfile
       - logs/*/PACKAGES
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: variables
+        continue-on-error: true
+        run: |
+          if [ ! -f "runstarttime" ]; then exit 1; fi
+          if [ ! -f "logs/$(cat runstarttime)/PACKAGES" ]; then exit 1; fi
+          echo platform=$(cat PLATFORM.bioc) >> $GITHUB_OUTPUT
+          echo testcontainer=$(cat ROOT_CONTAINER.bioc | sed "s#:#:test-#g") >> $GITHUB_OUTPUT
+          mkdir -p /tmp
+
+          # Pick 5 random built packages to test installing
+          grep -irl "tar.gz$" | awk -F'/' '{print $NF}' > /tmp/alltars
+          ggrep -Pzo "(?s)\s*\"\N*\":\s*\[" biocdeps.json | awk -F'"' '{print $2}' | grep -v '^$' > /tmp/allbioc
+          comm -12 <(sort /tmp/alltars) <(sort /tmp/allbioc) > /tmp/builtbioc
+          shuf -n 5 /tmp/builtbioc > randompkgs
+          cat << EOF > test.Dockerfile
+          FROM $(cat CONTAINER_BASE_IMAGE.bioc)
+          COPY randompkgs /tmp/randompkgs
+          COPY containername /tmp/containername
+          COPY runstarttime /tmp/runstarttime
+          COPY arch /tmp/arch
+          RUN cat /tmp/randompkgs | xargs -i Rscript -e "BiocManager::install('{}', site_repository = 'https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/')"
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: arm64
+        if: contains(steps.variables.outputs.platform, 'arm64') && steps.variables.outcome=='success'
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          platforms: ${{ steps.variables.outputs.platform }}
+        if: steps.variables.outcome=='success'
+
+      - name: Login to GHCR
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.variables.outcome=='success'
+
+      - name: Test libraries in buildx emulator
+        id: dockerbuild
+        uses: docker/build-push-action@v3
+        with:
+          file: .github/scripts/test.Dockerfile
+          push: false
+          load: false
+          outputs: type=tar,dest=/tmp/image/bioc_test.tar
+          context: .
+          tags: ${{ steps.variables.outputs.testcontainer }}
+          platforms: ${{ steps.variables.outputs.platform }}
+        if: steps.variables.outcome=='success'
+
+      - run: |
+          rclone move js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib js2:/container-binaries/$(cat containername)/$(cat arch)/binaries/src/contrib -vvvvvv
+        if: steps.variables.outcome=='success'
+
   packages-build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,7 +81,7 @@ jobs:
 
       - id: variables
         run: |
-          echo platform=$(cat ARCH.bioc) >> $GITHUB_OUTPUT
+          echo platform=$(cat PLATFORM.bioc) >> $GITHUB_OUTPUT
           echo rootcontainer=$(cat ROOT_CONTAINER.bioc) >> $GITHUB_OUTPUT
           mkdir -p /tmp/image
 
@@ -52,41 +117,39 @@ jobs:
           platforms: ${{ steps.variables.outputs.platform }}
 
       - name: Copy old run
-        run: |
-          set -x
-          STARTTIME="$(cat runstarttime)" || true
-          LOGDIR="logs/$(cat runstarttime)" || true
-          mv runstarttime "$LOGDIR"/ || true
-          mv uniquedeps.json "$LOGDIR"/ || true
-          mv packages.json "$LOGDIR"/ || true
-          mv biocdeps.json "$LOGDIR"/ || true
-          mv tobuild.txt "$LOGDIR"/ || true
-          mv lists "$LOGDIR"/lists || true
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git pull origin main || git reset --hard origin/main
+            STARTTIME="$(cat runstarttime)" || true
+            LOGDIR="logs/$(cat runstarttime)" || true
+            mv runstarttime "$LOGDIR"/ || true
+            mv uniquedeps.json "$LOGDIR"/ || true
+            mv packages.json "$LOGDIR"/ || true
+            mv biocdeps.json "$LOGDIR"/ || true
+            mv tobuild.txt "$LOGDIR"/ || true
+            mv lists "$LOGDIR"/lists || true
 
-          repodir=$(pwd)
-          mkdir -p bioc_build
+            repodir=$(pwd)
+            mkdir -p bioc_build
 
-          (cd /tmp/image && tar -xvf bioc_build.tar && cp -r tmp/bioc_build $repodir/)
+            (cd /tmp/image && tar -xvf bioc_build.tar && cp -r tmp/bioc_build $repodir/)
 
-          mv bioc_build/uniquedeps.json ./
-          mv bioc_build/biocdeps.json ./
-          cp biocdeps.json packages.json
-          cp bioc_build/containername containername
+            mv bioc_build/uniquedeps.json ./
+            mv bioc_build/biocdeps.json ./
+            cp biocdeps.json packages.json
+            cp bioc_build/containername containername
+            cp bioc_build/arch arch
 
-          # ROOTCONTAINER="${{ steps.variables.outputs.rootcontainer }}"
-
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/arch > bioc_build/arch
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/os > bioc_build/os
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/library > bioc_build/library
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/bioc > bioc_build/bioc
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/r > bioc_build/r
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/uniquedeps.json > uniquedeps.json
-          # docker container run -ti --rm regclient/regctl:latest image get-file $ROOTCONTAINER /tmp/bioc_build/biocdeps.json > biocdeps.json
-          
-          bash .github/scripts/reset_packages.sh
-          git config --global --add safe.directory "$GITHUB_WORKSPACE"
-          git config user.email "action@github.com"
-          git config user.name "GitHub Action"
-          git add .
-          git commit -m "Reset packages"
-          git push
+            bash .github/scripts/reset_packages.sh
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git config user.email "action@github.com"
+            git config user.name "GitHub Action"
+            git add .
+            git commit -m "Reset packages $STARTTIME"
+            git push

@@ -14,4 +14,3 @@ with open('packages.json', 'w') as f:
     f.write(json.dumps(pkgs, indent=4))
 """
 echo "$(TZ=EST date '+%Y-%m-%d-%H-%M')" > runstarttime
-bash .github/scripts/get_container_name.sh > containername

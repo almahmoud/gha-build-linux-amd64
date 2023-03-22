@@ -78,6 +78,9 @@ jobs:
           overprovision-lvm: true
 
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+          persist-credentials: true
 
       - uses: actions/setup-python@v4
         with:
@@ -111,7 +114,7 @@ jobs:
   
           helm repo add wunderio https://storage.googleapis.com/charts.wdr.io
           echo "$RCLONE_VALS" > rclone-vals.yaml
-          sed -i "s#HOLDERPATH#gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries#g" rclone-vals.yaml
+          sed -i "s#HOLDERPATH#gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib#g" rclone-vals.yaml
           helm upgrade --install --create-namespace -n rclone rclone wunderio/csi-rclone -f rclone-vals.yaml --wait
           kubectl -n rclone apply -f .github/scripts/k8s/k8s-resources.yaml
           while [[ $(kubectl get pods -n rclone package-file --no-headers -o custom-columns=":status.phase") != "Running" ]]; do
@@ -175,6 +178,6 @@ jobs:
             git push
 
       - run: |
-          rclone copyto /tmp/PACKAGES js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES -vvvvv
-          rclone copyto /tmp/PACKAGES.gz js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES.gz -vvvvv
-          rclone copyto /tmp/PACKAGES.rds js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES.rds -vvvvv
+          rclone copyto /tmp/PACKAGES js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib/PACKAGES -vvvvv
+          rclone copyto /tmp/PACKAGES.gz js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib/PACKAGES.gz -vvvvv
+          rclone copyto /tmp/PACKAGES.rds js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib/PACKAGES.rds -vvvvv

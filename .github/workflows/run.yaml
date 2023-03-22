@@ -232,7 +232,13 @@ jobs:
       - name: Get R, OS, and Bioc versions
         id: versions
         run: |
-          bash .github/scripts/output_versions.sh
+          echo os=$(cat bioc_build/os) >> $GITHUB_OUTPUT
+          echo r=$(cat bioc_build/r) >> $GITHUB_OUTPUT
+          echo bioc=$(cat bioc_build/bioc) >> $GITHUB_OUTPUT
+          echo library=$(echo "tmp/built") >> $GITHUB_OUTPUT
+          echo platform=$(cat platform) >> $GITHUB_OUTPUT
+          echo sanitizedplatform=$(cat platform | sed "s/[^[:alnum:]]/-/g") >> $GITHUB_OUTPUT
+          echo arch=$(cat arch) >> $GITHUB_OUTPUT
 
       - name: Get deps list
         id: deps
@@ -272,7 +278,7 @@ jobs:
       - name: Set container image name
         id: meta
         run: |
-          echo image="ghcr.io/${{ github.repository }}:${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedarch}}" >> $GITHUB_OUTPUT
+          echo image="ghcr.io/${{ github.repository }}:${{ matrix.pkg }}-${{steps.versions.outputs.sanitizedplatform}}" >> $GITHUB_OUTPUT
           echo base="$(cat CONTAINER_BASE_IMAGE.bioc)" >> $GITHUB_OUTPUT
           echo workspace="$(echo $GITHUB_WORKSPACE)" >> $GITHUB_OUTPUT
           mkdir -p "$GITHUB_WORKSPACE/tmp/image"
@@ -396,7 +402,7 @@ jobs:
           mkdir -p /tmp/logs/$runstarttime/sizes/$containername/$arch/libraries
           mkdir -p /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries
           wc -c "${{steps.tar.outputs.name}}" > /tmp/logs/$runstarttime/sizes/$containername/$arch/libraries/$PKG
-          wc -c "/tmp/tars/${{steps.tar.outputs.pkg}}" > /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries/$PKG
+          ls /tmp/tars/ | sed 's#/tmp/tars/##g' | xargs -i bash -c "wc -c /tmp/tars/{} > /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries/src/contrib/$(echo {} | awk -F'_' '{print $1}')"
           mkdir -p /tmp/logs/$runstarttime/times/$containername/$arch/
 
           # Get the 3 lines of times into time log
@@ -418,7 +424,7 @@ jobs:
           command: |
             set -x
             # Push binary
-            ls /tmp/tars/ | sed 's#/tmp/tars/##g' | xargs -i rclone copy /tmp/tars/{} js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/ -vvvvvv
+            ls /tmp/tars/ | sed 's#/tmp/tars/##g' | xargs -i rclone copy /tmp/tars/{} js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib/ -vvvvvv
             # Push copy of library
             rclone copy ${{steps.tar.outputs.name}} js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/libraries/ -vvvvvv
 
@@ -428,8 +434,8 @@ jobs:
           PLATFORM=${{ steps.versions.outputs.platform }}
           echo "# $PKG package build summary" >> $GITHUB_STEP_SUMMARY
           echo "Platform: $PLATFORM" >> $GITHUB_STEP_SUMMARY
-          echo "Package binary: [Jetstream2](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/${{steps.tar.outputs.pkg}})" >> $GITHUB_STEP_SUMMARY
-          echo "Size of package binary: $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/binaries/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
+          echo "Package binary: [Jetstream2](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib/${{steps.tar.outputs.pkg}})" >> $GITHUB_STEP_SUMMARY
+          echo "Size of package binary: $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/binaries/src/contrib/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
           echo "Size of package library w/ dependencies ([see GitHub artifacts in job summary](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}#artifacts)): $(cat /tmp/logs/$(cat runstarttime)/sizes/$(cat containername)/$(cat arch)/libraries/$PKG | awk '{print $1}' | numfmt --to=iec-i --suffix=B --format="%9.2f")" >> $GITHUB_STEP_SUMMARY
 
       - name: Set token depending on whether a new workflow is needed
