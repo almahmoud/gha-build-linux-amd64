@@ -32,6 +32,7 @@ jobs:
           COPY runstarttime /tmp/runstarttime
           COPY arch /tmp/arch
           RUN cat /tmp/randompkgs | xargs -i Rscript -e "BiocManager::install('{}', site_repository = 'https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/')"
+          EOF
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
