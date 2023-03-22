@@ -41,4 +41,6 @@ mv *.tar.gz /tmp/tmp/tars/ || true
 
 ls /tmp/tmp/tars | awk -F'_' '{print $1}' | grep -v "$PKG" | xargs -i bash -c 'if grep -q "tar.gz$" lists/{}; then rm /tmp/tmp/tars/$(cat lists/{}); else echo "{} tar not already found."; fi'
 
-ls /tmp/tmp/tars | awk -F'_' '{print $1}' | xargs -i Rscript -e "install.packages('maketools'); p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('{}'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('/tmp/tmp/{}-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"
+Rscript -e "install.packages('maketools')"
+
+ls /tmp/tmp/tars | awk -F'_' '{print $1}' | xargs -i Rscript -e "p <- .libPaths(); p <- c('$LIBRARY', p); .libPaths(p); sysd <- maketools::package_sysdeps('{}'); if (nrow(sysd) > 0) { library(jsonlite); fileConn <- file('/tmp/tmp/{}-sysdeps'); writeLines(prettify(toJSON(sysd)), fileConn); close(fileConn); }"
