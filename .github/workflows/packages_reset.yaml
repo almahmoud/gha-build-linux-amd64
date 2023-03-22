@@ -22,7 +22,7 @@ jobs:
 
           # Pick 5 random built packages to test installing
           grep -irl "tar.gz$" | awk -F'/' '{print $NF}' > /tmp/alltars
-          ggrep -Pzo "(?s)\s*\"\N*\":\s*\[" biocdeps.json | awk -F'"' '{print $2}' | grep -v '^$' > /tmp/allbioc
+          grep -Pzo "(?s)\s*\"\N*\":\s*\[" biocdeps.json | awk -F'"' '{print $2}' | grep -v '^$' > /tmp/allbioc
           comm -12 <(sort /tmp/alltars) <(sort /tmp/allbioc) > /tmp/builtbioc
           shuf -n 5 /tmp/builtbioc > randompkgs
           cat << EOF > test.Dockerfile
