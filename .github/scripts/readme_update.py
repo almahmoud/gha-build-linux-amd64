@@ -193,7 +193,8 @@ def main():
     tables = {"Failed": [], "Unclaimed": [], "Succeeded": []}
     process_pkg_list(tables, biocpkgs, biocpkgs, containername, runstart, arch)
     non_biocsoft_pkgs = get_non_bioc_soft_tars(biocpkgs)
-    process_pkg_list(tables, non_biocsoft_pkgs, biocpkgs, containername, runstart, arch)
+    nonsofttables = {"Failed": [], "Unclaimed": [], "Succeeded": []}
+    process_pkg_list(nonsofttables, non_biocsoft_pkgs, biocpkgs, containername, runstart, arch)
 
     process_failed_pkgs(tables)
     process_unclaimed_pkgs(tables, leftpkgs)
@@ -205,14 +206,18 @@ def main():
     unclaimed_headers = ["Package", "Status", "Blocked By"]
     succeeded_headers = ["Package", "Status", "Tarball"]
 
+    tables["NonBiocSoft"] = nonsofttables["Succeeded"]
+    
     with open("README.md", "w") as f:
-        f.write(f"# Summary\n\n{len(tables['Succeeded'])} built packages\n\n{len(tables['Failed'])} failed packages\n\n{len(tables['Unclaimed'])} unclaimed packages\n\n")
+        f.write(f"# Summary\n\n{len(tables['Succeeded'])} Bioconductor sotware binaries built\n\n{len(tables['NonBiocSoft'])} Other dependency binaries built\n\n{len(tables['Failed'])} failed packages\n\n{len(tables['Unclaimed'])} unclaimed packages\n\n")
         f.write(f"\n\n## Failed ({len(tables['Failed'])})\n")
         f.write(tabulate(tables["Failed"], failed_headers, tablefmt="github"))
         f.write(f"\n\n## Unclaimed ({len(tables['Unclaimed'])})\n")
         f.write(tabulate(tables["Unclaimed"], unclaimed_headers, tablefmt="github"))
-        f.write(f"\n\n## Succeeded ({len(tables['Succeeded'])})\n")
+        f.write(f"\n\n## Bioconductor Software Binaries Built ({len(tables['Succeeded'])})\n")
         f.write(tabulate(tables["Succeeded"], succeeded_headers, tablefmt="github"))
+        f.write(f"\n\n## Other Dependency Binaries ({len(tables['Succeeded'])})\n")
+        f.write(tabulate(tables["NonBiocSoft"], succeeded_headers, tablefmt="github"))
 
 if __name__ == "__main__":
     main()

@@ -28,7 +28,7 @@ if [ ! -s tobuild.txt ]; then
                     git add lists;
                 fi
             fi
-            if [ $counter -gt 10 ]; then
+            if [ $counter -eq 10 ]; then
                 echo "READY" > /tmp/write_PACKAGES
             fi
             git add logs/$(cat runstarttime)

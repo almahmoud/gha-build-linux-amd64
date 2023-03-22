@@ -8,34 +8,136 @@ jobs:
   writepkgs:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Free space
+        run: |
+          df -h
+          set -x
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /opt/ghc
+          sudo rm -rf /opt/hostedtoolcache/*
+          sudo rm -rf /usr/local/.ghcup
+          sudo rm -rf /usr/lib/google-cloud-sdk
+          sudo rm -rf /usr/lib/firefox
+          sudo rm -rf /opt/microsoft/powershell
+          sudo rm -rf /usr/lib/jvm
+          sudo rm -rf /usr/local/graalvm
+          sudo rm -rf /etc/skel/.rustup /home/runner/.rustup /home/runneradmin/.rustup
+          sudo rm -rf /usr/lib/llvm-13
+          sudo rm -rf /usr/local/julia1.8.5
+          sudo rm -rf /opt/microsoft
+          sudo rm -rf /usr/lib/llvm-14
+          sudo rm -rf /opt/az
+          sudo rm -rf /home/linuxbrew
+          sudo rm -rf /opt/pipx
+          sudo rm -rf /opt/google
+          sudo rm -rf /usr/lib/gcc
+          sudo rm -rf /usr/lib/mono
+          sudo rm -rf /usr/local/aws-*
+          sudo rm -rf /var/lib/mysql
+          sudo rm -rf /var/lib/gems
+          sudo rm -rf /usr/src/*-azure-*
+          sudo rm -rf /usr/share/swift
+          sudo rm -rf /usr/share/az_9.3.0
+          sudo rm -rf /usr/share/miniconda
+          sudo rm -rf /home/runner/.cargo
+          sudo rm -rf /usr/share/gradle-8.0.2
+          sudo rm -rf /usr/local/n
+          sudo rm -rf /usr/local/sqlpackage
+          sudo rm -rf /var/cache
+          sudo rm -rf /root/.sbt
+          sudo rm -rf /usr/share/sbt
+          sudo rm -rf /var/lib/mecab
+          sudo rm -rf /usr/lib/llvm-12
+          sudo rm -rf /usr/share/java
+          sudo rm -rf /usr/share/fonts
+          sudo rm -rf /usr/share/vim
+          sudo rm -rf /etc/skel/.dotnet
+          sudo rm -rf /home/runneradmin/.dotnet
+          sudo rm -rf /home/runner/.dotnet
+          sudo rm -rf /var/lib/postgresql
+          sudo rm -rf /usr/lib/postgresql
+          sudo rm -rf /usr/share/icons
+          sudo rm -rf /usr/include/c++
+          sudo rm -rf /usr/share/mecab
+          sudo rm -rf /usr/share/ri
+          sudo rm -rf /etc/skel/.cargo
+          sudo rm -rf /home/runneradmin/.cargo
+          sudo rm -rf /usr/lib/R
+          sudo rm -rf /usr/share/kotlinc
+          sudo rm -rf /usr/share/doc
+          sudo rm -rf /usr/share/man
+          df -h
+
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@v6
+        with:
+          root-reserve-mb: 71680
+          swap-size-mb: 1024
+          overprovision-lvm: true
+
       - uses: actions/checkout@v3
+
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
-      - name: Add rclone conf file and PEM key for ssh
-        run: |
-          echo "$RCLONE_CONF" > ~/.rclone.conf
-          echo "$VMKEY" > ~/packages.pem
-          echo "$CLOUDBRIDGE_CONF" > ~/.cloudbridge
-          chmod 400 ~/packages.pem
-        env:
-          CLOUDBRIDGE_CONF: ${{secrets.CLOUDBRIDGE_CONF}}
-          RCLONE_CONF: ${{secrets.RCLONE_CONF}}
-          VMKEY: ${{secrets.VMKEY}}
 
-      - name: Launch instance in cloudbridge
-        shell: bash
+      - name: Start a local k8s cluster
+        uses: jupyterhub/action-k3s-helm@v3
+        with:
+          k3s-channel: latest
+          metrics-enabled: false
+          traefik-enabled: false
+
+      - name: Verify function of k8s, kubectl, and helm
         run: |
           set -x
-          # Install cloudbridge
-          mkdir -p /tmp/binaries
-          python -m pip install 'cloudbridge[openstack] @ git+https://github.com/cloudve/cloudbridge@main'
-          # Launch js2 instance
-          python .github/scripts/instlaunch.py -n 1 -m Featured-Ubuntu22 -l gha-build -s 0 -t m3.medium -p openstack --network 739b1ee6-1e81-497f-8f76-188e17965d0e --subnet d58af0f2-1f4b-48cc-b54b-c4b3b59cc988 --firewall f93c379a-00e2-4cb4-8e6a-9ac3de8361b4 --router 7392886e-5751-41c0-b298-7f86f757dd7e --volume-size 300
-
-      - name: Install ansible
-        run: |
-          python -m pip install ansible
+          kubectl version
+          helm version
+          
+          git clone --depth=1 https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner.git
+          
+          cat << "EOF" > local.yaml
+          classes:
+          - name: local-storage
+            hostDir: /mnt/disks
+            volumeMode: Block
+            storageClass: true
+          EOF
+          
+          kubectl create ns rclone
+          helm install -n rclone static ./sig-storage-local-static-provisioner/helm/provisioner -f local.yaml
+  
+          helm repo add wunderio https://storage.googleapis.com/charts.wdr.io
+          echo "$RCLONE_VALS" > rclone-vals.yaml
+          sed -i "s#HOLDERPATH#gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries#g" rclone-vals.yaml
+          helm upgrade --install --create-namespace -n rclone rclone wunderio/csi-rclone -f rclone-vals.yaml --wait
+          kubectl -n rclone apply -f .github/scripts/k8s/k8s-resources.yaml
+          while [[ $(kubectl get pods -n rclone package-file --no-headers -o custom-columns=":status.phase") != "Running" ]]; do
+             
+            kubectl get events -n rclone > events.log
+            awk '{$1=""}1' events.log > newevents.log
+            if [ ! -f "oldevents.log" ]; then cat events.log && cp newevents.log oldevents.log; fi
+            # If different, cat new events
+            cmp --silent oldevents.log newevents.log || cat events.log
+            cp newevents.log oldevents.log
+            
+            kubectl logs -n rclone package-file -c copy-packages > copy.log || true
+            if [ -f "copy.log" ]; then
+              if [ ! -f "oldcopy.log" ]; then cat copy.log && cp copy.log oldcopy.log; fi
+              grep -A 99999999999 "$(tail -n 1 oldcopy.log)" copy.log || true
+              cp copy.log oldcopy.log
+            fi
+            kubectl logs -n rclone package-file -c sleep || true
+            sleep 10
+          done
+          mkdir -p /tmp
+          kubectl cp -c sleep -n rclone package-file:/mnt/results/PACKAGES.gz /tmp/PACKAGES.gz
+          kubectl cp -c sleep -n rclone package-file:/mnt/results/PACKAGES.rds /tmp/PACKAGES.rds
+          kubectl cp -c sleep -n rclone package-file:/mnt/results/PACKAGES /tmp/PACKAGES
+        env:
+          RCLONE_VALS: ${{secrets.RCLONE_VALS}}
 
       - name: Install rclone & add rclone conf file
         uses: nick-fields/retry@v2
@@ -43,30 +145,36 @@ jobs:
             RCLONE_CONF: ${{secrets.RCLONE_CONF}}
         with:
           timeout_minutes: 20
-          max_attempts: 3
-          shell: bash
-          command: |
-            echo "$RCLONE_CONF" > ~/.rclone.conf
-            set -x
-            mkdir -p /tmp/binaries
-            grep -roh "^.*tar.gz$" lists > /tmp/tarlist
-            ls /tmp/binaries/ > /tmp/curtars
-            comm -2 -3 <(sort /tmp/tarlist) <(sort /tmp/curtars) > /tmp/missingtars
-            mkdir -p .github/scripts/ansible/files
-            split -l 200 /tmp/missingtars .github/scripts/ansible/files/tars
-
-      - name: Run ansible playbook to create PACKAGES file in VM
-        run: |
-          VMIP=$(python -c 'from cloudbridge.factory import CloudProviderFactory, ProviderList; prov = CloudProviderFactory().create_provider("openstack", {}); inst = prov.compute.instances.find(label="gha-build-inst-0")[0]; inst.wait_till_ready(); print(inst.public_ips[0])')
-          sed -i "s@##IP##@$VMIP@g" .github/scripts/ansible/inventory
-          sed -i "s@##PEM##@$(realpath ~/packages.pem)@g" .github/scripts/ansible/inventory
-          ansible-playbook -vvv -T60 .github/scripts/ansible/ansible-packages.yaml -i .github/scripts/ansible/inventory --extra-vars "container_base_image=&bioc.ROOT_CONTAINER"
-
-      - name: Delete VM
-        uses: nick-fields/retry@v2
-        with:
-          timeout_minutes: 10
           max_attempts: 10
           shell: bash
           command: |
-            python .github/scripts/instlaunch.py --delete "$(python -c 'from cloudbridge.factory import CloudProviderFactory, ProviderList; prov = CloudProviderFactory().create_provider("openstack", {}); inst = prov.compute.instances.find(label="gha-build-inst-0")[0]; print(inst.id)')"
+            set -xe
+            sudo -v ; curl https://rclone.org/install.sh | sudo bash || true
+            echo "$RCLONE_CONF" > ~/.rclone.conf
+            if ! command -v rclone &> /dev/null
+            then
+                echo "rclone could not be found"
+                exit 1;
+            fi
+
+      - name: Add write_packages log
+        uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 50
+          shell: bash
+          command: |
+            set -x
+            git config --global --add safe.directory "$GITHUB_WORKSPACE"
+            git pull origin main || git reset --hard origin/main
+            cp /tmp/PACKAGES* logs/$(cat runstarttime)/
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add logs
+            git commit -m "Add PACKAGES files"
+            git push
+
+      - run: |
+          rclone copyto /tmp/PACKAGES js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES -vvvvv
+          rclone copyto /tmp/PACKAGES.gz js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES.gz -vvvvv
+          rclone copyto /tmp/PACKAGES.rds js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/PACKAGES.rds -vvvvv
