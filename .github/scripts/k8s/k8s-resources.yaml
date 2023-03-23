@@ -41,7 +41,11 @@ spec:
   - name: results
     emptyDir: {}
   initContainers:
+<<<<<<< HEAD
   - image: &bioc.ROOT_CONTAINER
+=======
+  - image: &bioc.ROOT_CONTAINER
+>>>>>>> 751bcec727c5dd85eaf21f7544813a09ea095f97
     imagePullPolicy: Always
     name: copy-packages
     volumeMounts:
@@ -54,7 +58,11 @@ spec:
     - "-c"
     - set -x; mkdir -p /tmp/pkglinks/ && ls /mnt/pkgs/* | sed 's#/mnt/pkgs/##g' | xargs -i bash -c "ln -s /mnt/pkgs/{} /tmp/pkglinks/{}"; Rscript -e 'tools::write_PACKAGES("/tmp/pkglinks", addFiles = TRUE, verbose = TRUE)' && cp /tmp/pkglinks/PACKAGES* /mnt/results/
   containers:
+<<<<<<< HEAD
   - image: &bioc.ROOT_CONTAINER
+=======
+  - image: &bioc.ROOT_CONTAINER
+>>>>>>> 751bcec727c5dd85eaf21f7544813a09ea095f97
     imagePullPolicy: IfNotPresent
     name: sleep
     volumeMounts:

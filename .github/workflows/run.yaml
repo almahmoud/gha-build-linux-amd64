@@ -402,7 +402,7 @@ jobs:
           mkdir -p /tmp/logs/$runstarttime/sizes/$containername/$arch/libraries
           mkdir -p /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries
           wc -c "${{steps.tar.outputs.name}}" > /tmp/logs/$runstarttime/sizes/$containername/$arch/libraries/$PKG
-          ls /tmp/tars/ | sed 's#/tmp/tars/##g' | xargs -i bash -c "wc -c /tmp/tars/{} > /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries/src/contrib/$(echo {} | awk -F'_' '{print $1}')"
+          ls /tmp/tars/ | sed 's#/tmp/tars/##g' | xargs -i bash -c "wc -c /tmp/tars/{} > /tmp/logs/$runstarttime/sizes/$containername/$arch/binaries/$(echo {} | awk -F'_' '{print $1}')"
           mkdir -p /tmp/logs/$runstarttime/times/$containername/$arch/
 
           # Get the 3 lines of times into time log
