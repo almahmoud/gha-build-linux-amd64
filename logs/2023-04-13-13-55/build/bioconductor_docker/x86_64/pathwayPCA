@@ -1,0 +1,67 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''pathwayPCA'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'pathwayPCA'
+also installing the dependency ‘lars’
+
+trying URL 'https://cloud.r-project.org/src/contrib/lars_1.3.tar.gz'
+Content type 'application/x-gzip' length 184025 bytes (179 KB)
+==================================================
+downloaded 179 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/pathwayPCA_1.15.0.tar.gz'
+Content type 'application/x-gzip' length 3388060 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+* installing *source* package ‘lars’ ...
+** package ‘lars’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c delcol.f -o delcol.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lars_init.c -o lars_init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o lars.so delcol.o lars_init.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-lars/00new/lars/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lars’ as ‘lars_1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lars)
+* installing *source* package ‘pathwayPCA’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pathwayPCA’ as ‘pathwayPCA_1.15.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pathwayPCA)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmUOyCM/downloaded_packages’
+
+real	0m13.159s
+user	0m10.657s
+sys	0m1.260s
