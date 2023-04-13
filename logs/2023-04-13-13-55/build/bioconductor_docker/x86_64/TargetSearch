@@ -1,0 +1,182 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''TargetSearch'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'TargetSearch'
+also installing the dependencies ‘ncdf4’, ‘assertthat’
+
+trying URL 'https://cloud.r-project.org/src/contrib/ncdf4_1.21.tar.gz'
+Content type 'application/x-gzip' length 127380 bytes (124 KB)
+==================================================
+downloaded 124 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/assertthat_0.2.1.tar.gz'
+Content type 'application/x-gzip' length 12742 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/TargetSearch_2.1.0.tar.gz'
+Content type 'application/x-gzip' length 717505 bytes (700 KB)
+==================================================
+downloaded 700 KB
+
+* installing *source* package ‘ncdf4’ ...
+** package ‘ncdf4’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure.ac: starting
+checking for nc-config... yes
+Using nc-config: nc-config
+Output of nc-config --all:
+
+This netCDF 4.8.1 has been built with the following features: 
+
+  --cc            -> /usr/bin/cc
+  --cflags        -> -I/usr/include -I/usr/include/hdf5/serial
+  --libs          -> -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lnetcdf
+  --static        -> -lhdf5_hl -lhdf5 -lcrypto -lcurl -lpthread -lsz -lz -ldl -lm
+
+  --has-c++       -> no
+  --cxx           -> 
+
+  --has-c++4      -> no
+  --cxx4          -> 
+
+  --has-fortran   -> no
+  --has-dap       -> yes
+  --has-dap2      -> yes
+  --has-dap4      -> yes
+  --has-nc2       -> yes
+  --has-nc4       -> yes
+  --has-hdf5      -> yes
+  --has-hdf4      -> no
+  --has-logging   -> no
+  --has-pnetcdf   -> no
+  --has-szlib     -> yes
+  --has-cdf5      -> yes
+  --has-parallel4 -> no
+  --has-parallel  -> no
+  --has-nczarr    -> yes
+
+  --prefix        -> /usr
+  --includedir    -> /usr/include
+  --libdir        -> /usr/lib/x86_64-linux-gnu
+  --version       -> netCDF 4.8.1
+
+---
+netcdf.m4: about to set rpath, here is source string: >-L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lnetcdf<
+netcdf.m4: final rpath:   -Wl,-rpath,/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu/hdf5/serial
+Netcdf library version: netCDF 4.8.1
+Netcdf library has version 4 interface present: yes
+Netcdf library was compiled with C compiler: /usr/bin/cc
+configure: creating ./config.status
+config.status: creating src/Makevars
+ 
+**********************  Results of ncdf4 package configure *******************
+ 
+netCDF v4 CPP flags      = -I/usr/include -I/usr/include/hdf5/serial
+netCDF v4 LD flags       =   -Wl,-rpath,/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu/hdf5/serial -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lnetcdf -L/usr/local/lib
+netCDF v4 runtime path   =   -Wl,-rpath,/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu/hdf5/serial
+ 
+netCDF C compiler used   = /usr/bin/cc
+R      C compiler used   = gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g
+ 
+******************************************************************************
+ 
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+netcdf cc arg1: /usr/bin/cc  R cc arg1: gcc R_IS_GCC: 1 R_IS_CLANG: 0 NETCDF_IS_GCC: 1 NETCDF_IS_CLANG: 0  emit_warning: 0
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I/usr/include/hdf5/serial  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ncdf.c -o ncdf.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ncdf4.so ncdf.o -Wl,-rpath,/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu/hdf5/serial -L/usr/lib/x86_64-linux-gnu -L/usr/lib/x86_64-linux-gnu/hdf5/serial -lnetcdf -L/usr/local/lib -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ncdf4/00new/ncdf4/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ncdf4’ as ‘ncdf4_1.21_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ncdf4)
+* installing *source* package ‘assertthat’ ...
+** package ‘assertthat’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘assertthat’ as ‘assertthat_0.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (assertthat)
+* installing *source* package ‘TargetSearch’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rinit.c -o Rinit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c baseline.c -o baseline.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c detection.c -o detection.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file.c -o file.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c find_peaks.c -o find_peaks.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getLine.c -o getLine.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hpf.c -o hpf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix.c -o matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ncdf.c -o ncdf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c peak.c -o peak.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o TargetSearch.so Rinit.o baseline.o detection.o file.o find_peaks.o getLine.o hpf.o matrix.o ncdf.o peak.o utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-TargetSearch/00new/TargetSearch/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TargetSearch’ as ‘TargetSearch_2.1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TargetSearch)
+
+The downloaded source packages are in
+	‘/tmp/RtmpHQ0XWj/downloaded_packages’
+
+real	0m15.319s
+user	0m13.419s
+sys	0m2.045s
+* installing *source* package ‘TargetSearchData’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TargetSearchData’ as ‘TargetSearchData_1.37.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TargetSearchData)
