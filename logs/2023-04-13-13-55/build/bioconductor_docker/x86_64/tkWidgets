@@ -1,0 +1,54 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''tkWidgets'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'tkWidgets'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/tkWidgets_1.77.0.tar.gz'
+Content type 'application/x-gzip' length 337142 bytes (329 KB)
+==================================================
+downloaded 329 KB
+
+* installing *source* package ‘tkWidgets’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+no DISPLAY variable so Tk is not available 
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: no DISPLAY variable so Tk is not available
+** testing if installed package can be loaded from final location
+Warning: no DISPLAY variable so Tk is not available
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tkWidgets’ as ‘tkWidgets_1.77.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tkWidgets)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp12C0b7/downloaded_packages’
+
+real	0m8.319s
+user	0m6.495s
+sys	0m0.890s
+* installing *source* package ‘hgu95av2’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘hgu95av2’ as ‘hgu95av2_2.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (hgu95av2)
