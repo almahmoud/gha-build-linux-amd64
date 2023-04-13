@@ -41,7 +41,7 @@ spec:
   - name: results
     emptyDir: {}
   initContainers:
-  - image: &bioc.ROOT_CONTAINER
+  - image: ghcr.io/almahmoud/gha-build-linux-amd64:linux-amd64
     imagePullPolicy: Always
     name: copy-packages
     volumeMounts:
@@ -54,7 +54,7 @@ spec:
     - "-c"
     - set -x; mkdir -p /tmp/pkglinks/ && ls /mnt/pkgs/* | sed 's#/mnt/pkgs/##g' | xargs -i bash -c "ln -s /mnt/pkgs/{} /tmp/pkglinks/{}"; Rscript -e 'tools::write_PACKAGES("/tmp/pkglinks", addFiles = TRUE, verbose = TRUE)' && cp /tmp/pkglinks/PACKAGES* /mnt/results/
   containers:
-  - image: &bioc.ROOT_CONTAINER
+  - image: ghcr.io/almahmoud/gha-build-linux-amd64:linux-amd64
     imagePullPolicy: IfNotPresent
     name: sleep
     volumeMounts:
