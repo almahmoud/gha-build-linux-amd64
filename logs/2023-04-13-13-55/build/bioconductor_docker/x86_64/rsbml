@@ -1,0 +1,100 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''rsbml'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'rsbml'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/rsbml_2.57.0.tar.gz'
+Content type 'application/x-gzip' length 566381 bytes (553 KB)
+==================================================
+downloaded 553 KB
+
+* installing *source* package ‘rsbml’ ...
+** using staged installation
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for LIBSBML... yes
+configure: === Begin local SOSLib build ===
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++ -std=gnu++17... gcc3
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking dependency style of gcc... gcc3
+checking whether gcc accepts -fpic... yes
+checking how to run the C preprocessor... gcc -E
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether make sets $(MAKE)... (cached) yes
+checking for autoconf... /usr/bin/autoconf
+checking for aclocal... /usr/bin/aclocal
+checking for make... /usr/bin/make
+checking for ar... /usr/bin/ar
+checking for swig... swig
+checking for perl... /usr/bin/perl
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for SBML... yes
+checking for correct functioning of SBML... yes
+checking for SUNDIALS Library headers... checking for SUNDIALS Library... checking correct functioning of SUNDIALS... no:
+                   CFLAGS=-g -O2 -pg -Wno-unknown-pragmas -Wall -ansi -std=iso9899:1990 
+                   LDFLAGS=-L/usr/local/lib 
+                   LIBS= -lm -lstdc++
+configure: error: Can not link to SUNDIALS Library
+configure: === End local SOSLib build ===
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c StringMap.c -o StringMap.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c check.c -o check.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c doc.c -o doc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dom.c -o dom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graph.c -o graph.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io.c -o io.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c layoutWrappers.cpp -o layoutWrappers.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mathml.c -o mathml.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include    -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c simulate.c -o simulate.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rsbml.so StringMap.o check.o doc.o dom.o graph.o init.o io.o layoutWrappers.o mathml.o simulate.o -lsbml -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-rsbml/00new/rsbml/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rsbml’ as ‘rsbml_2.57.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rsbml)
+
+The downloaded source packages are in
+	‘/tmp/RtmpqeqCj3/downloaded_packages’
+
+real	0m21.327s
+user	0m17.926s
+sys	0m1.654s
