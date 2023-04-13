@@ -1,0 +1,62 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BioQC'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'BioQC'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/BioQC_1.27.0.tar.gz'
+Content type 'application/x-gzip' length 4509136 bytes (4.3 MB)
+==================================================
+downloaded 4.3 MB
+
+* installing *source* package ‘BioQC’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gini.c -o gini.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_gmt.cpp -o read_gmt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stat_rank.c -o stat_rank.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG `/usr/local/lib/R/bin/Rscript -e 'Rcpp:::CxxFlags()'` -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wmw_test.c -o wmw_test.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o BioQC.so gini.o init.o read_gmt.o stat_rank.o wmw_test.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-BioQC/00new/BioQC/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BioQC’ as ‘BioQC_1.27.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BioQC)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnSfKsA/downloaded_packages’
+
+real	0m16.590s
+user	0m14.410s
+sys	0m1.811s
+* installing *source* package ‘rbenchmark’ ...
+** package ‘rbenchmark’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rbenchmark’ as ‘rbenchmark_1.0.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rbenchmark)
