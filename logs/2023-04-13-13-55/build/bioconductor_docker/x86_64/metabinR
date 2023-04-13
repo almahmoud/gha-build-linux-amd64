@@ -1,0 +1,612 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''metabinR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'metabinR'
+also installing the dependency ‘rJava’
+
+trying URL 'https://cloud.r-project.org/src/contrib/rJava_1.0-6.tar.gz'
+Content type 'application/x-gzip' length 1047062 bytes (1022 KB)
+==================================================
+downloaded 1022 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/metabinR_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 4577936 bytes (4.4 MB)
+==================================================
+downloaded 4.4 MB
+
+* installing *source* package ‘rJava’ ...
+** package ‘rJava’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for string.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking whether time.h and sys/time.h may both be included... yes
+configure: checking whether gcc supports static inline...
+yes
+checking whether setjmp.h is POSIX.1 compatible... yes
+checking whether sigsetjmp is declared... yes
+checking whether siglongjmp is declared... yes
+checking Java support in R... present:
+interpreter : '/usr/bin/java'
+archiver    : '/usr/bin/jar'
+compiler    : '/usr/bin/javac'
+header prep.: ''
+cpp flags   : '-I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux'
+java libs   : '-L/usr/lib/jvm/java-11-openjdk-amd64/lib/server -ljvm'
+checking whether Java run-time works... yes
+checking whether -Xrs is supported... yes
+checking whether -Xrs will be used... yes
+checking whether JVM will be loaded dynamically... no
+checking whether JNI programs can be compiled... yes
+checking whether JNI programs run... yes
+checking JNI data types... ok
+checking whether JRI should be compiled (autodetect)... yes
+checking whether debugging output should be enabled... no
+checking whether memory profiling is desired... no
+checking whether threads support is requested... no
+checking whether callbacks support is requested... no
+checking whether JNI cache support is requested... no
+checking whether headless init is enabled... no
+checking whether JRI is requested... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating R/zzz.R
+config.status: creating src/config.h
+=== configuring in jri (/tmp/RtmpBjvOho/R.INSTALLe075d60775a/rJava/jri)
+configure: running /bin/bash ./configure --disable-option-checking '--prefix=/usr/local'  'CC=gcc' 'CFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g' 'LDFLAGS=-L/usr/local/lib' 'CPPFLAGS=-I/usr/local/include' --cache-file=/dev/null --srcdir=.
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/select.h... yes
+checking Java version... 11.0.18
+checking Java compatibility version (integer)... 11
+checking whether  actually works... no
+checking whether javah was replaced by javac -h... yes
+checking for target flags...  -h . -target 1.6 -source 1.6
+checking whether Java interpreter works... checking whether JNI programs can be compiled... yes
+checking whether JNI programs can be run... yes
+checking JNI data types... ok
+checking whether Rinterface.h exports R_CStackXXX variables... yes
+checking whether Rinterface.h exports R_SignalHandlers... yes
+configure: creating ./config.status
+config.status: creating src/Makefile
+config.status: creating Makefile
+config.status: creating run
+config.status: creating src/config.h
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rglue.c -o Rglue.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arrayc.c -o arrayc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c callJNI.c -o callJNI.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c callback.c -o callback.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fields.c -o fields.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c jri_glue.c -o jri_glue.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c loader.c -o loader.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c otables.c -o otables.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rJava.c -o rJava.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c registration.c -o registration.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tools.c -o tools.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rJava.so Rglue.o arrayc.o callJNI.o callback.o fields.o init.o jri_glue.o loader.o otables.o rJava.o registration.o tools.o -L/usr/lib/jvm/java-11-openjdk-amd64/lib/server -ljvm -L/usr/local/lib/R/lib -lR
+(cd ../jri && make)
+make[1]: Entering directory '/tmp/RtmpBjvOho/R.INSTALLe075d60775a/rJava/jri'
+make -C src JRI.jar
+make[2]: Entering directory '/tmp/RtmpBjvOho/R.INSTALLe075d60775a/rJava/jri/src'
+/usr/bin/javac -h . -target 1.6 -source 1.6  -d . ../Mutex.java ../RBool.java ../RConsoleOutputStream.java ../REXP.java ../RFactor.java ../RList.java ../RMainLoopCallbacks.java ../RVector.java ../Rengine.java ../package-info.java
+warning: [options] bootstrap class path not set in conjunction with -source 6
+warning: [options] source value 6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+if [ -n "" ]; then  -d . -classpath . org.rosuda.JRI.Rengine; fi
+gcc -c -o Rengine.o Rengine.c -g -Iinclude  -DRIF_HAS_CSTACK -DRIF_HAS_RSIGHAND -DHAVE_CONFIG_H -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -fpic -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux -I/usr/local/lib/R/include -I/usr/local/lib/R/include 
+gcc -c -o jri.o jri.c -g -Iinclude  -DRIF_HAS_CSTACK -DRIF_HAS_RSIGHAND -DHAVE_CONFIG_H -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -fpic -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux -I/usr/local/lib/R/include -I/usr/local/lib/R/include 
+gcc -c -o Rcallbacks.o Rcallbacks.c -g -Iinclude  -DRIF_HAS_CSTACK -DRIF_HAS_RSIGHAND -DHAVE_CONFIG_H -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -fpic -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux -I/usr/local/lib/R/include -I/usr/local/lib/R/include 
+gcc -c -o Rinit.o Rinit.c -g -Iinclude  -DRIF_HAS_CSTACK -DRIF_HAS_RSIGHAND -DHAVE_CONFIG_H -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -fpic -I/usr/local/lib/R/include -I/usr/local/lib/R/include 
+gcc -c -o globals.o globals.c -g -Iinclude  -DRIF_HAS_CSTACK -DRIF_HAS_RSIGHAND -DHAVE_CONFIG_H -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -fpic -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux 
+gcc -c -o rjava.o rjava.c -g -Iinclude  -DRIF_HAS_CSTACK -DRIF_HAS_RSIGHAND -DHAVE_CONFIG_H -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux  -fpic -I/usr/lib/jvm/java-11-openjdk-amd64/include -I/usr/lib/jvm/java-11-openjdk-amd64/include/linux 
+gcc -o libjri.so Rengine.o jri.o Rcallbacks.o Rinit.o globals.o rjava.o -L/usr/local/lib -shared -L/usr/lib/jvm/java-11-openjdk-amd64/lib/server -ljvm -Wl,--export-dynamic -fopenmp -L/usr/local/lib -L/usr/local/lib/R/lib -lR -lpcre2-8 -llzma -lbz2 -lz -ltirpc -lrt -ldl -lm -licuuc -licui18n 
+/usr/bin/javac -h . -target 1.6 -source 1.6  -d . ../Mutex.java ../RBool.java ../RConsoleOutputStream.java ../REXP.java ../RFactor.java ../RList.java ../RMainLoopCallbacks.java ../RVector.java ../Rengine.java ../package-info.java
+warning: [options] bootstrap class path not set in conjunction with -source 6
+warning: [options] source value 6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+/usr/bin/jar fc JRI.jar org libjri.so
+make[2]: Leaving directory '/tmp/RtmpBjvOho/R.INSTALLe075d60775a/rJava/jri/src'
+rm -f libjri.so
+cp src/libjri.so libjri.so
+/usr/bin/javac -h . -target 1.6 -source 1.6 -classpath src/JRI.jar -d examples examples/rtest.java
+warning: [options] bootstrap class path not set in conjunction with -source 6
+warning: [options] source value 6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: examples/rtest.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+4 warnings
+/usr/bin/javac -h . -target 1.6 -source 1.6 -classpath src/JRI.jar -d examples examples/rtest2.java
+warning: [options] bootstrap class path not set in conjunction with -source 6
+warning: [options] source value 6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: examples/rtest2.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+4 warnings
+make[1]: Leaving directory '/tmp/RtmpBjvOho/R.INSTALLe075d60775a/rJava/jri'
+installing via 'install.libs.R' to /tmp/tmp/built/00LOCK-rJava/00new/rJava
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rJava’ as ‘rJava_1.0-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rJava)
+* installing *source* package ‘metabinR’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘metabinR’ as ‘metabinR_1.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (metabinR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWNkSl3/downloaded_packages’
+
+real	0m20.265s
+user	0m19.534s
+sys	0m2.542s
+* installing *source* package ‘generics’ ...
+** package ‘generics’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘generics’ as ‘generics_0.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (generics)
+* installing *source* package ‘tidyselect’ ...
+** package ‘tidyselect’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tidyselect’ as ‘tidyselect_1.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyselect)
+* installing *source* package ‘sp’ ...
+** package ‘sp’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcentroid.c -o Rcentroid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gcdist.c -o gcdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pip.c -o pip.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pip2.c -o pip2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sp_xports.c -o sp_xports.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c surfaceArea.c -o surfaceArea.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zerodist.c -o zerodist.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o sp.so Rcentroid.o gcdist.o init.o pip.o pip2.o sp_xports.o surfaceArea.o zerodist.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-sp/00new/sp/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘sp’ as ‘sp_1.6-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sp)
+* installing *source* package ‘terra’ ...
+** package ‘terra’ successfully unpacked and MD5 sums checked
+** using staged installation
+configure: CC: gcc
+configure: CXX: g++ -std=gnu++17
+checking for gdal-config... /usr/bin/gdal-config
+checking gdal-config usability... yes
+configure: GDAL: 3.4.1
+checking GDAL version >= 2.0.1... yes
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for gdal.h... yes
+checking GDAL: linking with --libs only... yes
+checking GDAL: /usr/share/gdal/pcs.csv readable... no
+checking GDAL: checking whether PROJ is available for linking:... yes
+checking GDAL: checking whether PROJ is available fur running:... yes
+configure: GDAL: 3.4.1
+configure: pkg-config proj exists, will use it
+configure: using proj.h.
+configure: PROJ: 8.2.1
+checking PROJ: checking whether PROJ and sqlite3 are available for linking:... yes
+checking for geos-config... /usr/bin/geos-config
+checking geos-config usability... yes
+configure: GEOS: 3.10.2
+checking GEOS version >= 3.4.0... yes
+checking for geos_c.h... yes
+checking geos: linking with -L/usr/lib/x86_64-linux-gnu -lgeos_c... yes
+configure: Package CPP flags:   -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include
+configure: Package LIBS: -lproj   -L/usr/lib -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppFunctions.cpp -o RcppFunctions.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppModule.cpp -o RcppModule.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arith.cpp -o arith.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crs.cpp -o crs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distRaster.cpp -o distRaster.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distance.cpp -o distance.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c extract.cpp -o extract.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c file_utils.cpp -o file_utils.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c focal.cpp -o focal.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gcp.cpp -o gcp.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gdal_algs.cpp -o gdal_algs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gdal_multidimensional.cpp -o gdal_multidimensional.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gdalio.cpp -o gdalio.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c geodesic.c -o geodesic.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c geos_methods.cpp -o geos_methods.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c geosphere.cpp -o geosphere.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math_utils.cpp -o math_utils.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mediancut.cpp -o mediancut.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c memory.cpp -o memory.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c movingWindow.cpp -o movingWindow.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ncdf.cpp -o ncdf.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ram.cpp -o ram.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c raster_methods.cpp -o raster_methods.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c raster_stats.cpp -o raster_stats.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rasterize.cpp -o rasterize.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read.cpp -o read.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_gdal.cpp -o read_gdal.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_ogr.cpp -o read_ogr.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sample.cpp -o sample.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sort.cpp -o sort.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatBase.cpp -o spatBase.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatDataframe.cpp -o spatDataframe.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatFactor.cpp -o spatFactor.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatRaster.cpp -o spatRaster.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatRasterMultiple.cpp -o spatRasterMultiple.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatSources.cpp -o spatSources.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatTime.cpp -o spatTime.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatVector.cpp -o spatVector.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c spatVector2.cpp -o spatVector2.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c string_utils.cpp -o string_utils.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vecmath.cpp -o vecmath.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vecmathse.cpp -o vecmathse.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vector_methods.cpp -o vector_methods.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write.cpp -o write.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_gdal.cpp -o write_gdal.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DHAVE_PROJ_H -I/usr/include/gdal -I/usr/include -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_ogr.cpp -o write_ogr.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o terra.so RcppExports.o RcppFunctions.o RcppModule.o arith.o crs.o distRaster.o distance.o extract.o file_utils.o focal.o gcp.o gdal_algs.o gdal_multidimensional.o gdalio.o geodesic.o geos_methods.o geosphere.o math_utils.o mediancut.o memory.o movingWindow.o ncdf.o ram.o raster_methods.o raster_stats.o rasterize.o read.o read_gdal.o read_ogr.o sample.o sort.o spatBase.o spatDataframe.o spatFactor.o spatRaster.o spatRasterMultiple.o spatSources.o spatTime.o spatVector.o spatVector2.o string_utils.o vecmath.o vecmathse.o vector_methods.o write.o write_gdal.o write_ogr.o -lproj -L/usr/lib -lgdal -L/usr/lib/x86_64-linux-gnu -lgeos_c -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-terra/00new/terra/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+in method for ‘sds’ with signature ‘x="stars"’: no definition for class “stars”
+in method for ‘sds’ with signature ‘x="stars_proxy"’: no definition for class “stars_proxy”
+in method for ‘svc’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘coerce’ with signature ‘"stars","SpatRasterDataset"’: no definition for class “stars”
+in method for ‘coerce’ with signature ‘"ggmap","SpatRaster"’: no definition for class “ggmap”
+in method for ‘coerce’ with signature ‘"sf","SpatRaster"’: no definition for class “sf”
+in method for ‘coerce’ with signature ‘"sf","SpatVector"’: no definition for class “sf”
+in method for ‘coerce’ with signature ‘"sfc","SpatVector"’: no definition for class “sfc”
+in method for ‘coerce’ with signature ‘"sfg","SpatVector"’: no definition for class “sfg”
+in method for ‘coerce’ with signature ‘"XY","SpatVector"’: no definition for class “XY”
+in method for ‘coerce’ with signature ‘"im","SpatRaster"’: no definition for class “im”
+in method for ‘coerce’ with signature ‘"SpatVector","Spatial"’: no definition for class “Spatial”
+in method for ‘coerce’ with signature ‘"Spatial","SpatVector"’: no definition for class “Spatial”
+in method for ‘coerce’ with signature ‘"SpatialGrid","SpatRaster"’: no definition for class “SpatialGrid”
+in method for ‘coerce’ with signature ‘"SpatialPixels","SpatRaster"’: no definition for class “SpatialPixels”
+in method for ‘crs’ with signature ‘"sf"’: no definition for class “sf”
+Creating a generic function for ‘ncol’ from package ‘base’ in package ‘terra’
+in method for ‘distance’ with signature ‘x="SpatRaster",y="sf"’: no definition for class “sf”
+in method for ‘ext’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘ext’ with signature ‘x="bbox"’: no definition for class “bbox”
+in method for ‘ext’ with signature ‘x="Extent"’: no definition for class “Extent”
+in method for ‘ext’ with signature ‘x="Raster"’: no definition for class “Raster”
+in method for ‘ext’ with signature ‘x="Spatial"’: no definition for class “Spatial”
+in method for ‘extract’ with signature ‘x="SpatRaster",y="sf"’: no definition for class “sf”
+in method for ‘mask’ with signature ‘x="SpatRaster",mask="sf"’: no definition for class “sf”
+in method for ‘points’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘lines’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘polys’ with signature ‘x="sf"’: no definition for class “sf”
+Creating a generic function for ‘unserialize’ from package ‘base’ in package ‘terra’
+Creating a generic function for ‘readRDS’ from package ‘base’ in package ‘terra’
+in method for ‘lines’ with signature ‘x="leaflet"’: no definition for class “leaflet”
+in method for ‘points’ with signature ‘x="leaflet"’: no definition for class “leaflet”
+in method for ‘rast’ with signature ‘x="stars"’: no definition for class “stars”
+in method for ‘rast’ with signature ‘x="stars_proxy"’: no definition for class “stars_proxy”
+in method for ‘rasterize’ with signature ‘x="sf",y="SpatRaster"’: no definition for class “sf”
+in method for ‘show’ with signature ‘"Rcpp_SpatDataFrame"’: no definition for class “Rcpp_SpatDataFrame”
+in method for ‘show’ with signature ‘"Rcpp_SpatCategories"’: no definition for class “Rcpp_SpatCategories”
+in method for ‘geomtype’ with signature ‘x="Spatial"’: no definition for class “Spatial”
+in method for ‘vect’ with signature ‘x="Spatial"’: no definition for class “Spatial”
+in method for ‘vect’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘vect’ with signature ‘x="sfc"’: no definition for class “sfc”
+in method for ‘vect’ with signature ‘x="XY"’: no definition for class “XY”
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘terra’ as ‘terra_1.7-23_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (terra)
+* installing *source* package ‘entropy’ ...
+** package ‘entropy’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘entropy’ as ‘entropy_1.3.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (entropy)
+* installing *source* package ‘dplyr’ ...
+** package ‘dplyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chop.cpp -o chop.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filter.cpp -o filter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c funs.cpp -o funs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_by.cpp -o group_by.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_data.cpp -o group_data.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imports.cpp -o imports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mask.cpp -o mask.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mutate.cpp -o mutate.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice.cpp -o slice.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summarise.cpp -o summarise.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o dplyr.so chop.o filter.o funs.o group_by.o group_data.o imports.o init.o mask.o mutate.o slice.o summarise.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-dplyr/00new/dplyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dplyr’ as ‘dplyr_1.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dplyr)
+* installing *source* package ‘raster’ ...
+** package ‘raster’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RasterModule.cpp -o RasterModule.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c aggregate.cpp -o aggregate.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bilinear.cpp -o bilinear.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c broom.cpp -o broom.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cellRowCol.cpp -o cellRowCol.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clamp.cpp -o clamp.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distance.cpp -o distance.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c edge.cpp -o edge.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c focal_fun.cpp -o focal_fun.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c focal_get.cpp -o focal_get.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c focal_sum.cpp -o focal_sum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c geodesic.c -o geodesic.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getPolygons.cpp -o getPolygons.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c layerize.cpp -o layerize.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c memory.cpp -o memory.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c modal.cpp -o modal.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ppmin.cpp -o ppmin.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c raster_aggregate.cpp -o raster_aggregate.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c raster_distance.cpp -o raster_distance.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rasterize.cpp -o rasterize.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reclass.cpp -o reclass.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c terrain.cpp -o terrain.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c util.cpp -o util.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c xyCell.cpp -o xyCell.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o raster.so RasterModule.o RcppExports.o aggregate.o bilinear.o broom.o cellRowCol.o clamp.o distance.o edge.o focal_fun.o focal_get.o focal_sum.o geodesic.o getPolygons.o layerize.o memory.o modal.o ppmin.o raster_aggregate.o raster_distance.o rasterize.o reclass.o terrain.o util.o xyCell.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-raster/00new/raster/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+in method for ‘initialize’ with signature ‘"BasicRaster"’: no definition for class “BasicRaster”
+in method for ‘brick’ with signature ‘x="kasc"’: no definition for class “kasc”
+in method for ‘brick’ with signature ‘x="grf"’: no definition for class “grf”
+in method for ‘coerce’ with signature ‘"STFDF","RasterBrick"’: no definition for class “STFDF”
+in method for ‘coerce’ with signature ‘"STSDF","RasterBrick"’: no definition for class “STSDF”
+in method for ‘coerce’ with signature ‘"asc","RasterLayer"’: no definition for class “asc”
+in method for ‘coerce’ with signature ‘"RasterLayer","asc"’: no definition for class “asc”
+in method for ‘coerce’ with signature ‘"kasc","RasterBrick"’: no definition for class “kasc”
+in method for ‘coerce’ with signature ‘"kasc","RasterStack"’: no definition for class “kasc”
+in method for ‘coerce’ with signature ‘"kde","RasterLayer"’: no definition for class “kde”
+in method for ‘coerce’ with signature ‘"grf","RasterBrick"’: no definition for class “grf”
+in method for ‘coerce’ with signature ‘"grf","RasterLayer"’: no definition for class “grf”
+in method for ‘extent’ with signature ‘x="bbox"’: no definition for class “bbox”
+in method for ‘extent’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘extract’ with signature ‘x="Raster",y="sf"’: no definition for class “sf”
+in method for ‘mask’ with signature ‘x="Raster",mask="sf"’: no definition for class “sf”
+in method for ‘raster’ with signature ‘x="sf"’: no definition for class “sf”
+in method for ‘raster’ with signature ‘x="kasc"’: no definition for class “kasc”
+in method for ‘raster’ with signature ‘x="asc"’: no definition for class “asc”
+in method for ‘raster’ with signature ‘x="kde"’: no definition for class “kde”
+in method for ‘raster’ with signature ‘x="grf"’: no definition for class “grf”
+in method for ‘rasterize’ with signature ‘x="sf",y="Raster"’: no definition for class “sf”
+Creating a generic function for ‘rowSums’ from package ‘base’ in package ‘raster’
+Creating a generic function for ‘colSums’ from package ‘base’ in package ‘raster’
+in method for ‘setValues’ with signature ‘x="RasterLayerSparse"’: no definition for class “RasterLayerSparse”
+in method for ‘stack’ with signature ‘x="kasc"’: no definition for class “kasc”
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘raster’ as ‘raster_3.6-20_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (raster)
+* installing *source* package ‘tidyr’ ...
+** package ‘tidyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c melt.cpp -o melt.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c simplifyPieces.cpp -o simplifyPieces.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o tidyr.so cpp11.o melt.o simplifyPieces.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-tidyr/00new/tidyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tidyr’ as ‘tidyr_1.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyr)
+* installing *source* package ‘sabre’ ...
+** package ‘sabre’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘sabre’ as ‘sabre_0.4.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sabre)
