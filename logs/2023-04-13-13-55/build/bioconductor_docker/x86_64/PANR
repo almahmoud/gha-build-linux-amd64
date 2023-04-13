@@ -1,0 +1,58 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''PANR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'PANR'
+also installing the dependency ‘pvclust’
+
+trying URL 'https://cloud.r-project.org/src/contrib/pvclust_2.2-0.tar.gz'
+Content type 'application/x-gzip' length 105190 bytes (102 KB)
+==================================================
+downloaded 102 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/PANR_1.45.0.tar.gz'
+Content type 'application/x-gzip' length 2073262 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+* installing *source* package ‘pvclust’ ...
+** package ‘pvclust’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pvclust’ as ‘pvclust_2.2-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pvclust)
+* installing *source* package ‘PANR’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘PANR’ as ‘PANR_1.45.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (PANR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpgvmqiR/downloaded_packages’
+
+real	0m10.248s
+user	0m8.208s
+sys	0m1.028s
