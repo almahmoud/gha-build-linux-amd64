@@ -1,0 +1,237 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''genefu'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'genefu'
+also installing the dependencies ‘pamr’, ‘iC10TrainingData’, ‘iC10’, ‘amap’, ‘mclust’
+
+trying URL 'https://cloud.r-project.org/src/contrib/pamr_1.56.1.tar.gz'
+Content type 'application/x-gzip' length 669353 bytes (653 KB)
+==================================================
+downloaded 653 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/iC10TrainingData_1.3.1.tar.gz'
+Content type 'application/x-gzip' length 6325579 bytes (6.0 MB)
+==================================================
+downloaded 6.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/iC10_1.5.tar.gz'
+Content type 'application/x-gzip' length 16899 bytes (16 KB)
+==================================================
+downloaded 16 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/amap_0.8-19.tar.gz'
+Content type 'application/x-gzip' length 182018 bytes (177 KB)
+==================================================
+downloaded 177 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/mclust_6.0.0.tar.gz'
+Content type 'application/x-gzip' length 2744043 bytes (2.6 MB)
+==================================================
+downloaded 2.6 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/genefu_2.31.0.tar.gz'
+Content type 'application/x-gzip' length 5078997 bytes (4.8 MB)
+==================================================
+downloaded 4.8 MB
+
+* installing *source* package ‘pamr’ ...
+** package ‘pamr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c knnimpute.f -o knnimpute.o
+knnimpute.f:99:72:
+
+   99 |  20                  pos(k1+1) = pos(k1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 20 at (1)
+knnimpute.f:113:72:
+
+  113 |  35                     pos(k1+1) = pos(k1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 35 at (1)
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o pamr.so knnimpute.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-pamr/00new/pamr/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pamr’ as ‘pamr_1.56.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pamr)
+* installing *source* package ‘iC10TrainingData’ ...
+** package ‘iC10TrainingData’ successfully unpacked and MD5 sums checked
+** using staged installation
+** data
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iC10TrainingData’ as ‘iC10TrainingData_1.3.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iC10TrainingData)
+* installing *source* package ‘amap’ ...
+** package ‘amap’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c acprob.cpp -o acprob.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c burt.c -o burt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c diss.c -o diss.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distance.cpp -o distance.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hclust.cpp -o hclust.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c kmeans.cpp -o kmeans.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrice.cpp -o matrice.o
+gfortran  -fpic  -g -O2  -c pop.f -o pop.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o amap.so acprob.o burt.o diss.o distance.o hclust.o init.o kmeans.o matrice.o pop.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-amap/00new/amap/libs
+** R
+** data
+** demo
+** exec
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘amap’ as ‘amap_0.8-19_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (amap)
+* installing *source* package ‘mclust’ ...
+** package ‘mclust’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c dmvnorm.f -o dmvnorm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c mclust.f -o mclust.o
+gfortran  -fpic  -g -O2  -c mclustaddson.f -o mclustaddson.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o mclust.so dmvnorm.o init.o mclust.o mclustaddson.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-mclust/00new/mclust/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘mclust’ as ‘mclust_6.0.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mclust)
+* installing *source* package ‘iC10’ ...
+** package ‘iC10’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iC10’ as ‘iC10_1.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iC10)
+* installing *source* package ‘genefu’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘genefu’ as ‘genefu_2.31.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (genefu)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpxs3C2r/downloaded_packages’
+
+real	1m24.597s
+user	1m18.814s
+sys	0m5.914s
+* installing *source* package ‘breastCancerNKI’ ...
+** using staged installation
+** data
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘breastCancerNKI’ as ‘breastCancerNKI_1.37.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (breastCancerNKI)
+* installing *source* package ‘breastCancerTRANSBIG’ ...
+** using staged installation
+** data
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘breastCancerTRANSBIG’ as ‘breastCancerTRANSBIG_1.37.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (breastCancerTRANSBIG)
+* installing *source* package ‘breastCancerUNT’ ...
+** using staged installation
+** data
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘breastCancerUNT’ as ‘breastCancerUNT_1.37.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (breastCancerUNT)
+* installing *source* package ‘breastCancerUPP’ ...
+** using staged installation
+** data
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘breastCancerUPP’ as ‘breastCancerUPP_1.37.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (breastCancerUPP)
