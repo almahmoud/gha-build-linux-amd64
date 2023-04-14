@@ -1,0 +1,115 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''RcwlPipelines'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'RcwlPipelines'
+also installing the dependency ‘git2r’
+
+trying URL 'https://cloud.r-project.org/src/contrib/git2r_0.32.0.tar.gz'
+Content type 'application/x-gzip' length 1345719 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/RcwlPipelines_1.15.0.tar.gz'
+Content type 'application/x-gzip' length 884168 bytes (863 KB)
+==================================================
+downloaded 863 KB
+
+* installing *source* package ‘git2r’ ...
+** package ‘git2r’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+Found pkg-config cflags and libs!
+checking whether the libgit2 version will work in git2r... yes
+checking whether the libgit2 function git_buf_dispose is available... yes
+checking whether the libgit2 constant GIT_OBJECT_ANY is available... yes
+checking whether the libgit2 function git_error_last is available... yes
+checking whether the libgit2 function git_oid_is_zero is available... yes
+----- Results of the git2r package configure -----
+
+  PKG_CFLAGS:  -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES
+  PKG_LIBS: -lgit2
+
+--------------------------------------------------
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r.c -o git2r.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_S3.c -o git2r_S3.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_arg.c -o git2r_arg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_blame.c -o git2r_blame.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_blob.c -o git2r_blob.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_branch.c -o git2r_branch.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_checkout.c -o git2r_checkout.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_clone.c -o git2r_clone.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_commit.c -o git2r_commit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_config.c -o git2r_config.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_cred.c -o git2r_cred.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_diff.c -o git2r_diff.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_error.c -o git2r_error.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_graph.c -o git2r_graph.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_index.c -o git2r_index.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_libgit2.c -o git2r_libgit2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_merge.c -o git2r_merge.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_note.c -o git2r_note.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_object.c -o git2r_object.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_odb.c -o git2r_odb.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_oid.c -o git2r_oid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_push.c -o git2r_push.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_reference.c -o git2r_reference.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_reflog.c -o git2r_reflog.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_remote.c -o git2r_remote.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_repository.c -o git2r_repository.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_reset.c -o git2r_reset.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_revparse.c -o git2r_revparse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_revwalk.c -o git2r_revwalk.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_signature.c -o git2r_signature.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_stash.c -o git2r_stash.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_status.c -o git2r_status.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_tag.c -o git2r_tag.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_transfer.c -o git2r_transfer.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DR_NO_REMAP -DSTRICT_R_HEADERS  -I/usr/local/include   -DGIT2R_HAVE_BUF_DISPOSE -DGIT2R_HAVE_OBJECT_ANY -DGIT2R_HAVE_GIT_ERROR -DGIT2R_LIBGIT2_V0_99_0_RENAMES -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c git2r_tree.c -o git2r_tree.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o git2r.so git2r.o git2r_S3.o git2r_arg.o git2r_blame.o git2r_blob.o git2r_branch.o git2r_checkout.o git2r_clone.o git2r_commit.o git2r_config.o git2r_cred.o git2r_diff.o git2r_error.o git2r_graph.o git2r_index.o git2r_libgit2.o git2r_merge.o git2r_note.o git2r_object.o git2r_odb.o git2r_oid.o git2r_push.o git2r_reference.o git2r_reflog.o git2r_remote.o git2r_repository.o git2r_reset.o git2r_revparse.o git2r_revwalk.o git2r_signature.o git2r_stash.o git2r_status.o git2r_tag.o git2r_transfer.o git2r_tree.o -lgit2 -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-git2r/00new/git2r/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘git2r’ as ‘git2r_0.32.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (git2r)
+* installing *source* package ‘RcwlPipelines’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RcwlPipelines’ as ‘RcwlPipelines_1.15.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RcwlPipelines)
+
+The downloaded source packages are in
+	‘/tmp/RtmpKTd7eA/downloaded_packages’
+
+real	0m24.588s
+user	0m22.042s
+sys	0m2.979s
