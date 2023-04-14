@@ -1,0 +1,523 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''MBQN'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'MBQN'
+also installing the dependencies ‘colorspace’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘lmom’, ‘gtable’, ‘isoband’, ‘scales’, ‘gld’, ‘mvtnorm’, ‘ggplot2’, ‘PairedData’
+
+trying URL 'https://cloud.r-project.org/src/contrib/colorspace_2.1-0.tar.gz'
+Content type 'application/x-gzip' length 2116339 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/farver_2.1.1.tar.gz'
+Content type 'application/x-gzip' length 1274363 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/labeling_0.4.2.tar.gz'
+Content type 'application/x-gzip' length 10156 bytes
+==================================================
+downloaded 10156 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/munsell_0.5.0.tar.gz'
+Content type 'application/x-gzip' length 182653 bytes (178 KB)
+==================================================
+downloaded 178 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RColorBrewer_1.1-3.tar.gz'
+Content type 'application/x-gzip' length 11638 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/viridisLite_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 1267090 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lmom_2.9.tar.gz'
+Content type 'application/x-gzip' length 347594 bytes (339 KB)
+==================================================
+downloaded 339 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtable_0.3.3.tar.gz'
+Content type 'application/x-gzip' length 130057 bytes (127 KB)
+==================================================
+downloaded 127 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/isoband_0.2.7.tar.gz'
+Content type 'application/x-gzip' length 1591812 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/scales_1.2.1.tar.gz'
+Content type 'application/x-gzip' length 270609 bytes (264 KB)
+==================================================
+downloaded 264 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gld_2.6.6.tar.gz'
+Content type 'application/x-gzip' length 54770 bytes (53 KB)
+==================================================
+downloaded 53 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/mvtnorm_1.1-3.tar.gz'
+Content type 'application/x-gzip' length 166421 bytes (162 KB)
+==================================================
+downloaded 162 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ggplot2_3.4.2.tar.gz'
+Content type 'application/x-gzip' length 3153811 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/PairedData_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 47263 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/MBQN_2.11.0.tar.gz'
+Content type 'application/x-gzip' length 188626 bytes (184 KB)
+==================================================
+downloaded 184 KB
+
+* installing *source* package ‘colorspace’ ...
+** package ‘colorspace’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c colorspace.c -o colorspace.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o colorspace.so colorspace.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-colorspace/00new/colorspace/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘colorspace’ as ‘colorspace_2.1-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (colorspace)
+* installing *source* package ‘farver’ ...
+** package ‘farver’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ColorSpace.cpp -o ColorSpace.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Comparison.cpp -o Comparison.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Conversion.cpp -o Conversion.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c encode.cpp -o encode.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c farver.cpp -o farver.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o farver.so ColorSpace.o Comparison.o Conversion.o encode.o farver.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-farver/00new/farver/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘farver’ as ‘farver_2.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (farver)
+* installing *source* package ‘labeling’ ...
+** package ‘labeling’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘labeling’ as ‘labeling_0.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (labeling)
+* installing *source* package ‘RColorBrewer’ ...
+** package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RColorBrewer’ as ‘RColorBrewer_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RColorBrewer)
+* installing *source* package ‘viridisLite’ ...
+** package ‘viridisLite’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘viridisLite’ as ‘viridisLite_0.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (viridisLite)
+* installing *source* package ‘lmom’ ...
+** package ‘lmom’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c d1mach.f -o d1mach.o
+gfortran  -fpic  -g -O2  -c dqagie.f -o dqagie.o
+gfortran  -fpic  -g -O2  -c dqagse.f -o dqagse.o
+gfortran  -fpic  -g -O2  -c dqelg.f -o dqelg.o
+gfortran  -fpic  -g -O2  -c dqk15i.f -o dqk15i.o
+gfortran  -fpic  -g -O2  -c dqk21.f -o dqk21.o
+gfortran  -fpic  -g -O2  -c dqpsrt.f -o dqpsrt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lmomc.c -o lmomc.o
+gfortran  -fpic  -g -O2  -c lmoments.f -o lmoments.o
+lmoments.f:288:72:
+
+  288 |    10 XMOM(J)=TWO/DFLOAT(J*(J-1))
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:448:72:
+
+  448 |    10 XMOM(I)=ZMOM(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:624:72:
+
+  624 |    10 SUM=SUM*GG+Z(K,M)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:712:72:
+
+  712 |     2 XMOM(I)=ZMOM(I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 2 at (1)
+lmoments.f:739:72:
+
+  739 |    10 SUM(M)=ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:755:72:
+
+  755 |    20 SUM(M)=SUM(M)+E*P
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 20 at (1)
+lmoments.f:758:72:
+
+  758 |    40 EST(M)=SUM(M)*XINC
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 40 at (1)
+lmoments.f:764:72:
+
+  764 |    50 ESTX(M)=EST(M)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 50 at (1)
+lmoments.f:780:72:
+
+  780 |    60 SUM(M)=SUM(M)+E*P
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 60 at (1)
+lmoments.f:797:72:
+
+  797 |   110 XMOM(M)=CONST*EST(M)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 110 at (1)
+lmoments.f:928:72:
+
+  928 |    10 XMOM(J)=ZMOM(J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:1004:72:
+
+ 1004 |    20 BETA(IR)=DEXP(ARG)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 20 at (1)
+lmoments.f:1011:72:
+
+ 1011 |    40 BETA(IR)=DEXP(DLGAM-G*DLOG(R))*(ONE-HALF*H*G*(ONE+G)/R)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 40 at (1)
+lmoments.f:1020:72:
+
+ 1020 |    60 BETA(IR)=DEXP(ARG)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 60 at (1)
+lmoments.f:1027:72:
+
+ 1027 |    80 BETA(IR)=EU+DLOG(-H)+DIGAMD(-R/H)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 80 at (1)
+lmoments.f:1034:72:
+
+ 1034 |   100 BETA(IR)=EU+DLOG(R)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 100 at (1)
+lmoments.f:1041:72:
+
+ 1041 |   120 BETA(IR)=EU+DLOG(H)+DIGAMD(ONE+R/H)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 120 at (1)
+lmoments.f:1135:72:
+
+ 1135 |    10 XMOM(M)=ZMOM(M)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:1819:72:
+
+ 1819 |    10 PARA(I)=ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+lmoments.f:2114:72:
+
+ 2114 |  1010 PARA(I)=ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 1010 at (1)
+lmoments.f:2234:72:
+
+ 2234 |  1010 PARA(I)=ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 1010 at (1)
+lmoments.f:2333:72:
+
+ 2333 |  1010 PARA(I)=ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 1010 at (1)
+gfortran  -fpic  -g -O2  -c samlm.f -o samlm.o
+samlm.f:39:72:
+
+   39 |    10 XMOM(J)=ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+samlm.f:106:72:
+
+  106 |    80 XMOM(J)=XMOM(J)*AMULT
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 80 at (1)
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o lmom.so d1mach.o dqagie.o dqagse.o dqelg.o dqk15i.o dqk21.o dqpsrt.o init.o lmomc.o lmoments.o samlm.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-lmom/00new/lmom/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lmom’ as ‘lmom_2.9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lmom)
+* installing *source* package ‘gtable’ ...
+** package ‘gtable’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtable’ as ‘gtable_0.3.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtable)
+* installing *source* package ‘isoband’ ...
+** package ‘isoband’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clip-lines.cpp -o clip-lines.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c isoband.cpp -o isoband.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c polygon.cpp -o polygon.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c separate-polygons.cpp -o separate-polygons.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-clip-lines.cpp -o test-clip-lines.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-runner.cpp -o test-runner.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-separate-polygons.cpp -o test-separate-polygons.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o isoband.so clip-lines.o init.o isoband.o polygon.o separate-polygons.o test-clip-lines.o test-runner.o test-separate-polygons.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-isoband/00new/isoband/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘isoband’ as ‘isoband_0.2.7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (isoband)
+* installing *source* package ‘mvtnorm’ ...
+** package ‘mvtnorm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c C_FORTRAN_interface.c -o C_FORTRAN_interface.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c miwa.c -o miwa.o
+gfortran  -fpic  -g -O2  -c mvt.f -o mvt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mvtnorm-init.c -o mvtnorm-init.o
+gfortran  -fpic  -g -O2  -c tvpack.f -o tvpack.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o mvtnorm.so C_FORTRAN_interface.o miwa.o mvt.o mvtnorm-init.o tvpack.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-mvtnorm/00new/mvtnorm/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘mvtnorm’ as ‘mvtnorm_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mvtnorm)
+* installing *source* package ‘munsell’ ...
+** package ‘munsell’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘munsell’ as ‘munsell_0.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (munsell)
+* installing *source* package ‘gld’ ...
+** package ‘gld’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fit_fkml.c -o fit_fkml.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gld.fm5.fx.c -o gld.fm5.fx.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gld.fmkl.fx.c -o gld.fmkl.fx.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gld.rs.fx.c -o gld.rs.fx.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gld.vsk.fx.c -o gld.vsk.fx.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gld_init.c -o gld_init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gld.so fit_fkml.o gld.fm5.fx.o gld.fmkl.fx.o gld.rs.fx.o gld.vsk.fx.o gld_init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gld/00new/gld/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gld’ as ‘gld_2.6.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gld)
+* installing *source* package ‘scales’ ...
+** package ‘scales’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘scales’ as ‘scales_1.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (scales)
+* installing *source* package ‘ggplot2’ ...
+** package ‘ggplot2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ggplot2’ as ‘ggplot2_3.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ggplot2)
+* installing *source* package ‘PairedData’ ...
+** package ‘PairedData’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘summary’ in package ‘PairedData’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘PairedData’ as ‘PairedData_1.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (PairedData)
+* installing *source* package ‘MBQN’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘MBQN’ as ‘MBQN_2.11.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (MBQN)
+
+The downloaded source packages are in
+	‘/tmp/RtmpNlz8Pr/downloaded_packages’
+
+real	1m42.876s
+user	1m36.033s
+sys	0m12.057s
