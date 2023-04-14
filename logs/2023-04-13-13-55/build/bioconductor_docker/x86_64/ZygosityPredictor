@@ -1,0 +1,858 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ZygosityPredictor'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'ZygosityPredictor'
+also installing the dependency ‘datastructures’
+
+trying URL 'https://cloud.r-project.org/src/contrib/datastructures_0.2.9.tar.gz'
+Content type 'application/x-gzip' length 365443 bytes (356 KB)
+==================================================
+downloaded 356 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/ZygosityPredictor_0.99.15.tar.gz'
+Content type 'application/x-gzip' length 649681 bytes (634 KB)
+==================================================
+downloaded 634 KB
+
+* installing *source* package ‘datastructures’ ...
+** package ‘datastructures’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bimap_module.cpp -o bimap_module.o
+In file included from /usr/local/lib/R/site-library/BH/include/boost/bind/mem_fn.hpp:25,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bind/bind.hpp:26,
+                 from /usr/local/lib/R/site-library/BH/include/boost/multi_index/detail/ord_index_impl.hpp:84,
+                 from /usr/local/lib/R/site-library/BH/include/boost/multi_index/ordered_index.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:37,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:26,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:43,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/get_pointer.hpp:48:40: warning: ‘template<class> class std::auto_ptr’ is deprecated: use 'std::unique_ptr' instead [-Wdeprecated-declarations]
+   48 | template<class T> T * get_pointer(std::auto_ptr<T> const& p)
+      |                                        ^~~~~~~~
+In file included from /usr/include/c++/11/bits/locale_conv.h:41,
+                 from /usr/include/c++/11/locale:43,
+                 from /usr/include/c++/11/iomanip:43,
+                 from /usr/local/lib/R/site-library/Rcpp/include/RcppCommon.h:53,
+                 from /usr/local/lib/R/site-library/Rcpp/include/Rcpp.h:27,
+                 from bimap_module.cpp:23:
+/usr/include/c++/11/bits/unique_ptr.h:57:28: note: declared here
+   57 |   template<typename> class auto_ptr;
+      |                            ^~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<std::__cxx11::basic_string<char> > >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<std::__cxx11::basic_string<char> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<std::__cxx11::basic_string<char> > >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<std::__cxx11::basic_string<char>, std::less<std::__cxx11::basic_string<char> > >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:91:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+bimap_module.cpp:29:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<std::__cxx11::basic_string<char> >]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::AssignableConcept<std::__cxx11::basic_string<char> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<std::__cxx11::basic_string<char>, std::less<std::__cxx11::basic_string<char> > >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:91:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+bimap_module.cpp:29:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:17: note: in a call to non-static member function ‘boost::AssignableConcept<std::__cxx11::basic_string<char> >::~AssignableConcept()’
+  143 |   BOOST_concept(Assignable,(TT))
+      |                 ^~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3: note: in expansion of macro ‘BOOST_concept’
+  143 |   BOOST_concept(Assignable,(TT))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<std::__cxx11::basic_string<char>, std::less<std::__cxx11::basic_string<char> > >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:91:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+bimap_module.cpp:29:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<std::__cxx11::basic_string<char>, std::less<std::__cxx11::basic_string<char> > >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:91:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+bimap_module.cpp:29:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:17: note: in a call to non-static member function ‘boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >::~BinaryFunctionConcept()’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |                 ^~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3: note: in expansion of macro ‘BOOST_concept’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<int> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<int>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<int> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<int, std::less<int> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<int>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, int>’
+bimap_module.cpp:41:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<int>]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::AssignableConcept<int>]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<int, std::less<int> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<int>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, int>’
+bimap_module.cpp:41:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:17: note: in a call to non-static member function ‘boost::AssignableConcept<int>::~AssignableConcept()’
+  143 |   BOOST_concept(Assignable,(TT))
+      |                 ^~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3: note: in expansion of macro ‘BOOST_concept’
+  143 |   BOOST_concept(Assignable,(TT))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<int>, bool, int, int> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<int>, bool, int, int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<int>, bool, int, int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<int>, bool, int, int>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<int>, bool, int, int> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<int, std::less<int> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<int>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, int>’
+bimap_module.cpp:41:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<int>, bool, int, int>]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::BinaryFunctionConcept<std::less<int>, bool, int, int>]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<int, std::less<int> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<int>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, int>’
+bimap_module.cpp:41:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:17: note: in a call to non-static member function ‘boost::BinaryFunctionConcept<std::less<int>, bool, int, int>::~BinaryFunctionConcept()’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |                 ^~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3: note: in expansion of macro ‘BOOST_concept’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<double> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<double>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<double> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<double, std::less<double> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<double>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, double>’
+bimap_module.cpp:53:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<double>]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::AssignableConcept<double>]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<double, std::less<double> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<double>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, double>’
+bimap_module.cpp:53:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:17: note: in a call to non-static member function ‘boost::AssignableConcept<double>::~AssignableConcept()’
+  143 |   BOOST_concept(Assignable,(TT))
+      |                 ^~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3: note: in expansion of macro ‘BOOST_concept’
+  143 |   BOOST_concept(Assignable,(TT))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<double>, bool, double, double> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<double>, bool, double, double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<double>, bool, double, double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<double>, bool, double, double>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<double>, bool, double, double> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<double, std::less<double> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<double>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, double>’
+bimap_module.cpp:53:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<double>, bool, double, double>]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::BinaryFunctionConcept<std::less<double>, bool, double, double>]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<double, std::less<double> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<double>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, double>’
+bimap_module.cpp:53:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:17: note: in a call to non-static member function ‘boost::BinaryFunctionConcept<std::less<double>, bool, double, double>::~BinaryFunctionConcept()’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |                 ^~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3: note: in expansion of macro ‘BOOST_concept’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<bool> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<bool>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<bool> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<bool, std::less<bool> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, bool>’
+bimap_module.cpp:65:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<bool>]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::AssignableConcept<bool>]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<bool, std::less<bool> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, bool>’
+bimap_module.cpp:65:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:17: note: in a call to non-static member function ‘boost::AssignableConcept<bool>::~AssignableConcept()’
+  143 |   BOOST_concept(Assignable,(TT))
+      |                 ^~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3: note: in expansion of macro ‘BOOST_concept’
+  143 |   BOOST_concept(Assignable,(TT))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<bool>, bool, bool, bool> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<bool>, bool, bool, bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<bool, std::less<bool> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, bool>’
+bimap_module.cpp:65:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:5: note: in a call to non-static member function ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<bool>, bool, bool, bool>]’
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |     ^
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept/assert.hpp:35,
+                 from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp: In instantiation of ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool>]’:
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<bool, std::less<bool> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, bool>’
+bimap_module.cpp:65:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47: warning: ‘this’ pointer is null [-Wnonnull]
+   50 |     static void failed() { ((Model*)0)->~Model(); }
+      |                            ~~~~~~~~~~~~~~~~~~~^~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/integral_wrapper.hpp:22,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/int.hpp:20,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/lambda_fwd.hpp:23,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/aux_/na_spec.hpp:18,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/if.hpp:19,
+                 from /usr/local/lib/R/site-library/BH/include/boost/mpl/eval_if.hpp:17,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/level.hpp:28,
+                 from /usr/local/lib/R/site-library/BH/include/boost/serialization/nvp.hpp:33,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:57,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:17: note: in a call to non-static member function ‘boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool>::~BinaryFunctionConcept()’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |                 ^~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/preprocessor/cat.hpp:29:34: note: in definition of macro ‘BOOST_PP_CAT_I’
+   29 | #    define BOOST_PP_CAT_I(a, b) a ## b
+      |                                  ^
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/concept_def.hpp:23:12: note: in expansion of macro ‘BOOST_PP_CAT’
+   23 |     struct BOOST_PP_CAT(name,Concept)                                           \
+      |            ^~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3: note: in expansion of macro ‘BOOST_concept’
+  349 |   BOOST_concept(BinaryFunction,(Func)(Return)(First)(Second))
+      |   ^~~~~~~~~~~~~
+In file included from /usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:31,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:61,
+                 from /usr/local/lib/R/site-library/BH/include/boost/bimap.hpp:13,
+                 from ../inst/include/bimap.hpp:30,
+                 from bimap_module.cpp:24:
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<std::__cxx11::basic_string<char> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<std::__cxx11::basic_string<char> > >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<std::__cxx11::basic_string<char> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<std::__cxx11::basic_string<char> > >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<std::__cxx11::basic_string<char>, std::less<std::__cxx11::basic_string<char> > >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:91:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+bimap_module.cpp:29:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::Assignable<TT>::~Assignable() [with TT = std::__cxx11::basic_string<char>]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  145 |     BOOST_CONCEPT_USAGE(Assignable) {
+      |     ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<std::__cxx11::basic_string<char> >, bool, std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> > >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<std::__cxx11::basic_string<char>, std::less<std::__cxx11::basic_string<char> > >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<std::__cxx11::basic_string<char> >’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:91:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char>, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’
+bimap_module.cpp:29:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::BinaryFunction<Func, Return, First, Second>::~BinaryFunction() [with Func = std::less<std::__cxx11::basic_string<char> >; Return = bool; First = std::__cxx11::basic_string<char>; Second = std::__cxx11::basic_string<char>]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  351 |       BOOST_CONCEPT_USAGE(BinaryFunction) { test(is_void<Return>()); }
+      |       ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<int>]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<int> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<int>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<int> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<int, std::less<int> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<int>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, int>’
+bimap_module.cpp:41:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::Assignable<TT>::~Assignable() [with TT = int]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  145 |     BOOST_CONCEPT_USAGE(Assignable) {
+      |     ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<int>, bool, int, int>]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<int>, bool, int, int> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<int>, bool, int, int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<int>, bool, int, int>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<int>, bool, int, int>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<int>, bool, int, int> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<int, std::less<int> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<int>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, int, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, int>’
+bimap_module.cpp:41:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::BinaryFunction<Func, Return, First, Second>::~BinaryFunction() [with Func = std::less<int>; Return = bool; First = int; Second = int]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  351 |       BOOST_CONCEPT_USAGE(BinaryFunction) { test(is_void<Return>()); }
+      |       ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<double>]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<double> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<double>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<double> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<double, std::less<double> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<double>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, double>’
+bimap_module.cpp:53:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::Assignable<TT>::~Assignable() [with TT = double]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  145 |     BOOST_CONCEPT_USAGE(Assignable) {
+      |     ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<double>, bool, double, double>]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<double>, bool, double, double> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<double>, bool, double, double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<double>, bool, double, double>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<double>, bool, double, double>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<double>, bool, double, double> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<double, std::less<double> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<double>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, double, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, double>’
+bimap_module.cpp:53:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::BinaryFunction<Func, Return, First, Second>::~BinaryFunction() [with Func = std::less<double>; Return = bool; First = double; Second = double]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  351 |       BOOST_CONCEPT_USAGE(BinaryFunction) { test(is_void<Return>()); }
+      |       ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::Assignable<bool>]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::Assignable<bool> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5:   required from ‘struct boost::Assignable<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:143:3:   required from ‘struct boost::AssignableConcept<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::AssignableConcept<bool>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::AssignableConcept<bool> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:129:9:   required from ‘struct boost::bimaps::set_of<bool, std::less<bool> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, bool>’
+bimap_module.cpp:65:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::Assignable<TT>::~Assignable() [with TT = bool]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:145:5: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  145 |     BOOST_CONCEPT_USAGE(Assignable) {
+      |     ^~~~~~~~~~~~~~~~~~~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp: In instantiation of ‘boost::concepts::usage_requirements<Model>::~usage_requirements() [with Model = boost::BinaryFunction<std::less<bool>, bool, bool, bool>]’:
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/general.hpp:50:47:   required from ‘static void boost::concepts::requirement<boost::concepts::failed************ Model::************>::failed() [with Model = boost::concepts::usage_requirements<boost::BinaryFunction<std::less<bool>, bool, bool, bool> >]’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7:   required from ‘struct boost::BinaryFunction<std::less<bool>, bool, bool, bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:349:3:   required from ‘struct boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool>’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:32:62:   required by substitution of ‘template<class Model> boost::concepts::detail::yes boost::concepts::detail::has_constraints_(Model*, boost::concepts::detail::wrap_constraints<Model, (& Model::constraints)>*) [with Model = boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool>]’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:42:5:   required from ‘const bool boost::concepts::not_satisfied<boost::BinaryFunctionConcept<std::less<bool>, bool, bool, bool> >::value’
+/usr/local/lib/R/site-library/BH/include/boost/concept/detail/has_constraints.hpp:45:51:   [ skipping 2 instantiation contexts, use -ftemplate-backtrace-limit=0 to disable ]
+/usr/local/lib/R/site-library/BH/include/boost/bimap/set_of.hpp:132:9:   required from ‘struct boost::bimaps::set_of<bool, std::less<bool> >::lazy_concept_checked’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/manage_bimap_key.hpp:70:13:   required from ‘struct boost::bimaps::detail::manage_bimap_key<bool>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/detail/bimap_core.hpp:97:13:   required from ‘class boost::bimaps::detail::bimap_core<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+/usr/local/lib/R/site-library/BH/include/boost/bimap/bimap.hpp:133:7:   required from ‘class boost::bimaps::bimap<std::__cxx11::basic_string<char>, bool, mpl_::na, mpl_::na, mpl_::na>’
+../inst/include/bimap.hpp:36:11:   required from ‘class bimap<std::__cxx11::basic_string<char>, bool>’
+bimap_module.cpp:65:39:   required from here
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:20:48: warning: ‘this’ pointer is null [-Wnonnull]
+   20 |     ~usage_requirements() { ((Model*)0)->~Model(); }
+      |                             ~~~~~~~~~~~~~~~~~~~^~
+/usr/local/lib/R/site-library/BH/include/boost/concept/usage.hpp:37:7: note: in a call to non-static member function ‘boost::BinaryFunction<Func, Return, First, Second>::~BinaryFunction() [with Func = std::less<bool>; Return = bool; First = bool; Second = bool]’
+   37 |       ~model()
+      |       ^
+/usr/local/lib/R/site-library/BH/include/boost/concept_check.hpp:351:7: note: in expansion of macro ‘BOOST_CONCEPT_USAGE’
+  351 |       BOOST_CONCEPT_USAGE(BinaryFunction) { test(is_void<Return>()); }
+      |       ^~~~~~~~~~~~~~~~~~~
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c binomial_heap_module.cpp -o binomial_heap_module.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fibonacci_heap_module.cpp -o fibonacci_heap_module.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hashmap_module.cpp -o hashmap_module.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multimap_module.cpp -o multimap_module.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c queue_module.cpp -o queue_module.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include/ -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/site-library/BH/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stack_module.cpp -o stack_module.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o datastructures.so bimap_module.o binomial_heap_module.o fibonacci_heap_module.o hashmap_module.o init.o multimap_module.o queue_module.o stack_module.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-datastructures/00new/datastructures/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘datastructures’ as ‘datastructures_0.2.9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (datastructures)
+* installing *source* package ‘ZygosityPredictor’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ZygosityPredictor’ as ‘ZygosityPredictor_0.99.15_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ZygosityPredictor)
+
+The downloaded source packages are in
+	‘/tmp/RtmpVoo0ug/downloaded_packages’
+
+real	2m38.541s
+user	2m29.763s
+sys	0m7.626s
