@@ -1,0 +1,103 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''rGADEM'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'rGADEM'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/rGADEM_2.47.0.tar.gz'
+Content type 'application/x-gzip' length 228266 bytes (222 KB)
+==================================================
+downloaded 222 KB
+
+* installing *source* package ‘rGADEM’ ...
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for gcc option to support OpenMP... -fopenmp
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dispatch/dispatch.h usability... no
+checking dispatch/dispatch.h presence... no
+checking for dispatch/dispatch.h... no
+checking whether OpenMP will work in a package... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Gadem_Analysis.c -o Gadem_Analysis.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c align_sites.c -o align_sites.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c alloc.c -o alloc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c background.c -o background.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c base_frequency.c -o base_frequency.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c check_convergence.c -o check_convergence.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c check_pwm_dist.c -o check_pwm_dist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c consensus.c -o consensus.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c construct_pwm.c -o construct_pwm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c copy_pwm.c -o copy_pwm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c crossover.c -o crossover.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c effect_seq_len.c -o effect_seq_len.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c evalue_meme.c -o evalue_meme.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c extend_alignment.c -o extend_alignment.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c initial_population.c -o initial_population.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mask_sites.c -o mask_sites.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mutation.c -o mutation.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c normalization.c -o normalization.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c output.c -o output.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pwm_score_distr.c -o pwm_score_distr.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_matrix.c -o read_matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_pwm0.c -o read_pwm0.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_seq.c -o read_seq.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reverse_seq.c -o reverse_seq.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sample_wo_replacement.c -o sample_wo_replacement.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scan_sites.c -o scan_sites.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c score_subsequence.c -o score_subsequence.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c selection.c -o selection.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sort.c -o sort.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c top_kmers.c -o top_kmers.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transform_pwm.c -o transform_pwm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c weights.c -o weights.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rGADEM.so Gadem_Analysis.o align_sites.o alloc.o background.o base_frequency.o check_convergence.o check_pwm_dist.o consensus.o construct_pwm.o copy_pwm.o crossover.o effect_seq_len.o evalue_meme.o extend_alignment.o initial_population.o mask_sites.o mutation.o normalization.o output.o pwm_score_distr.o read_matrix.o read_pwm0.o read_seq.o reverse_seq.o sample_wo_replacement.o scan_sites.o score_subsequence.o selection.o sort.o top_kmers.o transform_pwm.o weights.o -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-rGADEM/00new/rGADEM/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rGADEM’ as ‘rGADEM_2.47.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rGADEM)
+
+The downloaded source packages are in
+	‘/tmp/RtmpvC2wTB/downloaded_packages’
+
+real	0m33.755s
+user	0m31.040s
+sys	0m2.280s
