@@ -1,0 +1,67 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''bnem'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'bnem'
+also installing the dependency ‘binom’
+
+trying URL 'https://cloud.r-project.org/src/contrib/binom_1.1-1.1.tar.gz'
+Content type 'application/x-gzip' length 247220 bytes (241 KB)
+==================================================
+downloaded 241 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/bnem_1.7.0.tar.gz'
+Content type 'application/x-gzip' length 1613627 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+* installing *source* package ‘binom’ ...
+** package ‘binom’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c binom.c -o binom.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o binom.so binom.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-binom/00new/binom/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘binom’ as ‘binom_1.1-1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (binom)
+* installing *source* package ‘bnem’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bnem’ as ‘bnem_1.7.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bnem)
+
+The downloaded source packages are in
+	‘/tmp/RtmpMq0wTR/downloaded_packages’
+
+real	0m38.099s
+user	0m35.226s
+sys	0m2.343s
