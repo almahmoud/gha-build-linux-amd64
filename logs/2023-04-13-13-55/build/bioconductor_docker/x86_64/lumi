@@ -1,0 +1,113 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''lumi'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'lumi'
+also installing the dependency ‘nleqslv’
+
+trying URL 'https://cloud.r-project.org/src/contrib/nleqslv_3.3.4.tar.gz'
+Content type 'application/x-gzip' length 87286 bytes (85 KB)
+==================================================
+downloaded 85 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/lumi_2.51.0.tar.gz'
+Content type 'application/x-gzip' length 8422827 bytes (8.0 MB)
+==================================================
+downloaded 8.0 MB
+
+* installing *source* package ‘nleqslv’ ...
+** package ‘nleqslv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c lautil.f -o lautil.o
+gfortran  -fpic  -g -O2  -c limhpar.f -o limhpar.o
+gfortran  -fpic  -g -O2  -c liqrev.f -o liqrev.o
+gfortran  -fpic  -g -O2  -c liqrup.f -o liqrup.o
+gfortran  -fpic  -g -O2  -c lirslv.f -o lirslv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nleqslv.c -o nleqslv.o
+gfortran  -fpic  -g -O2  -c nwbjac.f -o nwbjac.o
+gfortran  -fpic  -g -O2  -c nwbrdn.f -o nwbrdn.o
+gfortran  -fpic  -g -O2  -c nwclsh.f -o nwclsh.o
+gfortran  -fpic  -g -O2  -c nwddlg.f -o nwddlg.o
+gfortran  -fpic  -g -O2  -c nwglsh.f -o nwglsh.o
+gfortran  -fpic  -g -O2  -c nwmhlm.f -o nwmhlm.o
+gfortran  -fpic  -g -O2  -c nwnjac.f -o nwnjac.o
+gfortran  -fpic  -g -O2  -c nwnleq.f -o nwnleq.o
+gfortran  -fpic  -g -O2  -c nwnwtn.f -o nwnwtn.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nwout.c -o nwout.o
+gfortran  -fpic  -g -O2  -c nwpdlg.f -o nwpdlg.o
+gfortran  -fpic  -g -O2  -c nwpure.f -o nwpure.o
+gfortran  -fpic  -g -O2  -c nwqlsh.f -o nwqlsh.o
+gfortran  -fpic  -g -O2  -c nwtrup.f -o nwtrup.o
+gfortran  -fpic  -g -O2  -c nwutil.f -o nwutil.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o nleqslv.so init.o lautil.o limhpar.o liqrev.o liqrup.o lirslv.o nleqslv.o nwbjac.o nwbrdn.o nwclsh.o nwddlg.o nwglsh.o nwmhlm.o nwnjac.o nwnleq.o nwnwtn.o nwout.o nwpdlg.o nwpure.o nwqlsh.o nwtrup.o nwutil.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-nleqslv/00new/nleqslv/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘nleqslv’ as ‘nleqslv_3.3.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (nleqslv)
+* installing *source* package ‘lumi’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lumi’ as ‘lumi_2.51.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lumi)
+
+The downloaded source packages are in
+	‘/tmp/RtmptmxBf2/downloaded_packages’
+
+real	0m56.714s
+user	0m51.200s
+sys	0m3.160s
+* installing *source* package ‘lumiHumanIDMapping’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘RSQLite’ for request: ‘dbListFields’ when loading ‘lumi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lumiHumanIDMapping’ as ‘lumiHumanIDMapping_1.10.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lumiHumanIDMapping)
