@@ -1,0 +1,56 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''getDEE2'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'getDEE2'
+also installing the dependency ‘htm2txt’
+
+trying URL 'https://cloud.r-project.org/src/contrib/htm2txt_2.2.2.tar.gz'
+Content type 'application/x-gzip' length 16135 bytes (15 KB)
+==================================================
+downloaded 15 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/getDEE2_1.9.0.tar.gz'
+Content type 'application/x-gzip' length 22393 bytes (21 KB)
+==================================================
+downloaded 21 KB
+
+* installing *source* package ‘htm2txt’ ...
+** package ‘htm2txt’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘htm2txt’ as ‘htm2txt_2.2.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (htm2txt)
+* installing *source* package ‘getDEE2’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘getDEE2’ as ‘getDEE2_1.9.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (getDEE2)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp5Kfhig/downloaded_packages’
+
+real	0m28.171s
+user	0m25.243s
+sys	0m2.035s
