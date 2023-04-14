@@ -1,0 +1,94 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''chromDraw'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'chromDraw'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/chromDraw_2.29.0.tar.gz'
+Content type 'application/x-gzip' length 2228918 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+* installing *source* package ‘chromDraw’ ...
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDraw.cpp -o chromDraw.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Board.cpp -o libBoard/src/Board.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Color.cpp -o libBoard/src/Color.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/PSFonts.cpp -o libBoard/src/PSFonts.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Path.cpp -o libBoard/src/Path.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Rect.cpp -o libBoard/src/Rect.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/ShapeList.cpp -o libBoard/src/ShapeList.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Shapes.cpp -o libBoard/src/Shapes.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Tools.cpp -o libBoard/src/Tools.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libBoard/src/Transforms.cpp -o libBoard/src/Transforms.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/canvas.cpp -o chromDrawCPP/canvas.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/chBlock.cpp -o chromDrawCPP/chBlock.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/chCentromere.cpp -o chromDrawCPP/chCentromere.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/chromosome.cpp -o chromDrawCPP/chromosome.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/chromosomeElement.cpp -o chromDrawCPP/chromosomeElement.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/chromosomeMark.cpp -o chromDrawCPP/chromosomeMark.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/chromosomeSign.cpp -o chromDrawCPP/chromosomeSign.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/color.cpp -o chromDrawCPP/color.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/colorPalette.cpp -o chromDrawCPP/colorPalette.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/getOpts.cpp -o chromDrawCPP/getOpts.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/ideogram.cpp -o chromDrawCPP/ideogram.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/karyotype.cpp -o chromDrawCPP/karyotype.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/markSign.cpp -o chromDrawCPP/markSign.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chromDrawCPP/parameters.cpp -o chromDrawCPP/parameters.o
+chromDrawCPP/parameters.cpp:66:63: warning: extra tokens at end of #ifdef directive
+   66 |                                                 #ifdef _WIN32 || _WIN64
+      |                                                               ^~
+chromDrawCPP/parameters.cpp:147:15: warning: extra tokens at end of #ifdef directive
+  147 | #ifdef _WIN32 || _WIN64
+      |               ^~
+chromDrawCPP/parameters.cpp:159:15: warning: extra tokens at end of #ifdef directive
+  159 | #ifdef _WIN32 || _WIN64
+      |               ^~
+chromDrawCPP/parameters.cpp: In member function ‘int parameters::loadArguments(int, char**)’:
+chromDrawCPP/parameters.cpp:42:37: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   42 |         char *paramsExpanded[10] = {"--help",
+      |                                     ^~~~~~~~
+chromDrawCPP/parameters.cpp:43:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   43 |                                                                 "--outputpath",
+      |                                                                 ^~~~~~~~~~~~~~
+chromDrawCPP/parameters.cpp:44:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   44 |                                                                 "--colorinputpath",
+      |                                                                 ^~~~~~~~~~~~~~~~~~
+chromDrawCPP/parameters.cpp:45:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   45 |                                                                 "--datainputpath",
+      |                                                                 ^~~~~~~~~~~~~~~~~
+chromDrawCPP/parameters.cpp:46:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   46 |                                                                 "--scale",
+      |                                                                 ^~~~~~~~~
+chromDrawCPP/parameters.cpp:47:65: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   47 |                                                                 "--format"};
+      |                                                                 ^~~~~~~~~~
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -isystem ./libBoard/include -isystem ./chromDrawCPP -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_chromDraw.cpp -o R_init_chromDraw.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o chromDraw.so chromDraw.o RcppExports.o ./libBoard/src/Board.o ./libBoard/src/Color.o ./libBoard/src/PSFonts.o ./libBoard/src/Path.o ./libBoard/src/Rect.o ./libBoard/src/ShapeList.o ./libBoard/src/Shapes.o ./libBoard/src/Tools.o ./libBoard/src/Transforms.o ./chromDrawCPP/canvas.o ./chromDrawCPP/chBlock.o ./chromDrawCPP/chCentromere.o ./chromDrawCPP/chromosome.o ./chromDrawCPP/chromosomeElement.o ./chromDrawCPP/chromosomeMark.o ./chromDrawCPP/chromosomeSign.o ./chromDrawCPP/color.o ./chromDrawCPP/colorPalette.o ./chromDrawCPP/getOpts.o ./chromDrawCPP/ideogram.o ./chromDrawCPP/karyotype.o ./chromDrawCPP/markSign.o ./chromDrawCPP/parameters.o ./R_init_chromDraw.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-chromDraw/00new/chromDraw/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘chromDraw’ as ‘chromDraw_2.29.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (chromDraw)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpi4wWFl/downloaded_packages’
+
+real	0m43.405s
+user	0m39.723s
+sys	0m3.170s
