@@ -1,0 +1,81 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''podkat'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'podkat'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/podkat_1.31.1.tar.gz'
+Content type 'application/x-gzip' length 1052045 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+* installing *source* package ‘podkat’ ...
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_podkat.cpp -o R_init_podkat.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bernoulliExact.cpp -o bernoulliExact.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c checkAndFixGenotype.cpp -o checkAndFixGenotype.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cumMax.cpp -o cumMax.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c doubleMale.cpp -o doubleMale.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c kernels.cpp -o kernels.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pValues.cpp -o pValues.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c partitionRegions.cpp -o partitionRegions.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c qfc.cpp -o qfc.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c readGenotypeMatrix.cpp -o readGenotypeMatrix.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/Rhtslib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c readVariantInfo.cpp -o readVariantInfo.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o podkat.so R_init_podkat.o bernoulliExact.o checkAndFixGenotype.o cumMax.o doubleMale.o kernels.o pValues.o partitionRegions.o qfc.o readGenotypeMatrix.o readVariantInfo.o /tmp/tmp/built/Rhtslib/usrlib/libhts.a -lcurl -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-podkat/00new/podkat/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘p.adjust’ from package ‘stats’ in package ‘podkat’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘podkat’ as ‘podkat_1.31.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (podkat)
+
+The downloaded source packages are in
+	‘/tmp/RtmpZ5QXLH/downloaded_packages’
+
+real	1m17.933s
+user	1m12.736s
+sys	0m5.237s
+* installing *source* package ‘BSgenome.Mmusculus.UCSC.mm10’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BSgenome.Mmusculus.UCSC.mm10’ as ‘BSgenome.Mmusculus.UCSC.mm10_1.4.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BSgenome.Mmusculus.UCSC.mm10)
+* installing *source* package ‘BSgenome.Mmusculus.UCSC.mm10.masked’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BSgenome.Mmusculus.UCSC.mm10.masked’ as ‘BSgenome.Mmusculus.UCSC.mm10.masked_1.4.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BSgenome.Mmusculus.UCSC.mm10.masked)
