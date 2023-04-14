@@ -1,0 +1,59 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''karyoploteR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'karyoploteR'
+also installing the dependency ‘bezier’
+
+trying URL 'https://cloud.r-project.org/src/contrib/bezier_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 18252 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/karyoploteR_1.25.0.tar.gz'
+Content type 'application/x-gzip' length 1647933 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+* installing *source* package ‘bezier’ ...
+** package ‘bezier’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bezier’ as ‘bezier_1.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bezier)
+* installing *source* package ‘karyoploteR’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘karyoploteR’ as ‘karyoploteR_1.25.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (karyoploteR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpTka47q/downloaded_packages’
+
+real	0m41.602s
+user	0m38.193s
+sys	0m2.492s
