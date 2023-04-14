@@ -1,0 +1,377 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''iCheck'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'iCheck'
+also installing the dependencies ‘gtools’, ‘caTools’, ‘zoo’, ‘gplots’, ‘randomForest’, ‘rgl’, ‘lmtest’, ‘scatterplot3d’
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'application/x-gzip' length 240661 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/caTools_1.18.2.tar.gz'
+Content type 'application/x-gzip' length 64960 bytes (63 KB)
+==================================================
+downloaded 63 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/zoo_1.8-12.tar.gz'
+Content type 'application/x-gzip' length 782344 bytes (764 KB)
+==================================================
+downloaded 764 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gplots_3.1.3.tar.gz'
+Content type 'application/x-gzip' length 520683 bytes (508 KB)
+==================================================
+downloaded 508 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/randomForest_4.7-1.1.tar.gz'
+Error in download.file(url, destfile, method, mode = "wb", ...) : 
+  cannot open URL 'https://cloud.r-project.org/src/contrib/randomForest_4.7-1.1.tar.gz'
+In addition: Warning message:
+In download.file(url, destfile, method, mode = "wb", ...) :
+  URL 'https://cloud.r-project.org/src/contrib/randomForest_4.7-1.1.tar.gz': status was 'SSL connect error'
+Warning in download.packages(pkgs, destdir = tmpd, available = available,  :
+  download of package ‘randomForest’ failed
+trying URL 'https://cloud.r-project.org/src/contrib/rgl_1.1.3.tar.gz'
+Content type 'application/x-gzip' length 2506680 bytes (2.4 MB)
+==================================================
+downloaded 2.4 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lmtest_0.9-40.tar.gz'
+Content type 'application/x-gzip' length 230313 bytes (224 KB)
+==================================================
+downloaded 224 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/scatterplot3d_0.3-43.tar.gz'
+Content type 'application/x-gzip' length 484515 bytes (473 KB)
+==================================================
+downloaded 473 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/iCheck_1.29.0.tar.gz'
+Content type 'application/x-gzip' length 387183 bytes (378 KB)
+==================================================
+downloaded 378 KB
+
+* installing *source* package ‘gtools’ ...
+** package ‘gtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c roman2int.c -o roman2int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c setTCPNoDelay.c -o setTCPNoDelay.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gtools.so init.o roman2int.o setTCPNoDelay.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gtools/00new/gtools/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *source* package ‘caTools’ ...
+** package ‘caTools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Gif2R.cpp -o Gif2R.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GifTools.cpp -o GifTools.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caTools_init.c -o caTools_init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c runfunc.c -o runfunc.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o caTools.so Gif2R.o GifTools.o caTools_init.o runfunc.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-caTools/00new/caTools/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘caTools’ as ‘caTools_1.18.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caTools)
+* installing *source* package ‘zoo’ ...
+** package ‘zoo’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coredata.c -o coredata.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lag.c -o lag.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o zoo.so coredata.o init.o lag.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-zoo/00new/zoo/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘zoo’ as ‘zoo_1.8-12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (zoo)
+* installing *source* package ‘rgl’ ...
+** package ‘rgl’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... gcc -E
+checking for gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking for libpng-config... yes
+configure: using libpng-config
+configure: using libpng dynamic linkage
+checking for X... libraries , headers 
+checking for XAllocClassHint... yes
+checking for GL/gl.h... yes
+checking for GL/glu.h... yes
+checking for glEnd in -lGL... yes
+checking for glEnd... yes
+checking for gluErrorString in -lGLU... yes
+checking for gluErrorString... yes
+checking for pkg-config... yes
+configure: using Freetype and FTGL
+configure: creating ./config.status
+config.status: creating R/noOpenGL.R
+config.status: creating src/useNULL/Makevars
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ABCLineSet.cpp -o ABCLineSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c BBoxDeco.cpp -o BBoxDeco.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Background.cpp -o Background.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ClipPlane.cpp -o ClipPlane.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Color.cpp -o Color.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Disposable.cpp -o Disposable.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Light.cpp -o Light.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LineSet.cpp -o LineSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LineStripSet.cpp -o LineStripSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Material.cpp -o Material.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c NULLgui.cpp -o NULLgui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PlaneSet.cpp -o PlaneSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PointSet.cpp -o PointSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PrimitiveSet.cpp -o PrimitiveSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RenderContext.cpp -o RenderContext.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Shape.cpp -o Shape.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SphereMesh.cpp -o SphereMesh.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SphereSet.cpp -o SphereSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SpriteSet.cpp -o SpriteSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c String.cpp -o String.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Surface.cpp -o Surface.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c TextSet.cpp -o TextSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Texture.cpp -o Texture.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Viewpoint.cpp -o Viewpoint.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c api.cpp -o api.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c assert.cpp -o assert.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c callbacks.cpp -o callbacks.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c device.cpp -o device.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c devicemanager.cpp -o devicemanager.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fps.cpp -o fps.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ftgl.cpp -o ftgl.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c geom.cpp -o geom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gl.c -o gl.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gl2ps.c -o gl2ps.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glErrors.cpp -o glErrors.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glgui.cpp -o glgui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gui.cpp -o gui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c par3d.cpp -o par3d.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pixmap.cpp -o pixmap.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c platform.cpp -o platform.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pretty.c -o pretty.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c render.cpp -o render.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rglmath.cpp -o rglmath.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rglview.cpp -o rglview.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scene.cpp -o scene.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c select.cpp -o select.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subscene.cpp -o subscene.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c win32gui.cpp -o win32gui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c win32lib.cpp -o win32lib.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c x11gui.cpp -o x11gui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DHAVE_FREETYPE -Iext/ftgl -I/usr/include/freetype2 -I/usr/include/libpng16 -Iext -Iext/glad/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c x11lib.cpp -o x11lib.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o rgl.so ABCLineSet.o BBoxDeco.o Background.o ClipPlane.o Color.o Disposable.o Light.o LineSet.o LineStripSet.o Material.o NULLgui.o PlaneSet.o PointSet.o PrimitiveSet.o RenderContext.o Shape.o SphereMesh.o SphereSet.o SpriteSet.o String.o Surface.o TextSet.o Texture.o Viewpoint.o api.o assert.o callbacks.o device.o devicemanager.o fps.o ftgl.o geom.o gl.o gl2ps.o glErrors.o glgui.o gui.o init.o par3d.o pixmap.o platform.o pretty.o render.o rglmath.o rglview.o scene.o select.o subscene.o win32gui.o win32lib.o x11gui.o x11lib.o -lGLU -lGL -lpng16 -lX11 -lfreetype -lpng16 -lm -lz -lm -lz -lbrotlidec -lbrotlicommon -L/usr/local/lib/R/lib -lR
+cp -Rp OpenGL useNULL && \
+cp -p *.c *.h *.cpp useNULL/ && \
+cd useNULL && \
+/usr/local/lib/R/bin/R CMD SHLIB -o useNULL.so *.cpp *.c && \
+cd .. && \
+mkdir -p ../inst/useNULL && \
+mv useNULL/useNULL.so ../inst/useNULL/rgl.so && \
+rm useNULL/*.cpp useNULL/*.c useNULL/*.h useNULL/OpenGL/*
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+make[1]: Entering directory '/tmp/RtmpBtypYb/R.INSTALLfa44767d8bb/rgl/src/useNULL'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ABCLineSet.cpp -o ABCLineSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c BBoxDeco.cpp -o BBoxDeco.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Background.cpp -o Background.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ClipPlane.cpp -o ClipPlane.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Color.cpp -o Color.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Disposable.cpp -o Disposable.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Light.cpp -o Light.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LineSet.cpp -o LineSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LineStripSet.cpp -o LineStripSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Material.cpp -o Material.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c NULLgui.cpp -o NULLgui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PlaneSet.cpp -o PlaneSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PointSet.cpp -o PointSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PrimitiveSet.cpp -o PrimitiveSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RenderContext.cpp -o RenderContext.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Shape.cpp -o Shape.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SphereMesh.cpp -o SphereMesh.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SphereSet.cpp -o SphereSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SpriteSet.cpp -o SpriteSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c String.cpp -o String.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Surface.cpp -o Surface.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c TextSet.cpp -o TextSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Texture.cpp -o Texture.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Viewpoint.cpp -o Viewpoint.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c api.cpp -o api.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c assert.cpp -o assert.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c callbacks.cpp -o callbacks.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c device.cpp -o device.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c devicemanager.cpp -o devicemanager.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fps.cpp -o fps.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ftgl.cpp -o ftgl.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c geom.cpp -o geom.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glErrors.cpp -o glErrors.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c glgui.cpp -o glgui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gui.cpp -o gui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c par3d.cpp -o par3d.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pixmap.cpp -o pixmap.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c platform.cpp -o platform.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c render.cpp -o render.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rglmath.cpp -o rglmath.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rglview.cpp -o rglview.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scene.cpp -o scene.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c select.cpp -o select.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subscene.cpp -o subscene.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c win32gui.cpp -o win32gui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c win32lib.cpp -o win32lib.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c x11gui.cpp -o x11gui.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c x11lib.cpp -o x11lib.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gl.c -o gl.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gl2ps.c -o gl2ps.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include -DHAVE_PNG_H -I/usr/include/libpng16 -DRGL_NO_OPENGL  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pretty.c -o pretty.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o useNULL.so ABCLineSet.o BBoxDeco.o Background.o ClipPlane.o Color.o Disposable.o Light.o LineSet.o LineStripSet.o Material.o NULLgui.o PlaneSet.o PointSet.o PrimitiveSet.o RenderContext.o Shape.o SphereMesh.o SphereSet.o SpriteSet.o String.o Surface.o TextSet.o Texture.o Viewpoint.o api.o assert.o callbacks.o device.o devicemanager.o fps.o ftgl.o geom.o glErrors.o glgui.o gui.o init.o par3d.o pixmap.o platform.o render.o rglmath.o rglview.o scene.o select.o subscene.o win32gui.o win32lib.o x11gui.o x11lib.o gl.o gl2ps.o pretty.o -lpng16 -L/usr/local/lib/R/lib -lR
+make[1]: Leaving directory '/tmp/RtmpBtypYb/R.INSTALLfa44767d8bb/rgl/src/useNULL'
+installing to /tmp/tmp/built/00LOCK-rgl/00new/rgl/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: 'rgl.init' failed, running with 'rgl.useNULL = TRUE'.
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+Warning: 'rgl.init' failed, running with 'rgl.useNULL = TRUE'.
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rgl’ as ‘rgl_1.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rgl)
+* installing *source* package ‘scatterplot3d’ ...
+** package ‘scatterplot3d’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘scatterplot3d’ as ‘scatterplot3d_0.3-43_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (scatterplot3d)
+* installing *source* package ‘gplots’ ...
+** package ‘gplots’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gplots’ as ‘gplots_3.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gplots)
+* installing *source* package ‘lmtest’ ...
+** package ‘lmtest’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c pan.f -o pan.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o lmtest.so init.o pan.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-lmtest/00new/lmtest/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lmtest’ as ‘lmtest_0.9-40_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lmtest)
+ERROR: dependency ‘randomForest’ is not available for package ‘iCheck’
+* removing ‘/tmp/tmp/built/iCheck’
+
+The downloaded source packages are in
+	‘/tmp/RtmphzzADL/downloaded_packages’
+Warning message:
+In install.packages(...) :
+  installation of package ‘iCheck’ had non-zero exit status
+
+real	1m31.372s
+user	1m21.526s
+sys	0m10.044s
