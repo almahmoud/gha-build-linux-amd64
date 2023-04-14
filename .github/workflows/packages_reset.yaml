@@ -30,6 +30,8 @@ jobs:
           if [ ! -f "logs/$(cat runstarttime)/PACKAGES" ]; then exit 1; fi
           echo platform=$(cat PLATFORM.bioc) >> $GITHUB_OUTPUT
           echo testcontainer=$(cat ROOT_CONTAINER.bioc | sed "s#:#:test-#g") >> $GITHUB_OUTPUT
+          echo biocver=$(cat bioc_build/bioc | sed 's/ /./g') >> $GITHUB_OUTPUT
+          
           mkdir -p /tmp/image
 
           # Pick 5 random built packages to test installing
@@ -80,7 +82,7 @@ jobs:
         if: steps.variables.outcome=='success'
 
       - run: |
-          rclone move js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib js2:/container-binaries/$(cat containername)/$(cat arch)/binaries/src/contrib -vvvvvv
+          rclone copyto js2:/gha-build/$(cat containername)/$(cat arch)/$(cat runstarttime)/binaries/src/contrib js2:/${{steps.variables.outputs.biocver}}/container-binaries/$(cat containername)/$(cat arch)/binaries/src/contrib -vvvvvv
         if: steps.variables.outcome=='success'
 
   packages-build:
