@@ -1,0 +1,210 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''SimFFPE'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'SimFFPE'
+also installing the dependencies ‘generics’, ‘tidyselect’, ‘iterators’, ‘dplyr’, ‘foreach’, ‘doParallel’, ‘truncnorm’
+
+trying URL 'https://cloud.r-project.org/src/contrib/generics_0.1.3.tar.gz'
+Content type 'application/x-gzip' length 172201 bytes (168 KB)
+==================================================
+downloaded 168 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tidyselect_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 101498 bytes (99 KB)
+==================================================
+downloaded 99 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/iterators_1.0.14.tar.gz'
+Content type 'application/x-gzip' length 300266 bytes (293 KB)
+==================================================
+downloaded 293 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/dplyr_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 1082508 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/foreach_1.5.2.tar.gz'
+Content type 'application/x-gzip' length 89758 bytes (87 KB)
+==================================================
+downloaded 87 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.17.tar.gz'
+Content type 'application/x-gzip' length 164254 bytes (160 KB)
+==================================================
+downloaded 160 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/truncnorm_1.0-9.tar.gz'
+Content type 'application/x-gzip' length 11629 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/SimFFPE_1.11.0.tar.gz'
+Content type 'application/x-gzip' length 766884 bytes (748 KB)
+==================================================
+downloaded 748 KB
+
+* installing *source* package ‘generics’ ...
+** package ‘generics’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘generics’ as ‘generics_0.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (generics)
+* installing *source* package ‘tidyselect’ ...
+** package ‘tidyselect’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tidyselect’ as ‘tidyselect_1.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyselect)
+* installing *source* package ‘iterators’ ...
+** package ‘iterators’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iterators’ as ‘iterators_1.0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iterators)
+* installing *source* package ‘truncnorm’ ...
+** package ‘truncnorm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c exports.c -o exports.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rtruncnorm.c -o rtruncnorm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c truncnorm.c -o truncnorm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zeroin.c -o zeroin.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o truncnorm.so exports.o rtruncnorm.o truncnorm.o zeroin.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-truncnorm/00new/truncnorm/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘truncnorm’ as ‘truncnorm_1.0-9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (truncnorm)
+* installing *source* package ‘dplyr’ ...
+** package ‘dplyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chop.cpp -o chop.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filter.cpp -o filter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c funs.cpp -o funs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_by.cpp -o group_by.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_data.cpp -o group_data.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imports.cpp -o imports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mask.cpp -o mask.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mutate.cpp -o mutate.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice.cpp -o slice.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summarise.cpp -o summarise.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o dplyr.so chop.o filter.o funs.o group_by.o group_data.o imports.o init.o mask.o mutate.o slice.o summarise.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-dplyr/00new/dplyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dplyr’ as ‘dplyr_1.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dplyr)
+* installing *source* package ‘foreach’ ...
+** package ‘foreach’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘foreach’ as ‘foreach_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (foreach)
+* installing *source* package ‘doParallel’ ...
+** package ‘doParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘doParallel’ as ‘doParallel_1.0.17_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (doParallel)
+* installing *source* package ‘SimFFPE’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SimFFPE’ as ‘SimFFPE_1.11.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SimFFPE)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpua80wC/downloaded_packages’
+
+real	0m40.897s
+user	0m37.327s
+sys	0m5.374s
