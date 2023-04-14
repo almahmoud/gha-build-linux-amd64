@@ -1,0 +1,121 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''Rsamtools'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'Rsamtools'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/Rsamtools_2.15.3.tar.gz'
+Content type 'application/x-gzip' length 2918523 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+* installing *source* package ‘Rsamtools’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Biostrings_stubs.c -o Biostrings_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c COMPAT_bcf_hdr_read.c -o COMPAT_bcf_hdr_read.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c IRanges_stubs.c -o IRanges_stubs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PileupBuffer.cpp -o PileupBuffer.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c PosCacheColl.cpp -o PosCacheColl.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_Rsamtools.c -o R_init_Rsamtools.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ResultManager.cpp -o ResultManager.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c XVector_stubs.c -o XVector_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c as_bam.c -o as_bam.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bam_data.c -o bam_data.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bam_mate_iter.cpp -o bam_mate_iter.o
+In file included from Template.h:9,
+                 from BamIterator.h:10,
+                 from BamRangeIterator.h:7,
+                 from bam_mate_iter.cpp:2:
+BamRangeIterator.h: In member function ‘virtual void BamRangeIterator::finalize_inprogress(bamFile)’:
+/tmp/tmp/built/Rhtslib/include/samtools-1.7-compat.h:14:41: warning: ignoring return value of ‘int64_t bgzf_seek(BGZF*, int64_t, int)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | #define bam_seek(fp, pos, dir) bgzf_seek(fp, pos, dir)
+      |                                ~~~~~~~~~^~~~~~~~~~~~~~
+BamRangeIterator.h:138:16: note: in expansion of macro ‘bam_seek’
+  138 |         (void) bam_seek(bfile, pos, SEEK_SET);
+      |                ^~~~~~~~
+BamIterator.h: In constructor ‘BamIterator::BamIterator(bamFile, const bam_index_t*)’:
+/tmp/tmp/built/Rhtslib/include/samtools-1.7-compat.h:14:41: warning: ignoring return value of ‘int64_t bgzf_seek(BGZF*, int64_t, int)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | #define bam_seek(fp, pos, dir) bgzf_seek(fp, pos, dir)
+      |                                ~~~~~~~~~^~~~~~~~~~~~~~
+BamIterator.h:87:16: note: in expansion of macro ‘bam_seek’
+   87 |         (void) bam_seek(bfile, 0, 0);
+      |                ^~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bam_plbuf.c -o bam_plbuf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bam_sort.c -o bam_sort.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bambuffer.c -o bambuffer.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bamfile.c -o bamfile.o
+bamfile.c: In function ‘bamfile_isincomplete’:
+bamfile.c:168:20: warning: ignoring return value of ‘bgzf_seek’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  168 |             (void) bgzf_seek(bfile->file->x.bam, offset, SEEK_SET);
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bcffile.c -o bcffile.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bedidx.c -o bedidx.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c encode.c -o encode.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fafile.c -o fafile.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c idxstats.c -o idxstats.o
+In file included from bamfile.h:5,
+                 from idxstats.c:1:
+idxstats.c: In function ‘idxstats_bamfile’:
+/tmp/tmp/built/Rhtslib/include/samtools-1.7-compat.h:14:32: warning: ignoring return value of ‘bgzf_seek’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | #define bam_seek(fp, pos, dir) bgzf_seek(fp, pos, dir)
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+idxstats.c:20:12: note: in expansion of macro ‘bam_seek’
+   20 |     (void) bam_seek(fp, 0, 0);
+      |            ^~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c io_sam.c -o io_sam.o
+In file included from io_sam.c:2:
+io_sam.c: In function ‘_scan_bam_all’:
+/tmp/tmp/built/Rhtslib/include/samtools-1.7-compat.h:14:32: warning: ignoring return value of ‘bgzf_seek’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   14 | #define bam_seek(fp, pos, dir) bgzf_seek(fp, pos, dir)
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+io_sam.c:307:12: note: in expansion of macro ‘bam_seek’
+  307 |     (void) bam_seek(bfile->file->x.bam, bfile->pos0, SEEK_SET);
+      |            ^~~~~~~~
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pbuffer_wrapper.cpp -o pbuffer_wrapper.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pileup.cpp -o pileup.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pileupbam.c -o pileupbam.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sam_opts.c -o sam_opts.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sam_utils.c -o sam_utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c samtools_patch.c -o samtools_patch.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scan_bam_data.c -o scan_bam_data.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tabixfile.c -o tabixfile.o
+tabixfile.c: In function ‘index_tabix’:
+tabixfile.c:190:5: warning: ‘bgzf_is_bgzf’ is deprecated: Use bgzf_compression() or hts_detect_format() instead [-Wdeprecated-declarations]
+  190 |     if (bgzf_is_bgzf(fn) != 1)
+      |     ^~
+In file included from tabixfile.c:3:
+/tmp/tmp/built/Rhtslib/include/htslib/bgzf.h:270:9: note: declared here
+  270 |     int bgzf_is_bgzf(const char *fn) HTS_DEPRECATED("Use bgzf_compression() or hts_detect_format() instead");
+      |         ^~~~~~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tagfilter.c -o tagfilter.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utilities.c -o utilities.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -D_FILE_OFFSET_BITS=64 -I'/tmp/tmp/built/Rhtslib/include' -I'/tmp/tmp/built/S4Vectors/include' -I'/tmp/tmp/built/IRanges/include' -I'/tmp/tmp/built/XVector/include' -I'/tmp/tmp/built/Biostrings/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zip_compression.c -o zip_compression.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Rsamtools.so Biostrings_stubs.o COMPAT_bcf_hdr_read.o IRanges_stubs.o PileupBuffer.o PosCacheColl.o R_init_Rsamtools.o ResultManager.o S4Vectors_stubs.o XVector_stubs.o as_bam.o bam_data.o bam_mate_iter.o bam_plbuf.o bam_sort.o bambuffer.o bamfile.o bcffile.o bedidx.o encode.o fafile.o idxstats.o io_sam.o pbuffer_wrapper.o pileup.o pileupbam.o sam_opts.o sam_utils.o samtools_patch.o scan_bam_data.o tabixfile.o tagfilter.o utilities.o zip_compression.o /tmp/tmp/built/Rhtslib/usrlib/libhts.a -lcurl -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-Rsamtools/00new/Rsamtools/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘Rsamtools’ as ‘Rsamtools_2.15.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Rsamtools)
+
+The downloaded source packages are in
+	‘/tmp/RtmpFATTJ3/downloaded_packages’
+
+real	0m41.803s
+user	0m38.611s
+sys	0m5.649s
