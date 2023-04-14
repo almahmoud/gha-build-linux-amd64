@@ -1,0 +1,274 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''NeuCA'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'NeuCA'
+also installing the dependencies ‘backports’, ‘RcppTOML’, ‘here’, ‘config’, ‘tfautograph’, ‘reticulate’, ‘tensorflow’, ‘tfruns’, ‘zeallot’, ‘keras’
+
+trying URL 'https://cloud.r-project.org/src/contrib/backports_1.4.1.tar.gz'
+Content type 'application/x-gzip' length 26201 bytes (25 KB)
+==================================================
+downloaded 25 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RcppTOML_0.2.2.tar.gz'
+Content type 'application/x-gzip' length 141195 bytes (137 KB)
+==================================================
+downloaded 137 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/here_1.0.1.tar.gz'
+Content type 'application/x-gzip' length 32954 bytes (32 KB)
+==================================================
+downloaded 32 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/config_0.3.1.tar.gz'
+Content type 'application/x-gzip' length 69056 bytes (67 KB)
+==================================================
+downloaded 67 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tfautograph_0.3.2.tar.gz'
+Content type 'application/x-gzip' length 47367 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/reticulate_1.28.tar.gz'
+Content type 'application/x-gzip' length 1551312 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tensorflow_2.11.0.tar.gz'
+Content type 'application/x-gzip' length 61098 bytes (59 KB)
+==================================================
+downloaded 59 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tfruns_1.5.1.tar.gz'
+Content type 'application/x-gzip' length 2011153 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/zeallot_0.1.0.tar.gz'
+Content type 'application/x-gzip' length 32549 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/keras_2.11.1.tar.gz'
+Content type 'application/x-gzip' length 3527604 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/NeuCA_1.5.0.tar.gz'
+Content type 'application/x-gzip' length 3880817 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+* installing *source* package ‘backports’ ...
+** package ‘backports’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dotsElt.c -o dotsElt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dotsLength.c -o dotsLength.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dotsNames.c -o dotsNames.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o backports.so dotsElt.o dotsLength.o dotsNames.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-backports/00new/backports/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘backports’ as ‘backports_1.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (backports)
+* installing *source* package ‘RcppTOML’ ...
+** package ‘RcppTOML’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++17
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include -DTOML_ENABLE_FLOAT16=0 -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include -DTOML_ENABLE_FLOAT16=0 -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parse.cpp -o parse.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o RcppTOML.so RcppExports.o parse.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-RcppTOML/00new/RcppTOML/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RcppTOML’ as ‘RcppTOML_0.2.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RcppTOML)
+* installing *source* package ‘here’ ...
+** package ‘here’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘here’ as ‘here_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (here)
+* installing *source* package ‘config’ ...
+** package ‘config’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘config’ as ‘config_0.3.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (config)
+* installing *source* package ‘zeallot’ ...
+** package ‘zeallot’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘zeallot’ as ‘zeallot_0.1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (zeallot)
+* installing *source* package ‘reticulate’ ...
+** package ‘reticulate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c event_loop.cpp -o event_loop.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libpython.cpp -o libpython.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c output.cpp -o output.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c python.cpp -o python.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c readline.cpp -o readline.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c signals.cpp -o signals.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o reticulate.so RcppExports.o event_loop.o libpython.o output.o python.o readline.o signals.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-reticulate/00new/reticulate/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘reticulate’ as ‘reticulate_1.28_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (reticulate)
+* installing *source* package ‘tfautograph’ ...
+** package ‘tfautograph’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tfautograph’ as ‘tfautograph_0.3.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tfautograph)
+* installing *source* package ‘tfruns’ ...
+** package ‘tfruns’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tfruns’ as ‘tfruns_1.5.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tfruns)
+* installing *source* package ‘tensorflow’ ...
+** package ‘tensorflow’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tensorflow’ as ‘tensorflow_2.11.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tensorflow)
+* installing *source* package ‘keras’ ...
+** package ‘keras’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘keras’ as ‘keras_2.11.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (keras)
+* installing *source* package ‘NeuCA’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘NeuCA’ as ‘NeuCA_1.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (NeuCA)
+
+The downloaded source packages are in
+	‘/tmp/RtmpmHtw2q/downloaded_packages’
+
+real	1m32.494s
+user	1m24.879s
+sys	0m8.156s
