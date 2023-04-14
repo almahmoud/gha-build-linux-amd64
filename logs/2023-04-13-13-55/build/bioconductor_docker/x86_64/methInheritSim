@@ -1,0 +1,112 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''methInheritSim'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'methInheritSim'
+also installing the dependencies ‘expm’, ‘msm’
+
+trying URL 'https://cloud.r-project.org/src/contrib/expm_0.999-7.tar.gz'
+Content type 'application/x-gzip' length 136826 bytes (133 KB)
+==================================================
+downloaded 133 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/msm_1.7.tar.gz'
+Content type 'application/x-gzip' length 849388 bytes (829 KB)
+==================================================
+downloaded 829 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/methInheritSim_1.21.0.tar.gz'
+Content type 'application/x-gzip' length 1171108 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+* installing *source* package ‘expm’ ...
+** package ‘expm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_dgebal.c -o R_dgebal.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c expm-eigen.c -o expm-eigen.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c expm.c -o expm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c logm-eigen.c -o logm-eigen.o
+gfortran  -fpic  -g -O2  -c matexp.f -o matexp.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matexp_MH09.c -o matexp_MH09.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matpow.c -o matpow.o
+gfortran  -fpic  -g -O2  -c matrexp.f -o matrexp.o
+gfortran  -fpic  -g -O2  -c matrexpO.f -o matrexpO.o
+gfortran  -fpic  -g -O2  -c mexp-common.f -o mexp-common.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o expm.so R_dgebal.o expm-eigen.o expm.o init.o logm-eigen.o matexp.o matexp_MH09.o matpow.o matrexp.o matrexpO.o mexp-common.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-expm/00new/expm/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘expm’ as ‘expm_0.999-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (expm)
+* installing *source* package ‘msm’ ...
+** package ‘msm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c analyticp.c -o analyticp.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hmm.c -o hmm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hmmderiv.c -o hmmderiv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lik.c -o lik.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c msm-init.c -o msm-init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pijt.c -o pijt.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o msm.so analyticp.o hmm.o hmmderiv.o lik.o msm-init.o pijt.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-msm/00new/msm/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘msm’ as ‘msm_1.7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (msm)
+* installing *source* package ‘methInheritSim’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘methInheritSim’ as ‘methInheritSim_1.21.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (methInheritSim)
+
+The downloaded source packages are in
+	‘/tmp/RtmpaDCnkw/downloaded_packages’
+
+real	0m48.129s
+user	0m44.584s
+sys	0m3.028s
