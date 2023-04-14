@@ -1,0 +1,127 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''SpectralTAD'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'SpectralTAD'
+also installing the dependency ‘PRIMME’
+
+trying URL 'https://cloud.r-project.org/src/contrib/PRIMME_3.2-3.tar.gz'
+Content type 'application/x-gzip' length 364330 bytes (355 KB)
+==================================================
+downloaded 355 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/SpectralTAD_1.15.3.tar.gz'
+Content type 'application/x-gzip' length 1563886 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+* installing *source* package ‘PRIMME’ ...
+** package ‘PRIMME’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/library/Matrix/include' -I/usr/local/include   -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/library/Matrix/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/usr/local/lib/R/library/Matrix/include' -I/usr/local/include   -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c primmeR.cpp -o primmeR.o
+make[1]: Entering directory '/tmp/RtmpGj9hSZ/R.INSTALLe567ca8c800/PRIMME/src/primme'
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/auxiliary_eigs.cpp -o eigs/auxiliary_eigs.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/auxiliary_eigs_normal.cpp -o eigs/auxiliary_eigs_normal.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/convergence.cpp -o eigs/convergence.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/correction.cpp -o eigs/correction.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/factorize.cpp -o eigs/factorize.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/init.cpp -o eigs/init.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/inner_solve.cpp -o eigs/inner_solve.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/main_iter.cpp -o eigs/main_iter.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/ortho.cpp -o eigs/ortho.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/primme_c.cpp -o eigs/primme_c.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/primme_f77.cpp -o eigs/primme_f77.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/primme_interface.cpp -o eigs/primme_interface.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/restart.cpp -o eigs/restart.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/solve_projection.cpp -o eigs/solve_projection.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/update_projection.cpp -o eigs/update_projection.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c eigs/update_W.cpp -o eigs/update_W.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c linalg/auxiliary.cpp -o linalg/auxiliary.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c linalg/blaslapack.cpp -o linalg/blaslapack.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c linalg/magma_wrapper.cpp -o linalg/magma_wrapper.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c linalg/memman.cpp -o linalg/memman.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c linalg/wtime.cpp -o linalg/wtime.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c svds/primme_svds_c.cpp -o svds/primme_svds_c.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c svds/primme_svds_f77.cpp -o svds/primme_svds_f77.o
+g++ -std=gnu++17 -I/usr/local/lib/R/include -DNDEBUG -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I../inst/include  -DPRIMME_INT_SIZE=0 -DF77UNDERSCORE -DUSE_XHEEV -DUSE_ZGESV -DUSE_XHEGV -DPRIMME_INT_SIZE=0 -DPRIMME_WITHOUT_FLOAT -DPRIMME_BLAS_RCOMPLEX   -I../../inst/include -Iinclude -c svds/primme_svds_interface.cpp -o svds/primme_svds_interface.o
+ar rv libprimme.a eigs/auxiliary_eigs.o eigs/auxiliary_eigs_normal.o eigs/convergence.o eigs/correction.o eigs/factorize.o eigs/init.o eigs/inner_solve.o eigs/main_iter.o eigs/ortho.o eigs/primme_c.o eigs/primme_f77.o eigs/primme_interface.o eigs/restart.o eigs/solve_projection.o eigs/update_projection.o eigs/update_W.o linalg/auxiliary.o linalg/blaslapack.o linalg/magma_wrapper.o linalg/memman.o linalg/wtime.o svds/primme_svds_c.o svds/primme_svds_f77.o svds/primme_svds_interface.o;\
+ranlib libprimme.a
+ar: creating libprimme.a
+a - eigs/auxiliary_eigs.o
+a - eigs/auxiliary_eigs_normal.o
+a - eigs/convergence.o
+a - eigs/correction.o
+a - eigs/factorize.o
+a - eigs/init.o
+a - eigs/inner_solve.o
+a - eigs/main_iter.o
+a - eigs/ortho.o
+a - eigs/primme_c.o
+a - eigs/primme_f77.o
+a - eigs/primme_interface.o
+a - eigs/restart.o
+a - eigs/solve_projection.o
+a - eigs/update_projection.o
+a - eigs/update_W.o
+a - linalg/auxiliary.o
+a - linalg/blaslapack.o
+a - linalg/magma_wrapper.o
+a - linalg/memman.o
+a - linalg/wtime.o
+a - svds/primme_svds_c.o
+a - svds/primme_svds_f77.o
+a - svds/primme_svds_interface.o
+make[1]: Leaving directory '/tmp/RtmpGj9hSZ/R.INSTALLe567ca8c800/PRIMME/src/primme'
+make[1]: Entering directory '/tmp/RtmpGj9hSZ/R.INSTALLe567ca8c800/PRIMME/src/primme'
+gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic  -c zhegv.c -o zhegv.o
+ar rv libprimmeext.a zhegv.o;\
+ranlib libprimmeext.a
+ar: creating libprimmeext.a
+a - zhegv.o
+make[1]: Leaving directory '/tmp/RtmpGj9hSZ/R.INSTALLe567ca8c800/PRIMME/src/primme'
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o PRIMME.so RcppExports.o init.o primmeR.o -Lprimme -lprimme -llapack -lprimmeext -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-PRIMME/00new/PRIMME/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘PRIMME’ as ‘PRIMME_3.2-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (PRIMME)
+* installing *source* package ‘SpectralTAD’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SpectralTAD’ as ‘SpectralTAD_1.15.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SpectralTAD)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp0ZkpQo/downloaded_packages’
+
+real	1m22.926s
+user	1m18.081s
+sys	0m3.826s
