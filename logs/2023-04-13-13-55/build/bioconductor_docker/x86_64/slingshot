@@ -1,0 +1,67 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''slingshot'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'slingshot'
+also installing the dependency ‘princurve’
+
+trying URL 'https://cloud.r-project.org/src/contrib/princurve_2.1.6.tar.gz'
+Content type 'application/x-gzip' length 52656 bytes (51 KB)
+==================================================
+downloaded 51 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/slingshot_2.7.0.tar.gz'
+Content type 'application/x-gzip' length 1675023 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+* installing *source* package ‘princurve’ ...
+** package ‘princurve’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c project_to_curve.cpp -o project_to_curve.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o princurve.so RcppExports.o project_to_curve.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-princurve/00new/princurve/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘princurve’ as ‘princurve_2.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (princurve)
+* installing *source* package ‘slingshot’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+in method for ‘slingshot’ with signature ‘data="ClusterExperiment"’: no definition for class “ClusterExperiment”
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘slingshot’ as ‘slingshot_2.7.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (slingshot)
+
+The downloaded source packages are in
+	‘/tmp/RtmpI5RekO/downloaded_packages’
+
+real	0m41.988s
+user	0m37.700s
+sys	0m2.959s
