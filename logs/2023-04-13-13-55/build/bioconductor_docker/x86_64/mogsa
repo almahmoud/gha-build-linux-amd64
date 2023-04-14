@@ -1,0 +1,190 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''mogsa'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'mogsa'
+also installing the dependencies ‘gtools’, ‘caTools’, ‘gplots’, ‘corpcor’, ‘svd’
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'application/x-gzip' length 240661 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/caTools_1.18.2.tar.gz'
+Content type 'application/x-gzip' length 64960 bytes (63 KB)
+==================================================
+downloaded 63 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gplots_3.1.3.tar.gz'
+Content type 'application/x-gzip' length 520683 bytes (508 KB)
+==================================================
+downloaded 508 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/corpcor_1.6.10.tar.gz'
+Content type 'application/x-gzip' length 22678 bytes (22 KB)
+==================================================
+downloaded 22 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/svd_0.5.4.tar.gz'
+Content type 'application/x-gzip' length 122776 bytes (119 KB)
+==================================================
+downloaded 119 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/mogsa_1.33.0.tar.gz'
+Content type 'application/x-gzip' length 791817 bytes (773 KB)
+==================================================
+downloaded 773 KB
+
+* installing *source* package ‘gtools’ ...
+** package ‘gtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c roman2int.c -o roman2int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c setTCPNoDelay.c -o setTCPNoDelay.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gtools.so init.o roman2int.o setTCPNoDelay.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gtools/00new/gtools/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *source* package ‘caTools’ ...
+** package ‘caTools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Gif2R.cpp -o Gif2R.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GifTools.cpp -o GifTools.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caTools_init.c -o caTools_init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c runfunc.c -o runfunc.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o caTools.so Gif2R.o GifTools.o caTools_init.o runfunc.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-caTools/00new/caTools/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘caTools’ as ‘caTools_1.18.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caTools)
+* installing *source* package ‘corpcor’ ...
+** package ‘corpcor’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘corpcor’ as ‘corpcor_1.6.10_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (corpcor)
+* installing *source* package ‘svd’ ...
+** package ‘svd’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c extmat.c -o extmat.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c svd_init.c -o svd_init.o
+gfortran  -fpic  -g -O2  -c propack/dlansvd_irl.f -o propack/dlansvd_irl.o
+gfortran  -fpic  -g -O2  -c  propack/printstat.f90 -o propack/printstat.o
+gfortran  -fpic  -g -O2  -c propack/second.f -o propack/second.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c propack/propack_svd.c -o propack/propack_svd.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/dsort2.c -o trlan/dsort2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/dstqrb.c -o trlan/dstqrb.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/trlcore.c -o trlan/trlcore.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/trlaux.c -o trlan/trlaux.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/trlan.c -o trlan/trlan.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/trl_comm_none.c -o trlan/trl_comm_none.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/trlmap.c -o trlan/trlmap.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/restart.c -o trlan/restart.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/ztrl_comm_none.c -o trlan/ztrl_comm_none.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/ztrlan.c -o trlan/ztrlan.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/ztrlcore.c -o trlan/ztrlcore.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/ztrlaux.c -o trlan/ztrlaux.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/zdaxpy.c -o trlan/zdaxpy.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/zdgemv.c -o trlan/zdgemv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/trlan_R.c -o trlan/trlan_R.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -I../inst/include -DUSE_FC_LEN_T -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trlan/ztrlan_R.c -o trlan/ztrlan_R.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o svd.so extmat.o svd_init.o propack/dlansvd_irl.o propack/printstat.o propack/second.o propack/propack_svd.o trlan/dsort2.o trlan/dstqrb.o trlan/trlcore.o trlan/trlaux.o trlan/trlan.o trlan/trl_comm_none.o trlan/trlmap.o trlan/restart.o trlan/ztrl_comm_none.o trlan/ztrlan.o trlan/ztrlcore.o trlan/ztrlaux.o trlan/zdaxpy.o trlan/zdgemv.o trlan/trlan_R.o trlan/ztrlan_R.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-svd/00new/svd/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘crossprod’ from package ‘base’ in package ‘svd’
+Creating a generic function for ‘tcrossprod’ from package ‘base’ in package ‘svd’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘svd’ as ‘svd_0.5.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (svd)
+* installing *source* package ‘gplots’ ...
+** package ‘gplots’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gplots’ as ‘gplots_3.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gplots)
+* installing *source* package ‘mogsa’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘mogsa’ as ‘mogsa_1.33.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mogsa)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp6i96Yy/downloaded_packages’
+
+real	0m45.122s
+user	0m41.791s
+sys	0m4.568s
