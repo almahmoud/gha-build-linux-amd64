@@ -1,0 +1,926 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''MLSeq'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'MLSeq'
+also installing the dependencies ‘listenv’, ‘parallelly’, ‘future’, ‘globals’, ‘shape’, ‘future.apply’, ‘numDeriv’, ‘progressr’, ‘SQUAREM’, ‘diagram’, ‘lava’, ‘tzdb’, ‘prodlim’, ‘timechange’, ‘data.table’, ‘clock’, ‘gower’, ‘hardhat’, ‘ipred’, ‘lubridate’, ‘timeDate’, ‘ModelMetrics’, ‘pROC’, ‘recipes’, ‘reshape2’, ‘iterators’, ‘caret’, ‘VennDiagram’, ‘pamr’, ‘plyr’, ‘foreach’
+
+trying URL 'https://cloud.r-project.org/src/contrib/listenv_0.9.0.tar.gz'
+Content type 'application/x-gzip' length 36055 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/parallelly_1.35.0.tar.gz'
+Content type 'application/x-gzip' length 137313 bytes (134 KB)
+==================================================
+downloaded 134 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/future_1.32.0.tar.gz'
+Content type 'application/x-gzip' length 340660 bytes (332 KB)
+==================================================
+downloaded 332 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/globals_0.16.2.tar.gz'
+Content type 'application/x-gzip' length 35764 bytes (34 KB)
+==================================================
+downloaded 34 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/shape_1.4.6.tar.gz'
+Content type 'application/x-gzip' length 677262 bytes (661 KB)
+==================================================
+downloaded 661 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/future.apply_1.10.0.tar.gz'
+Content type 'application/x-gzip' length 65992 bytes (64 KB)
+==================================================
+downloaded 64 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz'
+Content type 'application/x-gzip' length 76053 bytes (74 KB)
+==================================================
+downloaded 74 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/progressr_0.13.0.tar.gz'
+Content type 'application/x-gzip' length 210175 bytes (205 KB)
+==================================================
+downloaded 205 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/SQUAREM_2021.1.tar.gz'
+Content type 'application/x-gzip' length 241534 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/diagram_1.6.5.tar.gz'
+Content type 'application/x-gzip' length 536872 bytes (524 KB)
+==================================================
+downloaded 524 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lava_1.7.2.1.tar.gz'
+Content type 'application/x-gzip' length 1106717 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tzdb_0.3.0.tar.gz'
+Content type 'application/x-gzip' length 567544 bytes (554 KB)
+==================================================
+downloaded 554 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/prodlim_2023.03.31.tar.gz'
+Content type 'application/x-gzip' length 128568 bytes (125 KB)
+==================================================
+downloaded 125 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/timechange_0.2.0.tar.gz'
+Content type 'application/x-gzip' length 102806 bytes (100 KB)
+==================================================
+downloaded 100 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/data.table_1.14.8.tar.gz'
+Content type 'application/x-gzip' length 5338582 bytes (5.1 MB)
+==================================================
+downloaded 5.1 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/clock_0.6.1.tar.gz'
+Content type 'application/x-gzip' length 501028 bytes (489 KB)
+==================================================
+downloaded 489 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gower_1.0.1.tar.gz'
+Content type 'application/x-gzip' length 187590 bytes (183 KB)
+==================================================
+downloaded 183 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/hardhat_1.3.0.tar.gz'
+Content type 'application/x-gzip' length 872416 bytes (851 KB)
+==================================================
+downloaded 851 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ipred_0.9-14.tar.gz'
+Content type 'application/x-gzip' length 176371 bytes (172 KB)
+==================================================
+downloaded 172 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lubridate_1.9.2.tar.gz'
+Content type 'application/x-gzip' length 427200 bytes (417 KB)
+==================================================
+downloaded 417 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/timeDate_4022.108.tar.gz'
+Content type 'application/x-gzip' length 292518 bytes (285 KB)
+==================================================
+downloaded 285 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ModelMetrics_1.2.2.2.tar.gz'
+Content type 'application/x-gzip' length 17078 bytes (16 KB)
+==================================================
+downloaded 16 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/pROC_1.18.0.tar.gz'
+Content type 'application/x-gzip' length 688430 bytes (672 KB)
+==================================================
+downloaded 672 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/recipes_1.0.5.tar.gz'
+Content type 'application/x-gzip' length 799374 bytes (780 KB)
+==================================================
+downloaded 780 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/reshape2_1.4.4.tar.gz'
+Content type 'application/x-gzip' length 37307 bytes (36 KB)
+==================================================
+downloaded 36 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/iterators_1.0.14.tar.gz'
+Content type 'application/x-gzip' length 300266 bytes (293 KB)
+==================================================
+downloaded 293 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/caret_6.0-94.tar.gz'
+Content type 'application/x-gzip' length 2274203 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/VennDiagram_1.7.3.tar.gz'
+Content type 'application/x-gzip' length 78508 bytes (76 KB)
+==================================================
+downloaded 76 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/pamr_1.56.1.tar.gz'
+Content type 'application/x-gzip' length 669353 bytes (653 KB)
+==================================================
+downloaded 653 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/plyr_1.8.8.tar.gz'
+Content type 'application/x-gzip' length 401438 bytes (392 KB)
+==================================================
+downloaded 392 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/foreach_1.5.2.tar.gz'
+Content type 'application/x-gzip' length 89758 bytes (87 KB)
+==================================================
+downloaded 87 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/MLSeq_2.17.0.tar.gz'
+Content type 'application/x-gzip' length 643821 bytes (628 KB)
+==================================================
+downloaded 628 KB
+
+* installing *source* package ‘listenv’ ...
+** package ‘listenv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘listenv’ as ‘listenv_0.9.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (listenv)
+* installing *source* package ‘parallelly’ ...
+** package ‘parallelly’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘parallelly’ as ‘parallelly_1.35.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (parallelly)
+* installing *source* package ‘globals’ ...
+** package ‘globals’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘globals’ as ‘globals_0.16.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (globals)
+* installing *source* package ‘shape’ ...
+** package ‘shape’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘shape’ as ‘shape_1.4.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (shape)
+* installing *source* package ‘numDeriv’ ...
+** package ‘numDeriv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘numDeriv’ as ‘numDeriv_2016.8-1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (numDeriv)
+* installing *source* package ‘progressr’ ...
+** package ‘progressr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘progressr’ as ‘progressr_0.13.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (progressr)
+* installing *source* package ‘SQUAREM’ ...
+** package ‘SQUAREM’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SQUAREM’ as ‘SQUAREM_2021.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SQUAREM)
+* installing *source* package ‘tzdb’ ...
+** package ‘tzdb’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c api.cpp -o api.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c names.cpp -o names.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c path.cpp -o path.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tz.cpp -o tz.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c version.cpp -o version.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o tzdb.so api.o cpp11.o names.o path.o tz.o version.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-tzdb/00new/tzdb/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tzdb’ as ‘tzdb_0.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tzdb)
+* installing *source* package ‘timechange’ ...
+** package ‘timechange’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c common.cpp -o common.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c get.cpp -o get.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parse.c -o parse.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c round.cpp -o round.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tzone.cpp -o tzone.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c update.cpp -o update.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_fixed.cc -o cctz/src/time_zone_fixed.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_if.cc -o cctz/src/time_zone_if.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_impl.cc -o cctz/src/time_zone_impl.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_info.cc -o cctz/src/time_zone_info.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_libc.cc -o cctz/src/time_zone_libc.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_lookup.cc -o cctz/src/time_zone_lookup.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_posix.cc -o cctz/src/time_zone_posix.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/zone_info_source.cc -o cctz/src/zone_info_source.o
+ar rcs libcctz.a ./cctz/src/time_zone_fixed.o ./cctz/src/time_zone_if.o ./cctz/src/time_zone_impl.o ./cctz/src/time_zone_info.o ./cctz/src/time_zone_libc.o ./cctz/src/time_zone_lookup.o ./cctz/src/time_zone_posix.o ./cctz/src/zone_info_source.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o timechange.so common.o cpp11.o get.o parse.o round.o tzone.o update.o -L. -lcctz -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-timechange/00new/timechange/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘timechange’ as ‘timechange_0.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (timechange)
+* installing *source* package ‘data.table’ ...
+** package ‘data.table’ successfully unpacked and MD5 sums checked
+** using staged installation
+gcc 11.3.0
+zlib 1.2.11 is available ok
+R CMD SHLIB supports OpenMP without any extra hint
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c assign.c -o assign.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c between.c -o between.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bmerge.c -o bmerge.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chmatch.c -o chmatch.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cj.c -o cj.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coalesce.c -o coalesce.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dogroups.c -o dogroups.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fastmean.c -o fastmean.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fcast.c -o fcast.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fifelse.c -o fifelse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fmelt.c -o fmelt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c forder.c -o forder.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c frank.c -o frank.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fread.c -o fread.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c freadR.c -o freadR.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c froll.c -o froll.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c frollR.c -o frollR.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c frolladaptive.c -o frolladaptive.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fsort.c -o fsort.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fwrite.c -o fwrite.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fwriteR.c -o fwriteR.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gsumm.c -o gsumm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ijoin.c -o ijoin.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inrange.c -o inrange.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nafill.c -o nafill.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nqrecreateindices.c -o nqrecreateindices.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c openmp-utils.c -o openmp-utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c quickselect.c -o quickselect.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rbindlist.c -o rbindlist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c reorder.c -o reorder.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c shift.c -o shift.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c snprintf.c -o snprintf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c subset.c -o subset.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transpose.c -o transpose.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c types.c -o types.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c uniqlist.c -o uniqlist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vecseq.c -o vecseq.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wrappers.c -o wrappers.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o data.table.so assign.o between.o bmerge.o chmatch.o cj.o coalesce.o dogroups.o fastmean.o fcast.o fifelse.o fmelt.o forder.o frank.o fread.o freadR.o froll.o frollR.o frolladaptive.o fsort.o fwrite.o fwriteR.o gsumm.o ijoin.o init.o inrange.o nafill.o nqrecreateindices.o openmp-utils.o quickselect.o rbindlist.o reorder.o shift.o snprintf.o subset.o transpose.o types.o uniqlist.o utils.o vecseq.o wrappers.o -fopenmp -lz -L/usr/local/lib/R/lib -lR
+PKG_CFLAGS = -fopenmp
+PKG_LIBS = -fopenmp -lz
+if [ "data.table.so" != "data_table.so" ]; then mv data.table.so data_table.so; fi
+if [ "" != "Windows_NT" ] && [ `uname -s` = 'Darwin' ]; then install_name_tool -id data_table.so data_table.so; fi
+installing to /tmp/tmp/built/00LOCK-data.table/00new/data.table/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘data.table’ as ‘data.table_1.14.8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (data.table)
+* installing *source* package ‘gower’ ...
+** package ‘gower’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_register_native.c -o R_register_native.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gower.c -o gower.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gower.so R_register_native.o gower.o -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gower/00new/gower/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gower’ as ‘gower_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gower)
+* installing *source* package ‘hardhat’ ...
+** package ‘hardhat’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘hardhat’ as ‘hardhat_1.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (hardhat)
+* installing *source* package ‘timeDate’ ...
+** package ‘timeDate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘sample’ from package ‘base’ in package ‘timeDate’
+Creating a generic function for ‘getDataPart’ from package ‘methods’ in package ‘timeDate’
+Creating a generic function for ‘abline’ from package ‘graphics’ in package ‘timeDate’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘timeDate’ as ‘timeDate_4022.108_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (timeDate)
+* installing *source* package ‘iterators’ ...
+** package ‘iterators’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iterators’ as ‘iterators_1.0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iterators)
+* installing *source* package ‘VennDiagram’ ...
+** package ‘VennDiagram’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘VennDiagram’ as ‘VennDiagram_1.7.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (VennDiagram)
+* installing *source* package ‘pamr’ ...
+** package ‘pamr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c knnimpute.f -o knnimpute.o
+knnimpute.f:99:72:
+
+   99 |  20                  pos(k1+1) = pos(k1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 20 at (1)
+knnimpute.f:113:72:
+
+  113 |  35                     pos(k1+1) = pos(k1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 35 at (1)
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o pamr.so knnimpute.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-pamr/00new/pamr/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pamr’ as ‘pamr_1.56.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pamr)
+* installing *source* package ‘plyr’ ...
+** package ‘plyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c loop_apply.c -o loop_apply.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c split-numeric.cpp -o split-numeric.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o plyr.so RcppExports.o loop_apply.o split-numeric.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-plyr/00new/plyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘plyr’ as ‘plyr_1.8.8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (plyr)
+* installing *source* package ‘future’ ...
+** package ‘future’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘future’ as ‘future_1.32.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (future)
+* installing *source* package ‘diagram’ ...
+** package ‘diagram’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘diagram’ as ‘diagram_1.6.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (diagram)
+* installing *source* package ‘clock’ ...
+** package ‘clock’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c duration.cpp -o duration.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c enums.cpp -o enums.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c format.cpp -o format.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gregorian-year-day.cpp -o gregorian-year-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gregorian-year-month-day.cpp -o gregorian-year-month-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gregorian-year-month-weekday.cpp -o gregorian-year-month-weekday.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c iso-year-week-day.cpp -o iso-year-week-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c naive-time.cpp -o naive-time.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c quarterly-year-quarter-day.cpp -o quarterly-year-quarter-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rcrd.cpp -o rcrd.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sys-time.cpp -o sys-time.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c time-point.cpp -o time-point.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.cpp -o utils.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c weekday.cpp -o weekday.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zone.cpp -o zone.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zoned-time.cpp -o zoned-time.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o clock.so cpp11.o duration.o enums.o format.o gregorian-year-day.o gregorian-year-month-day.o gregorian-year-month-weekday.o iso-year-week-day.o naive-time.o quarterly-year-quarter-day.o rcrd.o sys-time.o time-point.o utils.o weekday.o zone.o zoned-time.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-clock/00new/clock/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘clock’ as ‘clock_0.6.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (clock)
+* installing *source* package ‘lubridate’ ...
+** package ‘lubridate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c datetime.c -o datetime.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c period.c -o period.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tparse.c -o tparse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o lubridate.so datetime.o init.o period.o tparse.o utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-lubridate/00new/lubridate/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lubridate’ as ‘lubridate_1.9.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lubridate)
+* installing *source* package ‘ModelMetrics’ ...
+** package ‘ModelMetrics’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c auc_.cpp -o auc_.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c confusionMatrix_.cpp -o confusionMatrix_.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c error.cpp -o error.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gini_.cpp -o gini_.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c logLoss_.cpp -o logLoss_.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ModelMetrics.so RcppExports.o auc_.o confusionMatrix_.o error.o gini_.o logLoss_.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ModelMetrics/00new/ModelMetrics/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ModelMetrics’ as ‘ModelMetrics_1.2.2.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ModelMetrics)
+* installing *source* package ‘pROC’ ...
+** package ‘pROC’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppVersion.cpp -o RcppVersion.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c delong.cpp -o delong.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c perfsAll.cpp -o perfsAll.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o pROC.so RcppExports.o RcppVersion.o delong.o perfsAll.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-pROC/00new/pROC/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pROC’ as ‘pROC_1.18.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pROC)
+* installing *source* package ‘reshape2’ ...
+** package ‘reshape2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c melt.cpp -o melt.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o reshape2.so RcppExports.o melt.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-reshape2/00new/reshape2/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘reshape2’ as ‘reshape2_1.4.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (reshape2)
+* installing *source* package ‘foreach’ ...
+** package ‘foreach’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘foreach’ as ‘foreach_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (foreach)
+* installing *source* package ‘future.apply’ ...
+** package ‘future.apply’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘future.apply’ as ‘future.apply_1.10.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (future.apply)
+* installing *source* package ‘lava’ ...
+** package ‘lava’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lava’ as ‘lava_1.7.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lava)
+* installing *source* package ‘prodlim’ ...
+** package ‘prodlim’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GMLE.c -o GMLE.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c IntIndex.c -o IntIndex.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c icens_prodlim.c -o icens_prodlim.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c icens_prodlim_ml.c -o icens_prodlim_ml.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c iindex.c -o iindex.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c life_table.c -o life_table.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c loo.c -o loo.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c neighborhood.c -o neighborhood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c predict.c -o predict.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c predict_individual_survival.c -o predict_individual_survival.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim.c -o prodlim.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_clustersurv.c -o prodlim_clustersurv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_comprisk.c -o prodlim_comprisk.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_multistates.c -o prodlim_multistates.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_surv.c -o prodlim_surv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sindex.c -o sindex.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summary_prodlim.c -o summary_prodlim.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o prodlim.so GMLE.o IntIndex.o icens_prodlim.o icens_prodlim_ml.o iindex.o init.o life_table.o loo.o neighborhood.o predict.o predict_individual_survival.o prodlim.o prodlim_clustersurv.o prodlim_comprisk.o prodlim_multistates.o prodlim_surv.o sindex.o summary_prodlim.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-prodlim/00new/prodlim/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘prodlim’ as ‘prodlim_2023.03.31_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (prodlim)
+* installing *source* package ‘ipred’ ...
+** package ‘ipred’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SdiffKM.c -o SdiffKM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ipred.so SdiffKM.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ipred/00new/ipred/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ipred’ as ‘ipred_0.9-14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ipred)
+* installing *source* package ‘recipes’ ...
+** package ‘recipes’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘recipes’ as ‘recipes_1.0.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (recipes)
+* installing *source* package ‘caret’ ...
+** package ‘caret’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caret.c -o caret.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o caret.so caret.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-caret/00new/caret/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘caret’ as ‘caret_6.0-94_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caret)
+* installing *source* package ‘MLSeq’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘MLSeq’ as ‘MLSeq_2.17.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (MLSeq)
+
+The downloaded source packages are in
+	‘/tmp/RtmpZ5ZhPx/downloaded_packages’
+
+real	8m54.027s
+user	8m25.759s
+sys	0m37.474s
