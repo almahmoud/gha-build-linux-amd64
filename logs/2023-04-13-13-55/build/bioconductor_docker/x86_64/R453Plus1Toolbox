@@ -1,0 +1,91 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''R453Plus1Toolbox'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'R453Plus1Toolbox'
+also installing the dependencies ‘R2HTML’, ‘TeachingDemos’
+
+trying URL 'https://cloud.r-project.org/src/contrib/R2HTML_2.3.3.tar.gz'
+Content type 'application/x-gzip' length 315809 bytes (308 KB)
+==================================================
+downloaded 308 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/TeachingDemos_2.12.tar.gz'
+Content type 'application/x-gzip' length 284717 bytes (278 KB)
+==================================================
+downloaded 278 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/R453Plus1Toolbox_1.49.0.tar.gz'
+Content type 'application/x-gzip' length 859107 bytes (838 KB)
+==================================================
+downloaded 838 KB
+
+* installing *source* package ‘R2HTML’ ...
+** package ‘R2HTML’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘R2HTML’ as ‘R2HTML_2.3.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (R2HTML)
+* installing *source* package ‘TeachingDemos’ ...
+** package ‘TeachingDemos’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TeachingDemos’ as ‘TeachingDemos_2.12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TeachingDemos)
+* installing *source* package ‘R453Plus1Toolbox’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c readSFF.c -o readSFF.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c writeSFF.c -o writeSFF.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o R453Plus1Toolbox.so readSFF.o writeSFF.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-R453Plus1Toolbox/00new/R453Plus1Toolbox/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘R453Plus1Toolbox’ as ‘R453Plus1Toolbox_1.49.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (R453Plus1Toolbox)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp4gBPNI/downloaded_packages’
+
+real	1m43.367s
+user	1m38.003s
+sys	0m4.586s
