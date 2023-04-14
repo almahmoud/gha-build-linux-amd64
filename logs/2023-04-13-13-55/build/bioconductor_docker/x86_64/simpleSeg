@@ -1,0 +1,266 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''simpleSeg'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'simpleSeg'
+also installing the dependencies ‘spatstat.data’, ‘spatstat.utils’, ‘deldir’, ‘polyclip’, ‘spatstat.geom’
+
+trying URL 'https://cloud.r-project.org/src/contrib/spatstat.data_3.0-1.tar.gz'
+Content type 'application/x-gzip' length 2936657 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/spatstat.utils_3.0-2.tar.gz'
+Content type 'application/x-gzip' length 76233 bytes (74 KB)
+==================================================
+downloaded 74 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/deldir_1.0-6.tar.gz'
+Content type 'application/x-gzip' length 120947 bytes (118 KB)
+==================================================
+downloaded 118 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/polyclip_1.10-4.tar.gz'
+Content type 'application/x-gzip' length 80061 bytes (78 KB)
+==================================================
+downloaded 78 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/spatstat.geom_3.1-0.tar.gz'
+Content type 'application/x-gzip' length 763547 bytes (745 KB)
+==================================================
+downloaded 745 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/simpleSeg_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 4712627 bytes (4.5 MB)
+==================================================
+downloaded 4.5 MB
+
+* installing *source* package ‘spatstat.utils’ ...
+** package ‘spatstat.utils’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c circxseg.c -o circxseg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distseg.c -o distseg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fastinterv.c -o fastinterv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inxyp.c -o inxyp.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matchindices.c -o matchindices.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matchpoints.c -o matchpoints.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ply.c -o ply.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c primefax.c -o primefax.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c revcum.c -o revcum.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o spatstat.utils.so circxseg.o distseg.o fastinterv.o init.o inxyp.o matchindices.o matchpoints.o ply.o primefax.o revcum.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-spatstat.utils/00new/spatstat.utils/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘spatstat.utils’ as ‘spatstat.utils_3.0-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (spatstat.utils)
+* installing *source* package ‘deldir’ ...
+** package ‘deldir’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c acchk.f -o acchk.o
+gfortran  -fpic  -g -O2  -c addpt.f -o addpt.o
+gfortran  -fpic  -g -O2  -c adjchk.f -o adjchk.o
+gfortran  -fpic  -g -O2  -c binsrt.f -o binsrt.o
+gfortran  -fpic  -g -O2  -c circen.f -o circen.o
+gfortran  -fpic  -g -O2  -c cross.f -o cross.o
+gfortran  -fpic  -g -O2  -c crossutil.f -o crossutil.o
+gfortran  -fpic  -g -O2  -c delet.f -o delet.o
+gfortran  -fpic  -g -O2  -c delet1.f -o delet1.o
+gfortran  -fpic  -g -O2  -c delout.f -o delout.o
+gfortran  -fpic  -g -O2  -c delseg.f -o delseg.o
+gfortran  -fpic  -g -O2  -c dirout.f -o dirout.o
+gfortran  -fpic  -g -O2  -c dirseg.f -o dirseg.o
+gfortran  -fpic  -g -O2  -c dldins.f -o dldins.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c initad.f -o initad.o
+gfortran  -fpic  -g -O2  -c insrt.f -o insrt.o
+gfortran  -fpic  -g -O2  -c insrt1.f -o insrt1.o
+gfortran  -fpic  -g -O2  -c intri.f -o intri.o
+gfortran  -fpic  -g -O2  -c locn.f -o locn.o
+gfortran  -fpic  -g -O2  -c master.f -o master.o
+gfortran  -fpic  -g -O2  -c mnnd.f -o mnnd.o
+gfortran  -fpic  -g -O2  -c pred.f -o pred.o
+gfortran  -fpic  -g -O2  -c qtest.f -o qtest.o
+gfortran  -fpic  -g -O2  -c qtest1.f -o qtest1.o
+gfortran  -fpic  -g -O2  -c stoke.f -o stoke.o
+gfortran  -fpic  -g -O2  -c succ.f -o succ.o
+gfortran  -fpic  -g -O2  -c swap.f -o swap.o
+gfortran  -fpic  -g -O2  -c testeq.f -o testeq.o
+gfortran  -fpic  -g -O2  -c triar.f -o triar.o
+gfortran  -fpic  -g -O2  -c trifnd.f -o trifnd.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o deldir.so acchk.o addpt.o adjchk.o binsrt.o circen.o cross.o crossutil.o delet.o delet1.o delout.o delseg.o dirout.o dirseg.o dldins.o init.o initad.o insrt.o insrt1.o intri.o locn.o master.o mnnd.o pred.o qtest.o qtest1.o stoke.o succ.o swap.o testeq.o triar.o trifnd.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-deldir/00new/deldir/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘deldir’ as ‘deldir_1.0-6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (deldir)
+* installing *source* package ‘polyclip’ ...
+** package ‘polyclip’ successfully unpacked and MD5 sums checked
+** using staged installation
+compiling under C++11
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++11 accepts -g... yes
+Using PKG_CONFIG: pkg-config
+Compiling against bundled copy of clipper library.
+     In the clipper library, signed 64-bit integers (cInt)
+     will be declared as 'signed long long'
+     In the clipper library, unsigned 64-bit integers (cUInt)
+     will be declared as 'unsigned long long'
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPOLYCLIP_LONG64="signed long long" -DPOLYCLIP_ULONG64="unsigned long long"  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -DPOLYCLIP_LONG64="signed long long" -DPOLYCLIP_ULONG64="unsigned long long"  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c interface.cpp -o interface.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -DPOLYCLIP_LONG64="signed long long" -DPOLYCLIP_ULONG64="unsigned long long"  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clipper.cpp -o clipper.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o polyclip.so init.o interface.o clipper.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-polyclip/00new/polyclip/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘polyclip’ as ‘polyclip_1.10-4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (polyclip)
+* installing *source* package ‘spatstat.data’ ...
+** package ‘spatstat.data’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘spatstat.data’ as ‘spatstat.data_3.0-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (spatstat.data)
+* installing *source* package ‘spatstat.geom’ ...
+** package ‘spatstat.geom’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c areadiff.c -o areadiff.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c auctionbf.c -o auctionbf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bdrymask.c -o bdrymask.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c close3pair.c -o close3pair.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c closepair.c -o closepair.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c connect.c -o connect.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dinfty.c -o dinfty.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c discarea.c -o discarea.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c discs.c -o discs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dist2dpath.c -o dist2dpath.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distan3.c -o distan3.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distances.c -o distances.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c distmapbin.c -o distmapbin.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dwpure.c -o dwpure.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c exactPdist.c -o exactPdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c exactdist.c -o exactdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fardist.c -o fardist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hasclose.c -o hasclose.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hotrod.c -o hotrod.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c knndistance.c -o knndistance.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c knngrid.c -o knngrid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c loccum.c -o loccum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c metricPdist.c -o metricPdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minnnd.c -o minnnd.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nearestpix.c -o nearestpix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nn3Ddist.c -o nn3Ddist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nnMDdist.c -o nnMDdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nndistance.c -o nndistance.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nngrid.c -o nngrid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c periodic.c -o periodic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c poly2im.c -o poly2im.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c quasirandom.c -o quasirandom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c raster.c -o raster.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rasterfilter.c -o rasterfilter.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scan.c -o scan.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c seg2pix.c -o seg2pix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tabnum.c -o tabnum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trigraf.c -o trigraf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c uniquemap.c -o uniquemap.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c veegraf.c -o veegraf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c whist.c -o whist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c xyseg.c -o xyseg.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o spatstat.geom.so areadiff.o auctionbf.o bdrymask.o close3pair.o closepair.o connect.o dinfty.o discarea.o discs.o dist2dpath.o distan3.o distances.o distmapbin.o dwpure.o exactPdist.o exactdist.o fardist.o hasclose.o hotrod.o init.o knndistance.o knngrid.o loccum.o metricPdist.o minnnd.o nearestpix.o nn3Ddist.o nnMDdist.o nndistance.o nngrid.o periodic.o poly2im.o quasirandom.o raster.o rasterfilter.o scan.o seg2pix.o tabnum.o trigraf.o uniquemap.o veegraf.o whist.o xyseg.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-spatstat.geom/00new/spatstat.geom/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘spatstat.geom’ as ‘spatstat.geom_3.1-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (spatstat.geom)
+* installing *source* package ‘simpleSeg’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘simpleSeg’ as ‘simpleSeg_1.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (simpleSeg)
+
+The downloaded source packages are in
+	‘/tmp/RtmpnRe7Go/downloaded_packages’
+
+real	1m44.384s
+user	1m35.704s
+sys	0m7.214s
