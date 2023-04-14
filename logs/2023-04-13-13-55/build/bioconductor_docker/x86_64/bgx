@@ -1,0 +1,78 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''bgx'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'bgx'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/bgx_1.65.1.tar.gz'
+Content type 'application/x-gzip' length 1233283 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+* installing *source* package ‘bgx’ ...
+** using staged installation
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for C compiler vendor... gnu
+checking whether C compiler accepts -ffast-math... yes
+checking whether C compiler accepts -O3... yes
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for gcc architecture flag... 
+checking for x86 cpuid 0 output... 15:756e6547:6c65746e:49656e69
+checking for x86 cpuid 1 output... 50657:1020800:feda3203:1f8bfbff
+checking whether C compiler accepts -march=pentium2... no
+checking whether C compiler accepts -mcpu=pentium2... no
+checking whether C compiler accepts -mpentium2... no
+checking whether C compiler accepts -march=pentiumpro... no
+checking whether C compiler accepts -mcpu=pentiumpro... no
+checking whether C compiler accepts -mpentiumpro... no
+checking for gcc architecture flag... unknown
+checking for gcc option to accept ISO C99... none needed
+checking for main in -lm... yes
+Untarring Boost header files...
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I ../boostIncl -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -ffast-math -O3 -DUSING_R -c bgx.cc -o bgx.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I ../boostIncl -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -ffast-math -O3 -DUSING_R -c bgx_frontend.cc -o bgx_frontend.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I ../boostIncl -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -ffast-math -O3 -c qnorm.c -o qnorm.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I ../boostIncl -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -ffast-math -O3 -DUSING_R -c rundir.cc -o rundir.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I ../boostIncl -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -ffast-math -O3 -DUSING_R -c sokal.cc -o sokal.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o bgx.so bgx.o bgx_frontend.o qnorm.o rundir.o sokal.o -lm -L/usr/local/lib/R/lib -lR
+rm -r ../boostIncl
+installing to /tmp/tmp/built/00LOCK-bgx/00new/bgx/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bgx’ as ‘bgx_1.65.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bgx)
+
+The downloaded source packages are in
+	‘/tmp/RtmpOUk9c5/downloaded_packages’
+
+real	0m29.968s
+user	0m27.058s
+sys	0m2.166s
