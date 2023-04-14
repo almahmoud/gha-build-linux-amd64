@@ -1,0 +1,46 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''multiscan'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'multiscan'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/multiscan_1.59.0.tar.gz'
+Content type 'application/x-gzip' length 542491 bytes (529 KB)
+==================================================
+downloaded 529 KB
+
+* installing *source* package ‘multiscan’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c multiscan.c -o multiscan.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o multiscan.so multiscan.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-multiscan/00new/multiscan/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+*** Loaded multiscan Version 1.59.0 *** 
+Type 'vignette("multiscan")' to view the package vignette.
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+*** Loaded multiscan Version 1.59.0 *** 
+Type 'vignette("multiscan")' to view the package vignette.
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘multiscan’ as ‘multiscan_1.59.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (multiscan)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDNmcIZ/downloaded_packages’
+
+real	0m5.886s
+user	0m4.804s
+sys	0m0.705s
