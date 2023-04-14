@@ -1,0 +1,853 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''RCy3'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'RCy3'
+also installing the dependencies ‘bitops’, ‘backports’, ‘repr’, ‘pbdZMQ’, ‘gtools’, ‘caTools’, ‘RJSONIO’, ‘XML’, ‘uuid’, ‘uchardet’, ‘RCurl’, ‘base64url’, ‘IRkernel’, ‘IRdisplay’, ‘RColorBrewer’, ‘gplots’
+
+trying URL 'https://cloud.r-project.org/src/contrib/bitops_1.0-7.tar.gz'
+Content type 'application/x-gzip' length 10809 bytes (10 KB)
+==================================================
+downloaded 10 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/backports_1.4.1.tar.gz'
+Content type 'application/x-gzip' length 26201 bytes (25 KB)
+==================================================
+downloaded 25 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/repr_1.1.6.tar.gz'
+Content type 'application/x-gzip' length 32134 bytes (31 KB)
+==================================================
+downloaded 31 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/pbdZMQ_0.3-9.tar.gz'
+Content type 'application/x-gzip' length 1213785 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'application/x-gzip' length 240661 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/caTools_1.18.2.tar.gz'
+Content type 'application/x-gzip' length 64960 bytes (63 KB)
+==================================================
+downloaded 63 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RJSONIO_1.3-1.8.tar.gz'
+Content type 'application/x-gzip' length 1170048 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/XML_3.99-0.14.tar.gz'
+Content type 'application/x-gzip' length 970710 bytes (947 KB)
+==================================================
+downloaded 947 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/uuid_1.1-0.tar.gz'
+Content type 'application/x-gzip' length 77959 bytes (76 KB)
+==================================================
+downloaded 76 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/uchardet_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 278291 bytes (271 KB)
+==================================================
+downloaded 271 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RCurl_1.98-1.12.tar.gz'
+Content type 'application/x-gzip' length 731481 bytes (714 KB)
+==================================================
+downloaded 714 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/base64url_1.4.tar.gz'
+Content type 'application/x-gzip' length 15868 bytes (15 KB)
+==================================================
+downloaded 15 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/IRkernel_1.3.2.tar.gz'
+Content type 'application/x-gzip' length 45172 bytes (44 KB)
+==================================================
+downloaded 44 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/IRdisplay_1.1.tar.gz'
+Content type 'application/x-gzip' length 8286 bytes
+==================================================
+downloaded 8286 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/RColorBrewer_1.1-3.tar.gz'
+Content type 'application/x-gzip' length 11638 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gplots_3.1.3.tar.gz'
+Content type 'application/x-gzip' length 520683 bytes (508 KB)
+==================================================
+downloaded 508 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/RCy3_2.19.2.tar.gz'
+Content type 'application/x-gzip' length 6556941 bytes (6.3 MB)
+==================================================
+downloaded 6.3 MB
+
+* installing *source* package ‘bitops’ ...
+** package ‘bitops’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bit-ops.c -o bit-ops.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cksum.c -o cksum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o bitops.so bit-ops.o cksum.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-bitops/00new/bitops/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bitops’ as ‘bitops_1.0-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bitops)
+* installing *source* package ‘backports’ ...
+** package ‘backports’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dotsElt.c -o dotsElt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dotsLength.c -o dotsLength.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dotsNames.c -o dotsNames.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o backports.so dotsElt.o dotsLength.o dotsNames.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-backports/00new/backports/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘backports’ as ‘backports_1.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (backports)
+* installing *source* package ‘repr’ ...
+** package ‘repr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘repr’ as ‘repr_1.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (repr)
+* installing *source* package ‘pbdZMQ’ ...
+** package ‘pbdZMQ’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.25... yes
+checking for zmq... yes
+checking for zmq_4_1_6... checking for zmq... yes
+ 
+****************** Results of pbdZMQ package configure *****************
+ 
+>> GET_PKG_CONFIG = yes
+>> GET_SYSTEM_ZMQ = yes
+>> GET_SYSTEM_ZMQ_430 = yes
+>> PKG_CONFIG = /usr/bin/pkg-config
+>> SYSTEM_ZMQ_INCLUDEDIR = /usr/include
+>> SYSTEM_ZMQ_LIBDIR = /usr/lib/x86_64-linux-gnu
+>> ENABLE_INTERNAL_ZMQ = no
+>> INTERNAL_ZMQ_INCLUDEDIR = ./zmqsrc/include
+>> INTERNAL_ZMQ_LIBDIR = ./
+>> EXTERNAL_ZMQ_INCLUDE = 
+>> EXTERNAL_ZMQ_LDFLAGS = 
+>> ZMQ_INCLUDE = -I/usr/include
+>> ZMQ_LDFLAGS = -L/usr/lib/x86_64-linux-gnu -lzmq
+>> EXT_LIBS = 
+>> ZMQ_POLLER = select
+ 
+************************************************************************
+ 
+configure: creating ./config.status
+config.status: creating src/Makevars
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/build_zmq
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/build_zmq
+config.status: creating R/zzz.r
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_context.c -o R_zmq_context.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_socket.c -o R_zmq_socket.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_sendrecv.c -o R_zmq_sendrecv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_utility.c -o R_zmq_utility.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_message.c -o R_zmq_message.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_transfer.c -o R_zmq_transfer.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c shellexec_wcc.c -o shellexec_wcc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_zmq_poll.c -o R_zmq_poll.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include  -I/usr/local/include   -I/usr/include -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zzz.c -o zzz.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o pbdZMQ.so R_zmq_context.o R_zmq_socket.o R_zmq_sendrecv.o R_zmq_utility.o R_zmq_message.o R_zmq_transfer.o shellexec_wcc.o R_zmq_poll.o zzz.o -L/usr/lib/x86_64-linux-gnu -lzmq -L/usr/local/lib/R/lib -lR
+installing via 'install.libs.R' to /tmp/tmp/built/00LOCK-pbdZMQ/00new/pbdZMQ
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pbdZMQ’ as ‘pbdZMQ_0.3-9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pbdZMQ)
+* installing *source* package ‘gtools’ ...
+** package ‘gtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c roman2int.c -o roman2int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c setTCPNoDelay.c -o setTCPNoDelay.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gtools.so init.o roman2int.o setTCPNoDelay.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gtools/00new/gtools/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *source* package ‘RJSONIO’ ...
+** package ‘RJSONIO’ successfully unpacked and MD5 sums checked
+** using staged installation
+Trying to find libjson.h header file
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+USE_LOCAL = ""
+Minor Version: 6
+Using local libjson code. Copying files from src/libjson/Source
+/tmp/RtmpIzAs14/R.INSTALL12f629d9ceb9/RJSONIO
+JSONAllocator.cpp
+JSONChildren.cpp
+JSONDebug.cpp
+JSONIterators.cpp
+JSONMemory.cpp
+JSONNode.cpp
+JSONNode_Mutex.cpp
+JSONPreparse.cpp
+JSONStream.cpp
+JSONValidator.cpp
+JSONWorker.cpp
+JSONWriter.cpp
+internalJSONNode.cpp
+libjson.cpp
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating tools/cleanup
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ConvertUTF.c -o ConvertUTF.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONAllocator.cpp -o JSONAllocator.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONChildren.cpp -o JSONChildren.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONDebug.cpp -o JSONDebug.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONIterators.cpp -o JSONIterators.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONMemory.cpp -o JSONMemory.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONNode.cpp -o JSONNode.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONNode_Mutex.cpp -o JSONNode_Mutex.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONPreparse.cpp -o JSONPreparse.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONStream.cpp -o JSONStream.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONValidator.cpp -o JSONValidator.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONWorker.cpp -o JSONWorker.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSONWriter.cpp -o JSONWriter.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c JSON_parser.c -o JSON_parser.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RJSON.c -o RJSON.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c internalJSONNode.cpp -o internalJSONNode.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libjson.cpp -o libjson.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rlibjson.c -o rlibjson.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ilibjson -Ilibjson/Source -DNEW_JSON_NEW_STREAM -DNDEBUG=1  -DJSON_VALIDATE -DJSON_STREAM=1 -DJSON_READ_PRIORITY=1 -DJSON_LIBRARY=1 -DJSON_ISO_STRICT  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rparser.c -o rparser.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o RJSONIO.so ConvertUTF.o JSONAllocator.o JSONChildren.o JSONDebug.o JSONIterators.o JSONMemory.o JSONNode.o JSONNode_Mutex.o JSONPreparse.o JSONStream.o JSONValidator.o JSONWorker.o JSONWriter.o JSON_parser.o RJSON.o init.o internalJSONNode.o libjson.o rlibjson.o rparser.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-RJSONIO/00new/RJSONIO/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RJSONIO’ as ‘RJSONIO_1.3-1.8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RJSONIO)
+* installing *source* package ‘XML’ ...
+** package ‘XML’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... gcc -E
+checking for sed... /usr/bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking for xml2-config... /usr/bin/xml2-config
+USE_XML2 = yes
+SED_EXTENDED_ARG: -E
+Minor 9, Patch 13 for 2.9.13
+Located parser file -I/usr/include/libxml2/parser.h
+Checking for 1.8:  -I/usr/include/libxml2
+Using libxml2.*
+checking for gzopen in -lz... yes
+checking for xmlParseFile in -lxml2... yes
+checking for xmlHashSize in -lxml2... yes
+Using built-in xmlHashSize
+Checking DTD parsing (presence of externalSubset)...
+checking for xmlHashSize in -lxml2... (cached) yes
+Found xmlHashSize
+checking for xmlOutputBufferCreateBuffer in -lxml2... yes
+have xmlOutputBufferCreateBuffer()
+checking for xmlDocDumpFormatMemoryEnc in -lxml2... yes
+checking for libxml/xmlversion.h... yes
+Expat:  FALSE
+Checking for return type of xmlHashScan element routine.
+No return value for xmlHashScan
+xmlNs has a context field
+Checking for cetype_t enumeration
+Using recent version of R with cetype_t enumeration type for encoding
+checking for xmlsec1-config... no
+nodegc default 
+xml-debug default 
+Version has XML_WITH_ZLIB
+Version has xmlHasFeature()
+
+****************************************
+Configuration information:
+
+Libxml settings
+
+libxml include directory: -I/usr/include/libxml2
+libxml library directory: -lxml2 -lz  -lxml2
+libxml 2:                 -DLIBXML2=1
+
+Compilation flags:         -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1 
+Link flags:               -lxml2 -lz  -lxml2
+
+****************************************
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating R/supports.R
+config.status: creating inst/scripts/RSXML.csh
+config.status: creating inst/scripts/RSXML.bsh
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c DocParse.c -o DocParse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c EventParse.c -o EventParse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ExpatParse.c -o ExpatParse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c HTMLParse.c -o HTMLParse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c NodeGC.c -o NodeGC.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RSDTD.c -o RSDTD.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RUtils.c -o RUtils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcatalog.c -o Rcatalog.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Utils.c -o Utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c XMLEventParse.c -o XMLEventParse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c XMLHashTree.c -o XMLHashTree.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c XMLTree.c -o XMLTree.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fixNS.c -o fixNS.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxmlFeatures.c -o libxmlFeatures.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c schema.c -o schema.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c xmlsecurity.c -o xmlsecurity.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DLIBXML -I/usr/include/libxml2 -DUSE_EXTERNAL_SUBSET=1 -DROOT_HAS_DTD_NODE=1 -DDUMP_WITH_ENCODING=1 -DUSE_XML_VERSION_H=1 -DXML_ELEMENT_ETYPE=1 -DXML_ATTRIBUTE_ATYPE=1 -DNO_XML_HASH_SCANNER_RETURN=1 -DLIBXML_NAMESPACE_HAS_CONTEXT=1 -DHAVE_R_CETYPE_T=1 -DHAVE_XML_WITH_ZLIB=1 -DHAVE_XML_HAS_FEATURE=1 -DUSE_R=1 -D_R_=1  -DHAVE_VALIDITY=1 -DXML_REF_COUNT_NODES=1  -I. -DLIBXML2=1  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c xpath.c -o xpath.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o XML.so DocParse.o EventParse.o ExpatParse.o HTMLParse.o NodeGC.o RSDTD.o RUtils.o Rcatalog.o Utils.o XMLEventParse.o XMLHashTree.o XMLTree.o fixNS.o libxmlFeatures.o schema.o xmlsecurity.o xpath.o -lxml2 -lz -lxml2 -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-XML/00new/XML/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘source’ from package ‘base’ in package ‘XML’
+in method for ‘xmlAttrsToDataFrame’ with signature ‘"AsIs"’: no definition for class “AsIs”
+in method for ‘readKeyValueDB’ with signature ‘"AsIs"’: no definition for class “AsIs”
+in method for ‘readSolrDoc’ with signature ‘"AsIs"’: no definition for class “AsIs”
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘XML’ as ‘XML_3.99-0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (XML)
+* installing *source* package ‘uuid’ ...
+** package ‘uuid’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grp.h... yes
+checking for langinfo.h... yes
+checking for locale.h... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking for sys/file.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/socket.h... yes
+checking for sys/sockio.h... no
+checking for sys/syscall.h... yes
+checking for sys/sendfile.h... yes
+checking for sys/time.h... yes
+checking for sys/un.h... yes
+checking for unistd.h... (cached) yes
+checking for net/if.h... yes
+checking for net/if_dl.h... no
+checking for dirfd... yes
+checking for err... yes
+checking for errx... yes
+checking for getexecname... no
+checking for getrandom... yes
+checking for jrand48... yes
+checking for llseek... no
+checking for lchown... yes
+checking for mempcpy... yes
+checking for mkostemp... yes
+checking for nanosleep... yes
+checking for sendfile... yes
+checking for srandom... yes
+checking for strnchr... no
+checking for strndup... yes
+checking for strnlen... yes
+checking for usleep... yes
+checking for warn... yes
+checking for warnx... yes
+checking for flock... yes
+checking for struct sockaddr.sa_len... no
+checking for dlfcn.h... yes
+checking for library containing dlsym... none required
+checking for thread local storage (TLS) support... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+config.status: creating src/config.h
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R.c -o R.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Ruuid.c -o Ruuid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clear.c -o clear.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c compare.c -o compare.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c copy.c -o copy.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gen_uuid.c -o gen_uuid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c isnull.c -o isnull.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c md5.c -o md5.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pack.c -o pack.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parse.c -o parse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rand.c -o rand.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c randutils.c -o randutils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sha1.c -o sha1.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unpack.c -o unpack.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -include config.h -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c unparse.c -o unparse.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o uuid.so R.o Ruuid.o clear.o compare.o copy.o gen_uuid.o isnull.o md5.o pack.o parse.o rand.o randutils.o sha1.o unpack.o unparse.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-uuid/00new/uuid/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘uuid’ as ‘uuid_1.1-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (uuid)
+* installing *source* package ‘uchardet’ ...
+** package ‘uchardet’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I"./uchardet/src"  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c detect.cpp -o detect.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I"./uchardet/src"  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/CharDistribution.cpp -o uchardet/src/CharDistribution.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/JpCntx.cpp -o uchardet/src/JpCntx.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsBig5Prober.cpp -o uchardet/src/nsBig5Prober.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsCharSetProber.cpp -o uchardet/src/nsCharSetProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsEUCJPProber.cpp -o uchardet/src/nsEUCJPProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsEUCKRProber.cpp -o uchardet/src/nsEUCKRProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsEUCTWProber.cpp -o uchardet/src/nsEUCTWProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsEscCharsetProber.cpp -o uchardet/src/nsEscCharsetProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsEscSM.cpp -o uchardet/src/nsEscSM.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsGB2312Prober.cpp -o uchardet/src/nsGB2312Prober.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsHebrewProber.cpp -o uchardet/src/nsHebrewProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsLatin1Prober.cpp -o uchardet/src/nsLatin1Prober.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsMBCSGroupProber.cpp -o uchardet/src/nsMBCSGroupProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsMBCSSM.cpp -o uchardet/src/nsMBCSSM.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsSBCSGroupProber.cpp -o uchardet/src/nsSBCSGroupProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsSBCharSetProber.cpp -o uchardet/src/nsSBCharSetProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsSJISProber.cpp -o uchardet/src/nsSJISProber.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsUTF8Prober.cpp -o uchardet/src/nsUTF8Prober.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/nsUniversalDetector.cpp -o uchardet/src/nsUniversalDetector.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/uchardet.cpp -o uchardet/src/uchardet.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangArabicModel.cpp -o uchardet/src/LangModels/LangArabicModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangBulgarianModel.cpp -o uchardet/src/LangModels/LangBulgarianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangCroatianModel.cpp -o uchardet/src/LangModels/LangCroatianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangCzechModel.cpp -o uchardet/src/LangModels/LangCzechModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangDanishModel.cpp -o uchardet/src/LangModels/LangDanishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangEsperantoModel.cpp -o uchardet/src/LangModels/LangEsperantoModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangEstonianModel.cpp -o uchardet/src/LangModels/LangEstonianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangFinnishModel.cpp -o uchardet/src/LangModels/LangFinnishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangFrenchModel.cpp -o uchardet/src/LangModels/LangFrenchModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangGermanModel.cpp -o uchardet/src/LangModels/LangGermanModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangGreekModel.cpp -o uchardet/src/LangModels/LangGreekModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangHebrewModel.cpp -o uchardet/src/LangModels/LangHebrewModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangHungarianModel.cpp -o uchardet/src/LangModels/LangHungarianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangIrishModel.cpp -o uchardet/src/LangModels/LangIrishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangItalianModel.cpp -o uchardet/src/LangModels/LangItalianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangLatvianModel.cpp -o uchardet/src/LangModels/LangLatvianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangLithuanianModel.cpp -o uchardet/src/LangModels/LangLithuanianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangMalteseModel.cpp -o uchardet/src/LangModels/LangMalteseModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangPolishModel.cpp -o uchardet/src/LangModels/LangPolishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangPortugueseModel.cpp -o uchardet/src/LangModels/LangPortugueseModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangRomanianModel.cpp -o uchardet/src/LangModels/LangRomanianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangRussianModel.cpp -o uchardet/src/LangModels/LangRussianModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangSlovakModel.cpp -o uchardet/src/LangModels/LangSlovakModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangSloveneModel.cpp -o uchardet/src/LangModels/LangSloveneModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangSpanishModel.cpp -o uchardet/src/LangModels/LangSpanishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangSwedishModel.cpp -o uchardet/src/LangModels/LangSwedishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangThaiModel.cpp -o uchardet/src/LangModels/LangThaiModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangTurkishModel.cpp -o uchardet/src/LangModels/LangTurkishModel.o
+g++ -std=gnu++11 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I"./uchardet/src" -c uchardet/src/LangModels/LangVietnameseModel.cpp -o uchardet/src/LangModels/LangVietnameseModel.o
+ar crs uchardet/src/libuchardet.a uchardet/src/CharDistribution.o uchardet/src/JpCntx.o uchardet/src/nsBig5Prober.o uchardet/src/nsCharSetProber.o uchardet/src/nsEUCJPProber.o uchardet/src/nsEUCKRProber.o uchardet/src/nsEUCTWProber.o uchardet/src/nsEscCharsetProber.o uchardet/src/nsEscSM.o uchardet/src/nsGB2312Prober.o uchardet/src/nsHebrewProber.o uchardet/src/nsLatin1Prober.o uchardet/src/nsMBCSGroupProber.o uchardet/src/nsMBCSSM.o uchardet/src/nsSBCSGroupProber.o uchardet/src/nsSBCharSetProber.o uchardet/src/nsSJISProber.o uchardet/src/nsUTF8Prober.o uchardet/src/nsUniversalDetector.o uchardet/src/uchardet.o uchardet/src/LangModels/LangArabicModel.o uchardet/src/LangModels/LangBulgarianModel.o uchardet/src/LangModels/LangCroatianModel.o uchardet/src/LangModels/LangCzechModel.o uchardet/src/LangModels/LangDanishModel.o uchardet/src/LangModels/LangEsperantoModel.o uchardet/src/LangModels/LangEstonianModel.o uchardet/src/LangModels/LangFinnishModel.o uchardet/src/LangModels/LangFrenchModel.o uchardet/src/LangModels/LangGermanModel.o uchardet/src/LangModels/LangGreekModel.o uchardet/src/LangModels/LangHebrewModel.o uchardet/src/LangModels/LangHungarianModel.o uchardet/src/LangModels/LangIrishModel.o uchardet/src/LangModels/LangItalianModel.o uchardet/src/LangModels/LangLatvianModel.o uchardet/src/LangModels/LangLithuanianModel.o uchardet/src/LangModels/LangMalteseModel.o uchardet/src/LangModels/LangPolishModel.o uchardet/src/LangModels/LangPortugueseModel.o uchardet/src/LangModels/LangRomanianModel.o uchardet/src/LangModels/LangRussianModel.o uchardet/src/LangModels/LangSlovakModel.o uchardet/src/LangModels/LangSloveneModel.o uchardet/src/LangModels/LangSpanishModel.o uchardet/src/LangModels/LangSwedishModel.o uchardet/src/LangModels/LangThaiModel.o uchardet/src/LangModels/LangTurkishModel.o uchardet/src/LangModels/LangVietnameseModel.o
+ranlib uchardet/src/libuchardet.a
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o uchardet.so detect.o init.o ./uchardet/src/libuchardet.a -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-uchardet/00new/uchardet/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘uchardet’ as ‘uchardet_1.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (uchardet)
+* installing *source* package ‘RColorBrewer’ ...
+** package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RColorBrewer’ as ‘RColorBrewer_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RColorBrewer)
+* installing *source* package ‘caTools’ ...
+** package ‘caTools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Gif2R.cpp -o Gif2R.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GifTools.cpp -o GifTools.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caTools_init.c -o caTools_init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c runfunc.c -o runfunc.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o caTools.so Gif2R.o GifTools.o caTools_init.o runfunc.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-caTools/00new/caTools/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘caTools’ as ‘caTools_1.18.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caTools)
+* installing *source* package ‘RCurl’ ...
+** package ‘RCurl’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for curl-config... /usr/bin/curl-config
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... gcc -E
+Version has a libidn field
+Version has CURLOPT_URL
+Version has CURLINFO_EFFECTIVE_URL
+Version has CURLINFO_RESPONSE_CODE
+Version has CURLINFO_TOTAL_TIME
+Version has CURLINFO_NAMELOOKUP_TIME
+Version has CURLINFO_CONNECT_TIME
+Version has CURLINFO_PRETRANSFER_TIME
+Version has CURLINFO_SIZE_UPLOAD
+Version has CURLINFO_SIZE_DOWNLOAD
+Version has CURLINFO_SPEED_DOWNLOAD
+Version has CURLINFO_SPEED_UPLOAD
+Version has CURLINFO_HEADER_SIZE
+Version has CURLINFO_REQUEST_SIZE
+Version has CURLINFO_SSL_VERIFYRESULT
+Version has CURLINFO_FILETIME
+Version has CURLINFO_CONTENT_LENGTH_DOWNLOAD
+Version has CURLINFO_CONTENT_LENGTH_UPLOAD
+Version has CURLINFO_STARTTRANSFER_TIME
+Version has CURLINFO_CONTENT_TYPE
+Version has CURLINFO_REDIRECT_TIME
+Version has CURLINFO_REDIRECT_COUNT
+Version has CURLINFO_PRIVATE
+Version has CURLINFO_HTTP_CONNECTCODE
+Version has CURLINFO_HTTPAUTH_AVAIL
+Version has CURLINFO_PROXYAUTH_AVAIL
+Version has CURLINFO_OS_ERRNO
+Version has CURLINFO_NUM_CONNECTS
+Version has CURLINFO_SSL_ENGINES
+Version has CURLINFO_COOKIELIST
+Version has CURLINFO_LASTSOCKET
+Version has CURLINFO_FTP_ENTRY_PATH
+Version has CURLINFO_REDIRECT_URL
+Version has CURLINFO_PRIMARY_IP
+Version has CURLINFO_APPCONNECT_TIME
+Version has CURLINFO_CERTINFO
+Version has CURLINFO_CONDITION_UNMET
+Version has CURLOPT_WRITEDATA
+Version has CURLOPT_KEYPASSWD
+Version has CURLOPT_DIRLISTONLY
+Version has CURLOPT_APPEND
+Version has CURLOPT_KRBLEVEL
+Version has CURLOPT_USE_SSL
+Version has CURLOPT_TIMEOUT_MS
+Version has CURLOPT_CONNECTTIMEOUT_MS
+Version has CURLOPT_HTTP_TRANSFER_DECODING
+Version has CURLOPT_HTTP_CONTENT_DECODING
+Version has CURLOPT_NEW_FILE_PERMS
+Version has CURLOPT_NEW_DIRECTORY_PERMS
+Version has CURLOPT_POSTREDIR
+Version has CURLOPT_OPENSOCKETFUNCTION
+Version has CURLOPT_OPENSOCKETDATA
+Version has CURLOPT_COPYPOSTFIELDS
+Version has CURLOPT_PROXY_TRANSFER_MODE
+Version has CURLOPT_SEEKFUNCTION
+Version has CURLOPT_SEEKDATA
+Version has CURLOPT_CRLFILE
+Version has CURLOPT_ISSUERCERT
+Version has CURLOPT_ADDRESS_SCOPE
+Version has CURLOPT_CERTINFO
+Version has CURLOPT_USERNAME
+Version has CURLOPT_PASSWORD
+Version has CURLOPT_PROXYUSERNAME
+Version has CURLOPT_PROXYPASSWORD
+Version has CURLOPT_SSH_HOST_PUBLIC_KEY_MD5
+Version has CURLOPT_NOPROXY
+Version has CURLOPT_TFTP_BLKSIZE
+Version has CURLOPT_SOCKS5_GSSAPI_SERVICE
+Version has CURLOPT_SOCKS5_GSSAPI_NEC
+Version has CURLOPT_PROTOCOLS
+Version has CURLOPT_REDIR_PROTOCOLS
+Version has CURLOPT_SSH_AUTH_TYPES
+Version has CURLOPT_SSH_PUBLIC_KEYFILE
+Version has CURLOPT_SSH_PRIVATE_KEYFILE
+Version has CURLOPT_FTP_SSL_CCC
+Version has CURLOPT_COOKIELIST
+Version has CURLOPT_IGNORE_CONTENT_LENGTH
+Version has CURLOPT_FTP_SKIP_PASV_IP
+Version has CURLOPT_FTP_FILEMETHOD
+Version has CURLOPT_LOCALPORT
+Version has CURLOPT_LOCALPORTRANGE
+Version has CURLOPT_CONNECT_ONLY
+Version has CURLOPT_CONV_FROM_NETWORK_FUNCTION
+Version has CURLOPT_CONV_TO_NETWORK_FUNCTION
+Version has CURLOPT_CONV_FROM_UTF8_FUNCTION
+Version has CURLOPT_MAX_SEND_SPEED_LARGE
+Version has CURLOPT_MAX_RECV_SPEED_LARGE
+Version has CURLOPT_FTP_ALTERNATIVE_TO_USER
+Version has CURLOPT_SOCKOPTFUNCTION
+Version has CURLOPT_SOCKOPTDATA
+Version has CURLOPT_SSL_SESSIONID_CACHE
+libcurl version: libcurl 7.81.0
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c base64.c -o base64.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c curl.c -o curl.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c curlInit.c -o curlInit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c curl_base64.c -o curl_base64.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c enums.c -o enums.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c json.c -o json.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c memoryManagement.c -o memoryManagement.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c myUTF8.c -o myUTF8.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o RCurl.so base64.o curl.o curlInit.o curl_base64.o enums.o json.o memoryManagement.o myUTF8.o -lcurl -lxml2 -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-RCurl/00new/RCurl/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RCurl’ as ‘RCurl_1.98-1.12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RCurl)
+* installing *source* package ‘base64url’ ...
+** package ‘base64url’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c base32.c -o base32.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c base64.c -o base64.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o base64url.so base32.o base64.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-base64url/00new/base64url/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘base64url’ as ‘base64url_1.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (base64url)
+* installing *source* package ‘IRdisplay’ ...
+** package ‘IRdisplay’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘IRdisplay’ as ‘IRdisplay_1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (IRdisplay)
+* installing *source* package ‘IRkernel’ ...
+** package ‘IRkernel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘IRkernel’ as ‘IRkernel_1.3.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (IRkernel)
+* installing *source* package ‘gplots’ ...
+** package ‘gplots’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gplots’ as ‘gplots_3.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gplots)
+* installing *source* package ‘RCy3’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RCy3’ as ‘RCy3_2.19.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RCy3)
+
+The downloaded source packages are in
+	‘/tmp/RtmpYmRWtH/downloaded_packages’
+
+real	1m34.197s
+user	1m24.926s
+sys	0m14.637s
