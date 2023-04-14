@@ -1,0 +1,553 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''sechm'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'sechm'
+also installing the dependencies ‘farver’, ‘labeling’, ‘munsell’, ‘viridisLite’, ‘TSP’, ‘qap’, ‘gclus’, ‘ca’, ‘registry’, ‘V8’, ‘scales’, ‘Rtsne’, ‘seriation’, ‘randomcoloR’
+
+trying URL 'https://cloud.r-project.org/src/contrib/farver_2.1.1.tar.gz'
+Content type 'application/x-gzip' length 1274363 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/labeling_0.4.2.tar.gz'
+Content type 'application/x-gzip' length 10156 bytes
+==================================================
+downloaded 10156 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/munsell_0.5.0.tar.gz'
+Content type 'application/x-gzip' length 182653 bytes (178 KB)
+==================================================
+downloaded 178 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/viridisLite_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 1267090 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/TSP_1.2-4.tar.gz'
+Content type 'application/x-gzip' length 639259 bytes (624 KB)
+==================================================
+downloaded 624 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/qap_0.1-2.tar.gz'
+Content type 'application/x-gzip' length 523276 bytes (511 KB)
+==================================================
+downloaded 511 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gclus_1.3.2.tar.gz'
+Content type 'application/x-gzip' length 339083 bytes (331 KB)
+==================================================
+downloaded 331 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ca_0.71.1.tar.gz'
+Content type 'application/x-gzip' length 47723 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/registry_0.5-1.tar.gz'
+Content type 'application/x-gzip' length 170969 bytes (166 KB)
+==================================================
+downloaded 166 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/V8_4.3.0.tar.gz'
+Content type 'application/x-gzip' length 648775 bytes (633 KB)
+==================================================
+downloaded 633 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/scales_1.2.1.tar.gz'
+Content type 'application/x-gzip' length 270609 bytes (264 KB)
+==================================================
+downloaded 264 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/Rtsne_0.16.tar.gz'
+Content type 'application/x-gzip' length 70074 bytes (68 KB)
+==================================================
+downloaded 68 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/seriation_1.4.2.tar.gz'
+Content type 'application/x-gzip' length 856625 bytes (836 KB)
+==================================================
+downloaded 836 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/randomcoloR_1.1.0.1.tar.gz'
+Content type 'application/x-gzip' length 5913 bytes
+==================================================
+downloaded 5913 bytes
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/sechm_1.7.3.tar.gz'
+Content type 'application/x-gzip' length 946002 bytes (923 KB)
+==================================================
+downloaded 923 KB
+
+* installing *source* package ‘farver’ ...
+** package ‘farver’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ColorSpace.cpp -o ColorSpace.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Comparison.cpp -o Comparison.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Conversion.cpp -o Conversion.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c encode.cpp -o encode.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c farver.cpp -o farver.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o farver.so ColorSpace.o Comparison.o Conversion.o encode.o farver.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-farver/00new/farver/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘farver’ as ‘farver_2.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (farver)
+* installing *source* package ‘labeling’ ...
+** package ‘labeling’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘labeling’ as ‘labeling_0.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (labeling)
+* installing *source* package ‘munsell’ ...
+** package ‘munsell’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘munsell’ as ‘munsell_0.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (munsell)
+* installing *source* package ‘viridisLite’ ...
+** package ‘viridisLite’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘viridisLite’ as ‘viridisLite_0.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (viridisLite)
+* installing *source* package ‘TSP’ ...
+** package ‘TSP’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dll.c -o dll.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c insertion_cost.c -o insertion_cost.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tour_length.c -o tour_length.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c two_opt.c -o two_opt.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o TSP.so dll.o insertion_cost.o tour_length.o two_opt.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-TSP/00new/TSP/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TSP’ as ‘TSP_1.2-4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TSP)
+* installing *source* package ‘qap’ ...
+** package ‘qap’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RNG_wrapper.c -o RNG_wrapper.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c qapsim.f -o qapsim.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o qap.so RNG_wrapper.o init.o qapsim.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-qap/00new/qap/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘qap’ as ‘qap_0.1-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (qap)
+* installing *source* package ‘gclus’ ...
+** package ‘gclus’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gclus’ as ‘gclus_1.3.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gclus)
+* installing *source* package ‘ca’ ...
+** package ‘ca’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ca’ as ‘ca_0.71.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ca)
+* installing *source* package ‘registry’ ...
+** package ‘registry’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘registry’ as ‘registry_0.5-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (registry)
+* installing *source* package ‘V8’ ...
+** package ‘V8’ successfully unpacked and MD5 sums checked
+** using staged installation
+Found C++17 compiler: g++
+Target architecture: x86_64 
+
+ [0%] Downloaded 8259 bytes...
+ [0%] Downloaded 11015 bytes...
+ [0%] Downloaded 13771 bytes...
+ [0%] Downloaded 16384 bytes...
+ [0%] Downloaded 19131 bytes...
+ [0%] Downloaded 21887 bytes...
+ [0%] Downloaded 24643 bytes...
+ [0%] Downloaded 27399 bytes...
+ [0%] Downloaded 30155 bytes...
+ [0%] Downloaded 32902 bytes...
+ [0%] Downloaded 35658 bytes...
+ [0%] Downloaded 38414 bytes...
+ [0%] Downloaded 39792 bytes...
+ [0%] Downloaded 42548 bytes...
+ [0%] Downloaded 43926 bytes...
+ [0%] Downloaded 46682 bytes...
+ [0%] Downloaded 48565 bytes...
+ [0%] Downloaded 64940 bytes...
+ [0%] Downloaded 81315 bytes...
+ [0%] Downloaded 97690 bytes...
+ [0%] Downloaded 114101 bytes...
+ [1%] Downloaded 130476 bytes...
+ [1%] Downloaded 146869 bytes...
+ [1%] Downloaded 163244 bytes...
+ [1%] Downloaded 179619 bytes...
+ [1%] Downloaded 195994 bytes...
+ [1%] Downloaded 212405 bytes...
+ [1%] Downloaded 228780 bytes...
+ [2%] Downloaded 245155 bytes...
+ [2%] Downloaded 277941 bytes...
+ [2%] Downloaded 294316 bytes...
+ [2%] Downloaded 327066 bytes...
+ [2%] Downloaded 359852 bytes...
+ [3%] Downloaded 392602 bytes...
+ [3%] Downloaded 425388 bytes...
+ [3%] Downloaded 458138 bytes...
+ [4%] Downloaded 490924 bytes...
+ [4%] Downloaded 523674 bytes...
+ [4%] Downloaded 556460 bytes...
+ [4%] Downloaded 605621 bytes...
+ [5%] Downloaded 621996 bytes...
+ [5%] Downloaded 654746 bytes...
+ [5%] Downloaded 687532 bytes...
+ [6%] Downloaded 736693 bytes...
+ [6%] Downloaded 802229 bytes...
+ [7%] Downloaded 867765 bytes...
+ [7%] Downloaded 884140 bytes...
+ [7%] Downloaded 933301 bytes...
+ [8%] Downloaded 998837 bytes...
+ [8%] Downloaded 1064373 bytes...
+ [9%] Downloaded 1129909 bytes...
+ [9%] Downloaded 1195445 bytes...
+ [10%] Downloaded 1260981 bytes...
+ [10%] Downloaded 1326517 bytes...
+ [11%] Downloaded 1392053 bytes...
+ [12%] Downloaded 1506732 bytes...
+ [12%] Downloaded 1572268 bytes...
+ [13%] Downloaded 1637804 bytes...
+ [14%] Downloaded 1703340 bytes...
+ [14%] Downloaded 1719715 bytes...
+ [14%] Downloaded 1768876 bytes...
+ [15%] Downloaded 1850787 bytes...
+ [15%] Downloaded 1899948 bytes...
+ [16%] Downloaded 2030956 bytes...
+ [18%] Downloaded 2276725 bytes...
+ [19%] Downloaded 2342261 bytes...
+ [19%] Downloaded 2407797 bytes...
+ [20%] Downloaded 2538869 bytes...
+ [23%] Downloaded 2801068 bytes...
+ [24%] Downloaded 2932140 bytes...
+ [24%] Downloaded 2981301 bytes...
+ [25%] Downloaded 3046837 bytes...
+ [27%] Downloaded 3374508 bytes...
+ [28%] Downloaded 3440053 bytes...
+ [28%] Downloaded 3505562 bytes...
+ [29%] Downloaded 3521973 bytes...
+ [29%] Downloaded 3571098 bytes...
+ [31%] Downloaded 3816867 bytes...
+ [33%] Downloaded 4079011 bytes...
+ [33%] Downloaded 4111797 bytes...
+ [39%] Downloaded 4849646 bytes...
+ [40%] Downloaded 4931557 bytes...
+ [42%] Downloaded 5111790 bytes...
+ [50%] Downloaded 6133879 bytes...
+ [50%] Downloaded 6150254 bytes...
+ [51%] Downloaded 6199415 bytes...
+ [52%] Downloaded 6406144 bytes...
+ [53%] Downloaded 6455296 bytes...
+ [53%] Downloaded 6537216 bytes...
+ [54%] Downloaded 6586359 bytes...
+ [54%] Downloaded 6602734 bytes...
+ [54%] Downloaded 6645568 bytes...
+ [55%] Downloaded 6711104 bytes...
+ [55%] Downloaded 6776631 bytes...
+ [56%] Downloaded 6799360 bytes...
+ [56%] Downloaded 6897646 bytes...
+ [58%] Downloaded 7094254 bytes...
+ [59%] Downloaded 7225344 bytes...
+ [60%] Downloaded 7278272 bytes...
+ [60%] Downloaded 7294656 bytes...
+ [60%] Downloaded 7327424 bytes...
+ [61%] Downloaded 7409344 bytes...
+ [65%] Downloaded 7929829 bytes...
+ [66%] Downloaded 8110080 bytes...
+ [67%] Downloaded 8126464 bytes...
+ [67%] Downloaded 8175616 bytes...
+ [67%] Downloaded 8241152 bytes...
+ [68%] Downloaded 8257536 bytes...
+ [69%] Downloaded 8372206 bytes...
+ [69%] Downloaded 8404992 bytes...
+ [69%] Downloaded 8437742 bytes...
+ [69%] Downloaded 8454117 bytes...
+ [71%] Downloaded 8650752 bytes...
+ [72%] Downloaded 8765422 bytes...
+ [72%] Downloaded 8847333 bytes...
+ [73%] Downloaded 8962030 bytes...
+ [74%] Downloaded 9011191 bytes...
+ [74%] Downloaded 9027566 bytes...
+ [75%] Downloaded 9207781 bytes...
+ [76%] Downloaded 9273317 bytes...
+ [78%] Downloaded 9469934 bytes...
+ [80%] Downloaded 9715712 bytes...
+ [81%] Downloaded 9846784 bytes...
+ [81%] Downloaded 9912302 bytes...
+ [82%] Downloaded 9961463 bytes...
+ [82%] Downloaded 10043365 bytes...
+ [84%] Downloaded 10239991 bytes...
+ [85%] Downloaded 10354688 bytes...
+ [90%] Downloaded 10944503 bytes...
+ [90%] Downloaded 10977271 bytes...
+ [92%] Downloaded 11272165 bytes...
+ [93%] Downloaded 11337701 bytes...
+ [93%] Downloaded 11386862 bytes...
+ [94%] Downloaded 11403237 bytes...
+ [94%] Downloaded 11517934 bytes...
+ [95%] Downloaded 11583470 bytes...
+ [96%] Downloaded 11714542 bytes...
+ [97%] Downloaded 11763703 bytes...
+ [97%] Downloaded 11780078 bytes...
+ [97%] Downloaded 11845614 bytes...
+ [98%] Downloaded 11911150 bytes...
+ [98%] Downloaded 11927525 bytes...
+ [98%] Downloaded 11976686 bytes...
+ [100%] Downloaded 12126286 bytes...
+Using CXXCPP=g++ -std=gnu++17 -E
+Using PKG_CFLAGS=-I/tmp/RtmpeI1DzY/R.INSTALL10c338ae4232/V8/.deps/include
+Using PKG_LIBS=-L/tmp/RtmpeI1DzY/R.INSTALL10c338ae4232/V8/.deps/lib -lv8_monolith
+Running feature test for pointer compression...
+Enabling pointer compression
+Running feature test for sandbox...
+Sandbox not enabled
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++17
+rm -f V8.so RcppExports.o bindings.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/tmp/RtmpeI1DzY/R.INSTALL10c338ae4232/V8/.deps/include -DV8_COMPRESS_POINTERS -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/tmp/RtmpeI1DzY/R.INSTALL10c338ae4232/V8/.deps/include -DV8_COMPRESS_POINTERS -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bindings.cpp -o bindings.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o V8.so RcppExports.o bindings.o -L/tmp/RtmpeI1DzY/R.INSTALL10c338ae4232/V8/.deps/lib -lv8_monolith -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-V8/00new/V8/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘V8’ as ‘V8_4.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (V8)
+* installing *source* package ‘Rtsne’ ...
+** package ‘Rtsne’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rtsne.cpp -o Rtsne.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c normalize_input.cpp -o normalize_input.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sptree.cpp -o sptree.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tsne.cpp -o tsne.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Rtsne.so RcppExports.o Rtsne.o normalize_input.o sptree.o tsne.o -llapack -lblas -lgfortran -lm -lquadmath -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-Rtsne/00new/Rtsne/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘Rtsne’ as ‘Rtsne_0.16_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Rtsne)
+* installing *source* package ‘scales’ ...
+** package ‘scales’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘scales’ as ‘scales_1.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (scales)
+* installing *source* package ‘seriation’ ...
+** package ‘seriation’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RNG_wrapper.c -o RNG_wrapper.o
+gfortran  -fpic  -g -O2  -c arsa.f -o arsa.o
+gfortran  -fpic  -g -O2  -c bburcg.f -o bburcg.o
+gfortran  -fpic  -g -O2  -c bbwrcg.f -o bbwrcg.o
+gfortran  -fpic  -g -O2  -c bea.f -o bea.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c criterion.c -o criterion.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dist.c -o dist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c greedy.c -o greedy.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c optimal.c -o optimal.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pathdist.c -o pathdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stress.c -o stress.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o seriation.so RNG_wrapper.o arsa.o bburcg.o bbwrcg.o bea.o criterion.o dist.o greedy.o init.o optimal.o pathdist.o stress.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-seriation/00new/seriation/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘seriation’ as ‘seriation_1.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (seriation)
+* installing *source* package ‘randomcoloR’ ...
+** package ‘randomcoloR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘randomcoloR’ as ‘randomcoloR_1.1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (randomcoloR)
+* installing *source* package ‘sechm’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘sechm’ as ‘sechm_1.7.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sechm)
+
+The downloaded source packages are in
+	‘/tmp/RtmpM4appn/downloaded_packages’
+
+real	2m3.117s
+user	1m52.759s
+sys	0m12.051s
