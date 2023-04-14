@@ -1,0 +1,63 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''TDbasedUFEadv'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'TDbasedUFEadv'
+also installing the dependency ‘enrichR’
+
+trying URL 'https://cloud.r-project.org/src/contrib/enrichR_3.1.tar.gz'
+Content type 'application/x-gzip' length 193955 bytes (189 KB)
+==================================================
+downloaded 189 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/TDbasedUFEadv_0.99.19.tar.gz'
+Content type 'application/x-gzip' length 3662261 bytes (3.5 MB)
+==================================================
+downloaded 3.5 MB
+
+* installing *source* package ‘enrichR’ ...
+** package ‘enrichR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘enrichR’ as ‘enrichR_3.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (enrichR)
+* installing *source* package ‘TDbasedUFEadv’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TDbasedUFEadv’ as ‘TDbasedUFEadv_0.99.19_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TDbasedUFEadv)
+
+The downloaded source packages are in
+	‘/tmp/RtmpTkIxNo/downloaded_packages’
+
+real	0m29.955s
+user	0m26.463s
+sys	0m2.327s
