@@ -1,0 +1,320 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''EpiCompare'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'EpiCompare'
+also installing the dependencies ‘timechange’, ‘lubridate’, ‘writexl’, ‘bsplus’, ‘downloadthis’
+
+trying URL 'https://cloud.r-project.org/src/contrib/timechange_0.2.0.tar.gz'
+Content type 'application/x-gzip' length 102806 bytes (100 KB)
+==================================================
+downloaded 100 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lubridate_1.9.2.tar.gz'
+Content type 'application/x-gzip' length 427200 bytes (417 KB)
+==================================================
+downloaded 417 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/writexl_1.4.2.tar.gz'
+Content type 'application/x-gzip' length 258454 bytes (252 KB)
+==================================================
+downloaded 252 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/bsplus_0.1.4.tar.gz'
+Content type 'application/x-gzip' length 31024 bytes (30 KB)
+==================================================
+downloaded 30 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/downloadthis_0.3.2.tar.gz'
+Content type 'application/x-gzip' length 3020122 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/EpiCompare_1.3.4.tar.gz'
+Content type 'application/x-gzip' length 7063707 bytes (6.7 MB)
+==================================================
+downloaded 6.7 MB
+
+* installing *source* package ‘timechange’ ...
+** package ‘timechange’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c common.cpp -o common.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c get.cpp -o get.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parse.c -o parse.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c round.cpp -o round.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tzone.cpp -o tzone.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c update.cpp -o update.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_fixed.cc -o cctz/src/time_zone_fixed.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_if.cc -o cctz/src/time_zone_if.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_impl.cc -o cctz/src/time_zone_impl.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_info.cc -o cctz/src/time_zone_info.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_libc.cc -o cctz/src/time_zone_libc.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_lookup.cc -o cctz/src/time_zone_lookup.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_posix.cc -o cctz/src/time_zone_posix.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/zone_info_source.cc -o cctz/src/zone_info_source.o
+ar rcs libcctz.a ./cctz/src/time_zone_fixed.o ./cctz/src/time_zone_if.o ./cctz/src/time_zone_impl.o ./cctz/src/time_zone_info.o ./cctz/src/time_zone_libc.o ./cctz/src/time_zone_lookup.o ./cctz/src/time_zone_posix.o ./cctz/src/zone_info_source.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o timechange.so common.o cpp11.o get.o parse.o round.o tzone.o update.o -L. -lcctz -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-timechange/00new/timechange/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘timechange’ as ‘timechange_0.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (timechange)
+* installing *source* package ‘writexl’ ...
+** package ‘writexl’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_xlsx.c -o write_xlsx.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/app.c -o libxlsxwriter/app.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/format.c -o libxlsxwriter/format.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/theme.c -o libxlsxwriter/theme.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/chart.c -o libxlsxwriter/chart.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/hash_table.c -o libxlsxwriter/hash_table.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/utility.c -o libxlsxwriter/utility.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/content_types.c -o libxlsxwriter/content_types.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/packager.c -o libxlsxwriter/packager.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/workbook.c -o libxlsxwriter/workbook.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/core.c -o libxlsxwriter/core.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/relationships.c -o libxlsxwriter/relationships.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/worksheet.c -o libxlsxwriter/worksheet.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/custom.c -o libxlsxwriter/custom.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/shared_strings.c -o libxlsxwriter/shared_strings.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/xmlwriter.c -o libxlsxwriter/xmlwriter.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/drawing.c -o libxlsxwriter/drawing.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/styles.c -o libxlsxwriter/styles.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tmpfileplus/tmpfileplus.c -o tmpfileplus/tmpfileplus.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/chartsheet.c -o libxlsxwriter/chartsheet.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minizip/ioapi.c -o minizip/ioapi.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minizip/zip.c -o minizip/zip.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/comment.c -o libxlsxwriter/comment.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c libxlsxwriter/vml.c -o libxlsxwriter/vml.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -Iinclude -DUSE_R_LANG  -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c md5/md5.c -o md5/md5.o
+ar rcs libxlsxwriter/libstatxlsxwriter.a libxlsxwriter/app.o libxlsxwriter/format.o libxlsxwriter/theme.o libxlsxwriter/chart.o libxlsxwriter/hash_table.o libxlsxwriter/utility.o libxlsxwriter/content_types.o libxlsxwriter/packager.o libxlsxwriter/workbook.o libxlsxwriter/core.o libxlsxwriter/relationships.o libxlsxwriter/worksheet.o libxlsxwriter/custom.o libxlsxwriter/shared_strings.o libxlsxwriter/xmlwriter.o libxlsxwriter/drawing.o libxlsxwriter/styles.o tmpfileplus/tmpfileplus.o libxlsxwriter/chartsheet.o minizip/ioapi.o minizip/zip.o libxlsxwriter/comment.o libxlsxwriter/vml.o md5/md5.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o writexl.so write_xlsx.o -Llibxlsxwriter -lstatxlsxwriter -lz -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-writexl/00new/writexl/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘writexl’ as ‘writexl_1.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (writexl)
+* installing *source* package ‘lubridate’ ...
+** package ‘lubridate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c datetime.c -o datetime.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c period.c -o period.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tparse.c -o tparse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o lubridate.so datetime.o init.o period.o tparse.o utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-lubridate/00new/lubridate/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lubridate’ as ‘lubridate_1.9.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lubridate)
+* installing *source* package ‘bsplus’ ...
+** package ‘bsplus’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bsplus’ as ‘bsplus_0.1.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bsplus)
+* installing *source* package ‘downloadthis’ ...
+** package ‘downloadthis’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘downloadthis’ as ‘downloadthis_0.3.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (downloadthis)
+* installing *source* package ‘EpiCompare’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘Biostrings::pattern’ by ‘grid::pattern’ when loading ‘genomation’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘Biostrings::pattern’ by ‘grid::pattern’ when loading ‘genomation’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘Biostrings::pattern’ by ‘grid::pattern’ when loading ‘genomation’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘EpiCompare’ as ‘EpiCompare_1.3.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (EpiCompare)
+
+The downloaded source packages are in
+	‘/tmp/RtmpKUHREN/downloaded_packages’
+
+real	1m26.838s
+user	1m20.717s
+sys	0m6.875s
+* installing *source* package ‘dlstats’ ...
+** package ‘dlstats’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dlstats’ as ‘dlstats_0.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dlstats)
+* installing *source* package ‘rvcheck’ ...
+** package ‘rvcheck’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rvcheck’ as ‘rvcheck_0.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rvcheck)
+* installing *source* package ‘badger’ ...
+** package ‘badger’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘badger’ as ‘badger_0.2.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (badger)
+* installing *source* package ‘dlstats’ ...
+** package ‘dlstats’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dlstats’ as ‘dlstats_0.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dlstats)
+* installing *source* package ‘rvcheck’ ...
+** package ‘rvcheck’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rvcheck’ as ‘rvcheck_0.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rvcheck)
+* installing *source* package ‘here’ ...
+** package ‘here’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘here’ as ‘here_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (here)
+* installing *source* package ‘rworkflows’ ...
+** package ‘rworkflows’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rworkflows’ as ‘rworkflows_0.99.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rworkflows)
