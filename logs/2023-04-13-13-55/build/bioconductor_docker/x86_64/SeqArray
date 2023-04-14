@@ -1,0 +1,59 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''SeqArray'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'SeqArray'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/SeqArray_1.39.2.tar.gz'
+Content type 'application/x-gzip' length 3593740 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+* installing *source* package ‘SeqArray’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ConvGDS2VCF.cpp -o ConvGDS2VCF.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ConvToGDS.cpp -o ConvToGDS.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ConvVCF2GDS.cpp -o ConvVCF2GDS.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c FileMerge.cpp -o FileMerge.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GetData.cpp -o GetData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Index.cpp -o Index.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c LinkSNPRelate.cpp -o LinkSNPRelate.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Methods.cpp -o Methods.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_SeqArray.c -o R_SeqArray.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ReadBySample.cpp -o ReadBySample.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ReadByUnit.cpp -o ReadByUnit.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ReadByVariant.cpp -o ReadByVariant.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SeqArray.cpp -o SeqArray.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pkg_test.cpp -o pkg_test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c samtools_ext.c -o samtools_ext.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DUSING_R -I'/tmp/tmp/built/gdsfmt/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vectorization.c -o vectorization.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o SeqArray.so ConvGDS2VCF.o ConvToGDS.o ConvVCF2GDS.o FileMerge.o GetData.o Index.o LinkSNPRelate.o Methods.o R_SeqArray.o ReadBySample.o ReadByUnit.o ReadByVariant.o SeqArray.o pkg_test.o samtools_ext.o vectorization.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-SeqArray/00new/SeqArray/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SeqArray’ as ‘SeqArray_1.39.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SeqArray)
+
+The downloaded source packages are in
+	‘/tmp/RtmpTgFohF/downloaded_packages’
+
+real	0m38.220s
+user	0m34.516s
+sys	0m2.126s
