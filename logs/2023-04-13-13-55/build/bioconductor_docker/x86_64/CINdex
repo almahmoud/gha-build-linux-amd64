@@ -1,0 +1,895 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''CINdex'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'CINdex'
+also installing the dependencies ‘gtools’, ‘caTools’, ‘gtable’, ‘gplots’, ‘som’, ‘gridExtra’
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'application/x-gzip' length 240661 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/caTools_1.18.2.tar.gz'
+Content type 'application/x-gzip' length 64960 bytes (63 KB)
+==================================================
+downloaded 63 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtable_0.3.3.tar.gz'
+Content type 'application/x-gzip' length 130057 bytes (127 KB)
+==================================================
+downloaded 127 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gplots_3.1.3.tar.gz'
+Content type 'application/x-gzip' length 520683 bytes (508 KB)
+==================================================
+downloaded 508 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/som_0.3-5.1.tar.gz'
+Content type 'application/x-gzip' length 209169 bytes (204 KB)
+==================================================
+downloaded 204 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gridExtra_2.3.tar.gz'
+Content type 'application/x-gzip' length 1062844 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/CINdex_1.27.0.tar.gz'
+Content type 'application/x-gzip' length 13114912 bytes (12.5 MB)
+==================================================
+downloaded 12.5 MB
+
+* installing *source* package ‘gtools’ ...
+** package ‘gtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c roman2int.c -o roman2int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c setTCPNoDelay.c -o setTCPNoDelay.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gtools.so init.o roman2int.o setTCPNoDelay.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gtools/00new/gtools/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *source* package ‘caTools’ ...
+** package ‘caTools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Gif2R.cpp -o Gif2R.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GifTools.cpp -o GifTools.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caTools_init.c -o caTools_init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c runfunc.c -o runfunc.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o caTools.so Gif2R.o GifTools.o caTools_init.o runfunc.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-caTools/00new/caTools/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘caTools’ as ‘caTools_1.18.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caTools)
+* installing *source* package ‘gtable’ ...
+** package ‘gtable’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtable’ as ‘gtable_0.3.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtable)
+* installing *source* package ‘som’ ...
+** package ‘som’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I.   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c som.cc -o som.o
+In file included from tntsupp.h:8,
+                 from sub.h:1,
+                 from SomParam.h:2,
+                 from som.cc:4:
+tnt/fmat.h: In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘*this.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘double rect_dist(TNT::Region2D<TNT::Fortran_Matrix<double> >, TNT::Region2D<TNT::Fortran_Matrix<double> >)’ at SomParam.h:11:19:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘<anonymous>.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘TNT::Subscript find_winner(TNT::DMatrix&, TNT::Subscript, TNT::DMatrix&)’ at som.cc:12:40:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘<anonymous>.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘TNT::Subscript find_winner(TNT::DMatrix&, TNT::Subscript, TNT::DMatrix&)’ at som.cc:16:36:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘<anonymous>.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘void visual(TNT::DMatrix&, TNT::DMatrix&, TNT::DMatrix&, TNT::DMatrix&)’ at som.cc:57:36:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘<anonymous>.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘int update(TNT::DMatrix&, TNT::DMatrix&, TNT::Subscript, double, TNT::DVector&)’ at som.cc:32:24:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘<anonymous>.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>& TNT::Fortran_Matrix<T>::operator=(const TNT::Fortran_Matrix<T>&) [with T = double]’ at tnt/fmat.h:227:20,
+    inlined from ‘TNT::Fortran_Matrix<T>& TNT::Fortran_Matrix<T>::operator=(const TNT::Fortran_Matrix<T>&) [with T = double]’ at tnt/fmat.h:217:24,
+    inlined from ‘int update(TNT::DMatrix&, TNT::DMatrix&, TNT::Subscript, double, TNT::DVector&)’ at som.cc:34:17:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘*code.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘double qerror(TNT::DMatrix&, TNT::DMatrix&, TNT::DMatrix&, TNT::DMatrix&, SomParam&)’ at som.cc:76:38:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘<anonymous>.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘void som_top(TNT::DMatrix&, TNT::DMatrix&, TNT::DMatrix&, SomParam&, SomParam&, double*)’ at som.cc:108:1:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘cord.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som_bat(SEXP, SEXP, SEXP, SEXP)’ at som.cc:225:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Vis.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som_bat(SEXP, SEXP, SEXP, SEXP)’ at som.cc:225:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Code.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som_bat(SEXP, SEXP, SEXP, SEXP)’ at som.cc:225:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Data.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som(SEXP, SEXP, SEXP)’ at som.cc:198:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Vis.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som(SEXP, SEXP, SEXP)’ at som.cc:198:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Cord.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som(SEXP, SEXP, SEXP)’ at som.cc:198:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Code.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+In member function ‘void TNT::Fortran_Matrix<T>::destroy() [with T = double]’,
+    inlined from ‘TNT::Fortran_Matrix<T>::~Fortran_Matrix() [with T = double]’ at tnt/fmat.h:211:16,
+    inlined from ‘SEXPREC* som(SEXP, SEXP, SEXP)’ at som.cc:198:3:
+tnt/fmat.h:161:9: warning: ‘void operator delete [](void*)’ called on pointer ‘Data.TNT::Fortran_Matrix<double>::col_’ with nonzero offset 8 [-Wfree-nonheap-object]
+  161 |         delete [] (col_);
+      |         ^~~~~~~~~~~~~~~~
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o som.so som.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-som/00new/som/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘som’ as ‘som_0.3-5.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (som)
+* installing *source* package ‘gplots’ ...
+** package ‘gplots’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gplots’ as ‘gplots_3.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gplots)
+* installing *source* package ‘gridExtra’ ...
+** package ‘gridExtra’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gridExtra’ as ‘gridExtra_2.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gridExtra)
+* installing *source* package ‘CINdex’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘CINdex’ as ‘CINdex_1.27.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (CINdex)
+
+The downloaded source packages are in
+	‘/tmp/RtmpwCiF08/downloaded_packages’
+
+real	0m46.282s
+user	0m43.152s
+sys	0m4.819s
+* installing *source* package ‘iterators’ ...
+** package ‘iterators’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iterators’ as ‘iterators_1.0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iterators)
+* installing *source* package ‘affyio’ ...
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for main in -lz... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking if zlib version >= 1.1.3... yes
+checking for pthread_create in -lpthread... yes
+checking if we can use pthreads... yes
+checking if PTHREAD_STACK_MIN is defined... yes
+configure: Enabling threading for affyio
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fread_functions.c -o fread_functions.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init_package.c -o init_package.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_abatch.c -o read_abatch.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_bpmap.c -o read_bpmap.o
+read_bpmap.c: In function ‘ReadBPMAPFileIntoRList’:
+read_bpmap.c:698:27: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  698 |           sprintf(buf, "%d", j+1);
+      |                           ^
+In file included from /usr/include/stdio.h:894,
+                 from /usr/local/lib/R/include/R.h:44,
+                 from read_bpmap.c:23:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:38:10: note: ‘__builtin___sprintf_chk’ output between 2 and 11 bytes into a destination of size 10
+   38 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   39 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   40 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+read_bpmap.c:655:27: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  655 |           sprintf(buf, "%d", j+1);
+      |                           ^
+In file included from /usr/include/stdio.h:894,
+                 from /usr/local/lib/R/include/R.h:44,
+                 from read_bpmap.c:23:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:38:10: note: ‘__builtin___sprintf_chk’ output between 2 and 11 bytes into a destination of size 10
+   38 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   39 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   40 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+read_bpmap.c:603:25: warning: ‘__builtin___sprintf_chk’ may write a terminating nul past the end of the destination [-Wformat-overflow=]
+  603 |         sprintf(buf, "%d", j+1);
+      |                         ^
+In file included from /usr/include/stdio.h:894,
+                 from /usr/local/lib/R/include/R.h:44,
+                 from read_bpmap.c:23:
+/usr/include/x86_64-linux-gnu/bits/stdio2.h:38:10: note: ‘__builtin___sprintf_chk’ output between 2 and 11 bytes into a destination of size 10
+   38 |   return __builtin___sprintf_chk (__s, __USE_FORTIFY_LEVEL - 1,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   39 |                                   __glibc_objsize (__s), __fmt,
+      |                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   40 |                                   __va_arg_pack ());
+      |                                   ~~~~~~~~~~~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_cdf_xda.c -o read_cdf_xda.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_cdffile2.c -o read_cdffile2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_celfile_generic.c -o read_celfile_generic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_clf.c -o read_clf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_generic.c -o read_generic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_multichannel_celfile_generic.c -o read_multichannel_celfile_generic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_ZLIB=1 -DHAVE_LIBPTHREAD=1 -DUSE_PTHREADS=1  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_pgf.c -o read_pgf.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o affyio.so fread_functions.o init_package.o read_abatch.o read_bpmap.o read_cdf_xda.o read_cdffile2.o read_celfile_generic.o read_clf.o read_generic.o read_multichannel_celfile_generic.o read_pgf.o -lpthread -lz -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-affyio/00new/affyio/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘affyio’ as ‘affyio_1.69.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (affyio)
+* installing *source* package ‘ff’ ...
+** package ‘ff’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking how to run the C++ preprocessor... g++ -std=gnu++17 -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/vfs.h usability... yes
+checking sys/vfs.h presence... yes
+checking for sys/vfs.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking for sys/stat.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/mount.h usability... yes
+checking sys/mount.h presence... yes
+checking for sys/mount.h... yes
+checking for struct statfs.f_iosize... no
+checking sys/statfs.h usability... yes
+checking sys/statfs.h presence... yes
+checking for sys/statfs.h... yes
+checking for struct statfs.f_iosize... (cached) no
+checking sys/statvfs.h usability... yes
+checking sys/statvfs.h presence... yes
+checking for sys/statvfs.h... yes
+checking for off_t... yes
+checking for size_t... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for fseeko... yes
+configure: creating ./config.status
+config.status: creating src/ac_config.h
+config.status: src/ac_config.h is unchanged
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Error.cpp -o Error.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c FSInfo_statfs.cpp -o FSInfo_statfs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c FSInfo_win32.cpp -o FSInfo_win32.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MMapFileMapping.cpp -o MMapFileMapping.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Win32FileMapping.cpp -o Win32FileMapping.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ff.cpp -o ff.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ordermerge.c -o ordermerge.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c r_ff.c -o r_ff.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c r_file_resize.cpp -o r_file_resize.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utk_file_allocate_fseek.cpp -o utk_file_allocate_fseek.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utk_file_resize.cpp -o utk_file_resize.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ff.so Error.o FSInfo_statfs.o FSInfo_win32.o MMapFileMapping.o Win32FileMapping.o ff.o ordermerge.o r_ff.o r_file_resize.o utk_file_allocate_fseek.o utk_file_resize.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ff/00new/ff/libs
+** R
+** exec
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ff’ as ‘ff_4.0.9_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ff)
+* installing *source* package ‘affxparser’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+rm -f fusion/calvin_files/data/src/CDFData.o fusion/calvin_files/data/src/CDFProbeGroupInformation.o fusion/calvin_files/data/src/CDFProbeInformation.o fusion/calvin_files/data/src/CDFProbeSetInformation.o fusion/calvin_files/data/src/CDFQCProbeInformation.o fusion/calvin_files/data/src/CDFQCProbeSetInformation.o fusion/calvin_files/data/src/CELData.o fusion/calvin_files/data/src/CHPBackgroundZone.o fusion/calvin_files/data/src/CHPData.o fusion/calvin_files/data/src/CHPExpressionEntry.o fusion/calvin_files/data/src/CHPMultiDataData.o fusion/calvin_files/data/src/CHPTilingData.o fusion/calvin_files/data/src/CHPQuantificationData.o fusion/calvin_files/data/src/CHPQuantificationDetectionData.o fusion/calvin_files/data/src/CHPGenotypeEntry.o fusion/calvin_files/data/src/CHPUniversalEntry.o fusion/calvin_files/data/src/ColumnInfo.o fusion/calvin_files/data/src/DataGroup.o fusion/calvin_files/data/src/DataGroupHeader.o fusion/calvin_files/data/src/DataSet.o fusion/calvin_files/data/src/DataSetHeader.o fusion/calvin_files/data/src/FileHeader.o fusion/calvin_files/data/src/GenericData.o fusion/calvin_files/data/src/GenericDataHeader.o fusion/calvin_files/exception/src/ExceptionBase.o fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCELDataAdapter.o fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCHPDataAdapter.o fusion/calvin_files/fusion/src/FusionBPMAPData.o fusion/calvin_files/fusion/src/FusionCDFData.o fusion/calvin_files/fusion/src/FusionCDFQCProbeSetNames.o fusion/calvin_files/fusion/src/FusionCELData.o fusion/calvin_files/fusion/src/FusionCHPData.o fusion/calvin_files/fusion/src/FusionProbeSetResults.o fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCELDataAdapter.o fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCHPDataAdapter.o fusion/calvin_files/fusion/src/FusionCHPLegacyData.o fusion/calvin_files/fusion/src/FusionCHPMultiDataAccessor.o fusion/calvin_files/fusion/src/FusionCHPMultiDataData.o fusion/calvin_files/fusion/src/FusionCHPTilingData.o fusion/calvin_files/fusion/src/FusionCHPGenericData.o fusion/calvin_files/fusion/src/FusionCHPQuantificationData.o fusion/calvin_files/fusion/src/FusionCHPQuantificationDetectionData.o fusion/calvin_files/parameter/src/ParameterNameValueType.o fusion/calvin_files/parsers/src/CDFFileReader.o fusion/calvin_files/parsers/src/CelFileReader.o fusion/calvin_files/parsers/src/CHPFileReader.o fusion/calvin_files/parsers/src/CHPMultiDataFileReader.o fusion/calvin_files/parsers/src/CHPTilingFileReader.o fusion/calvin_files/parsers/src/CHPQuantificationFileReader.o fusion/calvin_files/parsers/src/CHPQuantificationDetectionFileReader.o fusion/calvin_files/parsers/src/DataGroupHeaderReader.o fusion/calvin_files/parsers/src/DataGroupReader.o fusion/calvin_files/parsers/src/DataSetHeaderReader.o fusion/calvin_files/parsers/src/DataSetReader.o fusion/calvin_files/parsers/src/FileHeaderReader.o fusion/calvin_files/parsers/src/FileInput.o fusion/calvin_files/parsers/src/GenericDataHeaderReader.o fusion/calvin_files/parsers/src/GenericFileReader.o fusion/calvin_files/utils/src/AffymetrixGuid.o fusion/calvin_files/utils/src/DateTime.o fusion/calvin_files/utils/src/FileUtils.o fusion/calvin_files/utils/src/StringUtils.o fusion/calvin_files/utils/src/checksum.o fusion/file/BPMAPFileData.o fusion/file/BPMAPFileWriter.o fusion/file/CDFFileData.o fusion/file/CELFileData.o fusion/file/CHPFileData.o fusion/file/FileIO.o fusion/file/FileWriter.o fusion/file/TsvFile/ClfFile.o fusion/file/TsvFile/PgfFile.o fusion/file/TsvFile/TsvFile.o fusion/util/AffxByteArray.o fusion/util/AffxConv.o fusion/util/MsgStream.o fusion/util/Util.o fusion/util/Err.o fusion/util/Fs.o fusion/util/Verbose.o fusion/util/RowFile.o fusion/util/TableFile.o fusion/util/Convert.o R_affx_cel_parser.o R_affx_cdf_parser.o R_affx_cdf_extras.o R_affx_bpmap_parser.o R_affx_clf_pgf_parser.o R_affx_chp_parser.o 000.init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CDFData.cpp -o fusion/calvin_files/data/src/CDFData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CDFProbeGroupInformation.cpp -o fusion/calvin_files/data/src/CDFProbeGroupInformation.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CDFProbeInformation.cpp -o fusion/calvin_files/data/src/CDFProbeInformation.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CDFProbeSetInformation.cpp -o fusion/calvin_files/data/src/CDFProbeSetInformation.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CDFQCProbeInformation.cpp -o fusion/calvin_files/data/src/CDFQCProbeInformation.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CDFQCProbeSetInformation.cpp -o fusion/calvin_files/data/src/CDFQCProbeSetInformation.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CELData.cpp -o fusion/calvin_files/data/src/CELData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPBackgroundZone.cpp -o fusion/calvin_files/data/src/CHPBackgroundZone.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPData.cpp -o fusion/calvin_files/data/src/CHPData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPExpressionEntry.cpp -o fusion/calvin_files/data/src/CHPExpressionEntry.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPMultiDataData.cpp -o fusion/calvin_files/data/src/CHPMultiDataData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPTilingData.cpp -o fusion/calvin_files/data/src/CHPTilingData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPQuantificationData.cpp -o fusion/calvin_files/data/src/CHPQuantificationData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPQuantificationDetectionData.cpp -o fusion/calvin_files/data/src/CHPQuantificationDetectionData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPGenotypeEntry.cpp -o fusion/calvin_files/data/src/CHPGenotypeEntry.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/CHPUniversalEntry.cpp -o fusion/calvin_files/data/src/CHPUniversalEntry.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/ColumnInfo.cpp -o fusion/calvin_files/data/src/ColumnInfo.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/DataGroup.cpp -o fusion/calvin_files/data/src/DataGroup.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/DataGroupHeader.cpp -o fusion/calvin_files/data/src/DataGroupHeader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/DataSet.cpp -o fusion/calvin_files/data/src/DataSet.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/DataSetHeader.cpp -o fusion/calvin_files/data/src/DataSetHeader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/FileHeader.cpp -o fusion/calvin_files/data/src/FileHeader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/GenericData.cpp -o fusion/calvin_files/data/src/GenericData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/data/src/GenericDataHeader.cpp -o fusion/calvin_files/data/src/GenericDataHeader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/exception/src/ExceptionBase.cpp -o fusion/calvin_files/exception/src/ExceptionBase.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCELDataAdapter.cpp -o fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCELDataAdapter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCHPDataAdapter.cpp -o fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCHPDataAdapter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionBPMAPData.cpp -o fusion/calvin_files/fusion/src/FusionBPMAPData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCDFData.cpp -o fusion/calvin_files/fusion/src/FusionCDFData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCDFQCProbeSetNames.cpp -o fusion/calvin_files/fusion/src/FusionCDFQCProbeSetNames.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCELData.cpp -o fusion/calvin_files/fusion/src/FusionCELData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPData.cpp -o fusion/calvin_files/fusion/src/FusionCHPData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionProbeSetResults.cpp -o fusion/calvin_files/fusion/src/FusionProbeSetResults.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCELDataAdapter.cpp -o fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCELDataAdapter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCHPDataAdapter.cpp -o fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCHPDataAdapter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPLegacyData.cpp -o fusion/calvin_files/fusion/src/FusionCHPLegacyData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPMultiDataAccessor.cpp -o fusion/calvin_files/fusion/src/FusionCHPMultiDataAccessor.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPMultiDataData.cpp -o fusion/calvin_files/fusion/src/FusionCHPMultiDataData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPTilingData.cpp -o fusion/calvin_files/fusion/src/FusionCHPTilingData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPGenericData.cpp -o fusion/calvin_files/fusion/src/FusionCHPGenericData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPQuantificationData.cpp -o fusion/calvin_files/fusion/src/FusionCHPQuantificationData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/fusion/src/FusionCHPQuantificationDetectionData.cpp -o fusion/calvin_files/fusion/src/FusionCHPQuantificationDetectionData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parameter/src/ParameterNameValueType.cpp -o fusion/calvin_files/parameter/src/ParameterNameValueType.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CDFFileReader.cpp -o fusion/calvin_files/parsers/src/CDFFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CelFileReader.cpp -o fusion/calvin_files/parsers/src/CelFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CHPFileReader.cpp -o fusion/calvin_files/parsers/src/CHPFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CHPMultiDataFileReader.cpp -o fusion/calvin_files/parsers/src/CHPMultiDataFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CHPTilingFileReader.cpp -o fusion/calvin_files/parsers/src/CHPTilingFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CHPQuantificationFileReader.cpp -o fusion/calvin_files/parsers/src/CHPQuantificationFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/CHPQuantificationDetectionFileReader.cpp -o fusion/calvin_files/parsers/src/CHPQuantificationDetectionFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/DataGroupHeaderReader.cpp -o fusion/calvin_files/parsers/src/DataGroupHeaderReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/DataGroupReader.cpp -o fusion/calvin_files/parsers/src/DataGroupReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/DataSetHeaderReader.cpp -o fusion/calvin_files/parsers/src/DataSetHeaderReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/DataSetReader.cpp -o fusion/calvin_files/parsers/src/DataSetReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/FileHeaderReader.cpp -o fusion/calvin_files/parsers/src/FileHeaderReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/FileInput.cpp -o fusion/calvin_files/parsers/src/FileInput.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/GenericDataHeaderReader.cpp -o fusion/calvin_files/parsers/src/GenericDataHeaderReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/parsers/src/GenericFileReader.cpp -o fusion/calvin_files/parsers/src/GenericFileReader.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/utils/src/AffymetrixGuid.cpp -o fusion/calvin_files/utils/src/AffymetrixGuid.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/utils/src/DateTime.cpp -o fusion/calvin_files/utils/src/DateTime.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/utils/src/FileUtils.cpp -o fusion/calvin_files/utils/src/FileUtils.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/utils/src/StringUtils.cpp -o fusion/calvin_files/utils/src/StringUtils.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/calvin_files/utils/src/checksum.cpp -o fusion/calvin_files/utils/src/checksum.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/BPMAPFileData.cpp -o fusion/file/BPMAPFileData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/BPMAPFileWriter.cpp -o fusion/file/BPMAPFileWriter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/CDFFileData.cpp -o fusion/file/CDFFileData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/CELFileData.cpp -o fusion/file/CELFileData.o
+fusion/file/CELFileData.cpp: In member function ‘float affxcel::CCELFileData::GetIntensity(int)’:
+fusion/file/CELFileData.cpp:2409:41: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2409 |                 fIntensity=MmGetFloat_I(&m_pEntries[index].Intensity);
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2414:41: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2414 |                 fIntensity=MmGetFloat_I(&(m_pEntries[index].Intensity));
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2419:42: warning: taking address of packed member of ‘affxcel::_CELFileTranscriptomeEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2419 |                 fIntensity=MmGetUInt16_N(&(m_pTransciptomeEntries[index].Intensity));
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp: In member function ‘int affxcel::CCELFileData::GetIntensities(int, std::vector<float>&)’:
+fusion/file/CELFileData.cpp:2445:37: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2445 |       intensities[idx]=MmGetFloat_I(&m_pEntries[idx].Intensity);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2451:37: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2451 |       intensities[idx]=MmGetFloat_I(&m_pEntries[idx].Intensity);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2457:38: warning: taking address of packed member of ‘affxcel::_CELFileTranscriptomeEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2457 |       intensities[idx]=MmGetUInt16_N(&m_pTransciptomeEntries[idx].Intensity);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp: In member function ‘float affxcel::CCELFileData::GetStdv(int)’:
+fusion/file/CELFileData.cpp:2506:37: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2506 |                 fStdev=MmGetFloat_I(&m_pEntries[index].Stdv);
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2509:37: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2509 |                 fStdev=MmGetFloat_I(&(m_pEntries[index].Stdv));
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2512:38: warning: taking address of packed member of ‘affxcel::_CELFileTranscriptomeEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2512 |                 fStdev=MmGetUInt16_N(&(m_pTransciptomeEntries[index].Stdv));
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp: In member function ‘short int affxcel::CCELFileData::GetPixels(int)’:
+fusion/file/CELFileData.cpp:2551:38: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2551 |                 sPixels=MmGetInt16_I(&m_pEntries[index].Pixels);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:2554:38: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2554 |                 sPixels=MmGetInt16_I(&m_pEntries[index].Pixels);
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp: In member function ‘void affxcel::CCELFileData::SetIntensity(int, float)’:
+fusion/file/CELFileData.cpp:3194:30: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 3194 |                 MmSetFloat_I(&m_pEntries[index].Intensity,intensity);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:3199:30: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 3199 |                 MmSetFloat_I(&m_pEntries[index].Intensity,intensity);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:3204:31: warning: taking address of packed member of ‘affxcel::_CELFileTranscriptomeEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 3204 |                 MmSetUInt16_N(&m_pTransciptomeEntries[index].Intensity,s);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp: In member function ‘void affxcel::CCELFileData::SetStdv(int, float)’:
+fusion/file/CELFileData.cpp:3251:31: warning: taking address of packed member of ‘affxcel::_CELFileTranscriptomeEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 3251 |                 MmSetUInt16_N(&m_pTransciptomeEntries[index].Stdv,s);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp:3255:30: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 3255 |                 MmSetFloat_I(&m_pEntries[index].Stdv,stdev);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~
+fusion/file/CELFileData.cpp: In member function ‘void affxcel::CCELFileData::SetPixels(int, short int)’:
+fusion/file/CELFileData.cpp:3294:42: warning: taking address of packed member of ‘affxcel::_CELFileEntryType’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 3294 |                 MmSetUInt16_I((uint16_t*)&m_pEntries[index].Pixels,(uint16_t)pixels);
+      |                                          ^~~~~~~~~~~~~~~~~~~~~~~~~
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/CHPFileData.cpp -o fusion/file/CHPFileData.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/FileIO.cpp -o fusion/file/FileIO.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/FileWriter.cpp -o fusion/file/FileWriter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/TsvFile/ClfFile.cpp -o fusion/file/TsvFile/ClfFile.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/TsvFile/PgfFile.cpp -o fusion/file/TsvFile/PgfFile.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/file/TsvFile/TsvFile.cpp -o fusion/file/TsvFile/TsvFile.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/AffxByteArray.cpp -o fusion/util/AffxByteArray.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/AffxConv.cpp -o fusion/util/AffxConv.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/MsgStream.cpp -o fusion/util/MsgStream.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/Util.cpp -o fusion/util/Util.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/Err.cpp -o fusion/util/Err.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/Fs.cpp -o fusion/util/Fs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/Verbose.cpp -o fusion/util/Verbose.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/RowFile.cpp -o fusion/util/RowFile.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/TableFile.cpp -o fusion/util/TableFile.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c fusion/util/Convert.cpp -o fusion/util/Convert.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c R_affx_cel_parser.cpp -o R_affx_cel_parser.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c R_affx_cdf_parser.cpp -o R_affx_cdf_parser.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c R_affx_cdf_extras.cpp -o R_affx_cdf_extras.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c R_affx_bpmap_parser.cpp -o R_affx_bpmap_parser.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c R_affx_clf_pgf_parser.cpp -o R_affx_clf_pgf_parser.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -Wno-sign-compare -O0 -c R_affx_chp_parser.cpp -o R_affx_chp_parser.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifusion/calvin_files/array/src -Ifusion/calvin_files/data/src -Ifusion/calvin_files/exception/src -Ifusion/calvin_files/fusion/src -Ifusion/calvin_files/fusion/src/GCOSAdapter -Ifusion/calvin_files/fusion/src/CalvinAdapter -Ifusion/calvin_files/parameter/src -Ifusion/calvin_files/parsers/src -Ifusion/calvin_files/portability/src -Ifusion/calvin_files/template/src -Ifusion/calvin_files/utils/src -Ifusion/calvin_files/writers/src -Ifusion/file -Ifusion/file/TsvFile -Ifusion/portability -Ifusion/util -Ifusion -D_USE_MEM_MAPPING_  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c 000.init.c -o 000.init.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o affxparser.so fusion/calvin_files/data/src/CDFData.o fusion/calvin_files/data/src/CDFProbeGroupInformation.o fusion/calvin_files/data/src/CDFProbeInformation.o fusion/calvin_files/data/src/CDFProbeSetInformation.o fusion/calvin_files/data/src/CDFQCProbeInformation.o fusion/calvin_files/data/src/CDFQCProbeSetInformation.o fusion/calvin_files/data/src/CELData.o fusion/calvin_files/data/src/CHPBackgroundZone.o fusion/calvin_files/data/src/CHPData.o fusion/calvin_files/data/src/CHPExpressionEntry.o fusion/calvin_files/data/src/CHPMultiDataData.o fusion/calvin_files/data/src/CHPTilingData.o fusion/calvin_files/data/src/CHPQuantificationData.o fusion/calvin_files/data/src/CHPQuantificationDetectionData.o fusion/calvin_files/data/src/CHPGenotypeEntry.o fusion/calvin_files/data/src/CHPUniversalEntry.o fusion/calvin_files/data/src/ColumnInfo.o fusion/calvin_files/data/src/DataGroup.o fusion/calvin_files/data/src/DataGroupHeader.o fusion/calvin_files/data/src/DataSet.o fusion/calvin_files/data/src/DataSetHeader.o fusion/calvin_files/data/src/FileHeader.o fusion/calvin_files/data/src/GenericData.o fusion/calvin_files/data/src/GenericDataHeader.o fusion/calvin_files/exception/src/ExceptionBase.o fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCELDataAdapter.o fusion/calvin_files/fusion/src/CalvinAdapter/CalvinCHPDataAdapter.o fusion/calvin_files/fusion/src/FusionBPMAPData.o fusion/calvin_files/fusion/src/FusionCDFData.o fusion/calvin_files/fusion/src/FusionCDFQCProbeSetNames.o fusion/calvin_files/fusion/src/FusionCELData.o fusion/calvin_files/fusion/src/FusionCHPData.o fusion/calvin_files/fusion/src/FusionProbeSetResults.o fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCELDataAdapter.o fusion/calvin_files/fusion/src/GCOSAdapter/GCOSCHPDataAdapter.o fusion/calvin_files/fusion/src/FusionCHPLegacyData.o fusion/calvin_files/fusion/src/FusionCHPMultiDataAccessor.o fusion/calvin_files/fusion/src/FusionCHPMultiDataData.o fusion/calvin_files/fusion/src/FusionCHPTilingData.o fusion/calvin_files/fusion/src/FusionCHPGenericData.o fusion/calvin_files/fusion/src/FusionCHPQuantificationData.o fusion/calvin_files/fusion/src/FusionCHPQuantificationDetectionData.o fusion/calvin_files/parameter/src/ParameterNameValueType.o fusion/calvin_files/parsers/src/CDFFileReader.o fusion/calvin_files/parsers/src/CelFileReader.o fusion/calvin_files/parsers/src/CHPFileReader.o fusion/calvin_files/parsers/src/CHPMultiDataFileReader.o fusion/calvin_files/parsers/src/CHPTilingFileReader.o fusion/calvin_files/parsers/src/CHPQuantificationFileReader.o fusion/calvin_files/parsers/src/CHPQuantificationDetectionFileReader.o fusion/calvin_files/parsers/src/DataGroupHeaderReader.o fusion/calvin_files/parsers/src/DataGroupReader.o fusion/calvin_files/parsers/src/DataSetHeaderReader.o fusion/calvin_files/parsers/src/DataSetReader.o fusion/calvin_files/parsers/src/FileHeaderReader.o fusion/calvin_files/parsers/src/FileInput.o fusion/calvin_files/parsers/src/GenericDataHeaderReader.o fusion/calvin_files/parsers/src/GenericFileReader.o fusion/calvin_files/utils/src/AffymetrixGuid.o fusion/calvin_files/utils/src/DateTime.o fusion/calvin_files/utils/src/FileUtils.o fusion/calvin_files/utils/src/StringUtils.o fusion/calvin_files/utils/src/checksum.o fusion/file/BPMAPFileData.o fusion/file/BPMAPFileWriter.o fusion/file/CDFFileData.o fusion/file/CELFileData.o fusion/file/CHPFileData.o fusion/file/FileIO.o fusion/file/FileWriter.o fusion/file/TsvFile/ClfFile.o fusion/file/TsvFile/PgfFile.o fusion/file/TsvFile/TsvFile.o fusion/util/AffxByteArray.o fusion/util/AffxConv.o fusion/util/MsgStream.o fusion/util/Util.o fusion/util/Err.o fusion/util/Fs.o fusion/util/Verbose.o fusion/util/RowFile.o fusion/util/TableFile.o fusion/util/Convert.o R_affx_cel_parser.o R_affx_cdf_parser.o R_affx_cdf_extras.o R_affx_bpmap_parser.o R_affx_clf_pgf_parser.o R_affx_chp_parser.o 000.init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-affxparser/00new/affxparser/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘affxparser’ as ‘affxparser_1.71.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (affxparser)
+* installing *source* package ‘preprocessCore’ ...
+** using staged installation
+'config' variable 'CPP' is defunct
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for library containing pthread_create... none required
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for stdlib.h... (cached) yes
+checking if PTHREAD_STACK_MIN is defined... yes
+checking if R is using flexiblas... flexiblas not found. preprocessCore threading will not be disabled
+configure: Enabling threading for preprocessCore
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_colSummarize.c -o R_colSummarize.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_plmd_interfaces.c -o R_plmd_interfaces.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_plmr_interfaces.c -o R_plmr_interfaces.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_rlm_interfaces.c -o R_rlm_interfaces.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_subColSummarize.c -o R_subColSummarize.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_subrcModel_interfaces.c -o R_subrcModel_interfaces.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c avg.c -o avg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c avg_log.c -o avg_log.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c biweight.c -o biweight.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init_package.c -o init_package.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lm.c -o lm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c log_avg.c -o log_avg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c log_median.c -o log_median.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix_functions.c -o matrix_functions.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c median.c -o median.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c median_log.c -o median_log.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c medianpolish.c -o medianpolish.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c plmd.c -o plmd.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c plmr.c -o plmr.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c psi_fns.c -o psi_fns.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c qnorm.c -o qnorm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rlm.c -o rlm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rlm_anova.c -o rlm_anova.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rlm_se.c -o rlm_se.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rma_background4.c -o rma_background4.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rma_common.c -o rma_common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_STDLIB_H=1 -DUSE_PTHREADS=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c weightedkerneldensity.c -o weightedkerneldensity.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o preprocessCore.so R_colSummarize.o R_plmd_interfaces.o R_plmr_interfaces.o R_rlm_interfaces.o R_subColSummarize.o R_subrcModel_interfaces.o avg.o avg_log.o biweight.o init_package.o lm.o log_avg.o log_median.o matrix_functions.o median.o median_log.o medianpolish.o plmd.o plmr.o psi_fns.o qnorm.o rlm.o rlm_anova.o rlm_se.o rma_background4.o rma_common.o weightedkerneldensity.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-preprocessCore/00new/preprocessCore/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘preprocessCore’ as ‘preprocessCore_1.61.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (preprocessCore)
+* installing *source* package ‘foreach’ ...
+** package ‘foreach’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘foreach’ as ‘foreach_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (foreach)
+* installing *source* package ‘oligoClasses’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘oligoClasses’ as ‘oligoClasses_1.61.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (oligoClasses)
+* installing *source* package ‘oligo’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c DABG.c -o DABG.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ParserGzXYS.c -o ParserGzXYS.o
+ParserGzXYS.c: In function ‘gzcountLines’:
+ParserGzXYS.c:18:17: warning: passing argument 1 of ‘gzeof’ from incompatible pointer type [-Wincompatible-pointer-types]
+   18 |   while (!gzeof(file)){
+      |                 ^~~~
+      |                 |
+      |                 struct gzFile_s **
+In file included from /usr/include/zlib.h:34,
+                 from ParserGzXYS.c:4:
+/usr/include/zlib.h:1595:27: note: expected ‘gzFile’ {aka ‘struct gzFile_s *’} but argument is of type ‘struct gzFile_s **’
+ 1595 | ZEXTERN int ZEXPORT gzeof OF((gzFile file));
+      |                           ^~
+ParserGzXYS.c:19:12: warning: passing argument 1 of ‘gzgets’ from incompatible pointer type [-Wincompatible-pointer-types]
+   19 |     gzgets(file, buffer, 1000);
+      |            ^~~~
+      |            |
+      |            struct gzFile_s **
+In file included from /usr/include/zlib.h:34,
+                 from ParserGzXYS.c:4:
+/usr/include/zlib.h:1492:31: note: expected ‘gzFile’ {aka ‘struct gzFile_s *’} but argument is of type ‘struct gzFile_s **’
+ 1492 | ZEXTERN char * ZEXPORT gzgets OF((gzFile file, char *buf, int len));
+      |                               ^~
+ParserGzXYS.c: In function ‘gzxys_header_field’:
+ParserGzXYS.c:46:6: warning: assignment to ‘struct gzFile_s **’ from incompatible pointer type ‘gzFile’ {aka ‘struct gzFile_s *’} [-Wincompatible-pointer-types]
+   46 |   fp = gzopen(currentFile, "rb");
+      |      ^
+ParserGzXYS.c:50:10: warning: passing argument 1 of ‘gzgets’ from incompatible pointer type [-Wincompatible-pointer-types]
+   50 |   gzgets(fp, buffer, LINEMAX);
+      |          ^~
+      |          |
+      |          struct gzFile_s **
+In file included from /usr/include/zlib.h:34,
+                 from ParserGzXYS.c:4:
+/usr/include/zlib.h:1492:31: note: expected ‘gzFile’ {aka ‘struct gzFile_s *’} but argument is of type ‘struct gzFile_s **’
+ 1492 | ZEXTERN char * ZEXPORT gzgets OF((gzFile file, char *buf, int len));
+      |                               ^~
+ParserGzXYS.c:51:11: warning: passing argument 1 of ‘gzclose’ from incompatible pointer type [-Wincompatible-pointer-types]
+   51 |   gzclose(fp);
+      |           ^~
+      |           |
+      |           struct gzFile_s **
+In file included from /usr/include/zlib.h:34,
+                 from ParserGzXYS.c:4:
+/usr/include/zlib.h:1631:32: note: expected ‘gzFile’ {aka ‘struct gzFile_s *’} but argument is of type ‘struct gzFile_s **’
+ 1631 | ZEXTERN int ZEXPORT    gzclose OF((gzFile file));
+      |                                ^~
+ParserGzXYS.c: In function ‘R_read_gzxys_files’:
+ParserGzXYS.c:134:6: warning: assignment to ‘struct gzFile_s **’ from incompatible pointer type ‘gzFile’ {aka ‘struct gzFile_s *’} [-Wincompatible-pointer-types]
+  134 |   fp = gzopen(CHAR(STRING_ELT(filenames, 0)), "rb");
+      |      ^
+ParserGzXYS.c:138:11: warning: passing argument 1 of ‘gzclose’ from incompatible pointer type [-Wincompatible-pointer-types]
+  138 |   gzclose(fp);
+      |           ^~
+      |           |
+      |           struct gzFile_s **
+In file included from /usr/include/zlib.h:34,
+                 from ParserGzXYS.c:4:
+/usr/include/zlib.h:1631:32: note: expected ‘gzFile’ {aka ‘struct gzFile_s *’} but argument is of type ‘struct gzFile_s **’
+ 1631 | ZEXTERN int ZEXPORT    gzclose OF((gzFile file));
+      |                                ^~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ParserXYS.c -o ParserXYS.o
+ParserXYS.c: In function ‘xys_header_field’:
+ParserXYS.c:145:3: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  145 |   fgets(buffer, LINEMAX, fp);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+ParserXYS.c: In function ‘R_read_xys_header’:
+ParserXYS.c:320:3: warning: ignoring return value of ‘fgets’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  320 |   fgets(buffer, LINEMAX, fp);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c baseProfile.c -o baseProfile.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c basecontent.c -o basecontent.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chipbackground.c -o chipbackground.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mas5calls.c -o mas5calls.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rma2.c -o rma2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rma_common.c -o rma_common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/preprocessCore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trimmed.c -o trimmed.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o oligo.so DABG.o ParserGzXYS.o ParserXYS.o baseProfile.o basecontent.o chipbackground.o mas5calls.o rma2.o rma_common.o trimmed.o -lz -lgfortran -lm -lquadmath -llapack -lblas -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-oligo/00new/oligo/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Note: in method for ‘pm<-’ with signature
+‘object="TilingFeatureSet",subset="ANY",target="ANY",value="array"’:
+expanding the signature to include omitted arguments in definition:
+subset = "missing", target = "missing"
+Note: in method for ‘mm<-’ with signature
+‘object="TilingFeatureSet",subset="ANY",target="ANY",value="array"’:
+expanding the signature to include omitted arguments in definition:
+subset = "missing", target = "missing"
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘oligo’ as ‘oligo_1.63.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (oligo)
+* installing *source* package ‘pd.genomewidesnp.6’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pd.genomewidesnp.6’ as ‘pd.genomewidesnp.6_3.14.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pd.genomewidesnp.6)
