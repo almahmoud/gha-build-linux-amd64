@@ -1,0 +1,36 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''panp'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'panp'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/panp_1.69.0.tar.gz'
+Content type 'application/x-gzip' length 523233 bytes (510 KB)
+==================================================
+downloaded 510 KB
+
+* installing *source* package ‘panp’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘panp’ as ‘panp_1.69.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (panp)
+
+The downloaded source packages are in
+	‘/tmp/RtmpAmrmml/downloaded_packages’
+
+real	0m6.086s
+user	0m4.977s
+sys	0m0.641s
