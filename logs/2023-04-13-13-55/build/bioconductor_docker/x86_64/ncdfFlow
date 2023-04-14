@@ -1,0 +1,46 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ncdfFlow'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'ncdfFlow'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/ncdfFlow_2.45.0.tar.gz'
+Content type 'application/x-gzip' length 188411 bytes (183 KB)
+==================================================
+downloaded 183 KB
+
+* installing *source* package ‘ncdfFlow’ ...
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/usr/local/lib/R/site-library/BH/include' -I'/tmp/tmp/built/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/usr/local/lib/R/site-library/BH/include' -I'/tmp/tmp/built/Rhdf5lib/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hdfFlow.cpp -o hdfFlow.o
+mkdir -p "/tmp/tmp/built/00LOCK-ncdfFlow/00new/ncdfFlow/lib"
+ar rs "/tmp/tmp/built/00LOCK-ncdfFlow/00new/ncdfFlow/lib/libncdfFlow.a" cpp11.o hdfFlow.o
+ar: creating /tmp/tmp/built/00LOCK-ncdfFlow/00new/ncdfFlow/lib/libncdfFlow.a
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ncdfFlow.so cpp11.o hdfFlow.o /tmp/tmp/built/Rhdf5lib/lib/libhdf5_cpp.a /tmp/tmp/built/Rhdf5lib/lib/libhdf5.a -lcrypto -lcurl -lsz -laec -lz -ldl -lm -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ncdfFlow/00new/ncdfFlow/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ncdfFlow’ as ‘ncdfFlow_2.45.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ncdfFlow)
+
+The downloaded source packages are in
+	‘/tmp/RtmpHbrcLh/downloaded_packages’
+
+real	0m19.409s
+user	0m16.753s
+sys	0m1.367s
