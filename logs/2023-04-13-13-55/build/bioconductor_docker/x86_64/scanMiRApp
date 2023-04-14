@@ -1,0 +1,272 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''scanMiRApp'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'scanMiRApp'
+also installing the dependencies ‘fstcore’, ‘fst’, ‘plotly’, ‘rintrojs’, ‘scanMiRData’, ‘shinycssloaders’, ‘shinydashboard’, ‘shinyjqui’, ‘waiter’
+
+trying URL 'https://cloud.r-project.org/src/contrib/fstcore_0.9.14.tar.gz'
+Content type 'application/x-gzip' length 579301 bytes (565 KB)
+==================================================
+downloaded 565 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/fst_0.9.8.tar.gz'
+Content type 'application/x-gzip' length 274495 bytes (268 KB)
+==================================================
+downloaded 268 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/plotly_4.10.1.tar.gz'
+Content type 'application/x-gzip' length 3893413 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/rintrojs_0.3.2.tar.gz'
+Content type 'application/x-gzip' length 38882 bytes (37 KB)
+==================================================
+downloaded 37 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/data/experiment/src/contrib/scanMiRData_1.5.0.tar.gz'
+Content type 'application/x-gzip' length 16921218 bytes (16.1 MB)
+==================================================
+downloaded 16.1 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/shinycssloaders_1.0.0.tar.gz'
+Content type 'application/x-gzip' length 122969 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/shinydashboard_0.7.2.tar.gz'
+Content type 'application/x-gzip' length 239254 bytes (233 KB)
+==================================================
+downloaded 233 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/shinyjqui_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 3419238 bytes (3.3 MB)
+==================================================
+downloaded 3.3 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/waiter_0.2.5.tar.gz'
+Content type 'application/x-gzip' length 377113 bytes (368 KB)
+==================================================
+downloaded 368 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/scanMiRApp_1.5.0.tar.gz'
+Content type 'application/x-gzip' length 918802 bytes (897 KB)
+==================================================
+downloaded 897 KB
+
+* installing *source* package ‘fstcore’ ...
+** package ‘fstcore’ successfully unpacked and MD5 sums checked
+** using staged installation
+0.29.2
+Found pkg-config cflags and libs for LZ4!
+0.29.2
+Found pkg-config cflags and libs for ZSTD!
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c flex_store.cpp -o flex_store.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fst_blockrunner_char.cpp -o fst_blockrunner_char.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fst_compress.cpp -o fst_compress.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fst_error.cpp -o fst_error.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fst_table.cpp -o fst_table.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c openmp.cpp -o openmp.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c versions.cpp -o versions.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/compression/compression.cpp -o fstlib/compression/compression.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/compression/compressor.cpp -o fstlib/compression/compressor.o
+ar rcs libCOMPRESSION.a fstlib/compression/compression.o fstlib/compression/compressor.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/interface/openmphelper.cpp -o fstlib/interface/openmphelper.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/interface/fststore.cpp -o fstlib/interface/fststore.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/logical/logical_v10.cpp -o fstlib/logical/logical_v10.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/integer/integer_v8.cpp -o fstlib/integer/integer_v8.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/byte/byte_v12.cpp -o fstlib/byte/byte_v12.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/double/double_v9.cpp -o fstlib/double/double_v9.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/character/character_v6.cpp -o fstlib/character/character_v6.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/factor/factor_v7.cpp -o fstlib/factor/factor_v7.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/blockstreamer/blockstreamer_v2.cpp -o fstlib/blockstreamer/blockstreamer_v2.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/integer64/integer64_v11.cpp -o fstlib/integer64/integer64_v11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/byteblock/byteblock_v13.cpp -o fstlib/byteblock/byteblock_v13.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ifstlib -Ifstlib/LZ4 -Ifstlib/ZSTD -Ifstlib/ZSTD/common -Ifstlib/ZSTD/decompress -Ifstlib/ZSTD/compress -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fstlib/LZ4/xxhash.c -o fstlib/LZ4/xxhash.o
+ar rcs libFRAME.a fstlib/interface/openmphelper.o fstlib/interface/fststore.o fstlib/logical/logical_v10.o fstlib/integer/integer_v8.o fstlib/byte/byte_v12.o fstlib/double/double_v9.o fstlib/character/character_v6.o fstlib/factor/factor_v7.o fstlib/blockstreamer/blockstreamer_v2.o fstlib/integer64/integer64_v11.o fstlib/byteblock/byteblock_v13.o fstlib/LZ4/xxhash.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o fstcore.so RcppExports.o flex_store.o fst_blockrunner_char.o fst_compress.o fst_error.o fst_table.o openmp.o versions.o -fopenmp ./libFRAME.a ./libCOMPRESSION.a -llz4 -lzstd -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-fstcore/00new/fstcore/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘fstcore’ as ‘fstcore_0.9.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fstcore)
+* installing *source* package ‘plotly’ ...
+** package ‘plotly’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘plotly’ as ‘plotly_4.10.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (plotly)
+* installing *source* package ‘rintrojs’ ...
+** package ‘rintrojs’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘rintrojs’ as ‘rintrojs_0.3.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (rintrojs)
+* installing *source* package ‘scanMiRData’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘scanMiRData’ as ‘scanMiRData_1.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (scanMiRData)
+* installing *source* package ‘shinycssloaders’ ...
+** package ‘shinycssloaders’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘shinycssloaders’ as ‘shinycssloaders_1.0.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (shinycssloaders)
+* installing *source* package ‘shinydashboard’ ...
+** package ‘shinydashboard’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘shinydashboard’ as ‘shinydashboard_0.7.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (shinydashboard)
+* installing *source* package ‘shinyjqui’ ...
+** package ‘shinyjqui’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘shinyjqui’ as ‘shinyjqui_0.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (shinyjqui)
+* installing *source* package ‘waiter’ ...
+** package ‘waiter’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘waiter’ as ‘waiter_0.2.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (waiter)
+* installing *source* package ‘fst’ ...
+** package ‘fst’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/fstcore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/fstcore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c flex_store.cpp -o flex_store.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/fstcore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fst_compress.cpp -o fst_compress.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I'/tmp/tmp/built/fstcore/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c openmp.cpp -o openmp.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o fst.so RcppExports.o flex_store.o fst_compress.o openmp.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-fst/00new/fst/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘fst’ as ‘fst_0.9.8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fst)
+* installing *source* package ‘scanMiRApp’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘scanMiRApp’ as ‘scanMiRApp_1.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (scanMiRApp)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpk30w9b/downloaded_packages’
+
+real	2m4.669s
+user	1m54.934s
+sys	0m9.636s
