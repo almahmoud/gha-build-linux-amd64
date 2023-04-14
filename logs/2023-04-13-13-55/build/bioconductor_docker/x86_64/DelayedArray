@@ -1,0 +1,62 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''DelayedArray'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'DelayedArray'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/DelayedArray_0.25.0.tar.gz'
+Content type 'application/x-gzip' length 656990 bytes (641 KB)
+==================================================
+downloaded 641 KB
+
+* installing *source* package ‘DelayedArray’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_init_DelayedArray.c -o R_init_DelayedArray.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c S4Vectors_stubs.c -o S4Vectors_stubs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c abind.c -o abind.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c array_selection.c -o array_selection.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c compress_atomic_vector.c -o compress_atomic_vector.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/tmp/tmp/built/S4Vectors/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sparseMatrix_utils.c -o sparseMatrix_utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o DelayedArray.so R_init_DelayedArray.o S4Vectors_stubs.o abind.o array_selection.o compress_atomic_vector.o sparseMatrix_utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-DelayedArray/00new/DelayedArray/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a new generic function for ‘rowsum’ in package ‘DelayedArray’
+Creating a new generic function for ‘apply’ in package ‘DelayedArray’
+Creating a new generic function for ‘sweep’ in package ‘DelayedArray’
+Creating a new generic function for ‘scale’ in package ‘DelayedArray’
+Creating a generic function for ‘dnorm’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘pnorm’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qnorm’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘dbinom’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘pbinom’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qbinom’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘dpois’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘ppois’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qpois’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘dlogis’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘plogis’ from package ‘stats’ in package ‘DelayedArray’
+Creating a generic function for ‘qlogis’ from package ‘stats’ in package ‘DelayedArray’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DelayedArray’ as ‘DelayedArray_0.25.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DelayedArray)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDeXyC7/downloaded_packages’
+
+real	0m26.852s
+user	0m25.059s
+sys	0m1.135s
