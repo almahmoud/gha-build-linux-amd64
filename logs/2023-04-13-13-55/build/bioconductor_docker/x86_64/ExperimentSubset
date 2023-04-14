@@ -1,0 +1,45 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ExperimentSubset'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'ExperimentSubset'
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/ExperimentSubset_1.9.0.tar.gz'
+Content type 'application/x-gzip' length 314919 bytes (307 KB)
+==================================================
+downloaded 307 KB
+
+* installing *source* package ‘ExperimentSubset’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning in makePrototypeFromClassDef(properties, ClassDef, immediate, where) :
+  in constructing the prototype for class “SubsetSummarizedExperiment”, slots in prototype and not in class: listData, elementType
+Warning in makePrototypeFromClassDef(properties, ClassDef, immediate, where) :
+  in constructing the prototype for class “SubsetRangedSummarizedExperiment”, slots in prototype and not in class: listData, elementType
+Warning in makePrototypeFromClassDef(properties, ClassDef, immediate, where) :
+  in constructing the prototype for class “SubsetSingleCellExperiment”, slots in prototype and not in class: listData, elementType
+Warning in makePrototypeFromClassDef(properties, ClassDef, immediate, where) :
+  in constructing the prototype for class “SubsetTreeSummarizedExperiment”, slots in prototype and not in class: listData, elementType
+Warning in makePrototypeFromClassDef(properties, ClassDef, immediate, where) :
+  in constructing the prototype for class “SubsetSpatialExperiment”, slots in prototype and not in class: listData, elementType
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ExperimentSubset’ as ‘ExperimentSubset_1.9.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ExperimentSubset)
+
+The downloaded source packages are in
+	‘/tmp/RtmpiMstYY/downloaded_packages’
+
+real	0m35.007s
+user	0m31.818s
+sys	0m1.991s
