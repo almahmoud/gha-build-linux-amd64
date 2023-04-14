@@ -1,0 +1,67 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''easyRNASeq'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'easyRNASeq'
+also installing the dependency ‘LSD’
+
+trying URL 'https://cloud.r-project.org/src/contrib/LSD_4.1-0.tar.gz'
+Content type 'application/x-gzip' length 47403 bytes (46 KB)
+==================================================
+downloaded 46 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/easyRNASeq_2.35.0.tar.gz'
+Content type 'application/x-gzip' length 72839163 bytes (69.5 MB)
+==================================================
+downloaded 69.5 MB
+
+* installing *source* package ‘LSD’ ...
+** package ‘LSD’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘LSD’ as ‘LSD_4.1-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (LSD)
+* installing *source* package ‘easyRNASeq’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘BiocGenerics’ for request: ‘clusterApply’ when loading ‘easyRNASeq’
+Creating a generic function for ‘basename’ from package ‘base’ in package ‘easyRNASeq’
+Creating a generic function for ‘file.exists’ from package ‘base’ in package ‘easyRNASeq’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘BiocGenerics’ for request: ‘clusterApply’ when loading ‘easyRNASeq’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+No methods found in package ‘BiocGenerics’ for request: ‘clusterApply’ when loading ‘easyRNASeq’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘easyRNASeq’ as ‘easyRNASeq_2.35.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (easyRNASeq)
+
+The downloaded source packages are in
+	‘/tmp/RtmpbpLtNn/downloaded_packages’
+
+real	0m47.107s
+user	0m42.492s
+sys	0m2.554s
