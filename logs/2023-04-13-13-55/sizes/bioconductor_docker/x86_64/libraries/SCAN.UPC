@@ -1,0 +1,1 @@
+692196305 /tmp/SCAN.UPC.tar.gz
