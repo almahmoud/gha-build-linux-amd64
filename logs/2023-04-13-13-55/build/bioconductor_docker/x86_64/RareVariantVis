@@ -1,0 +1,167 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''RareVariantVis'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.17 (BiocManager 1.30.20), R 4.3.0 beta (2023-04-06
+  r84184)
+Installing package(s) 'RareVariantVis'
+also installing the dependencies ‘googleVis’, ‘gtools’, ‘BSgenome.Hsapiens.UCSC.hg19’, ‘TxDb.Hsapiens.UCSC.hg19.knownGene’, ‘phastCons100way.UCSC.hg19’
+
+trying URL 'https://cloud.r-project.org/src/contrib/googleVis_0.7.1.tar.gz'
+Content type 'application/x-gzip' length 604689 bytes (590 KB)
+==================================================
+downloaded 590 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtools_3.9.4.tar.gz'
+Content type 'application/x-gzip' length 240661 bytes (235 KB)
+==================================================
+downloaded 235 KB
+
+trying URL 'https://bioconductor.org/packages/3.17/data/annotation/src/contrib/BSgenome.Hsapiens.UCSC.hg19_1.4.3.tar.gz'
+Content type 'application/x-gzip' length 710245413 bytes (677.3 MB)
+==================================================
+downloaded 677.3 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/data/annotation/src/contrib/TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2.tar.gz'
+Content type 'application/x-gzip' length 18669702 bytes (17.8 MB)
+==================================================
+downloaded 17.8 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/data/annotation/src/contrib/phastCons100way.UCSC.hg19_3.7.2.tar.gz'
+Content type 'application/x-gzip' length 1050647519 bytes (1002.0 MB)
+==================================================
+downloaded 1002.0 MB
+
+trying URL 'https://bioconductor.org/packages/3.17/bioc/src/contrib/RareVariantVis_2.27.0.tar.gz'
+Content type 'application/x-gzip' length 2884313 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+* installing *source* package ‘googleVis’ ...
+** package ‘googleVis’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘googleVis’ as ‘googleVis_0.7.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (googleVis)
+* installing *source* package ‘gtools’ ...
+** package ‘gtools’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c roman2int.c -o roman2int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c setTCPNoDelay.c -o setTCPNoDelay.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gtools.so init.o roman2int.o setTCPNoDelay.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gtools/00new/gtools/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtools’ as ‘gtools_3.9.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtools)
+* installing *source* package ‘BSgenome.Hsapiens.UCSC.hg19’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BSgenome.Hsapiens.UCSC.hg19’ as ‘BSgenome.Hsapiens.UCSC.hg19_1.4.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BSgenome.Hsapiens.UCSC.hg19)
+* installing *source* package ‘TxDb.Hsapiens.UCSC.hg19.knownGene’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TxDb.Hsapiens.UCSC.hg19.knownGene’ as ‘TxDb.Hsapiens.UCSC.hg19.knownGene_3.2.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TxDb.Hsapiens.UCSC.hg19.knownGene)
+* installing *source* package ‘phastCons100way.UCSC.hg19’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘phastCons100way.UCSC.hg19’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘phastCons100way.UCSC.hg19’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘phastCons100way.UCSC.hg19’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘phastCons100way.UCSC.hg19’ as ‘phastCons100way.UCSC.hg19_3.7.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (phastCons100way.UCSC.hg19)
+* installing *source* package ‘RareVariantVis’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘phastCons100way.UCSC.hg19’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘phastCons100way.UCSC.hg19’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘phastCons100way.UCSC.hg19’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RareVariantVis’ as ‘RareVariantVis_2.27.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RareVariantVis)
+
+The downloaded source packages are in
+	‘/tmp/RtmpdxMteS/downloaded_packages’
+
+real	5m38.073s
+user	5m9.003s
+sys	0m17.103s
