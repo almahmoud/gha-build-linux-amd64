@@ -4,6 +4,12 @@ import os
 from tabulate import tabulate
 import requests, time, humanize
 
+def get_bioc_version():
+   """Gets bioc version from log file"""
+   with open("bioc_build/bioc", "r") as f:
+      biocver = f.read()
+   return biocver.replace(" ", ".")
+
 def get_pkgs_dict(jsonfile):
     """Loads package information from 'biocdeps.json' file"""
     with open(jsonfile, "r") as f:
@@ -131,7 +137,8 @@ def add_bbs_status(pkg, each):
     Add the CRAN status for a package to the `each` list.
     The CRAN status is determined by checking the package's build log for certain keywords.
     """
-    bbsurl = f"https://bioconductor.org/checkResults/release/bioc-LATEST/{pkg}/raw-results/nebbiolo2/buildsrc-summary.dcf"
+    biocver = get_bioc_version()
+    bbsurl = f"https://bioconductor.org/checkResults/{biocver}/bioc-LATEST/{pkg}/raw-results/nebbiolo2/buildsrc-summary.dcf"
     r = requests.get(bbsurl)
     bbs_status = ""
     retries = 0
