@@ -1,58 +1,57 @@
 # Summary
 
-2120 Bioconductor sotware binaries built
+2121 Bioconductor sotware binaries built
 
-4141 Other dependency binaries built
+4142 Other dependency binaries built
 
-0 failed packages
+7 failed packages
 
-34 unclaimed packages
+26 unclaimed packages
 
 
 
-## Failed (0)
-| Package   | Status   | BBS Status   | Log   | Known Error   |
-|-----------|----------|--------------|-------|---------------|
+## Failed (7)
+| Package                                                                                                  | Status   | BBS Status                                                                  | Log                                                                                               | Known Error                                                                                                                                                                                                              |
+|----------------------------------------------------------------------------------------------------------|----------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [BGmix](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790130)      | Failed   | [OK](https://bioconductor.org/checkResults/release/bioc-LATEST/BGmix)       | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/BGmix)      | Error unknown                                                                                                                                                                                                            |
+| [OmicsLonDA](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414792450) | Failed   | [OK](https://bioconductor.org/checkResults/release/bioc-LATEST/OmicsLonDA)  | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/OmicsLonDA) | Error unknown                                                                                                                                                                                                            |
+| [amplican](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414792359)   | Failed   | [ERROR](https://bioconductor.org/checkResults/release/bioc-LATEST/amplican) | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/amplican)   | Failed R dependency: 'clusterCrit'. [CRAN Package 'clusterCrit'](https://cran.r-project.org/web/packages/clusterCrit/index.html) archived. Extracted text: Archived on 2023-03-11 as issues were not corrected in time.  |
+| [tscR](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414792261)       | Failed   | [ERROR](https://bioconductor.org/checkResults/release/bioc-LATEST/tscR)     | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/tscR)       | Failed R dependency: 'kmlShape'. [CRAN Package 'kmlShape'](https://cran.r-project.org/web/packages/kmlShape/index.html) archived. Extracted text: Archived on 2022-12-19 as issues were not corrected despite reminders. |
+| [RiboDiPA](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791752)   | Failed   | [OK](https://bioconductor.org/checkResults/release/bioc-LATEST/RiboDiPA)    | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/RiboDiPA)   | Failed R dependency: 'rstan'                                                                                                                                                                                             |
+| [alpine](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790866)     | Failed   | [OK](https://bioconductor.org/checkResults/release/bioc-LATEST/alpine)      | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/alpine)     | Failed R dependency: 'speedglm'                                                                                                                                                                                          |
+| [exomePeak2](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791030) | Failed   | [OK](https://bioconductor.org/checkResults/release/bioc-LATEST/exomePeak2)  | [Build Log](https://github.com/almahmoud/gha-build-linux-amd64/blob/8eaf079/lists/failed/exomePeak2) | Failed R dependency: 'speedglm'                                                                                                                                                                                          |
 
-## Unclaimed (34)
-| Package                                                                                                                | Status    | Blocked By                                              |
-|------------------------------------------------------------------------------------------------------------------------|-----------|---------------------------------------------------------|
-| [alpine](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696554895/jobs/8327252134)                   | Unclaimed |                                                         |
-| [amplican](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4701630975/jobs/8337942522)                 | Unclaimed |                                                         |
-| [banocc](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4692829664/jobs/8319572612)                   | Unclaimed |                                                         |
-| [BASiCStan](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4705961162/jobs/8346967047)                | Unclaimed |                                                         |
-| [BGmix](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4692826601/jobs/8319039266)                    | Unclaimed |                                                         |
-| [ChIC](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695467521/jobs/8324814042)                     | Unclaimed |                                                         |
-| [compartmap](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696189176/jobs/8326553256)               | Unclaimed |                                                         |
-| [DMCFB](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696189176/jobs/8326555012)                    | Unclaimed |                                                         |
-| [EventPointer](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4697143286/jobs/8328543186)             | Unclaimed |                                                         |
-| [exomePeak2](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696811928/jobs/8327267473)               | Unclaimed |                                                         |
-| [hipathia](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696554895/jobs/8327248710)                 | Unclaimed |                                                         |
-| [iCheck](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4699393938/jobs/8332804831)                   | Unclaimed |                                                         |
-| [IgGeneUsage](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4703577426/jobs/8342250326)              | Unclaimed |                                                         |
-| [M3Drop](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4692826601/jobs/8319042198)                   | Unclaimed |                                                         |
-| [Maaslin2](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4701481440/jobs/8337563549)                 | Unclaimed |                                                         |
-| Macarron                                                                                                               | Unclaimed | Incomplete Bioc dependencies: Maaslin2.                 |
-| [MethReg](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4698144237/jobs/8331065181)                  | Unclaimed |                                                         |
-| MMUPHin                                                                                                                | Unclaimed | Incomplete Bioc dependencies: Maaslin2.                 |
-| [nullranges](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696828525/jobs/8327936557)               | Unclaimed |                                                         |
-| [omada](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4694134381/jobs/8322025662)                    | Unclaimed |                                                         |
-| [OmicsLonDA](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695530867/jobs/8324818519)               | Unclaimed |                                                         |
-| [ppcseq](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4693882366/jobs/8321989350)                   | Unclaimed |                                                         |
-| [PrInCE](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695148317/jobs/8324205842)                   | Unclaimed |                                                         |
-| [RiboDiPA](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696811928/jobs/8327270081)                 | Unclaimed |                                                         |
-| [sccomp](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695919185/jobs/8326001243)                   | Unclaimed |                                                         |
-| scMerge                                                                                                                | Unclaimed | Incomplete Bioc dependencies: M3Drop.                   |
-| [scMET](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695919185/jobs/8325998616)                    | Unclaimed |                                                         |
-| singleCellTK                                                                                                           | Unclaimed | Incomplete Bioc dependencies: M3Drop, scMerge.          |
-| [SISPA](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4697143286/jobs/8328547006)                    | Unclaimed |                                                         |
-| [SpatialFeatureExperiment](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4698144237/jobs/8331069291) | Unclaimed |                                                         |
-| [spatzie](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4698597356/jobs/8332087334)                  | Unclaimed |                                                         |
-| [TCseq](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695543177/jobs/8325310178)                    | Unclaimed |                                                         |
-| [tscR](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695530867/jobs/8324817581)                     | Unclaimed |                                                         |
-| Voyager                                                                                                                | Unclaimed | Incomplete Bioc dependencies: SpatialFeatureExperiment. |
+## Unclaimed (26)
+| Package                                                                                                    | Status    | Blocked By                                     |
+|------------------------------------------------------------------------------------------------------------|-----------|------------------------------------------------|
+| [banocc](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791136)       | Unclaimed |                                                |
+| [BASiCStan](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791864)    | Unclaimed |                                                |
+| [ChIC](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790554)         | Unclaimed |                                                |
+| [compartmap](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414789945)   | Unclaimed |                                                |
+| [DMCFB](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791250)        | Unclaimed |                                                |
+| [EventPointer](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790626) | Unclaimed |                                                |
+| [hipathia](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414789665)     | Unclaimed |                                                |
+| [iCheck](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790721)       | Unclaimed |                                                |
+| [IgGeneUsage](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790314)  | Unclaimed |                                                |
+| [M3Drop](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790480)       | Unclaimed |                                                |
+| [Maaslin2](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414792165)     | Unclaimed |                                                |
+| Macarron                                                                                                   | Unclaimed | Incomplete Bioc dependencies: Maaslin2.        |
+| [MethReg](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414789870)      | Unclaimed |                                                |
+| MMUPHin                                                                                                    | Unclaimed | Incomplete Bioc dependencies: Maaslin2.        |
+| [nullranges](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414792074)   | Unclaimed |                                                |
+| [omada](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791530)        | Unclaimed |                                                |
+| [ppcseq](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790023)       | Unclaimed |                                                |
+| [PrInCE](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791976)       | Unclaimed |                                                |
+| [sccomp](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791433)       | Unclaimed |                                                |
+| scMerge                                                                                                    | Unclaimed | Incomplete Bioc dependencies: M3Drop.          |
+| [scMET](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790230)        | Unclaimed |                                                |
+| singleCellTK                                                                                               | Unclaimed | Incomplete Bioc dependencies: M3Drop, scMerge. |
+| [SISPA](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791334)        | Unclaimed |                                                |
+| [spatzie](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414789760)      | Unclaimed |                                                |
+| [TCseq](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414791653)        | Unclaimed |                                                |
+| Voyager                                                                                                    | Unclaimed |                                                |
 
-## Bioconductor Software Binaries Built (2120)
+## Bioconductor Software Binaries Built (2121)
 | Package                                                                                                                    | Status    | Tarball                                                                                                                                                                                                                                                       |
 |----------------------------------------------------------------------------------------------------------------------------|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [a4](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4703577426/jobs/8342250485)                           | Succeeded | [a4_1.47.0_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/a4_1.47.0_R_x86_64-pc-linux-gnu.tar.gz)                                                     |
@@ -1932,6 +1931,7 @@
 | [spatialDE](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4698144237/jobs/8331069645)                    | Succeeded | [spatialDE_1.5.5_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/spatialDE_1.5.5_R_x86_64-pc-linux-gnu.tar.gz)                                         |
 | [SpatialDecon](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4695543177/jobs/8325309962)                 | Succeeded | [SpatialDecon_1.9.0_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/SpatialDecon_1.9.0_R_x86_64-pc-linux-gnu.tar.gz)                                   |
 | [SpatialExperiment](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4697143286/jobs/8328540942)            | Succeeded | [SpatialExperiment_1.9.5_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/SpatialExperiment_1.9.5_R_x86_64-pc-linux-gnu.tar.gz)                         |
+| [SpatialFeatureExperiment](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4739705119/jobs/8414790959)     | Succeeded | [SpatialFeatureExperiment_1.1.5_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/SpatialFeatureExperiment_1.1.5_R_x86_64-pc-linux-gnu.tar.gz)           |
 | [spatialHeatmap](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4697570226/jobs/8329750023)               | Succeeded | [spatialHeatmap_2.5.3_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/spatialHeatmap_2.5.3_R_x86_64-pc-linux-gnu.tar.gz)                               |
 | [SpatialOmicsOverlay](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4701481440/jobs/8337562492)          | Succeeded | [SpatialOmicsOverlay_0.99.23_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/SpatialOmicsOverlay_0.99.23_R_x86_64-pc-linux-gnu.tar.gz)                 |
 | [speckle](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4696149526/jobs/8326087290)                      | Succeeded | [speckle_0.99.7_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/speckle_0.99.7_R_x86_64-pc-linux-gnu.tar.gz)                                           |
@@ -2176,7 +2176,7 @@
 | [zlibbioc](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4693650968/jobs/8321465817)                     | Succeeded | [zlibbioc_1.45.0_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/zlibbioc_1.45.0_R_x86_64-pc-linux-gnu.tar.gz)                                         |
 | [ZygosityPredictor](https://github.com/almahmoud/gha-build-linux-amd64/actions/runs/4697143286/jobs/8328542049)            | Succeeded | [ZygosityPredictor_0.99.15_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/ZygosityPredictor_0.99.15_R_x86_64-pc-linux-gnu.tar.gz)                     |
 
-## Other Dependency Binaries (2120)
+## Other Dependency Binaries (2121)
 | Package                                       | Status    | Tarball                                                                                                                                                                                                                                                                                       |
 |-----------------------------------------------|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | tictoc                                        | Succeeded | [tictoc_1.1_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/tictoc_1.1_R_x86_64-pc-linux-gnu.tar.gz)                                                                                   |
@@ -4308,6 +4308,7 @@
 | BSgenome.Celegans.UCSC.ce2                    | Succeeded | [BSgenome.Celegans.UCSC.ce2_1.4.0_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/BSgenome.Celegans.UCSC.ce2_1.4.0_R_x86_64-pc-linux-gnu.tar.gz)                                       |
 | synapterdata                                  | Succeeded | [synapterdata_1.37.0_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/synapterdata_1.37.0_R_x86_64-pc-linux-gnu.tar.gz)                                                                 |
 | DGEobj.utils                                  | Succeeded | [DGEobj.utils_1.0.6_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/DGEobj.utils_1.0.6_R_x86_64-pc-linux-gnu.tar.gz)                                                                   |
+| SpatialFeatureExperiment                      | Succeeded | [SpatialFeatureExperiment_1.1.5_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/SpatialFeatureExperiment_1.1.5_R_x86_64-pc-linux-gnu.tar.gz)                                           |
 | recount3                                      | Succeeded | [recount3_1.9.1_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/recount3_1.9.1_R_x86_64-pc-linux-gnu.tar.gz)                                                                           |
 | assertive.files                               | Succeeded | [assertive.files_0.0-2_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/assertive.files_0.0-2_R_x86_64-pc-linux-gnu.tar.gz)                                                             |
 | BAGS                                          | Succeeded | [BAGS_2.39.0_R_x86_64-pc-linux-gnu.tar.gz](https://js2.jetstream-cloud.org:8001/swift/v1/gha-build/bioconductor_docker/x86_64/2023-04-13-13-55/binaries/src/contrib/BAGS_2.39.0_R_x86_64-pc-linux-gnu.tar.gz)                                                                                 |
