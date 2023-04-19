@@ -71,8 +71,12 @@ def check_cran_archived(pkg, each):
         time.sleep(5)
     if r.status_code == 200:
         crantext = r.content.decode("utf-8")
+        archivetext = ""
         if "Archived on " in crantext:
             archivetext = crantext[crantext.find("Archived on"):]
+        elif "Removed on" in crantext:
+            archivetext = crantext[crantext.find("Removed on"):]
+        if archivetext:
             archivetext = archivetext[:archivetext.find("\n")]
             currtext = each[-1]
             each[-1] = f"{currtext}. [CRAN Package '{pkg}']({cranurl}) archived. Extracted text: {archivetext}"
