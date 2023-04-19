@@ -138,7 +138,7 @@ def add_bbs_status(pkg, each):
     The CRAN status is determined by checking the package's build log for certain keywords.
     """
     biocver = get_bioc_version()
-    bbsurl = f"https://bioconductor.org/checkResults/{biocver}/bioc-LATEST/{pkg}/raw-results/nebbiolo2/buildsrc-summary.dcf"
+    bbsurl = f"https://bioconductor.org/checkResults/{biocver}/bioc-LATEST/{pkg}/raw-results/nebbiolo1/buildsrc-summary.dcf"
     r = requests.get(bbsurl)
     bbs_status = ""
     retries = 0
@@ -152,7 +152,7 @@ def add_bbs_status(pkg, each):
     if not bbs_status:
         bbs_status = "Failed retrieving"
     else:
-        bbs_status = f"[{bbs_status}]({bbsurl.replace('/raw-results/nebbiolo2/buildsrc-summary.dcf', '')})"
+        bbs_status = f"[{bbs_status}]({bbsurl.replace('/raw-results/nebbiolo1/buildsrc-summary.dcf', '')})"
     each.insert(2, bbs_status)
 
 def process_failed_pkgs(tables):
