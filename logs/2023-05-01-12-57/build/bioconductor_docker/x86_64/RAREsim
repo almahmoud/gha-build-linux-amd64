@@ -1,0 +1,234 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''RAREsim'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'RAREsim'
+also installing the dependency ‘nloptr’
+
+trying URL 'https://cloud.r-project.org/src/contrib/nloptr_2.0.3.tar.gz'
+Content type 'application/x-gzip' length 2219877 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/RAREsim_1.5.0.tar.gz'
+Content type 'application/x-gzip' length 297399 bytes (290 KB)
+==================================================
+downloaded 290 KB
+
+* installing *source* package ‘nloptr’ ...
+** package ‘nloptr’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C++... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking for g++ -std=gnu++17 option to enable C++11 features... none needed
+checking how to run the C++ preprocessor... g++ -std=gnu++17 -E
+checking whether the compiler supports GNU C++... (cached) yes
+checking whether g++ -std=gnu++17 accepts -g... (cached) yes
+checking for g++ -std=gnu++17 option to enable C++11 features... (cached) none needed
+checking for pkg-config... /usr/bin/pkg-config
+checking if pkg-config knows NLopt... no
+checking for cmake... /usr/bin/cmake
+using NLopt via local cmake build on x86_64 
+set CMAKE_BIN=/usr/bin/cmake
+set CC=gcc
+set CFLAGS=-I/usr/local/include -fpic -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g
+set CXX=g++
+set CXXFLAGS=-std=gnu++11 -I/usr/local/include -fpic -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g
+set LDFLAGS=-L/usr/local/lib
+-- The C compiler identification is GNU 11.3.0
+-- The CXX compiler identification is GNU 11.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- NLopt version 2.7.1
+-- Looking for getopt.h
+-- Looking for getopt.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for time.h
+-- Looking for time.h - found
+-- Looking for sys/time.h
+-- Looking for sys/time.h - found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for syscall
+-- Looking for syscall - found
+-- Looking for isinf
+-- Looking for isinf - found
+-- Looking for isnan
+-- Looking for isnan - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for qsort_r
+-- Looking for qsort_r - found
+-- Looking for time
+-- Looking for time - found
+-- Looking for copysign
+-- Looking for copysign - found
+-- Looking for getopt
+-- Looking for getopt - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of unsigned int
+-- Check size of unsigned int - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Looking for sqrt in m
+-- Looking for sqrt in m - found
+-- Looking for fpclassify
+-- Looking for fpclassify - TRUE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE - Success
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE
+-- Performing Test HAVE_THREAD_LOCAL_STORAGE - Failed
+-- Looking for __cplusplus
+-- Looking for __cplusplus - found
+-- Performing Test SUPPORTS_STDCXX11
+-- Performing Test SUPPORTS_STDCXX11 - Success
+-- Performing Test HAS_FPIC
+-- Performing Test HAS_FPIC - Success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt-build
+[  1%] Generating nlopt.hpp
+[  3%] Generating nlopt.f
+[  3%] Built target generate-fortran
+[  3%] Built target generate-cpp
+[  7%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/DIRect.c.o
+[  7%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/direct_wrap.c.o
+[  9%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/DIRserial.c.o
+[ 11%] Building C object CMakeFiles/nlopt.dir/src/algs/direct/DIRsubrout.c.o
+[ 13%] Building C object CMakeFiles/nlopt.dir/src/algs/cdirect/cdirect.c.o
+[ 15%] Building C object CMakeFiles/nlopt.dir/src/algs/cdirect/hybrid.c.o
+[ 17%] Building C object CMakeFiles/nlopt.dir/src/algs/praxis/praxis.c.o
+[ 19%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/plis.c.o
+[ 21%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/plip.c.o
+[ 23%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/pnet.c.o
+[ 25%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/mssubs.c.o
+[ 27%] Building C object CMakeFiles/nlopt.dir/src/algs/luksan/pssubs.c.o
+[ 29%] Building C object CMakeFiles/nlopt.dir/src/algs/crs/crs.c.o
+[ 31%] Building C object CMakeFiles/nlopt.dir/src/algs/mlsl/mlsl.c.o
+[ 33%] Building C object CMakeFiles/nlopt.dir/src/algs/mma/mma.c.o
+[ 35%] Building C object CMakeFiles/nlopt.dir/src/algs/mma/ccsa_quadratic.c.o
+[ 37%] Building C object CMakeFiles/nlopt.dir/src/algs/cobyla/cobyla.c.o
+[ 39%] Building C object CMakeFiles/nlopt.dir/src/algs/newuoa/newuoa.c.o
+[ 41%] Building C object CMakeFiles/nlopt.dir/src/algs/neldermead/nldrmd.c.o
+[ 43%] Building C object CMakeFiles/nlopt.dir/src/algs/neldermead/sbplx.c.o
+[ 45%] Building C object CMakeFiles/nlopt.dir/src/algs/auglag/auglag.c.o
+[ 47%] Building C object CMakeFiles/nlopt.dir/src/algs/bobyqa/bobyqa.c.o
+[ 49%] Building C object CMakeFiles/nlopt.dir/src/algs/isres/isres.c.o
+[ 50%] Building C object CMakeFiles/nlopt.dir/src/algs/slsqp/slsqp.c.o
+[ 52%] Building C object CMakeFiles/nlopt.dir/src/algs/esch/esch.c.o
+[ 54%] Building C object CMakeFiles/nlopt.dir/src/api/general.c.o
+[ 56%] Building C object CMakeFiles/nlopt.dir/src/api/options.c.o
+[ 58%] Building C object CMakeFiles/nlopt.dir/src/api/optimize.c.o
+[ 60%] Building C object CMakeFiles/nlopt.dir/src/api/deprecated.c.o
+[ 62%] Building C object CMakeFiles/nlopt.dir/src/api/f77api.c.o
+[ 64%] Building C object CMakeFiles/nlopt.dir/src/util/mt19937ar.c.o
+[ 66%] Building C object CMakeFiles/nlopt.dir/src/util/sobolseq.c.o
+[ 68%] Building C object CMakeFiles/nlopt.dir/src/util/timer.c.o
+[ 70%] Building C object CMakeFiles/nlopt.dir/src/util/stop.c.o
+[ 72%] Building C object CMakeFiles/nlopt.dir/src/util/redblack.c.o
+[ 74%] Building C object CMakeFiles/nlopt.dir/src/util/qsort_r.c.o
+[ 76%] Building C object CMakeFiles/nlopt.dir/src/util/rescale.c.o
+[ 78%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/global.cc.o
+[ 80%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/linalg.cc.o
+[ 82%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/local.cc.o
+[ 84%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/stogo.cc.o
+[ 86%] Building CXX object CMakeFiles/nlopt.dir/src/algs/stogo/tools.cc.o
+[ 88%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/evolvent.cc.o
+[ 90%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/solver.cc.o
+[ 92%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/local_optimizer.cc.o
+[ 94%] Building CXX object CMakeFiles/nlopt.dir/src/algs/ags/ags.cc.o
+[ 96%] Linking CXX static library libnlopt.a
+[100%] Built target nlopt
+[  1%] Built target generate-cpp
+[  3%] Built target generate-fortran
+Consolidate compiler generated dependencies of target nlopt
+[100%] Built target nlopt
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/lib/pkgconfig/nlopt.pc
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/include/nlopt.h
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/include/nlopt.hpp
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/include/nlopt.f
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/lib/libnlopt.a
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/lib/cmake/nlopt/NLoptLibraryDepends.cmake
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/lib/cmake/nlopt/NLoptLibraryDepends-release.cmake
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/lib/cmake/nlopt/NLoptConfig.cmake
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/lib/cmake/nlopt/NLoptConfigVersion.cmake
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/share/man/man3/nlopt.3
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/share/man/man3/nlopt_minimize.3
+-- Installing: /tmp/RtmptXNs8L/R.INSTALLe9319ea2559/nloptr/src/nlopt/share/man/man3/nlopt_minimize_constrained.3
+mv: cannot move 'nlopt/lib' to a subdirectory of itself, 'nlopt/lib/lib'
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I'/usr/local/lib/R/site-library/testthat/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init_nloptr.c -o init_nloptr.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I'/usr/local/lib/R/site-library/testthat/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nloptr.c -o nloptr.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I'/usr/local/lib/R/site-library/testthat/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-C-API.cpp -o test-C-API.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I../inst/include  -I'/usr/local/lib/R/site-library/testthat/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-runner.cpp -o test-runner.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o nloptr.so init_nloptr.o nloptr.o test-C-API.o test-runner.o -llapack -lblas -lgfortran -lm -lquadmath nlopt/lib/libnlopt.a -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-nloptr/00new/nloptr/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘nloptr’ as ‘nloptr_2.0.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (nloptr)
+* installing *source* package ‘RAREsim’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RAREsim’ as ‘RAREsim_1.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RAREsim)
+
+The downloaded source packages are in
+	‘/tmp/RtmpuRHfQ3/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m50.697s
+user	0m59.799s
+sys	0m5.846s
