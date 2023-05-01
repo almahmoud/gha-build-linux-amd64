@@ -1,0 +1,681 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''powerTCR'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'powerTCR'
+also installing the dependencies ‘iterators’, ‘gsl’, ‘SparseM’, ‘evd’, ‘permute’, ‘cubature’, ‘doParallel’, ‘evmix’, ‘foreach’, ‘truncdist’, ‘vegan’, ‘VGAM’
+
+trying URL 'https://cloud.r-project.org/src/contrib/iterators_1.0.14.tar.gz'
+Content type 'application/x-gzip' length 300266 bytes (293 KB)
+==================================================
+downloaded 293 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gsl_2.1-8.tar.gz'
+Content type 'application/x-gzip' length 217997 bytes (212 KB)
+==================================================
+downloaded 212 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/SparseM_1.81.tar.gz'
+Content type 'application/x-gzip' length 735100 bytes (717 KB)
+==================================================
+downloaded 717 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/evd_2.3-6.1.tar.gz'
+Content type 'application/x-gzip' length 1006631 bytes (983 KB)
+==================================================
+downloaded 983 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/permute_0.9-7.tar.gz'
+Content type 'application/x-gzip' length 114805 bytes (112 KB)
+==================================================
+downloaded 112 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/cubature_2.0.4.6.tar.gz'
+Content type 'application/x-gzip' length 3331285 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.17.tar.gz'
+Content type 'application/x-gzip' length 164254 bytes (160 KB)
+==================================================
+downloaded 160 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/evmix_2.12.tar.gz'
+Content type 'application/x-gzip' length 3328692 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/foreach_1.5.2.tar.gz'
+Content type 'application/x-gzip' length 89758 bytes (87 KB)
+==================================================
+downloaded 87 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/truncdist_1.0-2.tar.gz'
+Content type 'application/x-gzip' length 3963 bytes
+==================================================
+downloaded 3963 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/vegan_2.6-4.tar.gz'
+Content type 'application/x-gzip' length 1496110 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/VGAM_1.1-8.tar.gz'
+Content type 'application/x-gzip' length 1638263 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/powerTCR_1.21.0.tar.gz'
+Content type 'application/x-gzip' length 352374 bytes (344 KB)
+==================================================
+downloaded 344 KB
+
+* installing *source* package ‘iterators’ ...
+** package ‘iterators’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iterators’ as ‘iterators_1.0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iterators)
+* installing *source* package ‘gsl’ ...
+** package ‘gsl’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking for gsl-config... /usr/bin/gsl-config
+checking if GSL version >= 2.5... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c airy.c -o airy.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bessel.c -o bessel.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clausen.c -o clausen.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coulomb.c -o coulomb.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c coupling.c -o coupling.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dawson.c -o dawson.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c debye.c -o debye.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dilog.c -o dilog.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ellint.c -o ellint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c elljac.c -o elljac.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c error.c -o error.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c expint.c -o expint.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fermi_dirac.c -o fermi_dirac.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gamma.c -o gamma.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gegenbauer.c -o gegenbauer.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hyperg.c -o hyperg.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c laguerre.c -o laguerre.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lambert.c -o lambert.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c legendre.c -o legendre.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c log.c -o log.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c poly.c -o poly.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pow_int.c -o pow_int.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c psi.c -o psi.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c qrng.c -o qrng.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rng.c -o rng.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c synchrotron.c -o synchrotron.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transport.c -o transport.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c trig.c -o trig.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vector.c -o vector.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/include -I.  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zeta.c -o zeta.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gsl.so airy.o bessel.o clausen.o coulomb.o coupling.o dawson.o debye.o dilog.o ellint.o elljac.o error.o expint.o fermi_dirac.o gamma.o gegenbauer.o hyperg.o init.o laguerre.o lambert.o legendre.o log.o poly.o pow_int.o psi.o qrng.o rng.o synchrotron.o transport.o trig.o vector.o zeta.o -L/usr/lib/x86_64-linux-gnu -lgsl -lgslcblas -lm -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gsl/00new/gsl/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gsl’ as ‘gsl_2.1-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gsl)
+* installing *source* package ‘SparseM’ ...
+** package ‘SparseM’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c bckslv.f -o bckslv.o
+gfortran  -fpic  -g -O2  -c chol.f -o chol.o
+gfortran  -fpic  -g -O2  -c chol2csr.f -o chol2csr.o
+gfortran  -fpic  -g -O2  -c cholesky.f -o cholesky.o
+cholesky.f:2948:72:
+
+ 2948 |                          IF  ( NODE )  400, 900, 500
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:2982:72:
+
+ 2982 |                  IF  ( RNODE )  1100, 1800, 1200
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3299:72:
+
+ 3299 |                      IF  ( ENODE )  400, 800, 500
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3356:72:
+
+ 3356 |                              IF  ( NODE )  1000, 2100, 1100
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3430:72:
+
+ 3430 |                                          IF  ( NODE )  1700, 2000, 1800
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+gfortran  -fpic  -g -O2  -c csr.f -o csr.o
+gfortran  -fpic  -g -O2  -c extract.f -o extract.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c sparskit.f -o sparskit.o
+gfortran  -fpic  -g -O2  -c subscr.f -o subscr.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o SparseM.so bckslv.o chol.o chol2csr.o cholesky.o csr.o extract.o init.o sparskit.o subscr.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-SparseM/00new/SparseM/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘diag’ from package ‘base’ in package ‘SparseM’
+Creating a generic function for ‘diag<-’ from package ‘base’ in package ‘SparseM’
+Creating a generic function for ‘norm’ from package ‘base’ in package ‘SparseM’
+Creating a new generic function for ‘backsolve’ in package ‘SparseM’
+Creating a generic function for ‘forwardsolve’ from package ‘base’ in package ‘SparseM’
+Creating a generic function for ‘model.response’ from package ‘stats’ in package ‘SparseM’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SparseM’ as ‘SparseM_1.81_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SparseM)
+* installing *source* package ‘evd’ ...
+** package ‘evd’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bvpot.c -o bvpot.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ccop.c -o ccop.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c evd_init.c -o evd_init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fit.c -o fit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pot.c -o pot.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sim.c -o sim.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o evd.so bvpot.o ccop.o evd_init.o fit.o pot.o sim.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-evd/00new/evd/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘evd’ as ‘evd_2.3-6.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (evd)
+* installing *source* package ‘permute’ ...
+** package ‘permute’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘permute’ as ‘permute_0.9-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (permute)
+* installing *source* package ‘cubature’ ...
+** package ‘cubature’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+(cp -f Cuba-4.2-nonwin/makefile.in Cuba-4.2-nonwin/cuba.h Cuba-4.2 && \
+cp -f Cuba-4.2-nonwin/cuba.h ../inst/include && \
+cp -f Cuba-4.2-nonwin/src/common/* Cuba-4.2/src/common && \
+cp -f Cuba-4.2-nonwin/src/cuhre/common.c Cuba-4.2/src/cuhre && \
+cd Cuba-4.2 && \
+./configure && \
+make libcuba.a AR="ar" ARFLAGS="-rv" RANLIB="ranlib" CC="gcc -std=gnu17" CFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common" && \
+touch cuba.ts)
+checking for gcc... gcc -std=gnu17
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -std=gnu17 accepts -g... yes
+checking for gcc -std=gnu17 option to accept ISO C89... none needed
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran compiler... yes
+checking whether gfortran accepts -g... yes
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for long double with more range or precision than double... yes
+checking how to run the C preprocessor... gcc -std=gnu17 -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for pid_t... yes
+checking for powl... yes
+checking for erf... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for shmget... yes
+checking for getloadavg... yes
+checking for variable-size arrays... yes
+checking for MathLink... no
+checking for qmake... no
+configure: creating ./config.status
+config.status: creating makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+make[1]: Entering directory '/tmp/RtmpI6q5QU/R.INSTALL12cdf1488b2/cubature/src/Cuba-4.2'
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/vegas -DNOUNDERSCORE -c -o Vegas.o ./src/vegas/Vegas.c
+In file included from ./src/vegas/decl.h:9,
+                 from ./src/vegas/Vegas.c:12:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/vegas/decl.h:9,
+                 from ./src/vegas/Vegas.c:12:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+In file included from /usr/include/string.h:535,
+                 from ./src/common/stddecl.h:22,
+                 from ./src/vegas/decl.h:9,
+                 from ./src/vegas/Vegas.c:12:
+In function ‘memcpy’,
+    inlined from ‘SobolIni’ at ./src/common/Random.c:105:5,
+    inlined from ‘IniRandom’ at ./src/common/Random.c:340:22,
+    inlined from ‘Integrate’ at ./src/vegas/Integrate.c:59:3:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound 18446744073709551612 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ar -rv libcuba.a Vegas.o
+ar: creating libcuba.a
+a - Vegas.o
+rm -f Vegas.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/suave -DNOUNDERSCORE -c -o Suave.o ./src/suave/Suave.c
+In file included from ./src/suave/decl.h:9,
+                 from ./src/suave/Suave.c:12:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/suave/decl.h:9,
+                 from ./src/suave/Suave.c:12:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+In file included from /usr/include/string.h:535,
+                 from ./src/common/stddecl.h:22,
+                 from ./src/suave/decl.h:9,
+                 from ./src/suave/Suave.c:12:
+In function ‘memcpy’,
+    inlined from ‘SobolIni’ at ./src/common/Random.c:105:5,
+    inlined from ‘IniRandom’ at ./src/common/Random.c:340:22,
+    inlined from ‘Integrate’ at ./src/suave/Integrate.c:61:3:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound 18446744073709551612 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ar -rv libcuba.a Suave.o
+a - Suave.o
+rm -f Suave.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/divonne -DNOUNDERSCORE -c -o Divonne.o ./src/divonne/Divonne.c
+In file included from ./src/divonne/decl.h:9,
+                 from ./src/divonne/Divonne.c:13:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/divonne/decl.h:9,
+                 from ./src/divonne/Divonne.c:13:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+In file included from /usr/include/string.h:535,
+                 from ./src/common/stddecl.h:22,
+                 from ./src/divonne/decl.h:9,
+                 from ./src/divonne/Divonne.c:13:
+In function ‘memcpy’,
+    inlined from ‘SobolIni’ at ./src/common/Random.c:105:5,
+    inlined from ‘IniRandom’ at ./src/common/Random.c:340:22,
+    inlined from ‘Integrate’ at ./src/divonne/Integrate.c:72:5:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound 18446744073709551612 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ar -rv libcuba.a Divonne.o
+a - Divonne.o
+rm -f Divonne.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/cuhre -DNOUNDERSCORE -c -o Cuhre.o ./src/cuhre/Cuhre.c
+In file included from ./src/cuhre/decl.h:9,
+                 from ./src/cuhre/Cuhre.c:12:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/cuhre/decl.h:9,
+                 from ./src/cuhre/Cuhre.c:12:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Cuhre.o
+a - Cuhre.o
+rm -f Cuhre.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -DNOUNDERSCORE -c -o Fork.o ./src/common/Fork.c
+In file included from ./src/common/Fork.c:11:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/common/Fork.c:11:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Fork.o
+a - Fork.o
+rm -f Fork.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -DNOUNDERSCORE -c -o Global.o ./src/common/Global.c
+In file included from ./src/common/Global.c:9:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/common/Global.c:9:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Global.o
+a - Global.o
+rm -f Global.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -c -o Data.o ./src/common/Data.c
+In file included from ./src/common/Data.c:9:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/common/Data.c:9:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Data.o
+a - Data.o
+rm -f Data.o
+ranlib libcuba.a
+make[1]: Leaving directory '/tmp/RtmpI6q5QU/R.INSTALL12cdf1488b2/cubature/src/Cuba-4.2'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcpp-Cuba.cpp -o Rcpp-Cuba.o
+((cd cubature-1.0.3 && \
+(make libcubature.a CC="gcc -std=gnu17" CFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common" AR="ar" RANLIB="ranlib")) && \
+touch cubature.ts)
+make[1]: Entering directory '/tmp/RtmpI6q5QU/R.INSTALL12cdf1488b2/cubature/src/cubature-1.0.3'
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common   -c -o hcubature.o hcubature.c
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common   -c -o pcubature.o pcubature.c
+ar cr libcubature.a  hcubature.o pcubature.o
+make[1]: Leaving directory '/tmp/RtmpI6q5QU/R.INSTALL12cdf1488b2/cubature/src/cubature-1.0.3'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcpp-cubature.cpp -o Rcpp-cubature.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+gcc -std=gnu17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -I. -I../inst/include -I./src/common -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cubature_init.c -o cubature_init.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o cubature.so Rcpp-Cuba.o Rcpp-cubature.o RcppExports.o cubature_init.o -L./cubature-1.0.3 -L./Cuba-4.2 -lcubature -lcuba -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-cubature/00new/cubature/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘cubature’ as ‘cubature_2.0.4.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (cubature)
+* installing *source* package ‘VGAM’ ...
+** package ‘VGAM’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c VGAM_init.c -o VGAM_init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caqo3.c -o caqo3.o
+gfortran  -fpic  -g -O2  -c ei.f -o ei.o
+gfortran  -fpic  -g -O2  -c fgam.f -o fgam.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gautr.c -o gautr.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lerchphi.c -o lerchphi.o
+gfortran  -fpic  -g -O2  -c lms.f -o lms.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c muxr3.c -o muxr3.o
+gfortran  -fpic  -g -O2  -c rgam.f -o rgam.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rgam3.c -o rgam3.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c specfun3.c -o specfun3.o
+gfortran  -fpic  -g -O2  -c tyeepolygamma.f -o tyeepolygamma.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tyeepolygamma3.c -o tyeepolygamma3.o
+gfortran  -fpic  -g -O2  -c vdigami.f -o vdigami.o
+gfortran  -fpic  -g -O2  -c veigen.f -o veigen.o
+gfortran  -fpic  -g -O2  -c vgam.f -o vgam.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vgam3.c -o vgam3.o
+gfortran  -fpic  -g -O2  -c vlinpack1.f -o vlinpack1.o
+gfortran  -fpic  -g -O2  -c vlinpack2.f -o vlinpack2.o
+gfortran  -fpic  -g -O2  -c vlinpack3.f -o vlinpack3.o
+gfortran  -fpic  -g -O2  -c vmux.f -o vmux.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vmux3.c -o vmux3.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zeta3.c -o zeta3.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o VGAM.so VGAM_init.o caqo3.o ei.o fgam.o gautr.o lerchphi.o lms.o muxr3.o rgam.o rgam3.o specfun3.o tyeepolygamma.o tyeepolygamma3.o vdigami.o veigen.o vgam.o vgam3.o vlinpack1.o vlinpack2.o vlinpack3.o vmux.o vmux3.o zeta3.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-VGAM/00new/VGAM/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘VGAM’ as ‘VGAM_1.1-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (VGAM)
+* installing *source* package ‘evmix’ ...
+** package ‘evmix’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘evmix’ as ‘evmix_2.12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (evmix)
+* installing *source* package ‘foreach’ ...
+** package ‘foreach’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘foreach’ as ‘foreach_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (foreach)
+* installing *source* package ‘truncdist’ ...
+** package ‘truncdist’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘truncdist’ as ‘truncdist_1.0-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (truncdist)
+* installing *source* package ‘vegan’ ...
+** package ‘vegan’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data2hill.c -o data2hill.o
+gfortran  -fpic  -g -O2  -c decorana.f -o decorana.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getF.c -o getF.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c goffactor.c -o goffactor.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c monoMDS.f -o monoMDS.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nestedness.c -o nestedness.o
+gfortran  -fpic  -g -O2  -c ordering.f -o ordering.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pnpoly.c -o pnpoly.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stepacross.c -o stepacross.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vegdist.c -o vegdist.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o vegan.so data2hill.o decorana.o getF.o goffactor.o init.o monoMDS.o nestedness.o ordering.o pnpoly.o stepacross.o vegdist.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-vegan/00new/vegan/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘vegan’ as ‘vegan_2.6-4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (vegan)
+* installing *source* package ‘doParallel’ ...
+** package ‘doParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘doParallel’ as ‘doParallel_1.0.17_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (doParallel)
+* installing *source* package ‘powerTCR’ ...
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘powerTCR’ as ‘powerTCR_1.21.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (powerTCR)
+
+The downloaded source packages are in
+	‘/tmp/RtmpAYL6Wg/downloaded_packages’
+Old packages: 'MASS'
+
+real	2m40.934s
+user	2m32.848s
+sys	0m11.369s
