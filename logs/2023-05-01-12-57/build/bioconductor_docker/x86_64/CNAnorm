@@ -1,0 +1,48 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''CNAnorm'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'CNAnorm'
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/CNAnorm_1.47.0.tar.gz'
+Content type 'application/x-gzip' length 1477538 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+* installing *source* package ‘CNAnorm’ ...
+** using staged installation
+** libs
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c daxpy.f -o daxpy.o
+gfortran  -fpic  -g -O2  -c ddot.f -o ddot.o
+gfortran  -fpic  -g -O2  -c dgbfa.f -o dgbfa.o
+gfortran  -fpic  -g -O2  -c dgbsl.f -o dgbsl.o
+gfortran  -fpic  -g -O2  -c dscal.f -o dscal.o
+gfortran  -fpic  -g -O2  -c dsmooth.f -o dsmooth.o
+gfortran  -fpic  -g -O2  -c idamax.f -o idamax.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o CNAnorm.so daxpy.o ddot.o dgbfa.o dgbsl.o dscal.o dsmooth.o idamax.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-CNAnorm/00new/CNAnorm/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘CNAnorm’ as ‘CNAnorm_1.47.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (CNAnorm)
+
+The downloaded source packages are in
+	‘/tmp/Rtmpw5erwK/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m10.427s
+user	0m7.682s
+sys	0m0.797s
