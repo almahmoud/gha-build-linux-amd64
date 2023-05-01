@@ -1,0 +1,407 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''quantsmooth'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'quantsmooth'
+also installing the dependencies ‘SparseM’, ‘MatrixModels’, ‘quantreg’
+
+trying URL 'https://cloud.r-project.org/src/contrib/SparseM_1.81.tar.gz'
+Content type 'application/x-gzip' length 735100 bytes (717 KB)
+==================================================
+downloaded 717 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/MatrixModels_0.5-1.tar.gz'
+Content type 'application/x-gzip' length 24022 bytes (23 KB)
+==================================================
+downloaded 23 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/quantreg_5.95.tar.gz'
+Content type 'application/x-gzip' length 1026027 bytes (1001 KB)
+==================================================
+downloaded 1001 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/quantsmooth_1.67.0.tar.gz'
+Content type 'application/x-gzip' length 236010 bytes (230 KB)
+==================================================
+downloaded 230 KB
+
+* installing *source* package ‘SparseM’ ...
+** package ‘SparseM’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c bckslv.f -o bckslv.o
+gfortran  -fpic  -g -O2  -c chol.f -o chol.o
+gfortran  -fpic  -g -O2  -c chol2csr.f -o chol2csr.o
+gfortran  -fpic  -g -O2  -c cholesky.f -o cholesky.o
+cholesky.f:2948:72:
+
+ 2948 |                          IF  ( NODE )  400, 900, 500
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:2982:72:
+
+ 2982 |                  IF  ( RNODE )  1100, 1800, 1200
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3299:72:
+
+ 3299 |                      IF  ( ENODE )  400, 800, 500
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3356:72:
+
+ 3356 |                              IF  ( NODE )  1000, 2100, 1100
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3430:72:
+
+ 3430 |                                          IF  ( NODE )  1700, 2000, 1800
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+gfortran  -fpic  -g -O2  -c csr.f -o csr.o
+gfortran  -fpic  -g -O2  -c extract.f -o extract.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c sparskit.f -o sparskit.o
+gfortran  -fpic  -g -O2  -c subscr.f -o subscr.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o SparseM.so bckslv.o chol.o chol2csr.o cholesky.o csr.o extract.o init.o sparskit.o subscr.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-SparseM/00new/SparseM/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘diag’ from package ‘base’ in package ‘SparseM’
+Creating a generic function for ‘diag<-’ from package ‘base’ in package ‘SparseM’
+Creating a generic function for ‘norm’ from package ‘base’ in package ‘SparseM’
+Creating a new generic function for ‘backsolve’ in package ‘SparseM’
+Creating a generic function for ‘forwardsolve’ from package ‘base’ in package ‘SparseM’
+Creating a generic function for ‘model.response’ from package ‘stats’ in package ‘SparseM’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SparseM’ as ‘SparseM_1.81_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SparseM)
+* installing *source* package ‘MatrixModels’ ...
+** package ‘MatrixModels’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘MatrixModels’ as ‘MatrixModels_0.5-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (MatrixModels)
+* installing *source* package ‘quantreg’ ...
+** package ‘quantreg’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c akj.f -o akj.o
+gfortran  -fpic  -g -O2  -c boot.f -o boot.o
+gfortran  -fpic  -g -O2  -c bound.f -o bound.o
+gfortran  -fpic  -g -O2  -c boundc.f -o boundc.o
+gfortran  -fpic  -g -O2  -c brute.f -o brute.o
+gfortran  -fpic  -g -O2  -c chlfct.f -o chlfct.o
+gfortran  -fpic  -g -O2  -c cholesky.f -o cholesky.o
+cholesky.f:2946:72:
+
+ 2946 |                          IF  ( NODE )  400, 900, 500
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:2980:72:
+
+ 2980 |                  IF  ( RNODE )  1100, 1800, 1200
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3297:72:
+
+ 3297 |                      IF  ( ENODE )  400, 800, 500
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3354:72:
+
+ 3354 |                              IF  ( NODE )  1000, 2100, 1100
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+cholesky.f:3428:72:
+
+ 3428 |                                          IF  ( NODE )  1700, 2000, 1800
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+gfortran  -fpic  -g -O2  -c combos.f -o combos.o
+gfortran  -fpic  -g -O2  -c crqf.f -o crqf.o
+crqf.f:98:72:
+
+   98 |         DO 5 J=1,N
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 5 at (1)
+crqf.f:99:72:
+
+   99 |    5    WA(I,J) = X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 5 at (1)
+crqf.f:140:72:
+
+  140 |   25      WA(L,J) = X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 25 at (1)
+crqf.f:149:72:
+
+  149 |   50  SOL(J+1,1) = WF(J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 50 at (1)
+crqf.f:165:72:
+
+  165 |   60    XH(K,J) = X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 60 at (1)
+crqf.f:180:72:
+
+  180 |   80  S = S - WF(J)*X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 80 at (1)
+crqf.f:181:72:
+
+  181 |   90  WE(I) = S
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 90 at (1)
+crqf.f:192:72:
+
+  192 |  210  S = DMIN1(WD(J),S)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 210 at (1)
+crqf.f:205:72:
+
+  205 |  240    SOL(J+1,LSOL) = WF(J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 240 at (1)
+crqf.f:226:72:
+
+  226 |  250  WD(I) = ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 250 at (1)
+crqf.f:228:72:
+
+  228 |  260  WD(H(J)) = ONE
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 260 at (1)
+crqf.f:236:72:
+
+  236 |  270  S = S + X(I,J)*XH(J,KM)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 270 at (1)
+crqf.f:258:72:
+
+  258 |         DO 310 J = 1,N
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 310 at (1)
+crqf.f:259:72:
+
+  259 |  310    XH(K,J) = X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 310 at (1)
+crqf.f:273:72:
+
+  273 |  330  S = S + XH(K,J)*Y(H(J))
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 330 at (1)
+crqf.f:274:72:
+
+  274 |  340  WF(K) = S
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 340 at (1)
+crqf.f:278:72:
+
+  278 |  350  S = S - WF(J)*X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 350 at (1)
+crqf.f:279:72:
+
+  279 |  360  WE(I) = S
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 360 at (1)
+crqf.f:287:72:
+
+  287 |  370    SOL(J+1,LSOL) = WF(J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 370 at (1)
+crqf.f:330:72:
+
+  330 | 396       B2 = B2 + X(I,J) * SOL(J+1,LSOL - 1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 396 at (1)
+crqf.f:369:72:
+
+  369 |  506  WF(J) = ZERO
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 506 at (1)
+crqf.f:376:72:
+
+  376 |  510      WA(L1,J) = X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 510 at (1)
+crqf.f:379:72:
+
+  379 |  514      WF(J) = WF(J) + X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 514 at (1)
+crqf.f:389:72:
+
+  389 |  520      WF(J) = WF(J) + (ONE - W) * X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 520 at (1)
+crqf.f:394:72:
+
+  394 |  534  WA(MAL,J) = WF(J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 534 at (1)
+crqf.f:413:72:
+
+  413 |  540        XH(K,J) = X(I,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 540 at (1)
+crqf.f:429:72:
+
+  429 |  610  WD(I) = SOL(N+2,I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 610 at (1)
+crqf.f:441:72:
+
+  441 |  650  WF(J) = S/V
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 650 at (1)
+crqf.f:445:72:
+
+  445 |  660    S = S + WF(J) * SOL(J+1,I)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 660 at (1)
+crqf.f:446:72:
+
+  446 |  670  SOL(N+2,I) = S
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 670 at (1)
+crqf.f:487:72:
+
+  487 |   60    A = A + X(I,K)*XH(K,J)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 60 at (1)
+crqf.f:488:72:
+
+  488 |   70  WA(I,J) = A
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 70 at (1)
+crqf.f:497:72:
+
+  497 |   90  IFLAG(I) = 0
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 90 at (1)
+crqf.f:499:72:
+
+  499 |   95  IFLAG(H(J)) = 1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 95 at (1)
+crqf.f:544:72:
+
+  544 |  130  IFLAG(J) = IFLAG(J+M)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 130 at (1)
+gfortran  -fpic  -g -O2  -c crqfnb.f -o crqfnb.o
+gfortran  -fpic  -g -O2  -c dsel05.f -o dsel05.o
+gfortran  -fpic  -g -O2  -c etime.f -o etime.o
+gfortran  -fpic  -g -O2  -c extract.f -o extract.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c frand.c -o frand.o
+gfortran  -fpic  -g -O2  -c grexp.f -o grexp.o
+gfortran  -fpic  -g -O2  -c idmin.f -o idmin.o
+gfortran  -fpic  -g -O2  -c iswap.f -o iswap.o
+iswap.f:40:72:
+
+   40 |       IF (INCX-1) 5,20,60
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Arithmetic IF statement at (1)
+gfortran  -fpic  -g -O2  -c kuantile.f -o kuantile.o
+gfortran  -fpic  -g -O2  -c kuantiles.f -o kuantiles.o
+gfortran  -fpic  -g -O2  -c linpack.f -o linpack.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mcmb.c -o mcmb.o
+gfortran  -fpic  -g -O2  -c penalty.f -o penalty.o
+gfortran  -fpic  -g -O2  -c pfnb.f -o pfnb.o
+gfortran  -fpic  -g -O2  -c powell.f -o powell.o
+gfortran  -fpic  -g -O2  -c profnb.f -o profnb.o
+gfortran  -fpic  -g -O2  -c pwxy.f -o pwxy.o
+gfortran  -fpic  -g -O2  -c qfnb.f -o qfnb.o
+gfortran  -fpic  -g -O2  -c qselect.f -o qselect.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c quantreg_init.c -o quantreg_init.o
+gfortran  -fpic  -g -O2  -c rls.f -o rls.o
+gfortran  -fpic  -g -O2  -c rq0.f -o rq0.o
+gfortran  -fpic  -g -O2  -c rq1.f -o rq1.o
+gfortran  -fpic  -g -O2  -c rqbr.f -o rqbr.o
+gfortran  -fpic  -g -O2  -c rqfn.f -o rqfn.o
+gfortran  -fpic  -g -O2  -c rqfnb.f -o rqfnb.o
+gfortran  -fpic  -g -O2  -c rqfnc.f -o rqfnc.o
+gfortran  -fpic  -g -O2  -c rqs.f -o rqs.o
+gfortran  -fpic  -g -O2  -c sakj.f -o sakj.o
+gfortran  -fpic  -g -O2  -c sparskit2.f -o sparskit2.o
+gfortran  -fpic  -g -O2  -c srqfn.f -o srqfn.o
+gfortran  -fpic  -g -O2  -c srqfnc.f -o srqfnc.o
+gfortran  -fpic  -g -O2  -c srtpai.f -o srtpai.o
+srtpai.f:19:72:
+
+   19 |  10     P(1, I) = I
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o quantreg.so akj.o boot.o bound.o boundc.o brute.o chlfct.o cholesky.o combos.o crqf.o crqfnb.o dsel05.o etime.o extract.o frand.o grexp.o idmin.o iswap.o kuantile.o kuantiles.o linpack.o mcmb.o penalty.o pfnb.o powell.o profnb.o pwxy.o qfnb.o qselect.o quantreg_init.o rls.o rq0.o rq1.o rqbr.o rqfn.o rqfnb.o rqfnc.o rqs.o sakj.o sparskit2.o srqfn.o srqfnc.o srtpai.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-quantreg/00new/quantreg/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘quantreg’ as ‘quantreg_5.95_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (quantreg)
+* installing *source* package ‘quantsmooth’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘quantsmooth’ as ‘quantsmooth_1.67.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (quantsmooth)
+
+The downloaded source packages are in
+	‘/tmp/RtmpdN86ZZ/downloaded_packages’
+Old packages: 'cachem', 'rlang', 'waldo', 'MASS'
+
+real	0m56.000s
+user	0m49.512s
+sys	0m4.709s
