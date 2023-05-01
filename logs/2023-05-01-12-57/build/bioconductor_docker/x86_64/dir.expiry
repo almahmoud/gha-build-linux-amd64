@@ -1,0 +1,66 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''dir.expiry'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'dir.expiry'
+also installing the dependency ‘filelock’
+
+trying URL 'https://cloud.r-project.org/src/contrib/filelock_1.0.2.tar.gz'
+Content type 'application/x-gzip' length 12377 bytes (12 KB)
+==================================================
+downloaded 12 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/dir.expiry_1.9.0.tar.gz'
+Content type 'application/x-gzip' length 292895 bytes (286 KB)
+==================================================
+downloaded 286 KB
+
+* installing *source* package ‘filelock’ ...
+** package ‘filelock’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+rm -f filelock.so init.o filelock-unix.o locklist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filelock-unix.c -o filelock-unix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c locklist.c -o locklist.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o filelock.so init.o filelock-unix.o locklist.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-filelock/00new/filelock/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘filelock’ as ‘filelock_1.0.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (filelock)
+* installing *source* package ‘dir.expiry’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dir.expiry’ as ‘dir.expiry_1.9.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dir.expiry)
+
+The downloaded source packages are in
+	‘/tmp/RtmpEifcWM/downloaded_packages’
+Old packages: 'cachem', 'rlang', 'waldo', 'MASS'
+
+real	0m7.890s
+user	0m5.476s
+sys	0m1.123s
