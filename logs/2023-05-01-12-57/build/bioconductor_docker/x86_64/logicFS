@@ -1,0 +1,92 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''logicFS'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'logicFS'
+also installing the dependencies ‘LogicReg’, ‘mcbiopi’
+
+trying URL 'https://cloud.r-project.org/src/contrib/LogicReg_1.6.5.tar.gz'
+Content type 'application/x-gzip' length 151711 bytes (148 KB)
+==================================================
+downloaded 148 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/mcbiopi_1.1.6.tar.gz'
+Content type 'application/x-gzip' length 4754 bytes
+==================================================
+downloaded 4754 bytes
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/logicFS_2.21.0.tar.gz'
+Content type 'application/x-gzip' length 153912 bytes (150 KB)
+==================================================
+downloaded 150 KB
+
+* installing *source* package ‘LogicReg’ ...
+** package ‘LogicReg’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c Myownscoring.f -o Myownscoring.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clogic.c -o clogic.o
+gfortran  -fpic  -g -O2  -c external.f -o external.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c registerDynamicSymbol.c -o registerDynamicSymbol.o
+gfortran  -fpic  -g -O2  -c sextra.f -o sextra.o
+gfortran  -fpic  -g -O2  -c slogic.f -o slogic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c swrite.c -o swrite.o
+gfortran  -fpic  -g -O2  -c trioLR.f -o trioLR.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o LogicReg.so Myownscoring.o clogic.o external.o registerDynamicSymbol.o sextra.o slogic.o swrite.o trioLR.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-LogicReg/00new/LogicReg/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘LogicReg’ as ‘LogicReg_1.6.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (LogicReg)
+* installing *source* package ‘mcbiopi’ ...
+** package ‘mcbiopi’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘mcbiopi’ as ‘mcbiopi_1.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mcbiopi)
+* installing *source* package ‘logicFS’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘logicFS’ as ‘logicFS_2.21.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (logicFS)
+
+The downloaded source packages are in
+	‘/tmp/RtmpomHOxZ/downloaded_packages’
+Old packages: 'cachem', 'rlang', 'waldo', 'MASS'
+
+real	0m34.023s
+user	0m26.251s
+sys	0m2.683s
