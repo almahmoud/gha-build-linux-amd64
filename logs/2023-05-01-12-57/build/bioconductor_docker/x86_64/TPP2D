@@ -1,0 +1,662 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''TPP2D'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'TPP2D'
+also installing the dependencies ‘colorspace’, ‘farver’, ‘labeling’, ‘munsell’, ‘RColorBrewer’, ‘viridisLite’, ‘generics’, ‘tidyselect’, ‘gtable’, ‘isoband’, ‘scales’, ‘iterators’, ‘bitops’, ‘dplyr’, ‘ggplot2’, ‘tidyr’, ‘foreach’, ‘doParallel’, ‘openxlsx’, ‘RCurl’
+
+trying URL 'https://cloud.r-project.org/src/contrib/colorspace_2.1-0.tar.gz'
+Content type 'application/x-gzip' length 2116339 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/farver_2.1.1.tar.gz'
+Content type 'application/x-gzip' length 1274363 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/labeling_0.4.2.tar.gz'
+Content type 'application/x-gzip' length 10156 bytes
+==================================================
+downloaded 10156 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/munsell_0.5.0.tar.gz'
+Content type 'application/x-gzip' length 182653 bytes (178 KB)
+==================================================
+downloaded 178 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RColorBrewer_1.1-3.tar.gz'
+Content type 'application/x-gzip' length 11638 bytes (11 KB)
+==================================================
+downloaded 11 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/viridisLite_0.4.1.tar.gz'
+Content type 'application/x-gzip' length 1267090 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/generics_0.1.3.tar.gz'
+Content type 'application/x-gzip' length 172201 bytes (168 KB)
+==================================================
+downloaded 168 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tidyselect_1.2.0.tar.gz'
+Content type 'application/x-gzip' length 101498 bytes (99 KB)
+==================================================
+downloaded 99 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/gtable_0.3.3.tar.gz'
+Content type 'application/x-gzip' length 130057 bytes (127 KB)
+==================================================
+downloaded 127 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/isoband_0.2.7.tar.gz'
+Content type 'application/x-gzip' length 1591812 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/scales_1.2.1.tar.gz'
+Content type 'application/x-gzip' length 270609 bytes (264 KB)
+==================================================
+downloaded 264 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/iterators_1.0.14.tar.gz'
+Content type 'application/x-gzip' length 300266 bytes (293 KB)
+==================================================
+downloaded 293 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/bitops_1.0-7.tar.gz'
+Content type 'application/x-gzip' length 10809 bytes (10 KB)
+==================================================
+downloaded 10 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/dplyr_1.1.2.tar.gz'
+Content type 'application/x-gzip' length 1083348 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ggplot2_3.4.2.tar.gz'
+Content type 'application/x-gzip' length 3153811 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/tidyr_1.3.0.tar.gz'
+Content type 'application/x-gzip' length 823546 bytes (804 KB)
+==================================================
+downloaded 804 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/foreach_1.5.2.tar.gz'
+Content type 'application/x-gzip' length 89758 bytes (87 KB)
+==================================================
+downloaded 87 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/doParallel_1.0.17.tar.gz'
+Content type 'application/x-gzip' length 164254 bytes (160 KB)
+==================================================
+downloaded 160 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/openxlsx_4.2.5.2.tar.gz'
+Content type 'application/x-gzip' length 1339471 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/RCurl_1.98-1.12.tar.gz'
+Content type 'application/x-gzip' length 731481 bytes (714 KB)
+==================================================
+downloaded 714 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/TPP2D_1.17.0.tar.gz'
+Content type 'application/x-gzip' length 2368133 bytes (2.3 MB)
+==================================================
+downloaded 2.3 MB
+
+* installing *source* package ‘colorspace’ ...
+** package ‘colorspace’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c colorspace.c -o colorspace.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o colorspace.so colorspace.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-colorspace/00new/colorspace/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘colorspace’ as ‘colorspace_2.1-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (colorspace)
+* installing *source* package ‘farver’ ...
+** package ‘farver’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ColorSpace.cpp -o ColorSpace.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Comparison.cpp -o Comparison.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Conversion.cpp -o Conversion.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c encode.cpp -o encode.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c farver.cpp -o farver.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o farver.so ColorSpace.o Comparison.o Conversion.o encode.o farver.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-farver/00new/farver/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘farver’ as ‘farver_2.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (farver)
+* installing *source* package ‘labeling’ ...
+** package ‘labeling’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘labeling’ as ‘labeling_0.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (labeling)
+* installing *source* package ‘RColorBrewer’ ...
+** package ‘RColorBrewer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RColorBrewer’ as ‘RColorBrewer_1.1-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RColorBrewer)
+* installing *source* package ‘viridisLite’ ...
+** package ‘viridisLite’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘viridisLite’ as ‘viridisLite_0.4.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (viridisLite)
+* installing *source* package ‘generics’ ...
+** package ‘generics’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘generics’ as ‘generics_0.1.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (generics)
+* installing *source* package ‘tidyselect’ ...
+** package ‘tidyselect’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tidyselect’ as ‘tidyselect_1.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyselect)
+* installing *source* package ‘gtable’ ...
+** package ‘gtable’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gtable’ as ‘gtable_0.3.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gtable)
+* installing *source* package ‘isoband’ ...
+** package ‘isoband’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c clip-lines.cpp -o clip-lines.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c isoband.cpp -o isoband.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c polygon.cpp -o polygon.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c separate-polygons.cpp -o separate-polygons.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-clip-lines.cpp -o test-clip-lines.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-runner.cpp -o test-runner.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test-separate-polygons.cpp -o test-separate-polygons.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o isoband.so clip-lines.o init.o isoband.o polygon.o separate-polygons.o test-clip-lines.o test-runner.o test-separate-polygons.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-isoband/00new/isoband/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘isoband’ as ‘isoband_0.2.7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (isoband)
+* installing *source* package ‘iterators’ ...
+** package ‘iterators’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iterators’ as ‘iterators_1.0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iterators)
+* installing *source* package ‘bitops’ ...
+** package ‘bitops’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bit-ops.c -o bit-ops.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cksum.c -o cksum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o bitops.so bit-ops.o cksum.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-bitops/00new/bitops/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bitops’ as ‘bitops_1.0-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bitops)
+* installing *source* package ‘openxlsx’ ...
+** package ‘openxlsx’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c helper_functions.cpp -o helper_functions.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c load_workbook.cpp -o load_workbook.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_workbook.cpp -o read_workbook.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_data.cpp -o write_data.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_file.cpp -o write_file.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_file_2.cpp -o write_file_2.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o openxlsx.so RcppExports.o helper_functions.o load_workbook.o read_workbook.o write_data.o write_file.o write_file_2.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-openxlsx/00new/openxlsx/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘openxlsx’ as ‘openxlsx_4.2.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (openxlsx)
+* installing *source* package ‘munsell’ ...
+** package ‘munsell’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘munsell’ as ‘munsell_0.5.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (munsell)
+* installing *source* package ‘dplyr’ ...
+** package ‘dplyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c chop.cpp -o chop.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c filter.cpp -o filter.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c funs.cpp -o funs.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_by.cpp -o group_by.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c group_data.cpp -o group_data.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c imports.cpp -o imports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mask.cpp -o mask.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mutate.cpp -o mutate.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c slice.cpp -o slice.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summarise.cpp -o summarise.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o dplyr.so chop.o filter.o funs.o group_by.o group_data.o imports.o init.o mask.o mutate.o slice.o summarise.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-dplyr/00new/dplyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dplyr’ as ‘dplyr_1.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dplyr)
+* installing *source* package ‘foreach’ ...
+** package ‘foreach’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘foreach’ as ‘foreach_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (foreach)
+* installing *source* package ‘RCurl’ ...
+** package ‘RCurl’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for curl-config... /usr/bin/curl-config
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... gcc -E
+Version has a libidn field
+Version has CURLOPT_URL
+Version has CURLINFO_EFFECTIVE_URL
+Version has CURLINFO_RESPONSE_CODE
+Version has CURLINFO_TOTAL_TIME
+Version has CURLINFO_NAMELOOKUP_TIME
+Version has CURLINFO_CONNECT_TIME
+Version has CURLINFO_PRETRANSFER_TIME
+Version has CURLINFO_SIZE_UPLOAD
+Version has CURLINFO_SIZE_DOWNLOAD
+Version has CURLINFO_SPEED_DOWNLOAD
+Version has CURLINFO_SPEED_UPLOAD
+Version has CURLINFO_HEADER_SIZE
+Version has CURLINFO_REQUEST_SIZE
+Version has CURLINFO_SSL_VERIFYRESULT
+Version has CURLINFO_FILETIME
+Version has CURLINFO_CONTENT_LENGTH_DOWNLOAD
+Version has CURLINFO_CONTENT_LENGTH_UPLOAD
+Version has CURLINFO_STARTTRANSFER_TIME
+Version has CURLINFO_CONTENT_TYPE
+Version has CURLINFO_REDIRECT_TIME
+Version has CURLINFO_REDIRECT_COUNT
+Version has CURLINFO_PRIVATE
+Version has CURLINFO_HTTP_CONNECTCODE
+Version has CURLINFO_HTTPAUTH_AVAIL
+Version has CURLINFO_PROXYAUTH_AVAIL
+Version has CURLINFO_OS_ERRNO
+Version has CURLINFO_NUM_CONNECTS
+Version has CURLINFO_SSL_ENGINES
+Version has CURLINFO_COOKIELIST
+Version has CURLINFO_LASTSOCKET
+Version has CURLINFO_FTP_ENTRY_PATH
+Version has CURLINFO_REDIRECT_URL
+Version has CURLINFO_PRIMARY_IP
+Version has CURLINFO_APPCONNECT_TIME
+Version has CURLINFO_CERTINFO
+Version has CURLINFO_CONDITION_UNMET
+Version has CURLOPT_WRITEDATA
+Version has CURLOPT_KEYPASSWD
+Version has CURLOPT_DIRLISTONLY
+Version has CURLOPT_APPEND
+Version has CURLOPT_KRBLEVEL
+Version has CURLOPT_USE_SSL
+Version has CURLOPT_TIMEOUT_MS
+Version has CURLOPT_CONNECTTIMEOUT_MS
+Version has CURLOPT_HTTP_TRANSFER_DECODING
+Version has CURLOPT_HTTP_CONTENT_DECODING
+Version has CURLOPT_NEW_FILE_PERMS
+Version has CURLOPT_NEW_DIRECTORY_PERMS
+Version has CURLOPT_POSTREDIR
+Version has CURLOPT_OPENSOCKETFUNCTION
+Version has CURLOPT_OPENSOCKETDATA
+Version has CURLOPT_COPYPOSTFIELDS
+Version has CURLOPT_PROXY_TRANSFER_MODE
+Version has CURLOPT_SEEKFUNCTION
+Version has CURLOPT_SEEKDATA
+Version has CURLOPT_CRLFILE
+Version has CURLOPT_ISSUERCERT
+Version has CURLOPT_ADDRESS_SCOPE
+Version has CURLOPT_CERTINFO
+Version has CURLOPT_USERNAME
+Version has CURLOPT_PASSWORD
+Version has CURLOPT_PROXYUSERNAME
+Version has CURLOPT_PROXYPASSWORD
+Version has CURLOPT_SSH_HOST_PUBLIC_KEY_MD5
+Version has CURLOPT_NOPROXY
+Version has CURLOPT_TFTP_BLKSIZE
+Version has CURLOPT_SOCKS5_GSSAPI_SERVICE
+Version has CURLOPT_SOCKS5_GSSAPI_NEC
+Version has CURLOPT_PROTOCOLS
+Version has CURLOPT_REDIR_PROTOCOLS
+Version has CURLOPT_SSH_AUTH_TYPES
+Version has CURLOPT_SSH_PUBLIC_KEYFILE
+Version has CURLOPT_SSH_PRIVATE_KEYFILE
+Version has CURLOPT_FTP_SSL_CCC
+Version has CURLOPT_COOKIELIST
+Version has CURLOPT_IGNORE_CONTENT_LENGTH
+Version has CURLOPT_FTP_SKIP_PASV_IP
+Version has CURLOPT_FTP_FILEMETHOD
+Version has CURLOPT_LOCALPORT
+Version has CURLOPT_LOCALPORTRANGE
+Version has CURLOPT_CONNECT_ONLY
+Version has CURLOPT_CONV_FROM_NETWORK_FUNCTION
+Version has CURLOPT_CONV_TO_NETWORK_FUNCTION
+Version has CURLOPT_CONV_FROM_UTF8_FUNCTION
+Version has CURLOPT_MAX_SEND_SPEED_LARGE
+Version has CURLOPT_MAX_RECV_SPEED_LARGE
+Version has CURLOPT_FTP_ALTERNATIVE_TO_USER
+Version has CURLOPT_SOCKOPTFUNCTION
+Version has CURLOPT_SOCKOPTDATA
+Version has CURLOPT_SSL_SESSIONID_CACHE
+libcurl version: libcurl 7.81.0
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c base64.c -o base64.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c curl.c -o curl.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c curlInit.c -o curlInit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c curl_base64.c -o curl_base64.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c enums.c -o enums.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c json.c -o json.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c memoryManagement.c -o memoryManagement.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -DCURL_DISABLE_DEPRECATION -DHAVE_LIBIDN_FIELD=1 -DHAVE_CURLOPT_URL=1 -DHAVE_CURLINFO_EFFECTIVE_URL=1 -DHAVE_CURLINFO_RESPONSE_CODE=1 -DHAVE_CURLINFO_TOTAL_TIME=1 -DHAVE_CURLINFO_NAMELOOKUP_TIME=1 -DHAVE_CURLINFO_CONNECT_TIME=1 -DHAVE_CURLINFO_PRETRANSFER_TIME=1 -DHAVE_CURLINFO_SIZE_UPLOAD=1 -DHAVE_CURLINFO_SIZE_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_DOWNLOAD=1 -DHAVE_CURLINFO_SPEED_UPLOAD=1 -DHAVE_CURLINFO_HEADER_SIZE=1 -DHAVE_CURLINFO_REQUEST_SIZE=1 -DHAVE_CURLINFO_SSL_VERIFYRESULT=1 -DHAVE_CURLINFO_FILETIME=1 -DHAVE_CURLINFO_CONTENT_LENGTH_DOWNLOAD=1 -DHAVE_CURLINFO_CONTENT_LENGTH_UPLOAD=1 -DHAVE_CURLINFO_STARTTRANSFER_TIME=1 -DHAVE_CURLINFO_CONTENT_TYPE=1 -DHAVE_CURLINFO_REDIRECT_TIME=1 -DHAVE_CURLINFO_REDIRECT_COUNT=1 -DHAVE_CURLINFO_PRIVATE=1 -DHAVE_CURLINFO_HTTP_CONNECTCODE=1 -DHAVE_CURLINFO_HTTPAUTH_AVAIL=1 -DHAVE_CURLINFO_PROXYAUTH_AVAIL=1 -DHAVE_CURLINFO_OS_ERRNO=1 -DHAVE_CURLINFO_NUM_CONNECTS=1 -DHAVE_CURLINFO_SSL_ENGINES=1 -DHAVE_CURLINFO_COOKIELIST=1 -DHAVE_CURLINFO_LASTSOCKET=1 -DHAVE_CURLINFO_FTP_ENTRY_PATH=1 -DHAVE_CURLINFO_REDIRECT_URL=1 -DHAVE_CURLINFO_PRIMARY_IP=1 -DHAVE_CURLINFO_APPCONNECT_TIME=1 -DHAVE_CURLINFO_CERTINFO=1 -DHAVE_CURLINFO_CONDITION_UNMET=1 -DHAVE_CURLOPT_WRITEDATA=1 -DHAVE_CURLOPT_KEYPASSWD=1 -DHAVE_CURLOPT_DIRLISTONLY=1 -DHAVE_CURLOPT_APPEND=1 -DHAVE_CURLOPT_KRBLEVEL=1 -DHAVE_CURLOPT_USE_SSL=1 -DHAVE_CURLOPT_TIMEOUT_MS=1 -DHAVE_CURLOPT_CONNECTTIMEOUT_MS=1 -DHAVE_CURLOPT_HTTP_TRANSFER_DECODING=1 -DHAVE_CURLOPT_HTTP_CONTENT_DECODING=1 -DHAVE_CURLOPT_NEW_FILE_PERMS=1 -DHAVE_CURLOPT_NEW_DIRECTORY_PERMS=1 -DHAVE_CURLOPT_POSTREDIR=1 -DHAVE_CURLOPT_OPENSOCKETFUNCTION=1 -DHAVE_CURLOPT_OPENSOCKETDATA=1 -DHAVE_CURLOPT_COPYPOSTFIELDS=1 -DHAVE_CURLOPT_PROXY_TRANSFER_MODE=1 -DHAVE_CURLOPT_SEEKFUNCTION=1 -DHAVE_CURLOPT_SEEKDATA=1 -DHAVE_CURLOPT_CRLFILE=1 -DHAVE_CURLOPT_ISSUERCERT=1 -DHAVE_CURLOPT_ADDRESS_SCOPE=1 -DHAVE_CURLOPT_CERTINFO=1 -DHAVE_CURLOPT_USERNAME=1 -DHAVE_CURLOPT_PASSWORD=1 -DHAVE_CURLOPT_PROXYUSERNAME=1 -DHAVE_CURLOPT_PROXYPASSWORD=1 -DHAVE_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5=1 -DHAVE_CURLOPT_NOPROXY=1 -DHAVE_CURLOPT_TFTP_BLKSIZE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_SERVICE=1 -DHAVE_CURLOPT_SOCKS5_GSSAPI_NEC=1 -DHAVE_CURLOPT_PROTOCOLS=1 -DHAVE_CURLOPT_REDIR_PROTOCOLS=1 -DHAVE_CURLOPT_SSH_AUTH_TYPES=1 -DHAVE_CURLOPT_SSH_PUBLIC_KEYFILE=1 -DHAVE_CURLOPT_SSH_PRIVATE_KEYFILE=1 -DHAVE_CURLOPT_FTP_SSL_CCC=1 -DHAVE_CURLOPT_COOKIELIST=1 -DHAVE_CURLOPT_IGNORE_CONTENT_LENGTH=1 -DHAVE_CURLOPT_FTP_SKIP_PASV_IP=1 -DHAVE_CURLOPT_FTP_FILEMETHOD=1 -DHAVE_CURLOPT_LOCALPORT=1 -DHAVE_CURLOPT_LOCALPORTRANGE=1 -DHAVE_CURLOPT_CONNECT_ONLY=1 -DHAVE_CURLOPT_CONV_FROM_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_TO_NETWORK_FUNCTION=1 -DHAVE_CURLOPT_CONV_FROM_UTF8_FUNCTION=1 -DHAVE_CURLOPT_MAX_SEND_SPEED_LARGE=1 -DHAVE_CURLOPT_MAX_RECV_SPEED_LARGE=1 -DHAVE_CURLOPT_FTP_ALTERNATIVE_TO_USER=1 -DHAVE_CURLOPT_SOCKOPTFUNCTION=1 -DHAVE_CURLOPT_SOCKOPTDATA=1 -DHAVE_CURLOPT_SSL_SESSIONID_CACHE=1 -I/usr/include/libxml2  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c myUTF8.c -o myUTF8.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o RCurl.so base64.o curl.o curlInit.o curl_base64.o enums.o json.o memoryManagement.o myUTF8.o -lcurl -lxml2 -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-RCurl/00new/RCurl/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘RCurl’ as ‘RCurl_1.98-1.12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (RCurl)
+* installing *source* package ‘scales’ ...
+** package ‘scales’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘scales’ as ‘scales_1.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (scales)
+* installing *source* package ‘tidyr’ ...
+** package ‘tidyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c melt.cpp -o melt.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c simplifyPieces.cpp -o simplifyPieces.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o tidyr.so cpp11.o melt.o simplifyPieces.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-tidyr/00new/tidyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tidyr’ as ‘tidyr_1.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tidyr)
+* installing *source* package ‘doParallel’ ...
+** package ‘doParallel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘doParallel’ as ‘doParallel_1.0.17_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (doParallel)
+* installing *source* package ‘ggplot2’ ...
+** package ‘ggplot2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ggplot2’ as ‘ggplot2_3.4.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ggplot2)
+* installing *source* package ‘TPP2D’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘TPP2D’ as ‘TPP2D_1.17.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (TPP2D)
+
+The downloaded source packages are in
+	‘/tmp/RtmpyWIVBr/downloaded_packages’
+Old packages: 'MASS'
+
+real	3m1.094s
+user	2m49.754s
+sys	0m14.701s
