@@ -1,0 +1,87 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''diffGeneAnalysis'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'diffGeneAnalysis'
+also installing the dependency ‘minpack.lm’
+
+trying URL 'https://cloud.r-project.org/src/contrib/minpack.lm_1.2-3.tar.gz'
+Content type 'application/x-gzip' length 41287 bytes (40 KB)
+==================================================
+downloaded 40 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/diffGeneAnalysis_1.83.0.tar.gz'
+Content type 'application/x-gzip' length 158966 bytes (155 KB)
+==================================================
+downloaded 155 KB
+
+* installing *source* package ‘minpack.lm’ ...
+** package ‘minpack.lm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c chkder.f -o chkder.o
+gfortran  -fpic  -g -O2  -c dogleg.f -o dogleg.o
+gfortran  -fpic  -g -O2  -c dpmpar.f -o dpmpar.o
+gfortran  -fpic  -g -O2  -c enorm.f -o enorm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fcn_lmder.c -o fcn_lmder.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fcn_lmdif.c -o fcn_lmdif.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fcn_message.c -o fcn_message.o
+gfortran  -fpic  -g -O2  -c fdjac2.f -o fdjac2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c get_element.c -o get_element.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c lmder.f -o lmder.o
+gfortran  -fpic  -g -O2  -c lmdif.f -o lmdif.o
+gfortran  -fpic  -g -O2  -c lmpar.f -o lmpar.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nls_lm.c -o nls_lm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prod.c -o prod.o
+gfortran  -fpic  -g -O2  -c qform.f -o qform.o
+gfortran  -fpic  -g -O2  -c qrfac.f -o qrfac.o
+gfortran  -fpic  -g -O2  -c qrsolv.f -o qrsolv.o
+gfortran  -fpic  -g -O2  -c r1mpyq.f -o r1mpyq.o
+gfortran  -fpic  -g -O2  -c r1updt.f -o r1updt.o
+gfortran  -fpic  -g -O2  -c rwupdt.f -o rwupdt.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c transpose.c -o transpose.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vector.c -o vector.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o minpack.lm.so chkder.o dogleg.o dpmpar.o enorm.o fcn_lmder.o fcn_lmdif.o fcn_message.o fdjac2.o get_element.o init.o lmder.o lmdif.o lmpar.o nls_lm.o prod.o qform.o qrfac.o qrsolv.o r1mpyq.o r1updt.o rwupdt.o transpose.o vector.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-minpack.lm/00new/minpack.lm/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘minpack.lm’ as ‘minpack.lm_1.2-3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (minpack.lm)
+* installing *source* package ‘diffGeneAnalysis’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘diffGeneAnalysis’ as ‘diffGeneAnalysis_1.83.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (diffGeneAnalysis)
+
+The downloaded source packages are in
+	‘/tmp/RtmpLkWEUA/downloaded_packages’
+Old packages: 'cachem', 'rlang', 'waldo', 'MASS'
+
+real	0m9.602s
+user	0m7.193s
+sys	0m1.321s
