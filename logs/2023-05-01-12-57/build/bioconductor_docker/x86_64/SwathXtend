@@ -1,0 +1,170 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''SwathXtend'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'SwathXtend'
+also installing the dependencies ‘formatR’, ‘lambda.r’, ‘futile.options’, ‘futile.logger’, ‘openxlsx’, ‘VennDiagram’
+
+trying URL 'https://cloud.r-project.org/src/contrib/formatR_1.14.tar.gz'
+Content type 'application/x-gzip' length 96077 bytes (93 KB)
+==================================================
+downloaded 93 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/lambda.r_1.2.4.tar.gz'
+Content type 'application/x-gzip' length 25666 bytes (25 KB)
+==================================================
+downloaded 25 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/futile.options_1.0.1.tar.gz'
+Content type 'application/x-gzip' length 3919 bytes
+==================================================
+downloaded 3919 bytes
+
+trying URL 'https://cloud.r-project.org/src/contrib/futile.logger_1.4.3.tar.gz'
+Content type 'application/x-gzip' length 17456 bytes (17 KB)
+==================================================
+downloaded 17 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/openxlsx_4.2.5.2.tar.gz'
+Content type 'application/x-gzip' length 1339471 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/VennDiagram_1.7.3.tar.gz'
+Content type 'application/x-gzip' length 78508 bytes (76 KB)
+==================================================
+downloaded 76 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/SwathXtend_2.23.0.tar.gz'
+Content type 'application/x-gzip' length 363037119 bytes (346.2 MB)
+==================================================
+downloaded 346.2 MB
+
+* installing *source* package ‘formatR’ ...
+** package ‘formatR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘formatR’ as ‘formatR_1.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (formatR)
+* installing *source* package ‘futile.options’ ...
+** package ‘futile.options’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘futile.options’ as ‘futile.options_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (futile.options)
+* installing *source* package ‘openxlsx’ ...
+** package ‘openxlsx’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c helper_functions.cpp -o helper_functions.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c load_workbook.cpp -o load_workbook.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c read_workbook.cpp -o read_workbook.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_data.cpp -o write_data.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_file.cpp -o write_file.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c write_file_2.cpp -o write_file_2.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o openxlsx.so RcppExports.o helper_functions.o load_workbook.o read_workbook.o write_data.o write_file.o write_file_2.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-openxlsx/00new/openxlsx/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘openxlsx’ as ‘openxlsx_4.2.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (openxlsx)
+* installing *source* package ‘lambda.r’ ...
+** package ‘lambda.r’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lambda.r’ as ‘lambda.r_1.2.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lambda.r)
+* installing *source* package ‘futile.logger’ ...
+** package ‘futile.logger’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘futile.logger’ as ‘futile.logger_1.4.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (futile.logger)
+* installing *source* package ‘VennDiagram’ ...
+** package ‘VennDiagram’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘VennDiagram’ as ‘VennDiagram_1.7.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (VennDiagram)
+* installing *source* package ‘SwathXtend’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SwathXtend’ as ‘SwathXtend_2.23.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SwathXtend)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDBj1VX/downloaded_packages’
+Old packages: 'MASS'
+
+real	2m4.718s
+user	1m49.532s
+sys	0m7.861s
