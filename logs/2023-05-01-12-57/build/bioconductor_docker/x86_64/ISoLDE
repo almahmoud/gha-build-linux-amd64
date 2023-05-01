@@ -1,0 +1,42 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''ISoLDE'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'ISoLDE'
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/ISoLDE_1.29.0.tar.gz'
+Content type 'application/x-gzip' length 1288036 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+* installing *source* package ‘ISoLDE’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Isolde.c -o Isolde.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ISoLDE.so Isolde.o -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ISoLDE/00new/ISoLDE/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ISoLDE’ as ‘ISoLDE_1.29.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ISoLDE)
+
+The downloaded source packages are in
+	‘/tmp/RtmpKr9fGr/downloaded_packages’
+Old packages: 'cachem', 'rlang', 'waldo', 'MASS'
+
+real	0m7.859s
+user	0m5.569s
+sys	0m0.749s
