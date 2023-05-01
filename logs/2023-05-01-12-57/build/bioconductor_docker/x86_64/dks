@@ -1,0 +1,289 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''dks'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'dks'
+also installing the dependency ‘cubature’
+
+trying URL 'https://cloud.r-project.org/src/contrib/cubature_2.0.4.6.tar.gz'
+Content type 'application/x-gzip' length 3331285 bytes (3.2 MB)
+==================================================
+downloaded 3.2 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/dks_1.47.0.tar.gz'
+Content type 'application/x-gzip' length 441306 bytes (430 KB)
+==================================================
+downloaded 430 KB
+
+* installing *source* package ‘cubature’ ...
+** package ‘cubature’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+(cp -f Cuba-4.2-nonwin/makefile.in Cuba-4.2-nonwin/cuba.h Cuba-4.2 && \
+cp -f Cuba-4.2-nonwin/cuba.h ../inst/include && \
+cp -f Cuba-4.2-nonwin/src/common/* Cuba-4.2/src/common && \
+cp -f Cuba-4.2-nonwin/src/cuhre/common.c Cuba-4.2/src/cuhre && \
+cd Cuba-4.2 && \
+./configure && \
+make libcuba.a AR="ar" ARFLAGS="-rv" RANLIB="ranlib" CC="gcc -std=gnu17" CFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common" && \
+touch cuba.ts)
+checking for gcc... gcc -std=gnu17
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc -std=gnu17 accepts -g... yes
+checking for gcc -std=gnu17 option to accept ISO C89... none needed
+checking for gfortran... gfortran
+checking whether we are using the GNU Fortran compiler... yes
+checking whether gfortran accepts -g... yes
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for long double with more range or precision than double... yes
+checking how to run the C preprocessor... gcc -std=gnu17 -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for pid_t... yes
+checking for powl... yes
+checking for erf... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking for shmget... yes
+checking for getloadavg... yes
+checking for variable-size arrays... yes
+checking for MathLink... no
+checking for qmake... no
+configure: creating ./config.status
+config.status: creating makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+make[1]: Entering directory '/tmp/RtmpvJdYM4/R.INSTALLe92252dde83/cubature/src/Cuba-4.2'
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/vegas -DNOUNDERSCORE -c -o Vegas.o ./src/vegas/Vegas.c
+In file included from ./src/vegas/decl.h:9,
+                 from ./src/vegas/Vegas.c:12:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/vegas/decl.h:9,
+                 from ./src/vegas/Vegas.c:12:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+In file included from /usr/include/string.h:535,
+                 from ./src/common/stddecl.h:22,
+                 from ./src/vegas/decl.h:9,
+                 from ./src/vegas/Vegas.c:12:
+In function ‘memcpy’,
+    inlined from ‘SobolIni’ at ./src/common/Random.c:105:5,
+    inlined from ‘IniRandom’ at ./src/common/Random.c:340:22,
+    inlined from ‘Integrate’ at ./src/vegas/Integrate.c:59:3:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound 18446744073709551612 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ar -rv libcuba.a Vegas.o
+ar: creating libcuba.a
+a - Vegas.o
+rm -f Vegas.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/suave -DNOUNDERSCORE -c -o Suave.o ./src/suave/Suave.c
+In file included from ./src/suave/decl.h:9,
+                 from ./src/suave/Suave.c:12:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/suave/decl.h:9,
+                 from ./src/suave/Suave.c:12:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+In file included from /usr/include/string.h:535,
+                 from ./src/common/stddecl.h:22,
+                 from ./src/suave/decl.h:9,
+                 from ./src/suave/Suave.c:12:
+In function ‘memcpy’,
+    inlined from ‘SobolIni’ at ./src/common/Random.c:105:5,
+    inlined from ‘IniRandom’ at ./src/common/Random.c:340:22,
+    inlined from ‘Integrate’ at ./src/suave/Integrate.c:61:3:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound 18446744073709551612 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ar -rv libcuba.a Suave.o
+a - Suave.o
+rm -f Suave.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/divonne -DNOUNDERSCORE -c -o Divonne.o ./src/divonne/Divonne.c
+In file included from ./src/divonne/decl.h:9,
+                 from ./src/divonne/Divonne.c:13:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/divonne/decl.h:9,
+                 from ./src/divonne/Divonne.c:13:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+In file included from /usr/include/string.h:535,
+                 from ./src/common/stddecl.h:22,
+                 from ./src/divonne/decl.h:9,
+                 from ./src/divonne/Divonne.c:13:
+In function ‘memcpy’,
+    inlined from ‘SobolIni’ at ./src/common/Random.c:105:5,
+    inlined from ‘IniRandom’ at ./src/common/Random.c:340:22,
+    inlined from ‘Integrate’ at ./src/divonne/Integrate.c:72:5:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:29:10: warning: ‘__builtin_memcpy’ specified bound 18446744073709551612 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   29 |   return __builtin___memcpy_chk (__dest, __src, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   30 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+ar -rv libcuba.a Divonne.o
+a - Divonne.o
+rm -f Divonne.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -I./src/cuhre -DNOUNDERSCORE -c -o Cuhre.o ./src/cuhre/Cuhre.c
+In file included from ./src/cuhre/decl.h:9,
+                 from ./src/cuhre/Cuhre.c:12:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/cuhre/decl.h:9,
+                 from ./src/cuhre/Cuhre.c:12:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Cuhre.o
+a - Cuhre.o
+rm -f Cuhre.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -DNOUNDERSCORE -c -o Fork.o ./src/common/Fork.c
+In file included from ./src/common/Fork.c:11:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/common/Fork.c:11:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Fork.o
+a - Fork.o
+rm -f Fork.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -DNOUNDERSCORE -c -o Global.o ./src/common/Global.c
+In file included from ./src/common/Global.c:9:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/common/Global.c:9:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Global.o
+a - Global.o
+rm -f Global.o
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common -c -o Data.o ./src/common/Data.c
+In file included from ./src/common/Data.c:9:
+./src/common/stddecl.h:45: warning: "alloca" redefined
+   45 | #define alloca __builtin_alloca
+      | 
+In file included from /usr/include/stdlib.h:574,
+                 from ./src/common/stddecl.h:21,
+                 from ./src/common/Data.c:9:
+/usr/include/alloca.h:35: note: this is the location of the previous definition
+   35 | # define alloca(size)   __builtin_alloca (size)
+      | 
+ar -rv libcuba.a Data.o
+a - Data.o
+rm -f Data.o
+ranlib libcuba.a
+make[1]: Leaving directory '/tmp/RtmpvJdYM4/R.INSTALLe92252dde83/cubature/src/Cuba-4.2'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcpp-Cuba.cpp -o Rcpp-Cuba.o
+((cd cubature-1.0.3 && \
+(make libcubature.a CC="gcc -std=gnu17" CFLAGS="-g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common" AR="ar" RANLIB="ranlib")) && \
+touch cubature.ts)
+make[1]: Entering directory '/tmp/RtmpvJdYM4/R.INSTALLe92252dde83/cubature/src/cubature-1.0.3'
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common   -c -o hcubature.o hcubature.c
+gcc -std=gnu17 -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic -I. -I../inst/include -I./src/common   -c -o pcubature.o pcubature.c
+ar cr libcubature.a  hcubature.o pcubature.o
+make[1]: Leaving directory '/tmp/RtmpvJdYM4/R.INSTALLe92252dde83/cubature/src/cubature-1.0.3'
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcpp-cubature.cpp -o Rcpp-cubature.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+gcc -std=gnu17 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I../inst/include -I./src/common -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -I. -I../inst/include -I./src/common -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cubature_init.c -o cubature_init.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o cubature.so Rcpp-Cuba.o Rcpp-cubature.o RcppExports.o cubature_init.o -L./cubature-1.0.3 -L./Cuba-4.2 -lcubature -lcuba -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-cubature/00new/cubature/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘cubature’ as ‘cubature_2.0.4.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (cubature)
+* installing *source* package ‘dks’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘dks’ as ‘dks_1.47.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (dks)
+
+The downloaded source packages are in
+	‘/tmp/RtmpvRWqEH/downloaded_packages’
+Old packages: 'cachem', 'rlang', 'waldo', 'MASS'
+
+real	0m37.213s
+user	0m31.171s
+sys	0m3.671s
