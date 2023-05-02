@@ -1,0 +1,98 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''OTUbase'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'OTUbase'
+also installing the dependencies ‘permute’, ‘vegan’
+
+trying URL 'https://cloud.r-project.org/src/contrib/permute_0.9-7.tar.gz'
+Content type 'application/x-gzip' length 114805 bytes (112 KB)
+==================================================
+downloaded 112 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/vegan_2.6-4.tar.gz'
+Content type 'application/x-gzip' length 1496110 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/OTUbase_1.51.0.tar.gz'
+Content type 'application/x-gzip' length 183722 bytes (179 KB)
+==================================================
+downloaded 179 KB
+
+* installing *source* package ‘permute’ ...
+** package ‘permute’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘permute’ as ‘permute_0.9-7_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (permute)
+* installing *source* package ‘vegan’ ...
+** package ‘vegan’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c data2hill.c -o data2hill.o
+gfortran  -fpic  -g -O2  -c decorana.f -o decorana.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c getF.c -o getF.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c goffactor.c -o goffactor.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c monoMDS.f -o monoMDS.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c nestedness.c -o nestedness.o
+gfortran  -fpic  -g -O2  -c ordering.f -o ordering.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pnpoly.c -o pnpoly.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c stepacross.c -o stepacross.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c vegdist.c -o vegdist.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o vegan.so data2hill.o decorana.o getF.o goffactor.o init.o monoMDS.o nestedness.o ordering.o pnpoly.o stepacross.o vegdist.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-vegan/00new/vegan/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘vegan’ as ‘vegan_2.6-4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (vegan)
+* installing *source* package ‘OTUbase’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘OTUbase’ as ‘OTUbase_1.51.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (OTUbase)
+
+The downloaded source packages are in
+	‘/tmp/RtmpDqxVAv/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m50.148s
+user	0m46.105s
+sys	0m2.773s
