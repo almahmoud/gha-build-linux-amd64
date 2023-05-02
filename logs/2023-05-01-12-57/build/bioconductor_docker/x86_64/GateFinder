@@ -1,0 +1,386 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''GateFinder'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'GateFinder'
+also installing the dependencies ‘DEoptimR’, ‘sp’, ‘sgeostat’, ‘robustbase’, ‘splancs’, ‘mvoutlier’, ‘diptest’
+
+trying URL 'https://cloud.r-project.org/src/contrib/DEoptimR_1.0-12.tar.gz'
+Content type 'application/x-gzip' length 13471 bytes (13 KB)
+==================================================
+downloaded 13 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/sp_1.6-0.tar.gz'
+Content type 'application/x-gzip' length 1031688 bytes (1007 KB)
+==================================================
+downloaded 1007 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/sgeostat_1.0-27.tar.gz'
+Content type 'application/x-gzip' length 35685 bytes (34 KB)
+==================================================
+downloaded 34 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/robustbase_0.95-1.tar.gz'
+Content type 'application/x-gzip' length 2280387 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/splancs_2.01-43.tar.gz'
+Content type 'application/x-gzip' length 105999 bytes (103 KB)
+==================================================
+downloaded 103 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/mvoutlier_2.1.1.tar.gz'
+Content type 'application/x-gzip' length 476636 bytes (465 KB)
+==================================================
+downloaded 465 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/diptest_0.76-0.tar.gz'
+Content type 'application/x-gzip' length 165867 bytes (161 KB)
+==================================================
+downloaded 161 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/GateFinder_1.21.0.tar.gz'
+Content type 'application/x-gzip' length 490606 bytes (479 KB)
+==================================================
+downloaded 479 KB
+
+* installing *source* package ‘DEoptimR’ ...
+** package ‘DEoptimR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘DEoptimR’ as ‘DEoptimR_1.0-12_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (DEoptimR)
+* installing *source* package ‘sp’ ...
+** package ‘sp’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Rcentroid.c -o Rcentroid.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gcdist.c -o gcdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pip.c -o pip.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c pip2.c -o pip2.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sp_xports.c -o sp_xports.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c surfaceArea.c -o surfaceArea.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zerodist.c -o zerodist.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o sp.so Rcentroid.o gcdist.o init.o pip.o pip2.o sp_xports.o surfaceArea.o zerodist.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-sp/00new/sp/libs
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘sp’ as ‘sp_1.6-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sp)
+* installing *source* package ‘sgeostat’ ...
+** package ‘sgeostat’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c inplg.f -o inplg.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o sgeostat.so inplg.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-sgeostat/00new/sgeostat/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘sgeostat’ as ‘sgeostat_1.0-27_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (sgeostat)
+* installing *source* package ‘diptest’ ...
+** package ‘diptest’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dip.c -o dip.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o diptest.so dip.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-diptest/00new/diptest/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘diptest’ as ‘diptest_0.76-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (diptest)
+* installing *source* package ‘robustbase’ ...
+** package ‘robustbase’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R-rng4ftn.c -o R-rng4ftn.o
+gfortran  -fpic  -g -O2  -c eigen.f -o eigen.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c lmrob.c -o lmrob.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c mc.c -o mc.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c monitor.c -o monitor.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c qn_sn.c -o qn_sn.o
+gfortran  -fpic  -g -O2  -c rf-common.f -o rf-common.o
+gfortran  -fpic  -g -O2  -c rffastmcd.f -o rffastmcd.o
+gfortran  -fpic  -g -O2  -c rfltsreg.f -o rfltsreg.o
+gfortran  -fpic  -g -O2  -c rllarsbi.f -o rllarsbi.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rob-utils.c -o rob-utils.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rowMedians.c -o rowMedians.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c wgt_himed.c -o wgt_himed.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o robustbase.so R-rng4ftn.o eigen.o init.o lmrob.o mc.o monitor.o qn_sn.o rf-common.o rffastmcd.o rfltsreg.o rllarsbi.o rob-utils.o rowMedians.o wgt_himed.o -llapack -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-robustbase/00new/robustbase/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function from function ‘chgDefaults’ in package ‘robustbase’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘robustbase’ as ‘robustbase_0.95-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (robustbase)
+* installing *source* package ‘splancs’ ...
+** package ‘splancs’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fpic  -g -O2  -c areapl.f -o areapl.o
+gfortran  -fpic  -g -O2  -c cncvwt.f -o cncvwt.o
+gfortran  -fpic  -g -O2  -c dokhat.f -o dokhat.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fpic  -g -O2  -c inpip.f -o inpip.o
+gfortran  -fpic  -g -O2  -c ipippa.f -o ipippa.o
+gfortran  -fpic  -g -O2  -c iplace.f -o iplace.o
+gfortran  -fpic  -g -O2  -c k12hat.f -o k12hat.o
+gfortran  -fpic  -g -O2  -c kernel3d.f -o kernel3d.o
+gfortran  -fpic  -g -O2  -c khvc.f -o khvc.o
+gfortran  -fpic  -g -O2  -c khvmat.f -o khvmat.o
+gfortran  -fpic  -g -O2  -c krnnrm.f -o krnnrm.o
+gfortran  -fpic  -g -O2  -c krnqne.f -o krnqne.o
+gfortran  -fpic  -g -O2  -c krnqrt.f -o krnqrt.o
+gfortran  -fpic  -g -O2  -c nndist.f -o nndist.o
+gfortran  -fpic  -g -O2  -c plarea.f -o plarea.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c ptinpoly.c -o ptinpoly.o
+gfortran  -fpic  -g -O2  -c sekhat.f -o sekhat.o
+gfortran  -fpic  -g -O2  -c sort.f -o sort.o
+gfortran  -fpic  -g -O2  -c sort2.f -o sort2.o
+gfortran  -fpic  -g -O2  -c stkhat.f -o stkhat.o
+stkhat.f:64:72:
+
+   64 |       do 2 j=1,i1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 2 at (1)
+stkhat.f:89:72:
+
+   89 |     3 hs(is)=hs(is)+hs(is1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 3 at (1)
+stkhat.f:93:72:
+
+   93 |     4 ht(it)=ht(it)+ht(it1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 4 at (1)
+stkhat.f:114:72:
+
+  114 |   108 hst(i,j)=hst(i,j)*area*(thigh-tlow)/dn11
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 108 at (1)
+gfortran  -fpic  -g -O2  -c stsecal.f -o stsecal.o
+gfortran  -fpic  -g -O2  -c tribble.f -o tribble.o
+tribble.f:146:72:
+
+  146 | 1     p(i,nn)=start(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 1 at (1)
+tribble.f:157:72:
+
+  157 | 3     p(i,j)=start(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 3 at (1)
+tribble.f:163:72:
+
+  163 | 2     start(j)=x
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 2 at (1)
+tribble.f:192:72:
+
+  192 | 6     z=z+p(i,j)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 6 at (1)
+tribble.f:194:72:
+
+  194 | 7     pbar(i)=z/dn
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 7 at (1)
+tribble.f:199:72:
+
+  199 | 8     pstar(i)=(1d0+rcoeff)*pbar(i)-rcoeff*p(i,ihi)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 8 at (1)
+tribble.f:209:72:
+
+  209 | 9     p2star(i)=ecoeff*pstar(i)+(1d0-ecoeff)*pbar(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 9 at (1)
+tribble.f:219:72:
+
+  219 | 11    p(i,ihi)=p2star(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 11 at (1)
+tribble.f:235:72:
+
+  235 | 14    p(i,ihi)=pstar(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 14 at (1)
+tribble.f:241:72:
+
+  241 | 16    p2star(i)=ccoeff*p(i,ihi)+(1d0-ccoeff)*pbar(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 16 at (1)
+tribble.f:255:72:
+
+  255 | 17    min(i)=p(i,j)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 17 at (1)
+tribble.f:261:72:
+
+  261 | 18    summ=summ+y(j)*y(j)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 18 at (1)
+tribble.f:268:72:
+
+  268 | 20    p(i,ihi)=pstar(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 20 at (1)
+tribble.f:289:72:
+
+  289 | 23    min(i)=p(i,ihi)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 23 at (1)
+tribble.f:309:72:
+
+  309 |    24 min(i)=min(i)+del
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 24 at (1)
+tribble.f:316:72:
+
+  316 |    26 start(i)=min(i)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 26 at (1)
+gfortran  -fpic  -g -O2  -c twodimmse.f -o twodimmse.o
+twodimmse.f:57:72:
+
+   57 |    10 h(i)=0.0
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 10 at (1)
+twodimmse.f:62:72:
+
+   62 |       do 20 j=1,i1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: Shared DO termination label 20 at (1)
+twodimmse.f:72:72:
+
+   72 |    40 h(i)=h(i)+h(i-1)
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 40 at (1)
+twodimmse.f:75:72:
+
+   75 |  50   h(i)=h(i)*f1
+      |                                                                        1
+Warning: Fortran 2018 deleted feature: DO termination statement which is not END DO or CONTINUE with label 50 at (1)
+gfortran  -fpic  -g -O2  -c weight.f -o weight.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o splancs.so areapl.o cncvwt.o dokhat.o init.o inpip.o ipippa.o iplace.o k12hat.o kernel3d.o khvc.o khvmat.o krnnrm.o krnqne.o krnqrt.o nndist.o plarea.o ptinpoly.o sekhat.o sort.o sort2.o stkhat.o stsecal.o tribble.o twodimmse.o weight.o -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-splancs/00new/splancs/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘splancs’ as ‘splancs_2.01-43_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (splancs)
+* installing *source* package ‘mvoutlier’ ...
+** package ‘mvoutlier’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘mvoutlier’ as ‘mvoutlier_2.1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (mvoutlier)
+* installing *source* package ‘GateFinder’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘GateFinder’ as ‘GateFinder_1.21.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (GateFinder)
+
+The downloaded source packages are in
+	‘/tmp/Rtmp1r0svr/downloaded_packages’
+Old packages: 'MASS'
+
+real	1m9.280s
+user	1m1.809s
+sys	0m6.532s
