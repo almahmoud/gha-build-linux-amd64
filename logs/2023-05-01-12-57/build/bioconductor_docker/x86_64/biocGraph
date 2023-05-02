@@ -1,0 +1,52 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''biocGraph'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'biocGraph'
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/biocGraph_1.63.0.tar.gz'
+Content type 'application/x-gzip' length 453233 bytes (442 KB)
+==================================================
+downloaded 442 KB
+
+* installing *source* package ‘biocGraph’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘biocGraph’ as ‘biocGraph_1.63.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (biocGraph)
+
+The downloaded source packages are in
+	‘/tmp/RtmprxBC76/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m20.899s
+user	0m17.414s
+sys	0m1.309s
+* installing *source* package ‘fibroEset’ ...
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘fibroEset’ as ‘fibroEset_1.43.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (fibroEset)
