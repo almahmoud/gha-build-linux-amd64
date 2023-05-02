@@ -1,0 +1,1137 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''CBNplot'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'CBNplot'
+also installing the dependencies ‘gmp’, ‘HDInterval’, ‘distributional’, ‘numDeriv’, ‘quadprog’, ‘bnlearn’, ‘org.Hs.eg.db’, ‘depmap’, ‘Rmpfr’, ‘ggdist’, ‘pvclust’, ‘oaqc’
+
+trying URL 'https://cloud.r-project.org/src/contrib/gmp_0.7-1.tar.gz'
+Content type 'application/x-gzip' length 167489 bytes (163 KB)
+==================================================
+downloaded 163 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/HDInterval_0.2.4.tar.gz'
+Content type 'application/x-gzip' length 29242 bytes (28 KB)
+==================================================
+downloaded 28 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/distributional_0.3.2.tar.gz'
+Content type 'application/x-gzip' length 109409 bytes (106 KB)
+==================================================
+downloaded 106 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/numDeriv_2016.8-1.1.tar.gz'
+Content type 'application/x-gzip' length 76053 bytes (74 KB)
+==================================================
+downloaded 74 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/quadprog_1.5-8.tar.gz'
+Content type 'application/x-gzip' length 36141 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/bnlearn_4.8.3.tar.gz'
+Content type 'application/x-gzip' length 1297033 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/data/annotation/src/contrib/org.Hs.eg.db_3.17.0.tar.gz'
+Content type 'application/x-gzip' length 91754641 bytes (87.5 MB)
+==================================================
+downloaded 87.5 MB
+
+trying URL 'https://bioconductor.org/packages/3.18/data/experiment/src/contrib/depmap_1.15.0.tar.gz'
+Content type 'application/x-gzip' length 1379503 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/Rmpfr_0.9-2.tar.gz'
+Content type 'application/x-gzip' length 603750 bytes (589 KB)
+==================================================
+downloaded 589 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/ggdist_3.2.1.tar.gz'
+Content type 'application/x-gzip' length 2960923 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+trying URL 'https://cloud.r-project.org/src/contrib/pvclust_2.2-0.tar.gz'
+Content type 'application/x-gzip' length 105190 bytes (102 KB)
+==================================================
+downloaded 102 KB
+
+trying URL 'https://cloud.r-project.org/src/contrib/oaqc_1.0.tar.gz'
+Content type 'application/x-gzip' length 36357 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/CBNplot_1.1.0.tar.gz'
+Content type 'application/x-gzip' length 1428106 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+* installing *source* package ‘gmp’ ...
+** package ‘gmp’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ -std=gnu++17 accepts -g... yes
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking gmp.h usability... yes
+checking gmp.h presence... yes
+checking for gmp.h... yes
+checking for __gmpz_ui_sub in -lgmp... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c apply.cc -o apply.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c biginteger.cc -o biginteger.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bigintegerR.cc -o bigintegerR.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bigmod.cc -o bigmod.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bigrational.cc -o bigrational.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bigrationalR.cc -o bigrationalR.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bigvec.cc -o bigvec.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bigvec_q.cc -o bigvec_q.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c extract_matrix.cc -o extract_matrix.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c factor.cc -o factor.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c factorize.cc -o factorize.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cc -o init.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrix.cc -o matrix.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c matrixq.cc -o matrixq.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG -I/usr/local/include  -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c solve.cc -o solve.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gmp.so apply.o biginteger.o bigintegerR.o bigmod.o bigrational.o bigrationalR.o bigvec.o bigvec_q.o extract_matrix.o factor.o factorize.o init.o matrix.o matrixq.o solve.o -lgmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gmp/00new/gmp/libs
+** R
+** data
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘which.max’ from package ‘base’ in package ‘gmp’
+Creating a generic function for ‘which.min’ from package ‘base’ in package ‘gmp’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gmp’ as ‘gmp_0.7-1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gmp)
+* installing *source* package ‘HDInterval’ ...
+** package ‘HDInterval’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘HDInterval’ as ‘HDInterval_0.2.4_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (HDInterval)
+* installing *source* package ‘numDeriv’ ...
+** package ‘numDeriv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘numDeriv’ as ‘numDeriv_2016.8-1.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (numDeriv)
+* installing *source* package ‘quadprog’ ...
+** package ‘quadprog’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c aind.f -o aind.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c solve.QP.compact.f -o solve.QP.compact.o
+gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c solve.QP.f -o solve.QP.o
+gfortran  -fvisibility=hidden -fpic -g -O2 -msse2 -mfpmath=sse   -fpic  -g -O2  -c util.f -o util.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o quadprog.so aind.o init.o solve.QP.compact.o solve.QP.o util.o -lblas -lgfortran -lm -lquadmath -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-quadprog/00new/quadprog/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘quadprog’ as ‘quadprog_1.5-8_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (quadprog)
+* installing *source* package ‘bnlearn’ ...
+** package ‘bnlearn’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arcs/arcs2amat.c -o arcs/arcs2amat.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arcs/arcs2elist.c -o arcs/arcs2elist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arcs/bind.c -o arcs/bind.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arcs/filter.arcs.c -o arcs/filter.arcs.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arcs/hash.c -o arcs/hash.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c arcs/is.row.equal.c -o arcs/is.row.equal.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/bayesian.network.c -o bnlearn/bayesian.network.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/bn.recovery.c -o bnlearn/bn.recovery.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/cache.structure.c -o bnlearn/cache.structure.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/cextend.c -o bnlearn/cextend.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/colliders.c -o bnlearn/colliders.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/cpdag.c -o bnlearn/cpdag.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/fitted.c -o bnlearn/fitted.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/nparams.c -o bnlearn/nparams.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c bnlearn/shd.c -o bnlearn/shd.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/allocations.c -o core/allocations.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/contingency.tables.c -o core/contingency.tables.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/correlation.c -o core/correlation.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/covariance.matrix.c -o core/covariance.matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/data.table.c -o core/data.table.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/math.functions.c -o core/math.functions.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/moments.c -o core/moments.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/sampling.c -o core/sampling.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/sets.c -o core/sets.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c core/uppertriangular.c -o core/uppertriangular.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c fitted/enums.c -o fitted/enums.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c foreign/parse.c -o foreign/parse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c globals.c -o globals.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graphs/acyclic.c -o graphs/acyclic.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graphs/is.dag.c -o graphs/is.dag.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graphs/path.c -o graphs/path.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graphs/pdag2dag.c -o graphs/pdag2dag.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graphs/random/graph.generation.c -o graphs/random/graph.generation.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c graphs/topological.ordering.c -o graphs/topological.ordering.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inference/cpdist.c -o inference/cpdist.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inference/kullback.leibler.c -o inference/kullback.leibler.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inference/likelihood.weighting.c -o inference/likelihood.weighting.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inference/loss.c -o inference/loss.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c inference/rbn.c -o inference/rbn.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c learning/averaging/averaging.c -o learning/averaging/averaging.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c learning/averaging/bootstrap.c -o learning/averaging/bootstrap.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c learning/local/mi.matrix.c -o learning/local/mi.matrix.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c learning/score/hc.cache.lookup.c -o learning/score/hc.cache.lookup.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c learning/score/score.delta.c -o learning/score/score.delta.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c learning/score/tabu.c -o learning/score/tabu.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/conditional.least.squares.c -o math/conditional.least.squares.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/least.squares.c -o math/least.squares.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c math/linear.algebra.c -o math/linear.algebra.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minimal/common.c -o minimal/common.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minimal/data.frame.c -o minimal/data.frame.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minimal/strings.c -o minimal/strings.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minimal/table.c -o minimal/table.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minimal/tiers.c -o minimal/tiers.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c minimal/unique.c -o minimal/unique.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parameters/discrete/classic_discrete.c -o parameters/discrete/classic_discrete.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parameters/discrete/hierarchical_dirichlet.c -o parameters/discrete/hierarchical_dirichlet.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parameters/rinterface/classic_discrete.c -o parameters/rinterface/classic_discrete.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parameters/rinterface/hierarchical_dirichlet.c -o parameters/rinterface/hierarchical_dirichlet.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parameters/rinterface/mixture_ordinary_least_squares.c -o parameters/rinterface/mixture_ordinary_least_squares.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parameters/rinterface/ordinary_least_squares.c -o parameters/rinterface/ordinary_least_squares.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c predict/map.lw.c -o predict/map.lw.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c predict/predict.c -o predict/predict.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c preprocessing/dedup.c -o preprocessing/dedup.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c preprocessing/discretize.c -o preprocessing/discretize.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c preprocessing/enums.c -o preprocessing/enums.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sanitization/cg.assumptions.c -o sanitization/cg.assumptions.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sanitization/covariance.c -o sanitization/covariance.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sanitization/data.c -o sanitization/data.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/alpha.star.c -o scores/alpha.star.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/cg.loglikelihood.c -o scores/cg.loglikelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/cg.predictive.loglikelihood.c -o scores/cg.predictive.loglikelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/custom.score.c -o scores/custom.score.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/dirichlet.averaged.posterior.c -o scores/dirichlet.averaged.posterior.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/dirichlet.posterior.c -o scores/dirichlet.posterior.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/discrete.loglikelihood.c -o scores/discrete.loglikelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/discrete.predictive.loglikelihood.c -o scores/discrete.predictive.loglikelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/enum.c -o scores/enum.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/gaussian.loglikelihood.c -o scores/gaussian.loglikelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/gaussian.predictive.loglikelihood.c -o scores/gaussian.predictive.loglikelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/graph.priors.c -o scores/graph.priors.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/nml_regret.c -o scores/nml_regret.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/nml_regret_table.c -o scores/nml_regret_table.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/normalized.maximum.likelihood.c -o scores/normalized.maximum.likelihood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/per.node.score.c -o scores/per.node.score.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c scores/wishart.posterior.c -o scores/wishart.posterior.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c test.counter.c -o test.counter.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/conditional.gaussian/cg.mutual.information.c -o tests/conditional.gaussian/cg.mutual.information.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/discrete/df.adjust.c -o tests/discrete/df.adjust.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/discrete/discrete.tests.c -o tests/discrete/discrete.tests.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/discrete/jonckheere.c -o tests/discrete/jonckheere.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/discrete/shrinkage.c -o tests/discrete/shrinkage.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/enums.c -o tests/enums.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/gaussian/df.adjust.c -o tests/gaussian/df.adjust.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/gaussian/gaussian.tests.c -o tests/gaussian/gaussian.tests.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/gaussian/shrinkage.c -o tests/gaussian/shrinkage.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/patterns/allsubs.test.c -o tests/patterns/allsubs.test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/patterns/ctest.c -o tests/patterns/ctest.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/patterns/roundrobin.test.c -o tests/patterns/roundrobin.test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/patterns/utest.c -o tests/patterns/utest.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/permutation/discrete.monte.carlo.c -o tests/permutation/discrete.monte.carlo.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/permutation/gaussian.monte.carlo.c -o tests/permutation/gaussian.monte.carlo.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/rinterface/allsubs.test.c -o tests/rinterface/allsubs.test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/rinterface/ctest.c -o tests/rinterface/ctest.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/rinterface/htest.c -o tests/rinterface/htest.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/rinterface/indep.test.c -o tests/rinterface/indep.test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/rinterface/roundrobin.test.c -o tests/rinterface/roundrobin.test.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tests/rinterface/utest.c -o tests/rinterface/utest.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o bnlearn.so arcs/arcs2amat.o arcs/arcs2elist.o arcs/bind.o arcs/filter.arcs.o arcs/hash.o arcs/is.row.equal.o bnlearn/bayesian.network.o bnlearn/bn.recovery.o bnlearn/cache.structure.o bnlearn/cextend.o bnlearn/colliders.o bnlearn/cpdag.o bnlearn/fitted.o bnlearn/nparams.o bnlearn/shd.o core/allocations.o core/contingency.tables.o core/correlation.o core/covariance.matrix.o core/data.table.o core/math.functions.o core/moments.o core/sampling.o core/sets.o core/uppertriangular.o fitted/enums.o foreign/parse.o globals.o graphs/acyclic.o graphs/is.dag.o graphs/path.o graphs/pdag2dag.o graphs/random/graph.generation.o graphs/topological.ordering.o inference/cpdist.o inference/kullback.leibler.o inference/likelihood.weighting.o inference/loss.o inference/rbn.o learning/averaging/averaging.o learning/averaging/bootstrap.o learning/local/mi.matrix.o learning/score/hc.cache.lookup.o learning/score/score.delta.o learning/score/tabu.o math/conditional.least.squares.o math/least.squares.o math/linear.algebra.o minimal/common.o minimal/data.frame.o minimal/strings.o minimal/table.o minimal/tiers.o minimal/unique.o parameters/discrete/classic_discrete.o parameters/discrete/hierarchical_dirichlet.o parameters/rinterface/classic_discrete.o parameters/rinterface/hierarchical_dirichlet.o parameters/rinterface/mixture_ordinary_least_squares.o parameters/rinterface/ordinary_least_squares.o predict/map.lw.o predict/predict.o preprocessing/dedup.o preprocessing/discretize.o preprocessing/enums.o sanitization/cg.assumptions.o sanitization/covariance.o sanitization/data.o scores/alpha.star.o scores/cg.loglikelihood.o scores/cg.predictive.loglikelihood.o scores/custom.score.o scores/dirichlet.averaged.posterior.o scores/dirichlet.posterior.o scores/discrete.loglikelihood.o scores/discrete.predictive.loglikelihood.o scores/enum.o scores/gaussian.loglikelihood.o scores/gaussian.predictive.loglikelihood.o scores/graph.priors.o scores/nml_regret.o scores/nml_regret_table.o scores/normalized.maximum.likelihood.o scores/per.node.score.o scores/wishart.posterior.o test.counter.o tests/conditional.gaussian/cg.mutual.information.o tests/discrete/df.adjust.o tests/discrete/discrete.tests.o tests/discrete/jonckheere.o tests/discrete/shrinkage.o tests/enums.o tests/gaussian/df.adjust.o tests/gaussian/gaussian.tests.o tests/gaussian/shrinkage.o tests/patterns/allsubs.test.o tests/patterns/ctest.o tests/patterns/roundrobin.test.o tests/patterns/utest.o tests/permutation/discrete.monte.carlo.o tests/permutation/gaussian.monte.carlo.o tests/rinterface/allsubs.test.o tests/rinterface/ctest.o tests/rinterface/htest.o tests/rinterface/indep.test.o tests/rinterface/roundrobin.test.o tests/rinterface/utest.o -llapack -lblas -lgfortran -lm -lquadmath -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-bnlearn/00new/bnlearn/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bnlearn’ as ‘bnlearn_4.8.3_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bnlearn)
+* installing *source* package ‘org.Hs.eg.db’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘org.Hs.eg.db’ as ‘org.Hs.eg.db_3.17.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (org.Hs.eg.db)
+* installing *source* package ‘depmap’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘depmap’ as ‘depmap_1.15.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (depmap)
+* installing *source* package ‘pvclust’ ...
+** package ‘pvclust’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pvclust’ as ‘pvclust_2.2-0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pvclust)
+* installing *source* package ‘oaqc’ ...
+** package ‘oaqc’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Graph.cpp -o Graph.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c QuadCensus.cpp -o QuadCensus.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.cpp -o init.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o oaqc.so Graph.o QuadCensus.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-oaqc/00new/oaqc/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘oaqc’ as ‘oaqc_1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (oaqc)
+* installing *source* package ‘distributional’ ...
+** package ‘distributional’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘distributional’ as ‘distributional_0.3.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (distributional)
+* installing *source* package ‘Rmpfr’ ...
+** package ‘Rmpfr’ successfully unpacked and MD5 sums checked
+** using staged installation
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking mpfr.h usability... yes
+checking mpfr.h presence... yes
+checking for mpfr.h... yes
+checking gmp.h usability... yes
+checking gmp.h presence... yes
+checking for gmp.h... yes
+checking for __gmpz_init in -lgmp... yes
+checking for mpfr_init in -lmpfr... yes
+checking for mpfr_digamma in -lmpfr... yes
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Ops.c -o Ops.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Summary.c -o Summary.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c convert.c -o convert.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o Rmpfr.so Ops.o Summary.o convert.o init.o utils.o -lmpfr -lgmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-Rmpfr/00new/Rmpfr/libs
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘factorial’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘diag’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘diag<-’ from package ‘base’ in package ‘Rmpfr’
+Creating a new generic function for ‘cbind’ in package ‘Rmpfr’
+Creating a new generic function for ‘rbind’ in package ‘Rmpfr’
+Creating a generic function for ‘colSums’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘colMeans’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘rowSums’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘rowMeans’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘norm’ from package ‘base’ in package ‘Rmpfr’
+in method for ‘show’ with signature ‘"integrateR"’: no definition for class “integrateR”
+Creating a new generic function for ‘pmin’ in package ‘Rmpfr’
+Creating a new generic function for ‘pmax’ in package ‘Rmpfr’
+Creating a generic function for ‘atan2’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘beta’ from package ‘base’ in package ‘Rmpfr’
+Creating a generic function for ‘lbeta’ from package ‘base’ in package ‘Rmpfr’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘Rmpfr’ as ‘Rmpfr_0.9-2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (Rmpfr)
+* installing *source* package ‘ggdist’ ...
+** package ‘ggdist’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ggdist’ as ‘ggdist_3.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ggdist)
+* installing *source* package ‘CBNplot’ ...
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘CBNplot’ as ‘CBNplot_1.1.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (CBNplot)
+
+The downloaded source packages are in
+	‘/tmp/RtmpRnMSIE/downloaded_packages’
+Old packages: 'MASS'
+
+real	6m32.301s
+user	6m14.750s
+sys	0m12.423s
+* installing *source* package ‘listenv’ ...
+** package ‘listenv’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘listenv’ as ‘listenv_0.9.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (listenv)
+* installing *source* package ‘parallelly’ ...
+** package ‘parallelly’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘parallelly’ as ‘parallelly_1.35.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (parallelly)
+* installing *source* package ‘globals’ ...
+** package ‘globals’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘globals’ as ‘globals_0.16.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (globals)
+* installing *source* package ‘shape’ ...
+** package ‘shape’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘shape’ as ‘shape_1.4.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (shape)
+* installing *source* package ‘progressr’ ...
+** package ‘progressr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘progressr’ as ‘progressr_0.13.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (progressr)
+* installing *source* package ‘SQUAREM’ ...
+** package ‘SQUAREM’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘SQUAREM’ as ‘SQUAREM_2021.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (SQUAREM)
+* installing *source* package ‘tzdb’ ...
+** package ‘tzdb’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c api.cpp -o api.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c names.cpp -o names.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c path.cpp -o path.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tz.cpp -o tz.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include   -I../inst/include -DINSTALL=dummy -DAUTO_DOWNLOAD=0 -DHAS_REMOTE_API=0 -DUSE_OS_TZDB=0 -DONLY_C_LOCALE=1 -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c version.cpp -o version.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o tzdb.so api.o cpp11.o names.o path.o tz.o version.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-tzdb/00new/tzdb/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘tzdb’ as ‘tzdb_0.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (tzdb)
+* installing *source* package ‘timechange’ ...
+** package ‘timechange’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c common.cpp -o common.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c get.cpp -o get.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parse.c -o parse.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c round.cpp -o round.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tzone.cpp -o tzone.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c update.cpp -o update.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_fixed.cc -o cctz/src/time_zone_fixed.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_if.cc -o cctz/src/time_zone_if.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_impl.cc -o cctz/src/time_zone_impl.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_info.cc -o cctz/src/time_zone_info.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_libc.cc -o cctz/src/time_zone_libc.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_lookup.cc -o cctz/src/time_zone_lookup.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/time_zone_posix.cc -o cctz/src/time_zone_posix.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -I./cctz/src/ -I'/usr/local/lib/R/site-library/cpp11/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cctz/src/zone_info_source.cc -o cctz/src/zone_info_source.o
+ar rcs libcctz.a ./cctz/src/time_zone_fixed.o ./cctz/src/time_zone_if.o ./cctz/src/time_zone_impl.o ./cctz/src/time_zone_info.o ./cctz/src/time_zone_libc.o ./cctz/src/time_zone_lookup.o ./cctz/src/time_zone_posix.o ./cctz/src/zone_info_source.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o timechange.so common.o cpp11.o get.o parse.o round.o tzone.o update.o -L. -lcctz -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-timechange/00new/timechange/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘timechange’ as ‘timechange_0.2.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (timechange)
+* installing *source* package ‘iterators’ ...
+** package ‘iterators’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘iterators’ as ‘iterators_1.0.14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (iterators)
+* installing *source* package ‘gower’ ...
+** package ‘gower’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c R_register_native.c -o R_register_native.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include   -fopenmp -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gower.c -o gower.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o gower.so R_register_native.o gower.o -fopenmp -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-gower/00new/gower/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘gower’ as ‘gower_1.0.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (gower)
+* installing *source* package ‘hardhat’ ...
+** package ‘hardhat’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘hardhat’ as ‘hardhat_1.3.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (hardhat)
+* installing *source* package ‘timeDate’ ...
+** package ‘timeDate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Creating a generic function for ‘sample’ from package ‘base’ in package ‘timeDate’
+Creating a generic function for ‘getDataPart’ from package ‘methods’ in package ‘timeDate’
+Creating a generic function for ‘abline’ from package ‘graphics’ in package ‘timeDate’
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘timeDate’ as ‘timeDate_4022.108_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (timeDate)
+* installing *source* package ‘ModelMetrics’ ...
+** package ‘ModelMetrics’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c auc_.cpp -o auc_.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c confusionMatrix_.cpp -o confusionMatrix_.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c error.cpp -o error.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gini_.cpp -o gini_.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c logLoss_.cpp -o logLoss_.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ModelMetrics.so RcppExports.o auc_.o confusionMatrix_.o error.o gini_.o logLoss_.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ModelMetrics/00new/ModelMetrics/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ModelMetrics’ as ‘ModelMetrics_1.2.2.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ModelMetrics)
+* installing *source* package ‘pROC’ ...
+** package ‘pROC’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppVersion.cpp -o RcppVersion.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c delong.cpp -o delong.o
+g++ -std=gnu++17 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c perfsAll.cpp -o perfsAll.o
+g++ -std=gnu++17 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o pROC.so RcppExports.o RcppVersion.o delong.o perfsAll.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-pROC/00new/pROC/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘pROC’ as ‘pROC_1.18.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (pROC)
+* installing *source* package ‘visNetwork’ ...
+** package ‘visNetwork’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘visNetwork’ as ‘visNetwork_2.1.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (visNetwork)
+* installing *source* package ‘assertthat’ ...
+** package ‘assertthat’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘assertthat’ as ‘assertthat_0.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (assertthat)
+* installing *source* package ‘future’ ...
+** package ‘future’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘future’ as ‘future_1.32.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (future)
+* installing *source* package ‘diagram’ ...
+** package ‘diagram’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘diagram’ as ‘diagram_1.6.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (diagram)
+* installing *source* package ‘clock’ ...
+** package ‘clock’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c cpp11.cpp -o cpp11.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c duration.cpp -o duration.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c enums.cpp -o enums.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c format.cpp -o format.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gregorian-year-day.cpp -o gregorian-year-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gregorian-year-month-day.cpp -o gregorian-year-month-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c gregorian-year-month-weekday.cpp -o gregorian-year-month-weekday.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c iso-year-week-day.cpp -o iso-year-week-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c naive-time.cpp -o naive-time.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c quarterly-year-quarter-day.cpp -o quarterly-year-quarter-day.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c rcrd.cpp -o rcrd.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sys-time.cpp -o sys-time.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c time-point.cpp -o time-point.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.cpp -o utils.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c weekday.cpp -o weekday.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zone.cpp -o zone.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/cpp11/include' -I'/tmp/tmp/built/tzdb/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c zoned-time.cpp -o zoned-time.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o clock.so cpp11.o duration.o enums.o format.o gregorian-year-day.o gregorian-year-month-day.o gregorian-year-month-weekday.o iso-year-week-day.o naive-time.o quarterly-year-quarter-day.o rcrd.o sys-time.o time-point.o utils.o weekday.o zone.o zoned-time.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-clock/00new/clock/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘clock’ as ‘clock_0.6.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (clock)
+* installing *source* package ‘lubridate’ ...
+** package ‘lubridate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c datetime.c -o datetime.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c period.c -o period.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c tparse.c -o tparse.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c utils.c -o utils.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o lubridate.so datetime.o init.o period.o tparse.o utils.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-lubridate/00new/lubridate/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lubridate’ as ‘lubridate_1.9.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lubridate)
+* installing *source* package ‘foreach’ ...
+** package ‘foreach’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘foreach’ as ‘foreach_1.5.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (foreach)
+* installing *source* package ‘future.apply’ ...
+** package ‘future.apply’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘future.apply’ as ‘future.apply_1.10.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (future.apply)
+* installing *source* package ‘lava’ ...
+** package ‘lava’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘lava’ as ‘lava_1.7.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (lava)
+* installing *source* package ‘prodlim’ ...
+** package ‘prodlim’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c GMLE.c -o GMLE.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c IntIndex.c -o IntIndex.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c icens_prodlim.c -o icens_prodlim.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c icens_prodlim_ml.c -o icens_prodlim_ml.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c iindex.c -o iindex.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c life_table.c -o life_table.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c loo.c -o loo.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c neighborhood.c -o neighborhood.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c predict.c -o predict.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c predict_individual_survival.c -o predict_individual_survival.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim.c -o prodlim.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_clustersurv.c -o prodlim_clustersurv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_comprisk.c -o prodlim_comprisk.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_multistates.c -o prodlim_multistates.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c prodlim_surv.c -o prodlim_surv.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c sindex.c -o sindex.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG  -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c summary_prodlim.c -o summary_prodlim.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o prodlim.so GMLE.o IntIndex.o icens_prodlim.o icens_prodlim_ml.o iindex.o init.o life_table.o loo.o neighborhood.o predict.o predict_individual_survival.o prodlim.o prodlim_clustersurv.o prodlim_comprisk.o prodlim_multistates.o prodlim_surv.o sindex.o summary_prodlim.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-prodlim/00new/prodlim/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘prodlim’ as ‘prodlim_2023.03.31_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (prodlim)
+* installing *source* package ‘ipred’ ...
+** package ‘ipred’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c SdiffKM.c -o SdiffKM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c init.c -o init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o ipred.so SdiffKM.o init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-ipred/00new/ipred/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘ipred’ as ‘ipred_0.9-14_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (ipred)
+* installing *source* package ‘recipes’ ...
+** package ‘recipes’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘recipes’ as ‘recipes_1.0.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (recipes)
+* installing *source* package ‘caret’ ...
+** package ‘caret’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c caret.c -o caret.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o caret.so caret.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-caret/00new/caret/libs
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘caret’ as ‘caret_6.0-94_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (caret)
+* installing *source* package ‘bnviewer’ ...
+** package ‘bnviewer’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘bnviewer’ as ‘bnviewer_0.1.6_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (bnviewer)
