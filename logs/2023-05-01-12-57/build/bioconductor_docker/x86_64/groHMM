@@ -1,0 +1,49 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''groHMM'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'groHMM'
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/groHMM_1.35.0.tar.gz'
+Content type 'application/x-gzip' length 4359342 bytes (4.2 MB)
+==================================================
+downloaded 4.2 MB
+
+* installing *source* package ‘groHMM’ ...
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c AnnotateProbes.c -o AnnotateProbes.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c DecayAlgorithm.c -o DecayAlgorithm.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c MLEfit.c -o MLEfit.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RegisterRRoutines.c -o RegisterRRoutines.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c Windowing.c -o Windowing.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hmmEM.c -o hmmEM.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hmmFwBw.c -o hmmFwBw.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hmmMiscFunctions.c -o hmmMiscFunctions.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hmmViterbi.c -o hmmViterbi.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o groHMM.so AnnotateProbes.o DecayAlgorithm.o MLEfit.o RegisterRRoutines.o Windowing.o hmmEM.o hmmFwBw.o hmmMiscFunctions.o hmmViterbi.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-groHMM/00new/groHMM/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘groHMM’ as ‘groHMM_1.35.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (groHMM)
+
+The downloaded source packages are in
+	‘/tmp/RtmpWP5Nxp/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m32.108s
+user	0m27.817s
+sys	0m1.773s
