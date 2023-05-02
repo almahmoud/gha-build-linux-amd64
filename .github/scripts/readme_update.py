@@ -150,9 +150,20 @@ def add_bbs_status(pkg, each):
         bbs_summary = r.content.decode("utf-8")
         bbs_status = yaml.safe_load(bbs_summary).get("Status", "Unknown")
     if not bbs_status:
-        bbs_status = "Failed retrieving"
-    else:
-        bbs_status = f"[{bbs_status}]({bbsurl.replace('/raw-results/nebbiolo1/buildsrc-summary.dcf', '')})"
+        bbsurl = f"https://bioconductor.org/checkResults/{biocver}/bioc-LATEST/{pkg}/raw-results/nebbiolo2/buildsrc-summary.dcf"
+        r = requests.get(bbsurl)
+        retries = 0
+        while retries <= 5 and r.status_code != 200:
+            r = requests.get(bbsurl)
+            retries += 1
+            time.sleep(5)
+        if r.status_code == 200:
+            bbs_summary = r.content.decode("utf-8")
+            bbs_status = yaml.safe_load(bbs_summary).get("Status", "Unknown")
+        if not bbs_status:
+            bbs_status = "Failed retrieving"
+    if bbs_status != "Failed retrieving":
+        bbs_status = f"[{bbs_status}]({bbsurl.split('/raw-results/')[0]})"
     each.insert(2, bbs_status)
 
 def process_failed_pkgs(tables):
