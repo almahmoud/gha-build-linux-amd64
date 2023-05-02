@@ -1,0 +1,63 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BiFET'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'BiFET'
+also installing the dependency ‘poibin’
+
+trying URL 'https://cloud.r-project.org/src/contrib/poibin_1.5.tar.gz'
+Content type 'application/x-gzip' length 15710 bytes (15 KB)
+==================================================
+downloaded 15 KB
+
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BiFET_1.21.0.tar.gz'
+Content type 'application/x-gzip' length 659569 bytes (644 KB)
+==================================================
+downloaded 644 KB
+
+* installing *source* package ‘poibin’ ...
+** package ‘poibin’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dftcf.c -o dftcf.o
+gcc -I"/usr/local/lib/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c poibin_init.c -o poibin_init.o
+gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o poibin.so dftcf.o poibin_init.o -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-poibin/00new/poibin/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘poibin’ as ‘poibin_1.5_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (poibin)
+* installing *source* package ‘BiFET’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BiFET’ as ‘BiFET_1.21.0_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BiFET)
+
+The downloaded source packages are in
+	‘/tmp/RtmpGJRQYb/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m20.831s
+user	0m16.703s
+sys	0m1.871s
