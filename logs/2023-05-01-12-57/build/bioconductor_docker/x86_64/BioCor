@@ -1,0 +1,121 @@
++ Rscript -e 'Sys.setenv(BIOCONDUCTOR_USE_CONTAINER_REPOSITORY=FALSE); p <- .libPaths(); p <- c('\''/tmp/tmp/built'\'', p); .libPaths(p); if(BiocManager::install('\''BioCor'\'', INSTALL_opts = '\''--build'\'', update = TRUE, quiet = FALSE, force = TRUE, keep_outputs = TRUE) %in% rownames(installed.packages())) q(status = 0) else q(status = 1)'
+'getOption("repos")' replaces Bioconductor standard repositories, see
+'help("repositories", package = "BiocManager")' for details.
+Replacement repositories:
+    CRAN: https://cloud.r-project.org
+Bioconductor version 3.18 (BiocManager 1.30.20), R 4.3.0 (2023-04-21)
+Installing package(s) 'BioCor'
+trying URL 'https://bioconductor.org/packages/3.18/bioc/src/contrib/BioCor_1.25.1.tar.gz'
+Content type 'application/x-gzip' length 1412113 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+* installing *source* package ‘BioCor’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+Creating a generic function from function ‘clusterGeneSim’ in package ‘BioCor’
+Creating a generic function from function ‘clusterSim’ in package ‘BioCor’
+Creating a generic function from function ‘geneSim’ in package ‘BioCor’
+Creating a generic function from function ‘mclusterGeneSim’ in package ‘BioCor’
+Creating a generic function from function ‘mclusterSim’ in package ‘BioCor’
+Creating a generic function from function ‘mgeneSim’ in package ‘BioCor’
+Creating a generic function from function ‘mpathSim’ in package ‘BioCor’
+Creating a generic function from function ‘pathSim’ in package ‘BioCor’
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘BioCor’ as ‘BioCor_1.25.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (BioCor)
+
+The downloaded source packages are in
+	‘/tmp/RtmpHJXiJt/downloaded_packages’
+Old packages: 'MASS'
+
+real	0m22.686s
+user	0m18.924s
+sys	0m1.225s
+* installing *source* package ‘hunspell’ ...
+** package ‘hunspell’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0’
+using C++11
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c RcppExports.cpp -o RcppExports.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c dictionary.cpp -o dictionary.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parser.cpp -o parser.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parsers/textparser.cc -o parsers/textparser.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parsers/latexparser.cc -o parsers/latexparser.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parsers/manparser.cc -o parsers/manparser.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parsers/xmlparser.cc -o parsers/xmlparser.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c parsers/htmlparser.cc -o parsers/htmlparser.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/affentry.cc -o hunspell/affentry.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/affixmgr.cc -o hunspell/affixmgr.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/filemgr.cc -o hunspell/filemgr.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/hashmgr.cc -o hunspell/hashmgr.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/hunspell.cc -o hunspell/hunspell.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/hunzip.cc -o hunspell/hunzip.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/phonet.cc -o hunspell/phonet.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/replist.cc -o hunspell/replist.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/suggestmgr.cc -o hunspell/suggestmgr.o
+g++ -std=gnu++11 -I"/usr/local/lib/R/include" -DNDEBUG -I. -Ihunspell -DBUILDING_LIBHUNSPELL -I'/usr/local/lib/R/site-library/Rcpp/include' -I/usr/local/include   -fvisibility=hidden -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c hunspell/csutil.cc -o hunspell/csutil.o
+ar rcs hunspell/libstathunspell.a parsers/textparser.o parsers/latexparser.o parsers/manparser.o parsers/xmlparser.o parsers/htmlparser.o hunspell/affentry.o hunspell/affixmgr.o hunspell/filemgr.o hunspell/hashmgr.o hunspell/hunspell.o hunspell/hunzip.o hunspell/phonet.o hunspell/replist.o hunspell/suggestmgr.o hunspell/csutil.o
+g++ -std=gnu++11 -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o hunspell.so RcppExports.o dictionary.o parser.o -Lhunspell -lstathunspell -L/usr/local/lib/R/lib -lR
+installing to /tmp/tmp/built/00LOCK-hunspell/00new/hunspell/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘hunspell’ as ‘hunspell_3.0.2_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (hunspell)
+* installing *source* package ‘spelling’ ...
+** package ‘spelling’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘spelling’ as ‘spelling_2.2.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (spelling)
+* installing *source* package ‘targetscan.Hs.eg.db’ ...
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Warning message:
+replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’ 
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package can be loaded from final location
+Warning: replacing previous import ‘utils::findMatches’ by ‘S4Vectors::findMatches’ when loading ‘AnnotationDbi’
+** testing if installed package keeps a record of temporary installation path
+* creating tarball
+packaged installation of ‘targetscan.Hs.eg.db’ as ‘targetscan.Hs.eg.db_0.6.1_R_x86_64-pc-linux-gnu.tar.gz’
+* DONE (targetscan.Hs.eg.db)
